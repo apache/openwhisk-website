@@ -1,0 +1,21 @@
+.site-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-light;
+
+  &__nav {
+    flex: 1;
+    margin-top: 0;
+
+    &--primary {
+      order: 2;
+    }
+
+    &--secondary {
+      order: 1;
+      background-color: $color-blue-dark;
+    }
+  }
+}
