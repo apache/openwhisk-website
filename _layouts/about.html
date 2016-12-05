@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<section class="site-section">
+  <div class="main-content">
+    <h1 class="main-content__title">
+      {{ page.title }}
+    </h1>
+    <div class="main-content__columns">
+      <div class="main-content__column">
+        <div class="main-content__body-content">
+          {{ content }}
+        </div>
+      </div>
+      <div class="main-content__column">
+        <div class="u-embed-container">
+          <iframe width="560" height="315"
+                  src="https://www.youtube.com/embed/{{ page.youtube_video_id }}"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="site-section site-section--gray">
+  <div class="main-content">
+    <h2 class="main-content__heading">High-Level Architecture</h2>
+    <div class="main-content__columns">
+      <div class="main-content__column">
+        <img class="main-content__image"
+             src="{{ site.github.url }}/images/illustration-openwhisk-architecture.svg"
+             alt="OpenWhisk architecture">
+      </div>
+      <div class="main-content__column">
+        <h3 class="main-content__sub-heading">
+          Event Sources
+        </h3>
+        <p class="main-content__text main-content__text--no-top-margin">
+          Bacon ipsum dolor amet kevin proident prosciutto brisket, ea esse
+          chicken pork pork loin veniam irure laborum jerky id in.
+        </p>
+        <h3 class="main-content__sub-heading">
+          Triggers
+        </h3>
+        <p class="main-content__text main-content__text--no-top-margin">
+          Sint non pig ham hock andouille shankle biltong tail. Ground round
+          salami pork belly, officia sunt tenderloin corned beef.
+        </p>
+        <h3 class="main-content__sub-heading">
+          Rules
+        </h3>
+        <p class="main-content__text main-content__text--no-top-margin">
+          Veniam esse incididunt lorem alcatra salami consequat mollit jerky ut
+          reprehenderit brisket tongue.
+        </p>
+        <h3 class="main-content__sub-heading">
+          Actions
+        </h3>
+        <p class="main-content__text main-content__text--no-top-margin">
+          Enim hamburger nostrud, labore et in consectetur deserunt t-bone
+          adipisicing. Est capicola turducken, tempor porchetta.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
