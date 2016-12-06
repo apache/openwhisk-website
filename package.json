@@ -1,0 +1,33 @@
+{
+  "name": "openwhisk.org",
+  "version": "0.1.0",
+  "description": "The new site for Apache OpenWhisk.",
+  "main": "index.js",
+  "scripts": {
+    "build:js": "NODE_ENV=production rollup -c",
+    "dev": "run-p dev:* --silent",
+    "dev:jekyll": "bundle exec jekyll serve",
+    "dev:js": "rollup -c --watch",
+    "test": "npm run test:style --silent",
+    "test:style": "jscs src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openwhisk/openwhisk.github.io.git"
+  },
+  "author": "Jason Lengstorf <jason.lengstorf@ibm.com> (@jlengstorf)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/openwhisk/openwhisk.github.io/issues"
+  },
+  "homepage": "https://github.com/openwhisk/openwhisk.github.io#readme",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "npm-run-all": "^3.1.2",
+    "rollup": "^0.36.4",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^2.5.0"
+  }
+}
