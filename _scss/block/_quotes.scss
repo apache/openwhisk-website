@@ -1,0 +1,96 @@
+.quotes {
+  position: relative;
+  height: 25.5rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4.5rem 0 7rem;
+
+  @at-root .no-js & {
+    height: auto;
+    padding-bottom: 4.5rem;
+  }
+
+  @media (min-width: $max-width-lg) {
+    max-width: $max-width-lg;
+  }
+
+  &__quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-top: 0;
+    border: 0;
+    opacity: 0;
+    padding: 0;
+    text-align: center;
+    transition: 200ms opacity linear;
+
+    @at-root .no-js & {
+      position: static;
+      opacity: 1;
+      transform: none;
+
+      &:not(:first-child) {
+        margin-top: 3rem;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    color: $color-blue-dark-text;
+    font-family: $font-family-heading;
+    font-size: 2.25rem;
+    font-weight: $font-weight-black;
+    line-height: 1.25;
+  }
+
+  &__attribution {
+    color: $color-gray-medium;
+    font-size: 1.75rem;
+    font-weight: $font-weight-default;
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 4.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  @at-root .no-js &__nav {
+    display: none;
+  }
+
+  &__nav-link {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    overflow: hidden;
+    text-indent: -9999px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background: $color-blue-dark-text;
+      border: 2px solid $color-blue-dark-text;
+      border-radius: 50%;
+      text-indent: 0;
+      transition: 200ms background linear;
+    }
+
+    &--active::before {
+      background: $color-white;
+    }
+  }
+}
