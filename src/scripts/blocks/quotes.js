@@ -1,58 +1,96 @@
 // This file initializes a fade slider.
-const removeClassFromAll = (container, commonClass, classToRemove) => {
-  const allSlides = container.getElementsByClassName(commonClass);
-  [].map.call(allSlides, slide => slide.classList.remove(classToRemove));
-}
+const impure = {
+  removeClassFromAll: (container, elementSelector, classToRemove) => {
+    const elements = container.querySelectorAll(elementSelector);
+
+    // Element lists are only array-like, so we have to force mapping here.
+    [].map.call(elements, element => element.classList.remove(classToRemove));
+  },
+
+  setClassBySelector: (container, elementSelector, classToAdd) => {
+    const element = container.querySelector(elementSelector);
+    element.classList.add(classToAdd);
+  },
+
+  setNextActive: (container, slideClass, slideActive, linkClass, linkActive) => {
+    let nextSlide = container.querySelector(`.${slideActive}`).nextElementSibling;
+    if (!nextSlide || !nextSlide.classList || !nextSlide.classList.contains(slideClass)) {
+      nextSlide = container.querySelector(`.${slideClass}`);
+    }
+
+    impure.removeClassFromAll(container, `.${slideClass}`, slideActive);
+    impure.removeClassFromAll(container, `.${linkClass}`, linkActive);
+
+    nextSlide.classList.add(slideActive);
+    impure.setClassBySelector(container, `a[href="#${nextSlide.id}"]`, linkActive);
+  },
+
+  startInterval: (container, slideClass, slideActive, linkClass, linkActive, interval) => {
+    return setInterval(
+      impure.setNextActive.bind(
+        null,
+        container,
+        slideClass,
+        slideActive,
+        linkClass,
+        linkActive,
+        interval
+      ),
+      interval
+    );
+  },
+};
 
 export default function initialize({
   containerClass = 'js--fade-slider',
   slideClass = 'js--fade-slider__slide',
   slideActiveClass = 'js--fade-slider__slide--active',
-  navClass = 'js--fade-slider__nav',
-  navLinkClass = 'js--fade-slider__nav-link',
-  navLinkActiveClass = 'js--fade-slider__nav--active',
-  timeout = 3000,
+  linkClass = 'js--fade-slider__nav-link',
+  linkActiveClass = 'js--fade-slider__nav--active',
+  timeoutInterval = 3000,
 } = {}) {
   const container = document.querySelector(`.${containerClass}`);
-  container.querySelector(`.${slideClass}`).classList.add(slideActiveClass);
-  container.querySelector(`.${navLinkClass}`).classList.add(navLinkActiveClass);
+
+  // Alias these functions and bind the container for brevity.
+  const setClass = impure.setClassBySelector.bind(null, container);
+  const removeClassFromAll = impure.removeClassFromAll.bind(null, container);
+
+  const startLoop = impure.startInterval.bind(
+    null,
+    container,
+    slideClass,
+    slideActiveClass,
+    linkClass,
+    linkActiveClass,
+    timeoutInterval
+  );
+
+  let looper = startLoop();
+
+  // Find the first slide and nav item and activates them.
+  setClass(`.${slideClass}`, slideActiveClass);
+  setClass(`.${linkClass}`, linkActiveClass);
 
   // Add a click handler for the nav.
   container.addEventListener('click', event => {
-    let element = event.target;
+    if (event.target.classList.contains(linkClass)) {
+      const targetSlideId = event.target.href.split('#')[1];
 
-    do {
-      if (typeof element.classList === 'undefined') {
-        continue;
-      }
-
-      if (element.classList.contains(navClass)) {
+      if (targetSlideId) {
         event.preventDefault();
 
-        const targetSlideID = event.target.href.split('#')[1];
-        const targetSlide = document.getElementById(targetSlideID);
+        // Reset the active classes on slides and nav links.
+        removeClassFromAll(`.${slideClass}`, slideActiveClass);
+        removeClassFromAll(`.${linkClass}`, linkActiveClass);
 
-        if (targetSlide) {
+        // Add active classes to the selected slide and nav link.
+        setClass(`#${targetSlideId}`, slideActiveClass);
+        setClass(`a[href="#${targetSlideId}"]`, linkActiveClass);
 
-          // Reset the active classes on slides and nav links.
-          removeClassFromAll(container, slideClass, slideActiveClass);
-          removeClassFromAll(container, navLinkClass, navLinkActiveClass);
-
-          // Add active classes to the selected slide and nav link.
-          targetSlide.classList.add(slideActiveClass);
-          event.target.classList.add(navLinkActiveClass);
-        }
-
-        return;
+        // Restart the interval.
+        clearInterval(looper);
+        looper = startLoop();
       }
-    } while ((element = element.parentNode));
+    }
   });
 }
-
-/*
- * 1. Find the slider container
- * 2. Identify the slides
- * 3. Set the first slide to active
- * 4. Add a click handler to the nav
- * 5. Set a timeout to move between the slides
- */

@@ -7,7 +7,7 @@ fadeSliderInit({
   containerClass: 'quotes',
   slideClass: 'quotes__quote',
   slideActiveClass: 'quotes__quote--active',
-  navClass: 'quotes__nav',
-  navLinkClass: 'quotes__nav-link',
-  navLinkActiveClass: 'quotes__nav-link--active',
+  linkClass: 'quotes__nav-link',
+  linkActiveClass: 'quotes__nav-link--active',
+  timeoutInterval: 6000,
 });
