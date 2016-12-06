@@ -1,9 +1,13 @@
 ---
 layout: about
-title: What Is OpenWhisk?
+title: What Is Apache OpenWhisk?
 youtube_video_id: enk45wEQHzI
 ---
 
-OpenWhisk is a cloud-first distributed event-based programming service. It represents an event-action platform that allows you to execute code in response to an event.
+Apache OpenWhisk is a [serverless]({{ site.github.url }}/serverless), open-source cloud platform that allows you to execute code in response to events at any scale and without the need to manage servers. I.e. that it provides you with a serverless deployment and operations model hiding infrastructural complexity.
 
-OpenWhisk provides you with a serverless deployment and operations model hiding infrastructural complexity and allowing you to simply provide the code you want us to execute. It provides you with a fair pricing model at any scale, where we provide you with exactly the resources – not more not less – you need and only charge you for code really running. It offers a flexible programming model. incl. support for languages like NodeJS and Swift and even for the execution of custom logic via docker containers. This allows small agile teams to reuse existing skills and to develop in a fit-for-purpose fashion. It also provides you with tools to chain together the building blocks you have developed. And the best: It is open and can run anywhere to avoid any kind of vendor lock-in.
+It allows [developers]({{ site.github.url }}/developers) to focus on quickly developing value-adding code by providing them with a flexible programming model that allows to develop in different languages, by providing access to a rich service ecosystem of event emitters and consumers from different vendors falling into different domains like analytics, cognitive,data, mobile, IoT and so forth, and by relieving them from the need to worry about complex low-level infrastructural and operational tasks.
+
+It makes it easy for [service integrators]({{ site.github.url }}/service-integrators) to let their service become part of Apache OpenWhisk’s ecosystem to drive traffic & usage.
+
+It allows [open-source contributors]({{ site.github.url }}/contributors) to become part of a strong community, to learn something new, and to broaden their skillset.
