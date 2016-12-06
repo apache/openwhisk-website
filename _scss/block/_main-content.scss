@@ -61,6 +61,23 @@
       color: $color-gray-dark;
       font-size: 1.125rem;
     }
+
+    /* Nested selectors AND an ID? I’m so sorry... */
+    #markdown-toc {
+      padding-left: 1.25rem;
+
+      a {
+        color: $color-blue-dark-text;
+        font-size: 1.125rem;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   &__title {
