@@ -1,10 +1,3 @@
 #!/bin/bash
 
-export SSL="true"
-export JEKYLL_GITHUB_TOKEN='5f411973a44b84b54d7af7aee4a4a1884a561adf'
-export PAGES_REPO_NWO='bluemix/develop.ibm.com-openwhisk'
-export OCTOKIT_API_ENDPOINT='https://github.ibm.com/api/v3'
-export OCTOKIT_WEB_ENDPOINT='https://github.ibm.com'
-export PAGES_PAGES_HOSTNAME='https://pages.github.ibm.com'
-
 bundle exec jekyll serve
