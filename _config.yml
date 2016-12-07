@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: OpenWhisk | Cloud-first distributed event-based programming service
+title: Apache OpenWhisk is a serverless, open source cloud platform
 email: jason.lengstorf@ibm.com
 description: >
   Write an awesome description for your new site here. You can edit this

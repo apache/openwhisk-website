@@ -1,4 +1,4 @@
-# Contributing to OpenWhisk
+# Contributing to Apache OpenWhisk
 
 We welcome contributions, but request you follow these guidelines.
 
