@@ -38,3 +38,4 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - src/
