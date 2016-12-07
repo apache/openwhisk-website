@@ -1,9 +1,13 @@
 ---
 layout: about
-title: What Is OpenWhisk?
+title: What Is Apache OpenWhisk?
 youtube_video_id: enk45wEQHzI
 ---
 
-OpenWhisk is a cloud-first distributed event-based programming service. It represents an event-action platform that allows you to execute code in response to an event.
+Apache OpenWhisk is a [serverless]({{ site.github.url }}/serverless), open-source cloud platform that allows you to execute code in response to events at any scale. We handle the infrastructure and servers — you can focus on building amazing things.
 
-OpenWhisk provides you with a serverless deployment and operations model hiding infrastructural complexity and allowing you to simply provide the code you want us to execute. It provides you with a fair pricing model at any scale, where we provide you with exactly the resources – not more not less – you need and only charge you for code really running. It offers a flexible programming model. incl. support for languages like NodeJS and Swift and even for the execution of custom logic via docker containers. This allows small agile teams to reuse existing skills and to develop in a fit-for-purpose fashion. It also provides you with tools to chain together the building blocks you have developed. And the best: It is open and can run anywhere to avoid any kind of vendor lock-in.
+Apache OpenWhisk allows [developers]({{ site.github.url }}/developers) to focus on writing value-adding code instead of burning hours on architecture and server management. Write in your preferred language to combine custom code with plug-and-play packages from our rich ecosystem of partner services, and go live in hours instead of weeks.
+
+[Service integrators]({{ site.github.url }}/service-integrators) can easily add their service to Apache OpenWhisk’s growing ecosystem to eliminate the need to build in-house solutions for third-party integrations, reach a broader community of developers, and increase adoption of their products and services.
+
+The Apache OpenWhisk community is driven by [open-source contributors]({{ site.github.url }}/contributors) who are advancing this bleeding-edge technology, growing their skillsets, and pushing the boundaries of serverless technology.

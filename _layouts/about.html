@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="site-section">
+<section class="site-section site-section--gray">
   <div class="main-content">
     <h1 class="main-content__title">
       {{ page.title }}
@@ -22,9 +22,9 @@ layout: default
     </div>
   </div>
 </section>
-<section class="site-section site-section--gray">
+<section class="site-section">
   <div class="main-content">
-    <h2 class="main-content__heading">High-Level Architecture</h2>
+    <h2 class="main-content__heading">High-Level Programming Model</h2>
     <div class="main-content__columns">
       <div class="main-content__column">
         <img class="main-content__image"
@@ -36,29 +36,38 @@ layout: default
           Event Sources
         </h3>
         <p class="main-content__text main-content__text--no-top-margin">
-          Bacon ipsum dolor amet kevin proident prosciutto brisket, ea esse
-          chicken pork pork loin veniam irure laborum jerky id in.
+          Event sources, such as devices, queues, databases, and webhooks, emit
+          classes of events in the form of triggers.
         </p>
         <h3 class="main-content__sub-heading">
           Triggers
         </h3>
         <p class="main-content__text main-content__text--no-top-margin">
-          Sint non pig ham hock andouille shankle biltong tail. Ground round
-          salami pork belly, officia sunt tenderloin corned beef.
-        </p>
-        <h3 class="main-content__sub-heading">
-          Rules
-        </h3>
-        <p class="main-content__text main-content__text--no-top-margin">
-          Veniam esse incididunt lorem alcatra salami consequat mollit jerky ut
-          reprehenderit brisket tongue.
+          Triggers are the class of events (including device readings, published
+          messages, and data changes) that are emitted by event sources.
         </p>
         <h3 class="main-content__sub-heading">
           Actions
         </h3>
         <p class="main-content__text main-content__text--no-top-margin">
-          Enim hamburger nostrud, labore et in consectetur deserunt t-bone
-          adipisicing. Est capicola turducken, tempor porchetta.
+          Actions are functions that encapsulate code – written in any supported
+          language by implementing a single method signature – to be executed in
+          response to a trigger.
+        </p>
+        <h3 class="main-content__sub-heading">
+          Rules
+        </h3>
+        <p class="main-content__text main-content__text--no-top-margin">
+          Rules represent the declarative association between a trigger and an
+          action, defining which action(s) should be executed in response to
+          an event.
+        </p>
+        <h3 class="main-content__sub-heading">
+          Packages
+        </h3>
+        <p class="main-content__text main-content__text--no-top-margin">
+          Packages encapsulate external services in a reusable manner and
+          assemble them into triggers and actions.
         </p>
       </div>
     </div>
