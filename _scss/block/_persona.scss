@@ -1,0 +1,51 @@
+.persona {
+  display: flex;
+  justify-content: space-between;
+  max-width: $max-width-lg;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__heading {
+    margin-top: 0;
+  }
+
+  &__text {
+    flex: 4;
+    order: 2;
+  }
+
+  &__lede {
+    margin-top: 0.5rem;
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+
+    &--more-top-margin {
+      margin-top: 3.75rem;
+    }
+  }
+
+  &__column {
+    flex: 1;
+    max-width: 45%;
+    margin-top: 0;
+  }
+
+  &__cta {
+    flex: 1;
+    order: 1;
+    margin-right: 5rem;
+  }
+
+  &__illustration {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__button {
+    display: block;
+  }
+}

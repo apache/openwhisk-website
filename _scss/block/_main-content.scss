@@ -1,0 +1,116 @@
+.main-content {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3.5rem 0;
+
+  &--center {
+    text-align: center;
+  }
+
+  @media (min-width: $max-width-lg) {
+    max-width: $max-width-lg;
+  }
+
+  &__columns {
+    @media (min-width: $breakpoint-md) {
+      @supports (display: flex) {
+        display: flex;
+        justify-content: space-between;
+
+        &--reverse {
+          flex-direction: row-reverse;
+          text-align: right;
+        }
+
+        &--vertical-center {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__column {
+    @media (min-width: $breakpoint-md) {
+      @supports (display: flex) {
+        flex: 1;
+        max-width: 48%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  /*
+   * Shit gets weird in here, because this is where we have to style
+   * Mardown-generated user content.
+   */
+  &__body-content {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    > p:first-child {
+      color: $color-gray-dark;
+      font-size: 1.125rem;
+    }
+
+    /* Nested selectors AND an ID? I’m so sorry... */
+    #markdown-toc {
+      padding-left: 1.25rem;
+
+      a {
+        color: $color-blue-dark-text;
+        font-size: 1.125rem;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__title {
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    &--no-top-margin {
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 1.5rem;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+
+    &--float-right {
+      @media (min-width: $breakpoint-md) {
+        float: right;
+        margin: 0 0 1rem 3rem;
+      }
+    }
+  }
+
+  &__video {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

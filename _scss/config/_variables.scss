@@ -1,0 +1,36 @@
+/*
+ * # Sizing
+ */
+$max-width-lg: 940px;
+
+/*
+ * # Colors
+ */
+$color-blue-ultralight: #dcf0ff;
+$color-blue-light: #90e5fd;
+$color-blue-dark-text: #29648f;
+$color-blue-dark: #29558f;
+$color-blue-hover: transparentize($color-blue-dark, 0.94);
+$color-gray-light: #f0f8fd;
+$color-gray-medium: #3b667d;
+$color-gray-dark: #152934;
+$color-green-light: #6eedd8;
+$color-white: #fff;
+$color-gradient-start: #ccdaff;
+$color-gradient-end: #00fff7;
+
+/*
+ * # Fonts
+ */
+$font-family-heading: 'Lato', sans-serif;
+$font-family-default: 'Helvetica Neue for IBM', 'Helvetica Neue', 'Helvetica', 'Arial', 'Roboto', sans-serif;
+$font-weight-default: 300;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+/*
+ * # Responsive
+ */
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 980px;
