@@ -6,19 +6,8 @@ layout: default
     <h1 class="main-content__title">
       {{ page.title }}
     </h1>
-    <div class="main-content__columns">
-      <div class="main-content__column">
-        <div class="main-content__body-content">
-          {{ content }}
-        </div>
-      </div>
-      <div class="main-content__column">
-        <div class="u-embed-container">
-          <iframe width="560" height="315"
-                  src="https://www.youtube.com/embed/{{ page.youtube_video_id }}"
-                  frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
+    <div class="main-content__body-content">
+      {{ content }}
     </div>
   </div>
 </section>
