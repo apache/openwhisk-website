@@ -9,7 +9,7 @@ title: Frequently Asked Questions
 
 Event-driven programming follows a paradigm in which the flow of an application is determined by events such as user actions, sensor outputs, or messages from other applications or services.
 
-Serverless computing refers to a model where the existence of servers is simply hidden from developers. I.e. that even though servers still exist developers are relieved from the need to care about their operation. Learn more [here](https://ibm.biz/Bd4jBQ).
+Serverless computing refers to a model where the existence of servers is simply hidden from developers. I.e. that even though servers still exist developers are relieved from the need to care about their operation. Learn more [here]({{ site.github.url }}/serverless).
 
 ### What problems does OpenWhisk solve? What can you do with OpenWhisk?
 
@@ -21,31 +21,11 @@ OpenWhisk has been made available as open-source to encourage others to particip
 
 ### Which offerings are available?
 
-OpenWhisk is available – currently as experimental offering – for IBM Bluemix that can be found [here](https://ibm.biz/Bd4cuB) as well as open-source offering that can be found [here](https://ibm.biz/Bd4jBU).
-
-### Why wouldn’t I just get the corresponding open-source code OpenWhisk is build on and run it myself? What added value does IBM Bluemix provide?
-
-One of the key values of our offering for IBM Bluemix is that there is no infrastructure to stand up and maintain even though OpenWhisk does of course need servers & databases behind the scenes to execute the containers that run your code to make developers’ experience serverless.
-
-### When will OpenWhisk for IBM Bluemix be beta/GA?
-
-Our current focus is building a vibrant a community to make OpenWhisk a success. Exact timelines (for beta/GA) are not yet available, but we will updated as soon as possible.
-
-### Is OpenWhisk for IBM Bluemix able to scale and performant to support enterprise apps?
-
-Even though OpenWhisk is still experimental we have extensively tested the performance to ensure that we delight all of our users already on day one with a system that scales according to the demand of their applications. There are safe guards build into the system so that one users’ demand does not adversely impact others.
-
-### Which support is provided with OpenWhisk particularly for mobile back-ends and front-ends?
-
-Currently we provide an [iOS SDK](https://ibm.biz/Bd4jBN) to help to build your mobile front-ends as well as Swift support to help to build your mobile back-ends.
-
-### Which IBM Bluemix services is OpenWhisk best paired with?
-
-Initially we support the integration with some of the Watson cognitive services, the Weather service, Cloudant as well as with Slack and Git.
+OpenWhisk is available – currently as experimental offering – for IBM Bluemix that can be found [here](https://console.ng.bluemix.net/openwhisk/) as well as open-source offering that can be found [here](https://github.com/openwhisk/openwhisk).
 
 ### Can I enable my own services for OpenWhisk?
 
-Absolutely, we even encourage you to do so. Packages represent the concept allowing you to enable your own services; learn more [here](https://ibm.biz/Bd4jBt).
+Absolutely, we even encourage you to do so. Packages represent the concept allowing you to enable your own services; learn more [here](https://github.com/openwhisk/openwhisk/blob/master/docs/packages.md).
 
 ### Which programming languages/runtimes does OpenWhisk support?
 
@@ -53,34 +33,32 @@ Currently, OpenWhisk supports NodeJS and Swift; more languages will be supported
 
 ### When should I use OpenWhisk versus VMs, Containers, or Cloud Foundry apps?
 
-While VMs still provide you with maximum flexibility and control by allowing you to pick whatever CPU, memory, or storage you want, OpenWhisk makes it easy to get started. Despite that, if you want to scale on demand and don’t care about having access to your infrastructure to change configurations OpenWhisk may be a great choice. Learn more [here](https://ibm.biz/Bd4jBh).
-
-### What does OpenWhisk cost?
-
-The open-source offering is available for free.
-
-The experimental offering for IBM Bluemix is available for free, too. The exact prices for the final offering for IBM Bluemix are not yet available, but we will released as soon as possible.
+While VMs still provide you with maximum flexibility and control by allowing you to pick whatever CPU, memory, or storage you want, OpenWhisk makes it easy to get started. Despite that, if you want to scale on demand and don’t care about having access to your infrastructure to change configurations OpenWhisk may be a great choice. Learn more [here](https://www.ibm.com/blogs/bluemix/2015/08/bluemix-instant-runtimes-containers-or-virtual-machines/).
 
 ### Where can I go to learn more?
 
-You have already found the right place to learn more. For instance, browse through the resources we have pulled together here, read the blog posts we have made available [here](https://ibm.biz/Bd4jBJ), or read the articles we have listed [here](https://ibm.biz/Bd4jBu).
+We have a collection of blog posts available [on Medium](https://medium.com/openwhisk).
 
 ### Are there videos, demos, or sample code that I can have a look at?
 
-Absolutely. Videos can be found [here](https://ibm.biz/Bd4cJg), sample code [here](https://ibm.biz/Bd4cA7). Also check out this cool sample application to get an impression of what can be build using OpenWhisk.
+Absolutely. Videos can be found [on YouTube](https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA). We also have a collection of [resources on GitHub](https://github.com/openwhisk/awesome-openwhisk/) to help get you started.
 
 ### Who are the OpenWhisk open-source partners?
 
-At the moment we are discussing with different potential partners; we will provide a list of partners [here](https://ibm.biz/Bd4jBT) as soon as possible.
+Check out our [partners page]({{ site.github.url }}/partners) for information about Apache OpenWhisk partners.
 
 ### How do I get involved?
 
-If you are interested in contributing to our OpenWhisk project itself, or interested in providing services, learn more about how you can get involved [here](https://ibm.biz/Bd4cuR).
+If you are interested in contributing to our OpenWhisk project itself, or interested in providing services, [learn more about how you can become a contributor]({{ site.github.url }}/contributors).
 
 ### Need another question answered?
 
-For questions, hints and tips for developing in OpenWhisk, check out StackOverflow: [#openwhisk](https://ibm.biz/Bd4cAM).
+For questions, hints and tips for developing in Apache OpenWhisk:
 
-You can also ask questions and follow along in the forum at [OpenWhisk Forum](https://ibm.biz/Bd4cu4).
-
-**Learn more about OpenWhisk by reviewing the articles available [here](http://developer.ibm.com/openwhisk/media#openwhisk).**
+- [Apache OpenWhisk on GitHub](https://github.com/openwhisk)
+- [Posts tagged with #openwhisk on StackOverflow](http://stackoverflow.com/questions/tagged/openwhisk)
+- [Apache OpenWhisk on Medium](https://medium.com/openwhisk)
+- [@openwhisk on Twitter](https://twitter.com/openwhisk)
+- [Video resources on YouTube](https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA)
+- [Presentations on SlideShare](http://www.slideshare.net/OpenWhisk)
+- [OpenWhisk on Slack](http://slackindwo.mybluemix.net/)
