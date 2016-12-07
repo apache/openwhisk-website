@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>{{ site.title }}</title>
+    <title>{% if page.seo_title %}{{ page.seo_title }}{% else if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,700,900">
     <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
   </head>
