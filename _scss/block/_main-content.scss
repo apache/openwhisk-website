@@ -23,6 +23,7 @@
     @media (min-width: $breakpoint-md) {
       @supports (display: flex) {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
 
         &--reverse {
@@ -42,7 +43,17 @@
       @supports (display: flex) {
         flex: 1;
         max-width: 48%;
+        margin-bottom: 3.25rem;
         margin-top: 0;
+
+        &--3-across {
+          max-width: 30%;
+          min-width: 261px;
+        }
+
+        &--gray-light {
+          background-color: $color-gray-light;
+        }
       }
     }
   }
@@ -52,6 +63,11 @@
    * Mardown-generated user content.
    */
   &__body-content {
+    &--partners {
+      margin-top: 0.75rem;
+      font-size: 1.125rem;
+    }
+
     h2 {
       font-size: 1.75rem;
     }
