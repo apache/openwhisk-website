@@ -1,6 +1,5 @@
 .DS*
 _site
 node_modules/
-js/
 .sass-cache
 .jekyll-metadata
