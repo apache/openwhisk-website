@@ -1,6 +1,4 @@
 .quotes {
-  position: relative;
-  height: 27rem;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -15,18 +13,30 @@
     max-width: $max-width-lg;
   }
 
+  &--js-fader {
+    position: relative;
+    height: 27rem;
+  }
+
+  &--compact {
+    padding: 3.75rem 0;
+  }
+
   &__quote {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     margin-top: 0;
     border: 0;
-    opacity: 0;
     padding: 0;
     text-align: center;
-    transition: 200ms opacity linear;
+
+    &--js-fader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: 200ms opacity linear;
+    }
 
     @at-root .no-js & {
       position: static;
@@ -49,12 +59,21 @@
     font-size: 2.25rem;
     font-weight: $font-weight-black;
     line-height: 1.25;
+
+    &--compact {
+      font-size: 1.375rem;
+      font-weight: $font-weight-bold;
+    }
   }
 
   &__attribution {
     color: $color-gray-medium;
     font-size: 1.75rem;
     font-weight: $font-weight-default;
+
+    &--compact {
+      font-size: 1rem;
+    }
   }
 
   &__nav {
