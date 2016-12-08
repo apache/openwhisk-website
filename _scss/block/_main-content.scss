@@ -12,6 +12,13 @@
     max-width: $max-width-lg;
   }
 
+
+  &--narrower {
+    @media (min-width: 660px) {
+      max-width: 600px;
+    }
+  }
+
   &__columns {
     @media (min-width: $breakpoint-md) {
       @supports (display: flex) {
