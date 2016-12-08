@@ -1,20 +1,27 @@
 ---
 title: What Is Serverless Computing, and Why Should I Care?
-image: /images/temp-placeholder.svg
 ---
 
-Apache OpenWhisk is a cloud-first distributed event-based programming service. It represents an event-action platform that allows you to execute code in response to an event.
+Apache OpenWhisk is a serverless, open source cloud platform that executes functions (called actions) in response to events (called triggers) without developer concern for managing the lifecycle or operations of the containers that execute the code.
 
-Serverless computing refers to a model where the existence of servers is simply hidden from developers. I.e. that even though servers still exist developers are relieved from the need to care about their operation. They are relieved from the need to worry about low-level infrastructural and operational details such as scalability, high-availability, infrastructure-security, and so forth. Hence, serverless computing is essentially about reducing maintenance efforts to allow developers to quickly focus on developing value-adding code.
+There are several technical capabilities and business factors coming together to make this approach very compelling from both an application development and deployment cost perspective.
 
-> This is a quote from some twitter, Magazine, or any acredited news source 
-> that states how serverless computing is not just right, it is the future of 
-> cloud.
+> “The most important benefit to me though is the reduced feedback loop of creating new application components - I’m a huge fan of ‘lean’ approaches, largely because I think there is a lot of value in getting technology in front of an end user as soon as possible to get early feedback, and the reduced time-to-market that comes with Serverless fits right in with this philosophy.”
+>
+> **– Mike Roberts, [_Serverless Architectures_](http://martinfowler.com/articles/serverless.html)**
+
+New architectures built on this model are called serverless since a greater number of operational concerns are hidden from the developer and because the compute resources needed for applications are transient, leaving no trace on the bottom line when application code is not running.
+
+The primary benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running.
+
+In the Apache OpenWhisk programming model, the developer focuses solely on the unique features of their application by narrowing the scope of their concern down to smaller units of code – the functions (actions) commonly packaged as single files – that provide their core business logic.
+
+Beyond automatic scale and granular cost model, platforms like OpenWhisk address many of the operations focused 12 Factor best practices on behalf of the developer, making it easier to build cloud native applications like microservices.
+
+> “Serverless will fundamentally change how we build business around technology and how you code.”
 > 
-> **– Some [Tech Magazine News](#link), 2016**
+> **– Simon Wardley, [_Why the fuss about serverless?_](https://hackernoon.com/why-the-fuss-about-serverless-4370b1596da0#.9onv2dko9)**
 
-Serverless computing encourages and simplifies developing microservice-oriented solutions in order to decompose complex applications into small and independent modules that can be easily exchanged.
+Another trend driving this new model of development is the emergence of many more non-web workloads that require the benefits of cloud computing (for example, elasticity, scale, and cost reduction). These IoT, cognitive, batch, and data-driven use cases join HTTP and REST based applications that have long taken advantage of IaaS and PaaS capabilities.
 
-Serverless computing does not refer to a specific technology; instead if refers to the concepts underlying the model described prior. Nevertheless some promising solutions have recently emerged easing development approaches that follow the serverless model – such as Apache OpenWhisk.
-
-For now, learn more about serverless computing by reviewing the articles available [here](http://developer.ibm.com/openwhisk/media#serverless).
+[Learn more about what makes serverless architectures compelling.](https://developer.ibm.com/opentech/2016/09/06/what-makes-serverless-attractive/)
