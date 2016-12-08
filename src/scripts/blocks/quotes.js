@@ -51,6 +51,10 @@ export default function initialize({
 } = {}) {
   const container = document.querySelector(`.${containerClass}`);
 
+  if (!container) {
+    return;
+  }
+
   // Alias these functions and bind the container for brevity.
   const setClass = impure.setClassBySelector.bind(null, container);
   const removeClassFromAll = impure.removeClassFromAll.bind(null, container);
