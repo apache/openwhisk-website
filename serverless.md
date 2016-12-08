@@ -6,17 +6,17 @@ Apache OpenWhisk is a serverless, open source cloud platform that executes funct
 
 There are several technical capabilities and business factors coming together to make this approach very compelling from both an application development and deployment cost perspective.
 
+Key benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running. 
+
 > “The most important benefit to me though is the reduced feedback loop of creating new application components - I’m a huge fan of ‘lean’ approaches, largely because I think there is a lot of value in getting technology in front of an end user as soon as possible to get early feedback, and the reduced time-to-market that comes with Serverless fits right in with this philosophy.”
 >
 > **– Mike Roberts, [_Serverless Architectures_](http://martinfowler.com/articles/serverless.html)**
 
 New architectures built on this model are called serverless since a greater number of operational concerns are hidden from the developer and because the compute resources needed for applications are transient, leaving no trace on the bottom line when application code is not running.
 
-The primary benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running.
-
 In the Apache OpenWhisk programming model, the developer focuses solely on the unique features of their application by narrowing the scope of their concern down to smaller units of code – the functions (actions) commonly packaged as single files – that provide their core business logic.
 
-Beyond automatic scale and granular cost model, platforms like OpenWhisk address many of the operations focused 12 Factor best practices on behalf of the developer, making it easier to build cloud native applications like microservices.
+Beyond automatic scale and granular cost model which tie business operations directly to resources consumed, platforms like OpenWhisk address many of the operations-focused 12 Factor best practices on behalf of the developer, making it easier to build and deploy cloud native applications like microservices.
 
 > “Serverless will fundamentally change how we build business around technology and how you code.”
 > 
