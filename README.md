@@ -6,6 +6,8 @@ Apache OpenWhisk is a cloud-first distributed event-based programming service. I
 
 ## Quickstart for Local Development
 
+**NOTE:** This site is built with [Jekyll](https://jekyllrb.com/), so you'll need to run `gem install jekyll` if you don't have it installed already.
+
 ``` sh
 # Clone the repository (and correct branch).
 git clone https://github.com/openwhisk/openwhisk.github.io.git
