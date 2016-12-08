@@ -4,8 +4,8 @@ import fadeSliderInit from './blocks/quotes';
 document.body.classList.remove('no-js');
 
 fadeSliderInit({
-  containerClass: 'quotes',
-  slideClass: 'quotes__quote',
+  containerClass: 'quotes--js-fader',
+  slideClass: 'quotes__quote--js-fader',
   slideActiveClass: 'quotes__quote--active',
   linkClass: 'quotes__nav-link',
   linkActiveClass: 'quotes__nav-link--active',
