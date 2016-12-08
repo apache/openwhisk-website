@@ -80,10 +80,49 @@
     }
   }
 
+  /* Oh god, there’s more?! */
+  &__events {
+    h2 {
+      color: $color-blue-dark-text;
+      font-size: 1.125rem;
+    }
+
+    h3 {
+      margin-top: 3rem;
+      color: $color-gray-light-text;
+      font-size: 0.875rem;
+      font-weight: $font-weight-bold;
+    }
+
+    h2 + h3 {
+      margin-top: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid transparentize($color-gray-medium, 0.75);
+      font-size: 1.125rem;
+      padding: 1rem 0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
   &__title {
     &:not(:first-child) {
       margin-top: 0;
     }
+  }
+
+  &__lede {
+    font-family: $font-family-heading;
+    font-size: 1.75rem;
   }
 
   &__text {
