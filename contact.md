@@ -19,3 +19,5 @@ To create a new thread, send a message to:<br>
 <dev@openwhisk.incubator.apache.org>
 
 To comment on a thread, reply to the message.
+
+To see existing messages, [check out the archive](http://mail-archives.apache.org/mod_mbox/incubator-openwhisk-dev/).
