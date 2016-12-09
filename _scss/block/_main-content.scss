@@ -8,7 +8,7 @@
     text-align: center;
   }
 
-  @media (min-width: $max-width-lg) {
+  @media (min-width: $breakpoint-lg) {
     max-width: $max-width-lg;
   }
 
@@ -58,11 +58,11 @@
           max-width: 30%;
           min-width: 261px;
         }
-
-        &--gray-light {
-          background-color: $color-gray-light;
-        }
       }
+    }
+
+    &--gray-light {
+      background-color: $color-gray-light;
     }
 
     &--centered {

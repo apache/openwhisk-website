@@ -1,11 +1,20 @@
 .why-are-we-here {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
   padding: 0;
+
+  @media (min-width: $breakpoint-md) {
+    @supports (display: flex) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 880px) {
+    max-width: 800px;
+  }
 
   &__card {
     position: relative;
@@ -13,12 +22,9 @@
   }
 
   &__section-link {
-    flex: 1;
     display: block;
-    min-height: 8.5rem;
-    width: 250px;
-    margin-top: 12rem;
-    padding: 3rem 1rem 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
     background: $color-white;
     border: 5px solid transparent;
     color: $color-blue-dark-text;
@@ -30,43 +36,58 @@
     transition: 150ms all linear;
     z-index: 2;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+    @media (min-width: $breakpoint-md) {
+      min-height: 8.5rem;
+      width: 225px;
+      margin-top: 12rem;
+      padding-top: 3rem;
+
+      @supports (display: flex) {
+        flex: 1;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &::before {
+        height: 14rem;
+        top: 0.25rem;
+        transition: 250ms top ease-in-out;
+        z-index: 3;
+      }
+
+      &::after {
+        background-image: url(../images/icon-chevron-down.svg);
+        bottom: 0;
+        height: 1.125rem;
+        opacity: 0;
+        transition: 150ms all ease-in-out;
+        z-index: 0;
+      }
+
+      &--developers::before {
+        background-image: url(../images/persona-developer-torso.svg);
+      }
+
+      &--service-integrations::before {
+        background-image: url(../images/persona-integrator-torso.svg);
+      }
+
+      &--contributors::before {
+        background-image: url(../images/persona-contributor-torso.svg);
+      }
     }
 
-    &::before {
-      height: 14rem;
-      top: 0.25rem;
-      transition: 250ms top ease-in-out;
-      z-index: 3;
-    }
-
-    &::after {
-      background-image: url(../images/icon-chevron-down.svg);
-      bottom: 0;
-      height: 1.125rem;
-      opacity: 0;
-      transition: 150ms all ease-in-out;
-      z-index: 0;
-    }
-
-    &--developers::before {
-      background-image: url(../images/persona-developer-torso.svg);
-    }
-
-    &--service-integrations::before {
-      background-image: url(../images/persona-integrator-torso.svg);
-    }
-
-    &--contributors::before {
-      background-image: url(../images/persona-contributor-torso.svg);
+    @media (min-width: $breakpoint-lg) {
+      width: 250px;
     }
 
     &:hover,
