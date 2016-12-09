@@ -1,4 +1,9 @@
 .site-footer {
   margin-top: 0;
+  padding: 0.5rem 0;
   background-color: $color-blue-dark;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 0;
+  }
 }
