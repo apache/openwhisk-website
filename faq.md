@@ -50,12 +50,13 @@ Check out our [partners page]({{ site.github.url }}/partners) for information ab
 
 ### How do I get involved?
 
-If you are interested in contributing to our OpenWhisk project itself, or interested in providing services, [learn more about how you can become a contributor]({{ site.github.url }}/contributors).
+If you are interested in contributing to our OpenWhisk project itself, or interested in providing services, [join our mailing list]({{ site.github.url }}/contact) and [learn more about how you can become a contributor]({{ site.github.url }}/contributors).
 
 ### Need another question answered?
 
 For questions, hints and tips for developing in Apache OpenWhisk:
 
+- [Join the Dev Mailing List]({{ site.github.url }}/contact)
 - [Apache OpenWhisk on GitHub](https://github.com/openwhisk)
 - [Posts tagged with #openwhisk on StackOverflow](http://stackoverflow.com/questions/tagged/openwhisk)
 - [Apache OpenWhisk on Medium](https://medium.com/openwhisk)

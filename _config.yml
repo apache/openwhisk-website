@@ -16,11 +16,19 @@
 title: Apache OpenWhisk is a serverless, open source cloud platform
 email: jason.lengstorf@ibm.com
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  An open source platform for serverless, event-driven code at any scale.
+  We handle the infrastructure & servers so you can focus on building
+  amazing things.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+seo:
+  default_image: /images/apache-openwhisk@2x.jpg
+  facebook:
+    app_id: 176365419499478
+  twitter:
+    card_type: summary_large_image
+    username: openwhisk
 
 defaults:
   - scope:
