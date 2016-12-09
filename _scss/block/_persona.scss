@@ -1,17 +1,30 @@
 .persona {
-  display: flex;
-  justify-content: space-between;
-  max-width: $max-width-lg;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $breakpoint-md) {
+    @supports (display: flex) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: $max-width-lg;
+  }
 
   &__heading {
     margin-top: 0;
   }
 
   &__text {
-    flex: 4;
-    order: 2;
+    @media (min-width: $breakpoint-md) {
+      @supports (display: flex) {
+        flex: 4;
+        order: 2;
+      }
+    }
   }
 
   &__lede {
@@ -19,8 +32,12 @@
   }
 
   &__columns {
-    display: flex;
-    justify-content: space-between;
+    @media (min-width: $breakpoint-sm) {
+      @supports (display: flex) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
 
     &--more-top-margin {
       margin-top: 3.75rem;
@@ -28,21 +45,46 @@
   }
 
   &__column {
-    flex: 1;
-    max-width: 45%;
-    margin-top: 0;
+    &:not(:first-child) {
+      margin-top: 3rem;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      @supports (display: flex) {
+        flex: 1;
+        max-width: 45%;
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
   }
 
-  &__cta {
-    flex: 1;
-    order: 1;
-    margin-right: 5rem;
-  }
-
-  &__illustration {
+  &__benefit-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &__cta {
+    @media (min-width: $breakpoint-md) {
+      @supports (display: flex) {
+        flex: 1;
+        order: 1;
+        margin-right: 5rem;
+      }
+    }
+  }
+
+  &__illustration {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $breakpoint-md) {
+      display: block;
+    }
   }
 
   &__button {
