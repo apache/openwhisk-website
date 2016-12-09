@@ -8,7 +8,7 @@ There are several technical capabilities and business factors coming together to
 
 Key benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running. 
 
-> “The most important benefit to me though is the reduced feedback loop of creating new application components - I’m a huge fan of ‘lean’ approaches, largely because I think there is a lot of value in getting technology in front of an end user as soon as possible to get early feedback, and the reduced time-to-market that comes with Serverless fits right in with this philosophy.”
+> “The most important benefit to me [...] is the reduced feedback loop of creating new application components - I’m a huge fan of ‘lean’ approaches, largely because I think there is a lot of value in getting technology in front of an end user as soon as possible to get early feedback, and the reduced time-to-market that comes with Serverless fits right in with this philosophy.”
 >
 > **– Mike Roberts, [_Serverless Architectures_](http://martinfowler.com/articles/serverless.html)**
 
