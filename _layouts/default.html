@@ -1,18 +1,19 @@
+{% if page.seo_title %}
+  {% assign page_title = page.seo_title %}
+{% else if page.title %}
+  {% assign page_title = page.title %}
+{% else %}
+  {% assign page_title = site.title %}
+{% endif %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.github.url }}/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="{{ site.github.url }}/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ site.github.url }}/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="{{ site.github.url }}/images/favicon/manifest.json">
-    <link rel="mask-icon" href="{{ site.github.url }}/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="{{ site.github.url }}/images/favicon/favicon.ico">
-    <meta name="msapplication-config" content="{{ site.github.url }}/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <title>{% if page.seo_title %}{{ page.seo_title }}{% else if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% include head/favicon.html %}
+    <title>{{ page_title }}</title>
+    {% include head/seo/all.html %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,700,900">
     <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
   </head>

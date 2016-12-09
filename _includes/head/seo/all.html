@@ -1,0 +1,25 @@
+{% if page.url == '/' %}
+  {% capture seo_type %}website{% endcapture %}
+{% else %}
+  {% capture seo_type %}article{% endcapture %}
+{% endif %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% else if page.title %}
+  {% assign seo_title = page.title %}
+{% else %}
+  {% assign seo_title = site.title %}
+{% endif %}
+{% if page.seo_description %}
+  {% assign seo_description = page.seo_description %}
+{% else %}
+  {% assign seo_description = site.description %}
+{% endif %}
+{% if page.seo_image %}
+  {% assign seo_image = page.seo_image %}
+{% else %}
+  {% assign seo_image = site.github.url | append: site.seo.default_image %}
+{% endif %}
+{% include head/seo/json-ld.html %}
+{% include head/seo/opengraph.html %}
+{% include head/seo/twitter.html %}

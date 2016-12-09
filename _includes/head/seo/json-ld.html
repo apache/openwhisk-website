@@ -1,0 +1,10 @@
+{% if seo_type == 'article' %}
+  {% assign seo_type = 'WebPage' %}
+{% endif %}
+    <script type="application/ld+json">{
+      "@context":"http://schema.org",
+      "@type": "{{ seo_type }}",
+      "url": "{{ seo_url }}",
+      "image": "{{ seo_image }}",
+      "name": "{{ seo_title }}"
+    }</script>
