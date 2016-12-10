@@ -18,11 +18,11 @@ OpenWhisk abstracts away all infrastructure and operational concerns, allowing d
 
 ### How is it open?
 
-OpenWhisk has been made available as open-source to encourage others to participate to accelerate its development and to help generating a powerful ecosystem of event providers and consumers.
+OpenWhisk has been made available as open source to encourage others to participate to accelerate its development and to help generating a powerful ecosystem of event providers and consumers.
 
 ### Which offerings are available?
 
-OpenWhisk is available – currently as experimental offering – for IBM Bluemix that can be found [here](https://console.ng.bluemix.net/openwhisk/) as well as open-source offering that can be found [here](https://github.com/openwhisk/openwhisk).
+OpenWhisk is available – currently as experimental offering – for IBM Bluemix that can be found [here](https://console.ng.bluemix.net/openwhisk/) as well as open source offering that can be found [here](https://github.com/openwhisk/openwhisk).
 
 ### Can I enable my own services for OpenWhisk?
 
@@ -44,7 +44,7 @@ We have a collection of blog posts available [on Medium](https://medium.com/open
 
 Absolutely. Videos can be found [on YouTube](https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA). We also have a collection of [resources on GitHub](https://github.com/openwhisk/awesome-openwhisk/) to help get you started.
 
-### Who are the OpenWhisk open-source partners?
+### Who are the OpenWhisk open source partners?
 
 Check out our [partners page]({{ site.github.url }}/partners) for information about Apache OpenWhisk partners.
 
