@@ -16,7 +16,7 @@ New architectures built on this model are called serverless since a greater numb
 
 In the Apache OpenWhisk programming model, the developer focuses solely on the unique features of their application by narrowing the scope of their concern down to smaller units of code – the functions (actions) commonly packaged as single files – that provide their core business logic.
 
-Beyond automatic scale and granular cost model which tie business operations directly to resources consumed, platforms like OpenWhisk address many of the operations-focused 12 Factor best practices on behalf of the developer, making it easier to build and deploy cloud native applications like microservices.
+Beyond automatic scale and granular cost model which tie business operations directly to resources consumed, platforms like OpenWhisk address many of the operations-focused [12 Factor](https://12factor.net/) best practices on behalf of the developer, making it easier to build and deploy cloud native applications like microservices.
 
 > “Serverless will fundamentally change how we build business around technology and how you code.”
 > 
