@@ -11,10 +11,18 @@ lede: We have been busy spreading the word.
 - **Build a cloud native app with OpenWhisk** ([Daniel Krook presents an overview of serverless architectures and dive into the OpenWhisk programming model](https://developer.ibm.com/tv/build-a-cloud-native-app-with-openwhisk-event-registration/))
   December 14th, Virtual
 
+### February 2017
+
+- **TopConf Linz** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://topconf.com/linz-2017/)) February 28th - March 2nd 2017, Linz, Austria
+
 ### March 2017
 
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/))
   March 19th–23rd, Las Vegas, NV, USA
+
+### March 2017
+
+- **Codemotion Amsterdam** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://amsterdam2017.codemotionworld.com/)) May 16th - 17th 2017, Amsterdam, Holland
 
 ## Past Events
 
