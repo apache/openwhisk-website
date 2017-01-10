@@ -5,7 +5,7 @@ youtube_video_id: enk45wEQHzI
 ---
 
 Apache OpenWhisk is a [serverless]({{ site.github.url }}/serverless), open 
-source cloud platform that allows you to execute code in response to events at any scale. We handle the infrastructure and servers — you can focus on building amazing things.
+source cloud platform that allows you to execute code in response to events at any scale. OpenWhisk handles the infrastructure and servers so you can focus on building amazing things.
 
 Apache OpenWhisk allows [developers]({{ site.github.url }}/developers) to focus on writing value-adding code instead of burning hours on architecture and server management. Write in your preferred language to combine custom code with plug-and-play packages from our rich ecosystem of partner services, and go live in hours instead of weeks.
 
