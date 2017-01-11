@@ -52,6 +52,10 @@ Check out our [partners page]({{ site.github.url }}/partners) for information ab
 
 If you are interested in contributing to our OpenWhisk project itself, or interested in providing services, [join our mailing list]({{ site.github.url }}/contact) and [learn more about how you can become a contributor]({{ site.github.url }}/contributors).
 
+### How do I report a problem with this site or suggest an improvement for its content?
+
+You can [submit an issue to the GitHub repository](https://github.com/openwhisk/openwhisk.github.io/issues) for this site. You can also [submit a pull request if you have signed the Apache ICLA](https://github.com/openwhisk/openwhisk.github.io/blob/master/CONTRIBUTING.md).
+
 ### Need another question answered?
 
 For questions, hints and tips for developing in Apache OpenWhisk:
