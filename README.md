@@ -20,6 +20,19 @@ cd openwhisk.github.io
 bin/develop
 ```
 
+## How to Build Jekyll to Output Static Files
+
+If you need to generate static files, run the following:
+
+``` sh
+# NOTE: Make sure you have already cloned the repo and moved into the directory.
+
+# Build the site.
+bundle exec jekyll build
+```
+
+This will build static files to a directory called `_site/` in the project root. This can be used for manual deployment to a static server or with build tools like Jenkins.
+
 ### License
 
 Copyright 2016 IBM Corporation
