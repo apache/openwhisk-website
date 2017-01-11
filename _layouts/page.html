@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="site-section">
-  <div class="main-content main-content--narrower">
+  <div class="main-content">
     {% if page.image %}
       {% assign maybe_protocol = page.image | slice: 0, 4 %}
       {% if maybe_protocol == 'http' %}
