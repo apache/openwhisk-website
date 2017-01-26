@@ -67,4 +67,4 @@ For questions, hints and tips for developing in Apache OpenWhisk:
 - [@openwhisk on Twitter](https://twitter.com/openwhisk)
 - [Video resources on YouTube](https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA)
 - [Presentations on SlideShare](http://www.slideshare.net/OpenWhisk)
-- [OpenWhisk on Slack](http://slackindwo.mybluemix.net/)
+- [OpenWhisk on Slack](http://slack.openwhisk.org/)
