@@ -7,6 +7,25 @@ Apache OpenWhisk is a cloud-first distributed event-based programming service. I
 
 ## Quickstart for Local Development
 
+## Install Prerequisites
+
+* Download and install Nodejs: see [https://nodejs.org/](https://nodejs.org/)
+* Download and install Ruby: see [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
+
+``` sh
+# Verify Node and Node Package Manager are installed
+node -v
+npm -v
+
+# Verify Ruby is installed
+ruby env
+
+# Install Jekyll
+gem install jekyll
+
+```
+* 
+
 **NOTE:** This site is built with [Jekyll](https://jekyllrb.com/), so you'll need to run `gem install jekyll` if you don't have it installed already.
 
 ``` sh
@@ -32,6 +51,13 @@ bundle exec jekyll build
 ```
 
 This will build static files to a directory called `_site/` in the project root. This can be used for manual deployment to a static server or with build tools like Jenkins.
+
+## Troubleshooting
+
+If you get an error 'bundle: command not found' attempting to build the site, you may need to manually install the 'bundler' package:
+``` sh
+ gem install bundler
+```
 
 ### License
 
