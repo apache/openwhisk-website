@@ -24,7 +24,6 @@ ruby env
 gem install jekyll
 
 ```
-* 
 
 **NOTE:** This site is built with [Jekyll](https://jekyllrb.com/), so you'll need to run `gem install jekyll` if you don't have it installed already.
 
