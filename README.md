@@ -6,7 +6,7 @@ Apache OpenWhisk is a cloud-first distributed event-based programming service. I
 
 ## Quickstart for Local Development
 
-## Install Prerequisites
+### Install Prerequisites
 
 * Download and install Nodejs: see [https://nodejs.org/](https://nodejs.org/)
 * Download and install Ruby: see [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
@@ -19,12 +19,12 @@ npm -v
 # Verify Ruby is installed
 ruby env
 
-# Install Jekyll
+# Install Jekyll, which is used to build the site
 gem install jekyll
 
 ```
 
-**NOTE:** This site is built with [Jekyll](https://jekyllrb.com/), so you'll need to run `gem install jekyll` if you don't have it installed already.
+### Clone and start development server
 
 ``` sh
 # Clone the repository (and correct branch).
