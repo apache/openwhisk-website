@@ -88,6 +88,53 @@
       }
     }
 
+    // Encapsulates the entire dropdown nav item.
+    &--dropdown {
+      position: relative;
+      display: inline-block;
+      background-color: $color-white;
+      margin: 0;
+      padding: 0;
+
+      // The top level nav item.
+      &-link {
+        padding: 0.5rem 0.25rem;
+        line-height: 1.5rem;
+
+        @media (min-width: $breakpoint-sm) {
+          padding: 0.5rem;
+        }
+
+        cursor: pointer;
+      }
+
+      // The widget that contains the array of links.
+      &-container {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        margin: 0;
+        padding: 0;
+        //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      // Same as above, but on hover.
+      &:hover &-container {
+        display: block;
+        background-color: $color-white;
+      }
+
+      // Each of the dropdown links.
+      &-item {
+        color: $color-blue-dark;
+        text-align: left;
+        padding: 4px 4px 4px 10px;
+        text-decoration: none;
+        display: block;
+      }
+    }
+
     &:hover,
     &:active,
     &:focus {
