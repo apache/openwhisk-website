@@ -44,9 +44,9 @@ We have a collection of blog posts available [on Medium](https://medium.com/open
 
 Absolutely. Videos can be found [on YouTube](https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA). We also have a collection of [resources on GitHub](https://github.com/openwhisk/awesome-openwhisk/) to help get you started.
 
-### Who are the OpenWhisk open source partners?
+### Who are the OpenWhisk open source supporters?
 
-Check out our [partners page]({{ site.github.url }}/partners) for information about Apache OpenWhisk partners.
+Check out our [supporters page]({{ site.github.url }}/supporters) for information about Apache OpenWhisk supporters.
 
 ### How do I get involved?
 
