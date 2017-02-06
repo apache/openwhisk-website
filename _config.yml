@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Apache OpenWhisk is a serverless, open source cloud platform
-email: dev@openwhisk.apache.org
+email: dev@openwhisk.incubator.apache.org
 description: >
   An open source platform for serverless, event-driven code at any scale.
   We handle the infrastructure & servers so you can focus on building
