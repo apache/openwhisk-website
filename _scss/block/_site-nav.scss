@@ -40,6 +40,10 @@
     }
   }
 
+  &__group  &__item {
+    width: 28px;
+  }
+
   &__item {
     display: inline-block;
     margin-top: 0;
