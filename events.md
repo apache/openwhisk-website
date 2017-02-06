@@ -1,8 +1,10 @@
 ---
 layout: events
 title: Apache OpenWhisk Events
-lede: We have been busy spreading the word.
+lede: Presentations at conferences, meetups, and other events.
 ---
+
+The Apache Software Foundation does not endorse listed events. [Get in touch with us to suggest event listings](/social).
 
 ## Upcoming Events
 
@@ -15,7 +17,10 @@ lede: We have been busy spreading the word.
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/))
   March 19th–23rd, Las Vegas, NV, USA
 
-### March 2017
+- **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
+  March 21st–23rd, Las Vegas, NV, USA
+
+### May 2017
 
 - **Codemotion Amsterdam** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://amsterdam2017.codemotionworld.com/)) May 16th - 17th 2017, Amsterdam, Holland
 
