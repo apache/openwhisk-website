@@ -96,6 +96,10 @@
     }
   }
 
+  &--social &__item {
+    width: 28px;
+  }
+
   &__image {
     display: inline-block;
     width: 100%;
