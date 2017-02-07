@@ -20,8 +20,7 @@ npm -v
 ruby env
 
 # Install Jekyll, which is used to build the site
-gem install jekyll
-
+gem install jekyll bundler
 ```
 
 ### Clone and start development server
@@ -33,7 +32,10 @@ git clone https://github.com/openwhisk/openwhisk.github.io.git
 # Move into the cloned repo.
 cd openwhisk.github.io
 
-# Start the development server.
+# Install gem dependcies
+bundle install
+
+# Start the development server default location http://127.0.0.1:4000
 bin/develop
 ```
 
