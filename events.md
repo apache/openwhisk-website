@@ -10,6 +10,8 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### February 2017
 
+- **London Serverless** ([Building OpenWhisk apps with The Serverless Framework](https://www.twitch.tv/videos/119142073)) February 1st 2017, London, England
+
 - **TopConf Linz** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://topconf.com/linz-2017/)) February 28th - March 2nd 2017, Linz, Austria
 
 ### March 2017
@@ -19,6 +21,9 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
   March 21st–23rd, Las Vegas, NV, USA
+
+- **JS Remote Conf** ([James Thomas talking about OpenWhisk and Serverless](https://devchat.tv/conferences/js-remote-conf-2017)) March 15th-16th, Online
+
 
 ### May 2017
 
