@@ -45,6 +45,7 @@ BAS-3163: Serverless Bots: Create Efficient Inexpensive, Event-Driven Bots with 
 BAS-3397: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk; Tue, 21-Mar 01:30 PM - 05:30 PM; Mandalay Bay South, Level 3 South Seas I1;	Andreas Nauerz (IBM), Carlos Santana (IBM)<br/>
 BCP-2450: Working with IBM OpenWhisk in Bluemix; Mon, 20-Mar 04:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas I1; Budi Darmawan (IBM), Pam Geiger (IBM)<br/>
 BCS-2256: Build Your First Cognitive Chatbot Using OpenWhisk; Wed, 22-Mar 03:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas B; Carlos Santana (IBM), Andreas Nauerz (IBM>
+</details>
 <details><summary>**Hello World Labs**</summary>
 BAS-7070: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the Basics Hands-On Now!;	Wed, 22-Mar	09:00 AM - 12:45 PM; Concourse, Bayside B, Level 1 DevZone Hello World Lab #4; Andreas Nauerz (IBM)
 </details>
