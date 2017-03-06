@@ -68,7 +68,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 </details>
 <details><summary>**Open Labs**</summary>
 <ul>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/9002A" target="_blank">9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!</a>; Mon - Thurs drop In; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
+<li>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!; Mon - Thurs drop In; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
 </details>
 </details>
