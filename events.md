@@ -48,7 +48,7 @@ Tuesday, 3:45 PM - 4:30 PM; South Pacific J; Daniel Krook (IBM), Luis Enriquez (
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6229A" target="_blank">6229A: What's New in IBM API Connect</a><br/>
 Tuesday, 3:45 PM - 4:30 PM; Lagoon H; Pramodh Ramesh (IBM), Amit P. Acharya (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5064A" target="_blank">5064A: OpenWhisk, Adobe, and developerWorks Open for High-Powered Applications</a><br/>
-Wednesday, 8:00 AM - 8:45 AM; South Pacific J; Andreas Nauerz (IBM), Felix Meschberger (Adobe)</li>
+Wednesday, 8:00 AM - 8:45 AM; South Pacific J; Tony Ffrench (IBM), Felix Meschberger (Adobe)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5811A" target="_blank">5811A: Managing Video Assets in the Cloud with Object Storage and Node.js</a><br/>
 Wednesday, 8:00 AM - 8:45 AM; South Pacific D; Andrew Trice (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5421A" target="_blank">5421A: How to Build Homogeneously from One Source Repository to Mobile and Microservices Targets</a><br/>
@@ -118,13 +118,13 @@ Tuesday, 11:00 AM - 1:45 PM; DevZone Hello World Lab # 4; Erin McKean (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7070A" target="_blank">7070A: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the Basics Hands-On Now!</a><br/>
 Wednesday, 9:00 AM - 12:45 PM; DevZone Hello World Lab # 4; Andreas Nauerz (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7078A" target="_blank">7078A: Get Started with Apache OpenWhisk on IBM Bluemix</a><br/>
-Tuesday, 2:15 PM - 5:00 PM; DevZone Hello World Lab # 4; Alex Glikson (IBM)</li>
+Tuesday, 2:15 PM - 5:00 PM; DevZone Hello World Lab # 4; Andy Smith (IBM)</li>
 </ul>
 </details>
 <details><summary><strong>Meet the Expert Sessions</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7122A" target="_blank">7122A: Creating Serverless IoT Applications Using OpenWhisk, Docker and Node-RED</a><br/>
-Wednesday, 9:00 AM - 9:45 AM; Meet the Experts Forum # 1; Kalonji Bankole (IBM), Alex Glikson (IBM)</li>
+Wednesday, 9:00 AM - 9:45 AM; Meet the Experts Forum # 1; Kalonji Bankole (IBM)</li>
 </ul>
 </details>
 <details><summary><strong>Open Labs</strong></summary>
