@@ -11,16 +11,22 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 ### March 2017
 
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/))
-  March 19th–23rd, Las Vegas, NV, USA
+  March 19th–23rd, Las Vegas, USA
+  
+<details>
+    <summary>Test</summary>
+    Test123
+    Test123
+</details
 
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
-  March 21st–23rd, Las Vegas, NV, USA
+  March 21st–23rd, Las Vegas, USA
 
 - **JS Remote Conf** ([James Thomas talking about OpenWhisk and Serverless](https://devchat.tv/conferences/js-remote-conf-2017)) March 15th-16th, Online
 
 ### April 2017
 
-- **Serverlessconf Austin** ([Andreas Nauerz et al will run a hands-on workshop on OpenWhisk](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16)) April 26th - 28th 2017, Austin, USA
+- **Serverlessconf Austin** ([Andreas Nauerz et al will run a hands-on workshop on OpenWhisk](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16)) April 26th, Austin, USA
 
 - **Serverlessconf Austin** ([Andreas Nauerz et al will give a talk on OpenWhisk](http://austin.serverlessconf.io/)) April 26th - 28th 2017, Austin, USA
 
