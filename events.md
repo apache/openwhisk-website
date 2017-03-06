@@ -33,10 +33,10 @@ Sunday, 11:00 AM - 11:30 AM; South Pacific F; Ioana Baldini (IBM)</li>
 Sunday, 1:00 PM - 1:30 P; South Pacific G; Paula Ta-Shma (IBM), Dalit Naor (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7367A" target="_blank">7367A: The Serverless Revolution Continues: The Latest from OpenWhisk</a><br/>
 Sunday, 02:00 PM - 02:30 PM; South Pacific H; Stephen Fink (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3351A" target="_blank">3351A: MediaSpirit: A Bluemix and OpenWhisk Love Story</a><br/>
-Monday, 2:00 PM - 2:45 PM; South Pacific G; Andreas Nauerz (IBM), Barry Nijenhuis (SiteSpirit)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7392A" target="_blank">7329A: API Economy Demonstrations</a><br/>
 Sunday, 2:00 PM - 2:30 P; South Pacific G; Jim Laredo (IBM), Erik Wittern (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3351A" target="_blank">3351A: MediaSpirit: A Bluemix and OpenWhisk Love Story</a><br/>
+Monday, 2:00 PM - 2:45 PM; South Pacific G; Andreas Nauerz (IBM), Barry Nijenhuis (SiteSpirit)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2724A" target="_blank">2724A: Create Event-Driven iOS Apps Using IBM Mobile Foundation, OpenWhisk Runtime and Server-Side Swift</a><br/>
 Monday, 3:15 PM - 4:00 PM; South Pacific D; Srinivasan Nanduri (IBM), Girish Dhanakshirur (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A" target="_blank">4467A: Containerize, PaaS or Go Serverless?: A Case Study in Application Deployment Models</a><br/>
