@@ -10,15 +10,12 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### March 2017
 
-- **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/))
-  March 19th–23rd, Las Vegas, USA
-  
-<details>
-    <summary>Test</summary>
-    Test123
-    Test123
+- <details>
+<summary>**IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA</summary>
+-- test123
+-- test123
 </details>
-
+  
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
   March 21st–23rd, Las Vegas, USA
 
