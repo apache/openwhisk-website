@@ -12,12 +12,12 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 - <details>
 <summary>**IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA</summary>
-<details><summary><em>Ask Me Anything</em></summary>
+<details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank">BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</a>; Tue 21-Mar 01:00 PM - 02:45 PM; Concourse, Bayside B, Level 1 DevZone Ask Me Anything; Carlos Santana (IBM)</li>
 </ul>
 </details>
-<details><summary><em>Breakout Sessions</em></summary>
+<details><summary><strong>Breakout Sessions</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A" target="_blank">BAS-4467: Containerize, PaaS or Go Serverless?: A Case Study in Application Deployment Models</a>; Tue, 21-Mar 11:30 AM - 12:15 PM; Mandalay Bay North, Level 0 Islander G; Phil Estes (IBM), Lin Sun (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3351A" target="_blank">BBM-3351: MediaSpirit: A Bluemix and OpenWhisk Love Story</a>; Mon, 20-Mar 02:00 PM - 02:45 PM;	Mandalay Bay North, Level 0 South Pacific G; Barry Nijenhuis (SiteSpirit), Andreas Nauerz (IBM)</li>
