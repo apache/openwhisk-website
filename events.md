@@ -97,6 +97,7 @@ Wed, 22-Mar 09:00 AM - 09:45 AM; Concourse, Bayside B, Level 1 Meet the Experts 
 Mon - Thurs drop In; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
 </details>
+<hr/>
   
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
   March 21st–23rd, Las Vegas, USA
