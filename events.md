@@ -43,7 +43,8 @@ Tue, 21-Mar 03:45 PM - 04:30 PM; Mandalay Bay North, Level 0 South Pacific J; Da
 Wed, 22-Mar 01:00 PM - 01:45 PM; Mandalay Bay South, Level 2 Lagoon F; Thejaswini Ramachandra (IBM), Srinivasan Nanduri (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4460A" target="_blank">HHA-4460: Combining OpenWhisk (Serverless), OpenAPI (Swagger) and IBM API Connect to Build Powerful APIs</a><br/>
 Wed, 22-Mar 04:15 PM - 05:00 PM; Mandalay Bay South, Level 2 Breakers C; Joe Sepi (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6324A" target="_blank">HHA-6324: How to Secure and Control API, Microservices and Serverless Workloads</a>; Thu, 23-Mar 10:30 AM - 11:15 AM; Mandalay Bay South, Level 2 Lagoon H;	Shiu-Fun Poon (IBM), Matt Roberts (IBM), Krithika Prakash (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6324A" target="_blank">HHA-6324: How to Secure and Control API, Microservices and Serverless Workloads</a>
+<br/>Thu, 23-Mar 10:30 AM - 11:15 AM; Mandalay Bay South, Level 2 Lagoon H;	Shiu-Fun Poon (IBM), Matt Roberts (IBM), Krithika Prakash (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3248A" target="_blank">HMT-3248: Integrating New Tools into IBM Bluemix Continuous Delivery Toolchains</a><br/>
 Wed, 22-Mar 02:00 PM - 02:45 PM; Mandalay Bay South, Level 2 Mandalay Bay Ballroom D; Chris Brealey (IBM), Simon Kaegi (IBM)</li>
 <li>NBS-1427: Serverless: Where We are Now and Where We're Heading<br/>
