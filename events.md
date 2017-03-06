@@ -10,9 +10,8 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### March 2017
 
-- <details>
-<summary>**IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA</summary>
-<details><summary><strong>Ask Me Anything</strong></summary>
+- **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA
+- <details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank">BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</a>; Tue 21-Mar 01:00 PM - 02:45 PM; Concourse, Bayside B, Level 1 DevZone Ask Me Anything; Carlos Santana (IBM)</li>
 </ul>
@@ -36,19 +35,19 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 <li>NBS-1427: Serverless: Where We are Now and Where We're Heading; Sun, 19-Mar 09:30 AM - 10:30 AM; Mandalay Bay South, Level 2 Reef A; Michael Behrendt (IBM), Andreas Nauerz (IBM)</li>
 </ul>
 </details>
-<details><summary>**Customer Feedback Round Tables**</summary>
+<details><summary><strong>Customer Feedback Round Tables</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6671A" target="_blank">BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix</a>; Mon, 20-Mar 01:00 PM - 01:45 PM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6671B" target="_blank">BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix</a>; Wed, 22-Mar 08:00 AM - 08:45 AM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6637A" target="_blank">HHA-6637: Shaping the Future of IBM DataPower and API Gateways</a>; Mon, 20-Mar 11:15 AM - 12:00 PM; Mandalay Bay North, Level 0 Coral A; Tony Ffrench (IBM), Ozair Sheikh (IBM)</li>
 </ul>
 </details>
-<details><summary>**Engagement Theater Sessions**</summary>
+<details><summary><strong>Engagement Theater Sessions</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6522A" target="_blank">BOP-6522: Build a Cloud Native App with Apache OpenWhisk</a>; Wed, 22-Mar 11:45 AM - 12:05 PM; Concourse, Bayside B, Level 1 Engagement Theater Booth #649; Daniel Krook (IBM)</li>
 </ul>
 </details>
-<details><summary>**Hands-on Labs**</summary>
+<details><summary><strong>Hands-on Labs</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3163A" target="_blank">BAS-3163: Serverless Bots: Create Efficient Inexpensive, Event-Driven Bots with Node.js and OpenWhisk</a>; Mon, 20-Mar 03:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas B; Erin McKean (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3397A" target="_blank">BAS-3397: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk</a>; Tue, 21-Mar 01:30 PM - 05:30 PM; Mandalay Bay South, Level 3 South Seas I1;	Andreas Nauerz (IBM), Carlos Santana (IBM)</li>
@@ -56,21 +55,20 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2256A" target="_blank">BCS-2256: Build Your First Cognitive Chatbot Using OpenWhisk</a>; Wed, 22-Mar 03:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas B; Carlos Santana (IBM), Andreas Nauerz (IBM)</li>
 </ul>
 </details>
-<details><summary>**Hello World Labs**</summary>
+<details><summary><strong>Hello World Labs</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7070A" target="_blank">BAS-7070: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the Basics Hands-On Now!</a>; Wed, 22-Mar 09:00 AM - 12:45 PM; Concourse, Bayside B, Level 1 DevZone Hello World Lab #4; Andreas Nauerz (IBM)</li>
 </ul>
 </details>
-<details><summary>**Meet the Expert Sessions**</summary>
+<details><summary><strong>Meet the Expert Sessions</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7122A" target="_blank">BOP-7122: Creating Serverless IoT Applications Using OpenWhisk, Docker and Node-RED</a>; Wed, 22-Mar 09:00 AM - 09:45 AM; Concourse, Bayside B, Level 1 Meet the Experts Forum #1; Kalonji Bankole (IBM), Alex Glikson (IBM)</li>
 </ul>
 </details>
-<details><summary>**Open Labs**</summary>
+<details><summary><strong>Open Labs</strong></summary>
 <ul>
 <li>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!; Mon - Thurs drop In; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
-</details>
 </details>
   
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
