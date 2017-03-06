@@ -19,7 +19,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 </details>
 <details><summary>**Breakout Sessions**</summary>
 <ul>
-<li>([BAS-4467](https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A)): Containerize, PaaS or Go Serverless?: A Case Study in Application Deployment Models; Tue, 21-Mar 11:30 AM - 12:15 PM; Mandalay Bay North, Level 0 Islander G; Phil Estes (IBM), Lin Sun (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A" target="_blank">BAS-4467: Containerize, PaaS or Go Serverless?</a>: A Case Study in Application Deployment Models; Tue, 21-Mar 11:30 AM - 12:15 PM; Mandalay Bay North, Level 0 Islander G; Phil Estes (IBM), Lin Sun (IBM)</li>
 <li>BBM-3351: MediaSpirit: A Bluemix and OpenWhisk Love Story; Mon, 20-Mar 02:00 PM - 02:45 PM;	Mandalay Bay North, Level 0 South Pacific G; Barry Nijenhuis (SiteSpirit), Andreas Nauerz (IBM)</li>
 <li>BCP-1081: What’s New with the IBM Bluemix Core Platform?; Thu, 23-Mar 09:30 AM - 10:15 AM; Mandalay Bay North, Level 0 South Pacific E; Simon Daniel Moser (IBM), Michael Behrendt (IBM)</li>
 <li>BCS-1596: Computation in Real-time on the Network; Wed, 22-Mar 02:00 PM - 02:45 PM;	Mandalay Bay North, Level 0 South Pacific B; Dan Zeitman, PubNub (IBM Business Partner)</li>
