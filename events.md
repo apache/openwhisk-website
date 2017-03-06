@@ -13,13 +13,16 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA
 <details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank">BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</a>; Tue 21-Mar 01:00 PM - 02:45 PM; Concourse, Bayside B, Level 1 DevZone Ask Me Anything; Carlos Santana (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank">BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</a><br/>
+Tue 21-Mar 01:00 PM - 02:45 PM; Concourse, Bayside B, Level 1 DevZone Ask Me Anything; Carlos Santana (IBM)</li>
 </ul>
 </details>
 <details><summary><strong>Breakout Sessions</strong></summary>
 <ul>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A" target="_blank">BAS-4467: Containerize, PaaS or Go Serverless?: A Case Study in Application Deployment Models</a>; Tue, 21-Mar 11:30 AM - 12:15 PM; Mandalay Bay North, Level 0 Islander G; Phil Estes (IBM), Lin Sun (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3351A" target="_blank">BBM-3351: MediaSpirit: A Bluemix and OpenWhisk Love Story</a>; Mon, 20-Mar 02:00 PM - 02:45 PM;	Mandalay Bay North, Level 0 South Pacific G; Barry Nijenhuis (SiteSpirit), Andreas Nauerz (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A" target="_blank">BAS-4467: Containerize, PaaS or Go Serverless?: A Case Study in Application Deployment Models</a><br/>
+Tue, 21-Mar 11:30 AM - 12:15 PM; Mandalay Bay North, Level 0 Islander G; Phil Estes (IBM), Lin Sun (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3351A" target="_blank">BBM-3351: MediaSpirit: A Bluemix and OpenWhisk Love Story</a><br/>
+Mon, 20-Mar 02:00 PM - 02:45 PM;	Mandalay Bay North, Level 0 South Pacific G; Barry Nijenhuis (SiteSpirit), Andreas Nauerz (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1081A" target="_blank">BCP-1081: What’s New with the IBM Bluemix Core Platform?</a>; Thu, 23-Mar 09:30 AM - 10:15 AM; Mandalay Bay North, Level 0 South Pacific E; Simon Daniel Moser (IBM), Michael Behrendt (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1596A" target="_blank">BCS-1596: Computation in Real-time on the Network</a>; Wed, 22-Mar 02:00 PM - 02:45 PM;	Mandalay Bay North, Level 0 South Pacific B; Dan Zeitman, PubNub (IBM Business Partner)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2724A" target="_blank">BMO-2724: Create Event-Driven iOS Apps Using IBM Mobile Foundation, OpenWhisk Runtime and Server-Side Swift</a>; Mon, 20-Mar 03:15 PM - 04:00 PM; Mandalay Bay North, Level 0 South Pacific D; Srinivasan Nanduri (IBM), Girish Dhanakshirur (IBM)</li>
@@ -91,7 +94,6 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 ### February 2017
 
 - **London Serverless** ([Building OpenWhisk apps with The Serverless Framework](https://www.twitch.tv/videos/119142073)) February 1st 2017, London, England
-
 - **TopConf Linz** ([James Thomas gave a talk about build serverless applications using OpenWhisk](http://topconf.com/linz-2017/)) February 28th - March 2nd 2017, Linz, Austria
 
 ### December 2016
