@@ -61,8 +61,6 @@ Wednesday, 2:00 PM - 2:45 PM; South Pacific B; Dan Zeitman, PubNub (IBM Business
 Wednesday, 2:00 PM - 2:45 PM; Mandalay Bay Ballroom D; Chris Brealey (IBM), Simon Kaegi (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4073A" target="_blank">4073A: Serverless, Event-Driven Architectures and Bluemix OpenWhisk: Overview and IBM's Technical Strategy</a><br/>
 Wednesday, 2:00 PM - 2:45 PM; South Pacific H; Michael Behrendt (IBM), Andreas Nauerz (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5130A" target="_blank">5130A: A Deep-Dive into Serverless Computing and Watson Service Chaining Via OpenWhisk</a><br/>
-Wednesday, 2:00 PM - 2:45 PM; South Seas G; Vidyasagar Machupalli (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4460A" target="_blank">4460A: Combining OpenWhisk (Serverless), OpenAPI (Swagger) and IBM API Connect to Build Powerful APIs</a><br/>
 Wednesday, 4:15 PM - 5:00 PM; Breakers C; Joe Sepi (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1081A" target="_blank">1081A: What’s New with the IBM Bluemix Core Platform?</a><br/>
@@ -101,6 +99,8 @@ Monday, 3:15 PM - 5:00 PM; South Seas B; Erin McKean (IBM)</li>
 Monday, 4:15 PM - 5:00 PM; South Seas I1; Budi Darmawan (IBM), Pam Geiger (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3397A" target="_blank">3397A: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk</a><br/>
 Tuesday, 1:30 PM - 5:30 PM; South Seas I1; Andreas Nauerz (IBM), Carlos Santana (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5130A" target="_blank">5130A: A Deep-Dive into Serverless Computing and Watson Service Chaining Via OpenWhisk</a><br/>
+Wednesday, 2:00 PM - 2:45 PM; South Seas G; Vidyasagar Machupalli (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2256A" target="_blank">2256A: Build Your First Cognitive Chatbot Using OpenWhisk</a><br/>
 Wednesday, 3:15 PM - 5:00 PM; South Seas B; Carlos Santana (IBM), Andreas Nauerz (IBM)</li>
 </ul>
