@@ -11,7 +11,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 ### March 2017
 
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA
-- <details><summary><strong>Ask Me Anything</strong></summary>
+<details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank">BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</a>; Tue 21-Mar 01:00 PM - 02:45 PM; Concourse, Bayside B, Level 1 DevZone Ask Me Anything; Carlos Santana (IBM)</li>
 </ul>
