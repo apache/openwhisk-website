@@ -41,10 +41,12 @@ Monday, 2:00 PM - 2:45 PM; South Pacific G; Andreas Nauerz (IBM), Barry Nijenhui
 Monday, 3:15 PM - 4:00 PM; South Pacific D; Srinivasan Nanduri (IBM), Girish Dhanakshirur (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/4467A" target="_blank">4467A: Containerize, PaaS or Go Serverless?: A Case Study in Application Deployment Models</a><br/>
 Tuesday, 11:30 AM - 12:15 PM; Islander G; Phil Estes (IBM), Lin Sun (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7111A" target="_blank">7111A: Discovering the Fun World of Serverless with IBM Bluemix and OpenWhisk</a><br/>
-Tuesday, 1:30 PM - 1:50 PM; Engagement Theater Booth # 319; Chanakya Lokam (Miracle Software Systems, Inc.), Jyotsna Duvvuri (Miracle Software Systems, Inc.)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5496A" target="_blank">5496A: Cloud Native Applications and Microservices Made Easy!</a><br/>
+Tuesday, 2:30 PM - 3:15 PM; Islander F; Erin Schnabel (IBM), Chris Vignola (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5513A" target="_blank">5513A: Serverless Architectures in Banking: OpenWhisk on IBM Bluemix at Santander</a><br/>
 Tuesday, 3:45 PM - 4:30 PM; South Pacific J; Daniel Krook (IBM), Luis Enriquez (Banco Santander)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6229A" target="_blank">6229A: What's New in IBM API Connect</a><br/>
+Tuesday, 3:45 PM - 4:30 PM; Lagoon H; Pramodh Ramesh (IBM), Amit P. Acharya (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5064A" target="_blank">5064A: OpenWhisk, Adobe, and developerWorks Open for High-Powered Applications</a><br/>
 Wednesday, 8:00 AM - 8:45 AM; South Pacific J; Andreas Nauerz (IBM), Felix Meschberger (Adobe)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5811A" target="_blank">5811A: Managing Video Assets in the Cloud with Object Storage and Node.js</a><br/>
@@ -53,6 +55,8 @@ Wednesday, 8:00 AM - 8:45 AM; South Pacific D; Andrew Trice (IBM)</li>
 Wednesday, 9:00 AM - 9:45 AM; South Pacific J; Roland Barcia (IBM), John Pearson (Wakefern)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6336A" target="_blank">6336A: Use IBM Bluemix to Build Cognitive Mobile Apps that Learn and Act Proactively</a><br/>
 Wednesday, 9:00 AM - 9:45 AM; South Pacific D; Anton Aleksandrov (IBM), Matthew Perrins (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1117A" target="_blank">1117A: Introduction to LoopBack</a><br/>
+Wednesday, 11:15 AM - 12:00 PM; Islander F; Matt Roberts (IBM); Raymond Camden (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3044A" target="_blank">3044A: Retail Customer Feedback: Case Study with OpenWhisk, Watson and Mobile Services on IBM Bluemix</a><br/>
 Wednesday, 1:00 PM - 1:45 PM; Lagoon F; Thejaswini Ramachandra (IBM), Srinivasan Nanduri (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1596A" target="_blank">1596A: Computation in Real-time on the Network</a><br/>
@@ -81,10 +85,12 @@ Wednesday, 8:00 AM - 8:45 AM; Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM
 </details>
 <details><summary><strong>Engagement Theater Sessions</strong></summary>
 <ul>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7111A" target="_blank">7111A: Discovering the Fun World of Serverless with IBM Bluemix and OpenWhisk</a><br/>
+Tuesday, 1:30 PM - 1:50 PM; Engagement Theater Booth # 319; Chanakya Lokam (Miracle Software Systems, Inc.), Jyotsna Duvvuri (Miracle Software Systems, Inc.)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7432A" target="_blank">7432A: Create Secure Cloud Foundry and OpenWhisk Powered APIs in IBM Bluemix</a><br/>
 Wednesday, 11:15 AM - 11:35 AM; Engagement Theater Booth # 649; Sajan Sankaran (IBM), Rob Thelen (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6522A" target="_blank">6522A: Build a Cloud Native App with Apache OpenWhisk</a><br/>
-Wednesday, 11:45 AM - 12:05 PM; Concourse, Bayside B, Level 1 Engagement Theater Booth # 649; Daniel Krook (IBM)</li>
+Wednesday, 11:45 AM - 12:05 PM; Engagement Theater Booth # 649; Daniel Krook (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1515A" target="_blank">1515A: Discover Dark Data behind Videos with OpenWhisk and IBM Watson</a><br/>
 Wednesday, 1:30 PM - 1:50 PM; Engagement Theater Booth # 649; Ramratan Vennam (IBM), Frederic Lavigne (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1515B" target="_blank">1515B: Discover Dark Data behind Videos with OpenWhisk and IBM Watson</a><br/>
