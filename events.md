@@ -96,12 +96,9 @@ Wed, 22-Mar 09:00 AM - 09:45 AM; Concourse, Bayside B, Level 1 Meet the Experts 
 <li>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!<br/>
 Mon - Thurs drop In; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
-</details>
-<hr/>
-  
+</details> 
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
   March 21st–23rd, Las Vegas, USA
-
 - **JS Remote Conf** ([James Thomas talking about OpenWhisk and Serverless](https://devchat.tv/conferences/js-remote-conf-2017)) March 15th-16th, Online
 
 ### April 2017
