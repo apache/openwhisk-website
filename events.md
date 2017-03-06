@@ -17,7 +17,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
     <summary>Test</summary>
     Test123
     Test123
-</details
+</details>
 
 - **Devoxx US** ([IBM booth presentations and short workshops](https://devoxx.us/))
   March 21st–23rd, Las Vegas, USA
