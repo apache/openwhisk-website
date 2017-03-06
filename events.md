@@ -52,7 +52,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3163A" target="_blank">BAS-3163: Serverless Bots: Create Efficient Inexpensive, Event-Driven Bots with Node.js and OpenWhisk</a>; Mon, 20-Mar 03:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas B; Erin McKean (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3397A" target="_blank">BAS-3397: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk</a>; Tue, 21-Mar 01:30 PM - 05:30 PM; Mandalay Bay South, Level 3 South Seas I1;	Andreas Nauerz (IBM), Carlos Santana (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2450A" target="_blank">BCP-2450: Working with IBM OpenWhisk in Bluemix</a>; Mon, 20-Mar 04:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas I1; Budi Darmawan (IBM), Pam Geiger (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2450B" target="_blank">BCP-2450: Working with IBM OpenWhisk in Bluemix</a>; Mon, 20-Mar 04:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas I1; Budi Darmawan (IBM), Pam Geiger (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/2256A" target="_blank">BCS-2256: Build Your First Cognitive Chatbot Using OpenWhisk</a>; Wed, 22-Mar 03:15 PM - 05:00 PM; Mandalay Bay South, Level 3 South Seas B; Carlos Santana (IBM), Andreas Nauerz (IBM)</li>
 </ul>
 </details>
