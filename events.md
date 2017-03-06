@@ -13,7 +13,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/)) March 19th–23rd, Las Vegas, USA
 <details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank"><strong>BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</strong></a><br/>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7291A" target="_blank">BAS-7291: Bluemix OpenWhisk: Ask Me Anything Expert Station</a><br/>
 Tue 21-Mar 01:00 PM - 02:45 PM; Concourse, Bayside B, Level 1 DevZone Ask Me Anything; Carlos Santana (IBM)</li>
 </ul>
 </details>
@@ -47,7 +47,7 @@ Wed, 22-Mar 04:15 PM - 05:00 PM; Mandalay Bay South, Level 2 Breakers C; Joe Sep
 <br/>Thu, 23-Mar 10:30 AM - 11:15 AM; Mandalay Bay South, Level 2 Lagoon H;	Shiu-Fun Poon (IBM), Matt Roberts (IBM), Krithika Prakash (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/3248A" target="_blank">HMT-3248: Integrating New Tools into IBM Bluemix Continuous Delivery Toolchains</a><br/>
 Wed, 22-Mar 02:00 PM - 02:45 PM; Mandalay Bay South, Level 2 Mandalay Bay Ballroom D; Chris Brealey (IBM), Simon Kaegi (IBM)</li>
-<li>NBS-1427: Serverless: Where We are Now and Where We're Heading<br/>
+<li><strong>NBS-1427: Serverless: Where We are Now and Where We're Heading</strong><br/>
 Sun, 19-Mar 09:30 AM - 10:30 AM; Mandalay Bay South, Level 2 Reef A; Michael Behrendt (IBM), Andreas Nauerz (IBM)</li>
 </ul>
 </details>
