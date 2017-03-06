@@ -39,7 +39,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 <details><summary>**Customer Feedback Round Tables**</summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6671A" target="_blank">BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix</a>; Mon, 20-Mar 01:00 PM - 01:45 PM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6671A" target="_blank">BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix</a>; Wed, 22-Mar 08:00 AM - 08:45 AM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6671B" target="_blank">BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix</a>; Wed, 22-Mar 08:00 AM - 08:45 AM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6637A" target="_blank">HHA-6637: Shaping the Future of IBM DataPower and API Gateways</a>; Mon, 20-Mar 11:15 AM - 12:00 PM; Mandalay Bay North, Level 0 Coral A; Tony Ffrench (IBM), Ozair Sheikh (IBM)</li>
 </ul>
 </details>
