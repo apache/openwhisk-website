@@ -93,7 +93,7 @@ Wed, 22-Mar 09:00 AM - 09:45 AM; Concourse, Bayside B, Level 1 Meet the Experts 
 </details>
 <details><summary><strong>Open Labs</strong></summary>
 <ul>
-<li>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!<br/>
+<li><strong>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!</strong><br/>
 Mon - Thurs drop In; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
 </details> 
