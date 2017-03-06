@@ -84,13 +84,13 @@ Wednesday, 8:00 AM - 8:45 AM; Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM
 <details><summary><strong>Engagement Theater Sessions</strong></summary>
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7432A" target="_blank">7432A: Create Secure Cloud Foundry and OpenWhisk Powered APIs in IBM Bluemix</a><br/>
-Wednesday, 11:15 AM - 11:35 AM; Engagement Theater Booth #649; Sajan Sankaran (IBM), Rob Thelen (IBM)</li>
+Wednesday, 11:15 AM - 11:35 AM; Engagement Theater Booth # 649; Sajan Sankaran (IBM), Rob Thelen (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6522A" target="_blank">6522A: Build a Cloud Native App with Apache OpenWhisk</a><br/>
-Wednesday, 11:45 AM - 12:05 PM; Concourse, Bayside B, Level 1 Engagement Theater Booth #649; Daniel Krook (IBM)</li>
+Wednesday, 11:45 AM - 12:05 PM; Concourse, Bayside B, Level 1 Engagement Theater Booth # 649; Daniel Krook (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1515A" target="_blank">1515A: Discover Dark Data behind Videos with OpenWhisk and IBM Watson</a><br/>
-Wednesday, 1:30 PM - 1:50 PM; Engagement Theater Booth #649; Ramratan Vennam (IBM), Frederic Lavigne (IBM)</li>
+Wednesday, 1:30 PM - 1:50 PM; Engagement Theater Booth # 649; Ramratan Vennam (IBM), Frederic Lavigne (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/1515B" target="_blank">1515B: Discover Dark Data behind Videos with OpenWhisk and IBM Watson</a><br/>
-Wednesday, 4:45 PM - 5:05 PM; Engagement Theater Booth #649; Ramratan Vennam (IBM), Frederic Lavigne (IBM)</li>
+Wednesday, 4:45 PM - 5:05 PM; Engagement Theater Booth # 649; Ramratan Vennam (IBM), Frederic Lavigne (IBM)</li>
 </ul>
 </details>
 <details><summary><strong>Hands-on Labs</strong></summary>
