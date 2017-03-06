@@ -8,12 +8,6 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-### February 2017
-
-- **London Serverless** ([Building OpenWhisk apps with The Serverless Framework](https://www.twitch.tv/videos/119142073)) February 1st 2017, London, England
-
-- **TopConf Linz** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://topconf.com/linz-2017/)) February 28th - March 2nd 2017, Linz, Austria
-
 ### March 2017
 
 - **IBM InterConnect** ([Multiple sessions and hands-on workshops](http://www.ibm.com/cloud-computing/us/en/interconnect/))
@@ -24,6 +18,11 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 - **JS Remote Conf** ([James Thomas talking about OpenWhisk and Serverless](https://devchat.tv/conferences/js-remote-conf-2017)) March 15th-16th, Online
 
+### April 2017
+
+- **Serverlessconf Austin** ([Andreas Nauerz et al will run a hands-on workshop on OpenWhisk](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16)) April 26th - 28th 2017, Austin, USA
+
+- **Serverlessconf Austin** ([Andreas Nauerz et al will give a talk on OpenWhisk](http://austin.serverlessconf.io/)) April 26th - 28th 2017, Austin, USA
 
 ### May 2017
 
@@ -31,9 +30,15 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Past Events
 
+### February 2017
+
+- **London Serverless** ([Building OpenWhisk apps with The Serverless Framework](https://www.twitch.tv/videos/119142073)) February 1st 2017, London, England
+
+- **TopConf Linz** ([James Thomas gave a talk about build serverless applications using OpenWhisk](http://topconf.com/linz-2017/)) February 28th - March 2nd 2017, Linz, Austria
+
 ### December 2016
 
-- **Build a cloud native app with OpenWhisk** ([Daniel Krook presents an overview of serverless architectures and dive into the OpenWhisk programming model](https://developer.ibm.com/tv/build-a-cloud-native-app-with-openwhisk-event-registration/))
+- **Build a cloud native app with OpenWhisk** ([Daniel Krook presented an overview of serverless architectures and dive into the OpenWhisk programming model](https://developer.ibm.com/tv/build-a-cloud-native-app-with-openwhisk-event-registration/))
   December 14th, Virtual
 
 ### November 2016
