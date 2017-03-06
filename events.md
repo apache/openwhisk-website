@@ -33,9 +33,10 @@ HMT-3248: Integrating New Tools into IBM Bluemix Continuous Delivery Toolchains;
 NBS-1427: Serverless: Where We are Now and Where We're Heading; Sun, 19-Mar 09:30 AM - 10:30 AM; Mandalay Bay South, Level 2 Reef A;	Michael Behrendt (IBM), Andreas Nauerz (IBM)
 </details>
 <details><summary>**Customer Feedback Round Tables**</summary>
-BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix; Mon, 20-Mar 01:00 PM - 01:45 PM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)<br/>
-BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix; Wed, 22-Mar 08:00 AM - 08:45 AM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)<br/>
-HHA-6637: Shaping the Future of IBM DataPower and API Gateways;	Mon, 20-Mar	11:15 AM - 12:00 PM; Mandalay Bay North, Level 0 Coral A; Tony Ffrench (IBM), Ozair Sheikh (IBM)
+<ul>
+<li>BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix; Mon, 20-Mar 01:00 PM - 01:45 PM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
+<li>BAS-6671: Shaping the Future of Serverless APIs and Microservices in IBM Bluemix; Wed, 22-Mar 08:00 AM - 08:45 AM; Mandalay Bay North, Level 0 Coral A; Carlos Santana (IBM), Sajan Sankaran (IBM), Andrew Hoyt (IBM)</li>
+<li>HHA-6637: Shaping the Future of IBM DataPower and API Gateways;	Mon, 20-Mar	11:15 AM - 12:00 PM; Mandalay Bay North, Level 0 Coral A; Tony Ffrench (IBM), Ozair Sheikh (IBM)</li>
 </details>
 <details><summary>**Engagement Theater Sessions**</summary>
 BOP-6522: Build a Cloud Native App with Apache OpenWhisk; Wed, 22-Mar 11:45 AM - 12:05 PM; Concourse, Bayside B, Level 1 Engagement Theater Booth #649;	Daniel Krook (IBM)
