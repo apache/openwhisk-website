@@ -4,7 +4,7 @@ title: Apache OpenWhisk Events
 lede: Presentations at conferences, meetups, and other events.
 ---
 
-The Apache Software Foundation does not endorse listed events. [Get in touch with us to suggest event listings)/social).
+The Apache Software Foundation does not endorse listed events. [Get in touch with us to suggest event listings](/social).
 
 ## Upcoming Events
 
