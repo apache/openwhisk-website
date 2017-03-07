@@ -139,9 +139,9 @@ Monday - Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (I
 
 ### April 2017
 
-- [**Serverlessconf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
+- [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
 
-- [**Serverlessconf Austin**](http://austin.serverlessconf.io/), April 26th - 28th 2017, Austin, USA<br/> (OpenWhisk et al will attend) 
+- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 26th - 28th 2017, Austin, USA<br/> (OpenWhisk et al will attend) 
 
 ### May 2017
 
@@ -170,7 +170,7 @@ Monday - Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (I
   
 ### October 2016
 
-- [**Serverlessconf**](http://london.serverlessconf.io/), October 26th-28th 2016, London, UK<br/>Andreas Nauerz et al gave a talk on OpenWhisk
+- [**ServerlessConf London**](http://london.serverlessconf.io/), October 26th-28th 2016, London, UK<br/>Andreas Nauerz et al gave a talk on OpenWhisk
 - [**OpenStack Summit**](https://www.openstack.org/summit/barcelona-2016/), October 25th-28th 2016, Barcelona, Spain<br/>Shaun Murakami gave a talk on OpenWhisk
 - [**JavaDay**](http://javaday.org.ua/kyiv/), October 14th-16th 2016, Kyiv, Ukraine<br/>James Thomas gave a talk on OpenWhisk
 - [**New York City Bluemix Meetup**](http://www.meetup.com/nyc-bluemix/events/233970408/), October 13th 2016, New York, USA<br/>Daniel Krook et al hosted a workshop on OpenWhisk and other Bluemix topics
@@ -180,7 +180,7 @@ Monday - Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (I
 
 ### September 2016
 
-- [**Serverlessconf**](http://tokyo.serverlessconf.io/), September 30th–October 1st 2016, Tokyo, Japan<br/>Andreas Nauerz & Markus Thömmes gave a talk on OpenWhisk  
+- [**ServerlessConf Tokyo**](http://tokyo.serverlessconf.io/), September 30th–October 1st 2016, Tokyo, Japan<br/>Andreas Nauerz & Markus Thömmes gave a talk on OpenWhisk  
 - [**Voxxed Days**](https://belgrade.voxxeddays.com/), September 28th-30th 2016, Belgrade, Serbia<br/>James Thomas gave a talk on OpenWhisk
 - [**CloudFoundry Summit**](https://www.cloudfoundry.org/community/summits/program/about/?summitId=11993/), September 26th-28th 2016, Frankfurt, Germany<br/>Andreas Nauerz & Andrei Yurkovich gave a talk on OpenWhisk
 - [**Codemotion**](http://warsaw2016.codemotionworld.com/), September 15th-16th 2016, Warsaw, Poland<br/>Andreas Nauerz gave a talk on OpenWhisk
@@ -202,7 +202,7 @@ Monday - Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (I
 
 ### May 2016
 
-- [**Serverlessconf**](http://nyc.serverlessconf.io/), May 26th-27th 2016, New York City, USA<br/>Michael Behrendt, Stephen Fink, and Andreas Nauerz gave a talk on OpenWhisk
+- [**ServerlessConf New York**](http://nyc.serverlessconf.io/), May 26th-27th 2016, New York City, USA<br/>Michael Behrendt, Stephen Fink, and Andreas Nauerz gave a talk on OpenWhisk
 - [**Drones, IoT, Cognitive Computing, Bluemix, and OpenWhisk!**](http://www.meetup.com/nyc-bluemix/events/231021166/), May 25th 2016, New York City, USA<br/>Andrew Trice gave a talk on OpenWhisk
 - [**Cloud Foundry Unconference**](http://www.meetup.com/CloudFoundry/events/227086817/), May 22nd 2016, Santa Clara, USA<br/>Animesh Singh gave a talk on OpenWhisk
 - [**OSCON Austin**](http://conferences.oreilly.com/oscon/open-source-us), May 18th-19th 2016, Austin, USA<br/>Daniel Krook gave a talk on OpenWhisk
