@@ -145,7 +145,11 @@ Monday - Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (I
 
 ### May 2017
 
-- **Codemotion Amsterdam** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://amsterdam2017.codemotionworld.com/)) May 16th - 17th 2017, Amsterdam, Holland
+- **Codemotion Amsterdam** ([James Thomas gives a talk about build serverless applications using OpenWhisk](http://amsterdam2017.codemotionworld.com/)) May 16th - 17th 2017, Amsterdam, Netherlands
+
+### June 2017
+
+- **FunctionConf Amsterdam** ([OpenWhisk team will attend](https://functionconf.io/)) June 15th - 16th 2017, Amsterdam, Netherlands
 
 ## Past Events
 
