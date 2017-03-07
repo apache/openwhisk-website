@@ -157,8 +157,8 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 
 ### February 2017
 
-- [**London Serverless**](https://www.twitch.tv/videos/119142073), February 1st 2017, London, UK<br/>James Thomas gave a talk on building OpenWhisk apps with The Serverless Framework
 - [**TopConf Linz**](http://topconf.com/linz-2017/), February 28th-March 2nd 2017, Linz, Austria<br/>James Thomas gave a talk on building serverless applications using OpenWhisk
+- [**London Serverless**](https://www.twitch.tv/videos/119142073), February 1st 2017, London, UK<br/>James Thomas gave a talk on building OpenWhisk apps with The Serverless Framework
 
 ### December 2016
 
