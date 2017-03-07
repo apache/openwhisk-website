@@ -10,6 +10,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### March 2017
 
+- [**ForwardJS**](https://forwardjs.com/), March 1st, San Francisco, USA<br/>Raymond Camden will give a talk on OpenWhisk
 - [**JS Remote Conf**](https://devchat.tv/conferences/js-remote-conf-2017), March 15th-16th, Virtual<br/>James Thomas will give a talk on OpenWhisk and Serverless
 
 - [**IBM InterConnect**](http://www.ibm.com/cloud-computing/us/en/interconnect/), March 19th–23rd, Las Vegas, USA<br/>OpenWhisk team will attend
