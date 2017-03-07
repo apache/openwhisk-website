@@ -141,7 +141,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 
 - [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
 
-- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 26th-28th 2017, Austin, USA<br/> (OpenWhisk et al will attend) 
+- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 26th-28th 2017, Austin, USA<br/>OpenWhisk tean will attend
 
 ### May 2017
 
