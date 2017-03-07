@@ -10,6 +10,8 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### March 2017
 
+- [**JS Remote Conf**](https://devchat.tv/conferences/js-remote-conf-2017), March 15th-16th, Virtual<br/>James Thomas will give a talk on OpenWhisk and Serverless
+
 - [**IBM InterConnect**](http://www.ibm.com/cloud-computing/us/en/interconnect/), March 19th–23rd, Las Vegas, USA<br/>OpenWhisk team will attend
 <details><summary><strong>Ask Me Anything</strong></summary>
 <ul>
@@ -133,19 +135,19 @@ Wednesday, 9:00 AM-9:45 AM; Meet the Experts Forum # 1; Kalonji Bankole (IBM)</l
 Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
 </ul>
 </details> 
+
 - [**Devoxx US**](https://devoxx.us/), March 21st–23rd, Las Vegas, USA<br/>OpenWhisk team will attend
-  
-- [**JS Remote Conf**](https://devchat.tv/conferences/js-remote-conf-2017), March 15th-16th, Virtual<br/>James Thomas will give a talk about OpenWhisk and Serverless
+- [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th, Berlin, Germany<br/>Daniel Krook will give a demo on OpenWhisk
 
 ### April 2017
 
 - [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
 
-- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 26th-28th 2017, Austin, USA<br/> (OpenWhisk et al will attend) 
+- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 26th-28th 2017, Austin, USA<br/>OpenWhisk team will attend
 
 ### May 2017
 
-- [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk about build serverless applications using OpenWhisk
+- [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 
 ### June 2017
 
@@ -155,8 +157,8 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 
 ### February 2017
 
-- [**London Serverless**](https://www.twitch.tv/videos/119142073), February 1st 2017, London, UK<br/>Building OpenWhisk apps with The Serverless Framework
-- [**TopConf Linz**](http://topconf.com/linz-2017/), February 28th-March 2nd 2017, Linz, Austria<br/>James Thomas gave a talk about build serverless applications using OpenWhisk
+- [**London Serverless**](https://www.twitch.tv/videos/119142073), February 1st 2017, London, UK<br/>James Thomas gave a talk on building OpenWhisk apps with The Serverless Framework
+- [**TopConf Linz**](http://topconf.com/linz-2017/), February 28th-March 2nd 2017, Linz, Austria<br/>James Thomas gave a talk on building serverless applications using OpenWhisk
 
 ### December 2016
 
@@ -173,7 +175,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 - [**ServerlessConf London**](http://london.serverlessconf.io/), October 26th-28th 2016, London, UK<br/>Andreas Nauerz et al gave a talk on OpenWhisk
 - [**OpenStack Summit**](https://www.openstack.org/summit/barcelona-2016/), October 25th-28th 2016, Barcelona, Spain<br/>Shaun Murakami gave a talk on OpenWhisk
 - [**JavaDay**](http://javaday.org.ua/kyiv/), October 14th-16th 2016, Kyiv, Ukraine<br/>James Thomas gave a talk on OpenWhisk
-- [**New York City Bluemix Meetup**](http://www.meetup.com/nyc-bluemix/events/233970408/), October 13th 2016, New York, USA<br/>Daniel Krook et al hosted a workshop on OpenWhisk and other Bluemix topics
+- [**New York City Bluemix Meetup**](http://www.meetup.com/nyc-bluemix/events/233970408/), October 13th 2016, New York, USA<br/>Daniel Krook et al ran a workshop on OpenWhisk and other Bluemix topics
 - [**Serverless New York City Meetup**](http://www.meetup.com/Serverless-NYC/events/234479192/), October 13th 2016, New York, USA<br/>Nick Mitchell gave a talk on OpenWhisk
 - [**Serverless Seattle Meetup**](http://www.meetup.com/Serverless-Seattle/events/233807991/), October 12th 2016, Seattle, USA<br/>Megan Kostick gave a talk on OpenWhisk
 - [**New York City Bluemix Meetup**](http://www.meetup.com/nyc-bluemix/events/233968352/), October 12th 2016, New York, USA<br/>Daniel Krook gave a talk on OpenWhisk
