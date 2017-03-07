@@ -137,7 +137,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 </details> 
 
 - [**Devoxx US**](https://devoxx.us/), March 21st–23rd, Las Vegas, USA<br/>OpenWhisk team will attend
-- [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th, Berlin, Germany<br/>Daniel Krook will give a demo on OpenWhisk
+- [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th, Berlin, Germany<br/>Daniel Krook will give an OpenWhisk demo at the IBM booth, and will be on hand to answer any questions
 
 ### April 2017
 
