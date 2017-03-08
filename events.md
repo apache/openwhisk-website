@@ -149,7 +149,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 ### May 2017
 
 - [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
-- [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miama, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
+- [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
 
 ### June 2017
 
