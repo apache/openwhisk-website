@@ -52,8 +52,6 @@ Tuesday, 3:45 PM-4:30 PM; South Pacific J; Daniel Krook (IBM), Luis Enriquez (Ba
 Tuesday, 3:45 PM-4:30 PM; Lagoon H; Pramodh Ramesh (IBM), Amit P. Acharya (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5064A" target="_blank">5064A: OpenWhisk, Adobe, and developerWorks Open for High-Powered Applications</a><br/>
 Wednesday, 8:00 AM-8:45 AM; South Pacific J; Tony Ffrench (IBM), Felix Meschberger (Adobe)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5811A" target="_blank">5811A: Managing Video Assets in the Cloud with Object Storage and Node.js</a><br/>
-Wednesday, 8:00 AM-8:45 AM; South Pacific D; Andrew Trice (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/5421A" target="_blank">5421A: How to Build Homogeneously from One Source Repository to Mobile and Microservices Targets</a><br/>
 Wednesday, 9:00 AM-9:45 AM; South Pacific J; Roland Barcia (IBM), John Pearson (Wakefern)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/6336A" target="_blank">6336A: Use IBM Bluemix to Build Cognitive Mobile Apps that Learn and Act Proactively</a><br/>
