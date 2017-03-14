@@ -116,10 +116,10 @@ Wednesday, 3:15 PM-5:00 PM; South Seas B; Carlos Santana (IBM), Andreas Nauerz (
 <ul>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7252A" target="_blank">7252A: Create Quick Twitterbots with OpenWhisk!</a><br/>
 Tuesday, 11:00 AM-1:45 PM; DevZone Hello World Lab # 4; Erin McKean (IBM)</li>
-<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7070A" target="_blank">7070A: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the Basics Hands-On Now!</a><br/>
-Wednesday, 9:00 AM-12:45 PM; DevZone Hello World Lab # 4; Andreas Nauerz (IBM)</li>
 <li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7078A" target="_blank">7078A: Get Started with Apache OpenWhisk on IBM Bluemix</a><br/>
 Tuesday, 2:15 PM-5:00 PM; DevZone Hello World Lab # 4; Andy Smith (IBM)</li>
+<li><a href="https://myibm.ibm.com/events/interconnect/all-sessions/session/7070A" target="_blank">7070A: Event-Driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the Basics Hands-On Now!</a><br/>
+Wednesday, 9:00 AM-12:45 PM; DevZone Hello World Lab # 4; Andreas Nauerz (IBM)</li>
 </ul>
 </details>
 <details><summary><strong>Meet the Expert Sessions</strong></summary>
