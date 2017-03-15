@@ -200,7 +200,7 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 ### June 2016
 
 - [**Bluemix Developers in Cambridge Meetup**](http://www.meetup.com/Bluemix-Developers-in-Cambridge/events/231783149/), June 23rd 2016, Cambridge, USA<br/>Vatche Ishakia gave a talk on OpenWhisk
-- [**Silicon Valley Cloud Foundry User Group Meetup**](http://www.meetup.com/CloudFoundry/events/231791789/), June 14th 2016, Sunnyvale, USA<br&>Animesh Singh & Altoros gave a talk on OpenWhisk  
+- [**Silicon Valley Cloud Foundry User Group Meetup**](http://www.meetup.com/CloudFoundry/events/231791789/), June 14th 2016, Sunnyvale, USA<br/>Animesh Singh & Altoros gave a talk on OpenWhisk  
 
 ### May 2016
 
