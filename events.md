@@ -136,10 +136,12 @@ Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM
 </details> 
 
 - [**Devoxx US**](https://devoxx.us/), March 21st–23rd, Las Vegas, USA<br/>OpenWhisk team will attend
+- [**Meetup Serverless Vienna**](https://www.meetup.com/Serverless-Vienna/events/238392790/), March 28, Vienna, Austria. Coding on various Serverless systems, incl OpenWhisk.
 - [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th, Berlin, Germany<br/>Daniel Krook will give an OpenWhisk demo at the IBM booth, and will be on hand to answer any questions
 
 ### April 2017
 
+- [**Meetup Serverless Hamburg**](https://www.meetup.com/Serverless-Hamburg/events/238520956/), April 10, Hamburg, Germany. Andreas Nauerz to give a talk on OpenWhisk
 - [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
 - [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 26th-28th 2017, Austin, USA<br/>OpenWhisk team will attend
 - [**Into the Box**](https://www.intothebox.org/), April 26th-28th 2017, The Woodlands, USA<br/>Raymond Camden will give a talk on OpenWhisk
