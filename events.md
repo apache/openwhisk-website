@@ -8,8 +8,13 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
+### April 2017
+
+- [**Meetup Serverless Hamburg**](https://www.meetup.com/Serverless-Hamburg/events/238520956/), April 10, Hamburg, Germany. Andreas Nauerz to give a talk on OpenWhisk
+
 ### March 2017
 
+- [**Meetup Serverless Vienna**](https://www.meetup.com/Serverless-Vienna/events/238392790/), March 28, Vienna, Austria. Coding on various Serverless systems, incl OpenWhisk.
 - [**ForwardJS**](https://forwardjs.com/), March 1st, San Francisco, USA<br/>Raymond Camden will give a talk on OpenWhisk
 - [**JS Remote Conf**](https://devchat.tv/conferences/js-remote-conf-2017), March 15th-16th, Virtual<br/>James Thomas will give a talk on OpenWhisk and Serverless
 
