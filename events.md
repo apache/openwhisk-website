@@ -22,7 +22,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### May 2017
 
-- [**Meetup Serverless Berlin**](), May 4th 2017, Hamburg, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
+- [**Meetup Serverless Berlin**](), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
 - [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 - [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
 
