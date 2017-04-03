@@ -8,10 +8,6 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-### March 2017
-
-- [**Meetup Serverless Vienna**](https://www.meetup.com/Serverless-Vienna/events/238392790/), March 28th 2017, Vienna, Austria<br/>Coding on various Serverless systems, incl OpenWhisk.
-- [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th 2017, Berlin, Germany<br/>Daniel Krook will give an OpenWhisk demo at the IBM booth, and will be on hand to answer any questions
 
 ### April 2017
 
@@ -25,6 +21,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 ### May 2017
 
 - [**Meetup Serverless Berlin**](), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
+- [**Meetup Triangle Bluemix**](https://www.meetup.com/rtpbluemix/events/238926973/), May 11th 2017, NCSU Centennial Campus, Raleigh, NC USA<br/>IBM Development team contributing to OpenWhisk will give overview and live demos using Bluemix.
 - [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 - [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
 
@@ -36,6 +33,8 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### March 2017
 
+- [**Meetup Serverless Vienna**](https://www.meetup.com/Serverless-Vienna/events/238392790/), March 28th 2017, Vienna, Austria<br/>Coding on various Serverless systems, incl OpenWhisk.
+- [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th 2017, Berlin, Germany<br/>Daniel Krook will give an OpenWhisk demo at the IBM booth, and will be on hand to answer any questions
 - [**Devoxx US**](https://devoxx.us/), March 21st–23rd 2017, Las Vegas, USA<br/>OpenWhisk team will attend
 
 - [**IBM InterConnect**](http://www.ibm.com/cloud-computing/us/en/interconnect/), March 19th–23rd 2017, Las Vegas, USA<br/>OpenWhisk team will attend
