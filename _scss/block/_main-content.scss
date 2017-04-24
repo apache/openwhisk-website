@@ -179,6 +179,16 @@
         margin: 0 0 1rem 3rem;
       }
     }
+
+    &--side-by-side {
+      @media (min-width: $breakpoint-md) {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 50px;
+        height: 150px;
+      }
+    }
   }
 
   &__video {
