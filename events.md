@@ -8,29 +8,26 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-
-### April 2017
-
-- [**Meetup TRI REST**](https://www.meetup.com/TRI-REST/events/238345148/?from=ref), April 26th 2017, Raleigh, USA<br/>Carlos Santana will give a talk on OpenWhisk
-- [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th 2017, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
-- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 27th-28th 2017, Austin, USA<br/>OpenWhisk team will attend
-- [**Into the Box**](https://www.intothebox.org/), April 26th-28th 2017, The Woodlands, USA<br/>Raymond Camden will give a talk on OpenWhisk
-
 ### May 2017
 
-- [**Meetup Serverless Berlin**](), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
+- [**Meetup Serverless Berlin**](https://www.meetup.com/eBay-Europe-Technology/events/239295491/), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
 - [**Meetup Triangle Bluemix**](https://www.meetup.com/rtpbluemix/events/238926973/), May 11th 2017, NCSU Centennial Campus, Raleigh, NC USA<br/>IBM Development team contributing to OpenWhisk will give overview and live demos using Bluemix.
 - [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 - [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
+- [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thämmes will give a talk and run a hands-on workshop on OpenWhisk
 
 ### June 2017
 
-- [**FunctionConf Amsterdam**](https://functionconf.io/), June 15th-16th 2017, Amsterdam, Netherlands<br/>OpenWhisk team will attend
+- Nothing planned yet
 
 ## Past Events
 
 ### April 2017
 
+- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 27th-28th 2017, Austin, USA<br/>OpenWhisk team will attend
+- [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th 2017, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
+- [**Into the Box**](https://www.intothebox.org/), April 26th-28th 2017, The Woodlands, USA<br/>Raymond Camden will give a talk on OpenWhisk
+- [**Meetup TRI REST**](https://www.meetup.com/TRI-REST/events/238345148/?from=ref), April 26th 2017, Raleigh, USA<br/>Carlos Santana will give a talk on OpenWhisk
 - [**Meetup Serverless Hamburg**](https://www.meetup.com/Serverless-Hamburg/events/238520956/), April 10th 2017, Hamburg, Germany<br/>Andreas Nauerz and Xin Cai will give a talk and run a hands-on workshop on OpenWhisk
 - [**Meetup Serverless Boston**](https://www.meetup.com/Serverless-Boston/events/237480548/), April 5th 2017, Boston, USA<br/>Paul Castro and Perry Cheng will give a talk on OpenWhisk
 - [**O'Reilly Software Architecture Conference**](https://conferences.oreilly.com/software-architecture/sa-ny/public/schedule/grid/public/2017-04-05), April 5th 2017, New York, USA<br/>Daniel Krook will give a keynote and Ioana Baldini and Rodric Rabbah talks on OpenWhisk
