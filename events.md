@@ -8,19 +8,25 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-### May 2017
-
-- [**Meetup Serverless Berlin**](https://www.meetup.com/eBay-Europe-Technology/events/239295491/), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
-- [**Meetup Triangle Bluemix**](https://www.meetup.com/rtpbluemix/events/238926973/), May 11th 2017, NCSU Centennial Campus, Raleigh, NC USA<br/>IBM Development team contributing to OpenWhisk will give overview and live demos using Bluemix.
-- [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
-- [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
-- [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thömmes will give a talk and run a hands-on workshop on OpenWhisk
-
 ### June 2017
 
 - Nothing planned yet
 
+### May 2017
+
+- [Meetup Triangle CocoaHeads](https://www.meetup.com/nscoderrtp/events/239925683/), May 25th 2017, Raleigh, USA<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk on OpenWhisk and Swift at the Triangle Cocoa - Mac and iOS Development Meetup
+- [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thömmes will give a talk and run a hands-on workshop on OpenWhisk
+
+
 ## Past Events
+
+### May 2017
+
+- [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
+- [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
+- [**Meetup Triangle Bluemix**](https://www.meetup.com/rtpbluemix/events/238926973/), May 11th 2017, NCSU Centennial Campus, Raleigh, NC USA<br/>IBM Development team contributing to OpenWhisk will give overview and live demos using Bluemix.
+- [**Meetup Serverless Berlin**](https://www.meetup.com/eBay-Europe-Technology/events/239295491/), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
+
 
 ### April 2017
 
