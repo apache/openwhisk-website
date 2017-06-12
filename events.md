@@ -8,10 +8,6 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-### July 2017
-
-- Nothing planned yet
-
 ### June 2017
 
 - [**Acadiana Software Group**](https://www.facebook.com/events/1920692501553535/), June 14th 2017, Lafayette, USA<br/>Raymond Camden will give a talk on OpenWhisk
