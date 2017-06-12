@@ -14,10 +14,6 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Past Events
 
-### June 2017
-
-- No past events yet
-
 ### May 2017
 
 - [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thömmes will give a talk and run a hands-on workshop on OpenWhisk
