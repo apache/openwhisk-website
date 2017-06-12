@@ -8,20 +8,24 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-### June 2017
+### July 2017
 
 - Nothing planned yet
 
-### May 2017
+### June 2017
 
-- [Meetup Triangle CocoaHeads](https://www.meetup.com/nscoderrtp/events/239925683/), May 25th 2017, Raleigh, USA<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk on OpenWhisk and Swift at the Triangle Cocoa - Mac and iOS Development Meetup
-- [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thömmes will give a talk and run a hands-on workshop on OpenWhisk
-
+- [**Acadiana Software Group**](https://www.facebook.com/events/1920692501553535/), June 14th 2017, Lafayette, USA<br/>Raymond Camden will give a talk on OpenWhisk
 
 ## Past Events
 
+### June 2017
+
+- No past events yet
+
 ### May 2017
 
+- [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thömmes will give a talk and run a hands-on workshop on OpenWhisk
+- [**Meetup Triangle CocoaHeads**](https://www.meetup.com/nscoderrtp/events/239925683/), May 25th 2017, Raleigh, USA<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk on OpenWhisk and Swift at the Triangle Cocoa - Mac and iOS Development Meetup
 - [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
 - [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 - [**Meetup Triangle Bluemix**](https://www.meetup.com/rtpbluemix/events/238926973/), May 11th 2017, NCSU Centennial Campus, Raleigh, NC USA<br/>IBM Development team contributing to OpenWhisk will give overview and live demos using Bluemix.
