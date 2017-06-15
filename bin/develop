@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Make sure we have the required dependencies.
+npm install
+
+# Create the JavaScript bundle.
+npm run build:js
+
+# Start the Jekyll server and JavaScript watcher.
+npm run dev:jekyll
