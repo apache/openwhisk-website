@@ -3,9 +3,9 @@ node("git-websites") {
   sh 'env'
   stage('Build') {
     // Run jekyll
-    sh 'pwd'
-    sh 'ls'
     sh '''
+    ls
+    rm -r *
     pwd
     env
     export
