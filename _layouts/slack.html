@@ -1,0 +1,85 @@
+--- 
+layout: default 
+---
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+  crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+<section>
+  <div class="main-content">
+    <div class="main-content__columns">
+      <div class="main-content__column">
+        <div><img src="https://s23.postimg.org/oy3kv2uxn/skitch.png" alt="OpenWhisk plus Slack" style="height: 60px;"> </div>
+        <div>
+          <h3>Already a Team member?</h3>
+          <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
+        </div>
+        <div>
+          <h3>If not, join us!</h3>
+          <p>Join the OpenWhisk Community to discuss the project in real-time.
+          </p>
+          <ul style="text-align: left">
+            <li><strong>Talk</strong> to the core devs and the OpenWhisk community.
+            </li>
+            <li><strong>Learn</strong> from others and ask questions.</li>
+            <li><strong>Share</strong> your work and demos.</li>
+          </ul>
+          <form>
+            <div> <label for="exampleInputEmail2">Email:</label>
+              <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email"> </div>
+            <button type="button" class="btn btn-primary" style="margin:
+            5px;">Send invitation</button>
+          </form>
+        </div>
+        <div>
+          <p>We are a friendly, respectful and inclusive community!</p>
+        </div>
+        <div><a href="https://openwhisk-team.slack.com/"> </a>
+          <p><i>Code for Slack invite (this page) is on github:</i><br>
+            <i> </i><i><a
+              href="https://github.com/openwhisk/openwhisk-slackinvite"
+              target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var btn = $("button");
+    var res = $("#result");
+    var email = $('#inputEmail');
+    var actionUrl = "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/3e172721d7ba44ac0cb5633eae516fb1284fd9a45633e4172dbe7a780b6572c6/api/slackinvite";
+    function handler() {
+      var email = $("input")[0].value;
+      $.get(actionUrl, { email: email })
+        .done(function (data) {
+          btn.addClass("btn-success");
+          btn.html("WOOT. CHECK YOUR EMAIL!");
+          res.html(data.message);
+        })
+        .fail(function (err) {
+          res.html(err.statusText + ":Your invitation didn't work :-( ");
+          btn.addClass("btn-error");
+        });
+    }
+    btn.click(handler);
+    btn.prop("disabled", true);
+
+    function validate() {
+      console.log("validate")
+      if (email[0].validity.typeMismatch) {
+        btn.prop("disabled", true);
+      } else {
+        btn.prop("disabled", false);
+      }
+    }
+    email.keyup(validate);
+  })
+
+</script>
