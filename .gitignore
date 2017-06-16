@@ -4,3 +4,5 @@ node_modules/
 .sass-cache
 .jekyll-metadata
 .bundle/
+.Gemfile.lock
+js/

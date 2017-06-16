@@ -59,6 +59,14 @@ If you get an error 'bundle: command not found' attempting to build the site, yo
  gem install bundler
 ```
 
+### Jenkins build
+
+The OpenWhisk.org website is automatically built and published to Apache at:
+http://openwhisk.incubator.apache.org/
+
+Current Jenkins build status can be checked here:
+https://builds.apache.org/view/OpenWhisk/job/OpenWhisk-site/
+
 ### Issues
 
 Report bugs, ask questions and request features [here on GitHub](../../issues).
