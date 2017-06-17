@@ -5,4 +5,3 @@ node_modules/
 .jekyll-metadata
 .bundle/
 Gemfile.lock
-js/
