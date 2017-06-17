@@ -10,7 +10,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ### June 2017
 
-- <a name="2017-06-21" href="#2017-06-21">**OpenWhisk Meetup Austin, TX**</a>, June 21st 2017, Austin, TX<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk, show demos, discuss latest features.<br>IBM Bldg 908 Room: Texas Star<br>11501 BURNET RD<br>AUSTIN, TX 78758-3400, US
+- <a name="2017-06-21" href="#2017-06-21">**OpenWhisk Meetup Austin, TX**</a>, June 21st 2017, Austin, TX<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk, show demos, discuss latest features.<br>6:30PM - 8:00PM<br>IBM Bldg 908 Room: Texas Star<br>11501 BURNET RD<br>AUSTIN, TX 78758-3400, US
 - [**Acadiana Software Group**](https://www.facebook.com/events/1920692501553535/), June 14th 2017, Lafayette, USA<br/>Raymond Camden will give a talk on OpenWhisk
 
 ## Past Events
