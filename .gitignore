@@ -3,3 +3,8 @@
 node_modules/
 .bundle/
 tools/
+_site/
+bin/
+Gemfile.lock
+
+
