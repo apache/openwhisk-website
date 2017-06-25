@@ -19,6 +19,8 @@ node("git-websites") {
     which bundle
     bundle install --path ${GEM_HOME}
     bundle
+    npm install
+    npm run build:js
     bundle exec jekyll build --verbose
     ls -l _site
     '''
