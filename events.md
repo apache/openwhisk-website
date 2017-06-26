@@ -8,34 +8,37 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
+### June 2017
+
+- <a name="2017-06-21" href="#2017-06-21">**OpenWhisk Meetup Austin, TX**</a>, June 21st 2017, Austin, TX<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk, show demos, discuss latest features.<br>6:30PM - 8:00PM<br>IBM Bldg 908 Room: Texas Star<br>11501 BURNET RD<br>AUSTIN, TX 78758-3400, US
+- [**Acadiana Software Group**](https://www.facebook.com/events/1920692501553535/), June 14th 2017, Lafayette, USA<br/>Raymond Camden will give a talk on OpenWhisk
+
+## Past Events
+
+### May 2017
+
+- [**Meetup Serverless Amsterdam**](https://serverless.amsterdam/workshop-going-serverless-with-openwhisk.html), May 29th 2017, Amsterdam, Netherlands<br/>Andreas Nauerz and Markus Thömmes will give a talk and run a hands-on workshop on OpenWhisk
+- [**Meetup Triangle CocoaHeads**](https://www.meetup.com/nscoderrtp/events/239925683/), May 25th 2017, Raleigh, USA<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk on OpenWhisk and Swift at the Triangle Cocoa - Mac and iOS Development Meetup
+- [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
+- [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
+- [**Meetup Triangle Bluemix**](https://www.meetup.com/rtpbluemix/events/238926973/), May 11th 2017, NCSU Centennial Campus, Raleigh, NC USA<br/>IBM Development team contributing to OpenWhisk will give overview and live demos using Bluemix.
+- [**Meetup Serverless Berlin**](https://www.meetup.com/eBay-Europe-Technology/events/239295491/), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
+
+
+### April 2017
+
+- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 27th-28th 2017, Austin, USA<br/>OpenWhisk team will attend
+- [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th 2017, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
+- [**Into the Box**](https://www.intothebox.org/), April 26th-28th 2017, The Woodlands, USA<br/>Raymond Camden will give a talk on OpenWhisk
+- [**Meetup TRI REST**](https://www.meetup.com/TRI-REST/events/238345148/?from=ref), April 26th 2017, Raleigh, USA<br/>Carlos Santana will give a talk on OpenWhisk
+- [**Meetup Serverless Hamburg**](https://www.meetup.com/Serverless-Hamburg/events/238520956/), April 10th 2017, Hamburg, Germany<br/>Andreas Nauerz and Xin Cai will give a talk and run a hands-on workshop on OpenWhisk
+- [**Meetup Serverless Boston**](https://www.meetup.com/Serverless-Boston/events/237480548/), April 5th 2017, Boston, USA<br/>Paul Castro and Perry Cheng will give a talk on OpenWhisk
+- [**O'Reilly Software Architecture Conference**](https://conferences.oreilly.com/software-architecture/sa-ny/public/schedule/grid/public/2017-04-05), April 5th 2017, New York, USA<br/>Daniel Krook will give a keynote and Ioana Baldini and Rodric Rabbah talks on OpenWhisk
+
 ### March 2017
 
 - [**Meetup Serverless Vienna**](https://www.meetup.com/Serverless-Vienna/events/238392790/), March 28th 2017, Vienna, Austria<br/>Coding on various Serverless systems, incl OpenWhisk.
 - [**CloudNativeCon and KubeCon Europe**](http://events.linuxfoundation.org/events/cloudnativecon-and-kubecon-europe), March 29th–30th 2017, Berlin, Germany<br/>Daniel Krook will give an OpenWhisk demo at the IBM booth, and will be on hand to answer any questions
-
-### April 2017
-
-- [**O'Reilly Software Architecture Conference**](https://conferences.oreilly.com/software-architecture/sa-ny/public/schedule/grid/public/2017-04-05), April 5th 2017, New York, USA<br/>Daniel Krook will give a keynote and Ioana Baldini and Rodric Rabbah talks on OpenWhisk
-- [**Meetup Serverless Boston**](https://www.meetup.com/Serverless-Boston/events/237480548/), April 5th 2017, Boston, USA<br/>Paul Castro and Perry Cheng will give a talk on OpenWhisk
-- [**Meetup Serverless Hamburg**](https://www.meetup.com/Serverless-Hamburg/events/238520956/), April 10th 2017, Hamburg, Germany<br/>Andreas Nauerz and Xin Cai will give a talk and run a hands-on workshop on OpenWhisk
-- [**ServerlessConf Austin**](https://medium.com/openwhisk/openwhisk-workshop-at-the-serverless-conference-in-austin-sign-up-now-c2b88f5bac9d#.73xz9bl16), April 26th 2017, Austin, USA<br/>Andreas Nauerz et al will run a hands-on workshop on OpenWhisk
-- [**ServerlessConf Austin**](http://austin.serverlessconf.io/), April 27th-28th 2017, Austin, USA<br/>OpenWhisk team will attend
-- [**Into the Box**](https://www.intothebox.org/), April 26th-28th 2017, The Woodlands, USA<br/>Raymond Camden will give a talk on OpenWhisk
-
-### May 2017
-
-- [**Meetup Serverless Berlin**](), May 4th 2017, Berlin, Germany<br/>Andreas Nauerz and Jeremias Werner will give a talk and run a hands-on workshop on OpenWhisk
-- [**Codemotion Amsterdam**](http://amsterdam2017.codemotionworld.com/), May 16th-17th 2017, Amsterdam, Netherlands<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
-- [**ApacheCon North America**](http://events.linuxfoundation.org/events/apachecon-north-america), May 16th-18th 2017, Miami, USA<br/>Carlos Santana and Matt Rutkowski will give talks on OpenWhisk
-
-### June 2017
-
-- [**FunctionConf Amsterdam**](https://functionconf.io/), June 15th-16th 2017, Amsterdam, Netherlands<br/>OpenWhisk team will attend
-
-## Past Events
-
-### March 2017
-
 - [**Devoxx US**](https://devoxx.us/), March 21st–23rd 2017, Las Vegas, USA<br/>OpenWhisk team will attend
 
 - [**IBM InterConnect**](http://www.ibm.com/cloud-computing/us/en/interconnect/), March 19th–23rd 2017, Las Vegas, USA<br/>OpenWhisk team will attend

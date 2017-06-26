@@ -17,7 +17,7 @@ node -v
 npm -v
 
 # Verify Ruby is installed
-ruby env
+ruby -v
 
 # Install Jekyll, which is used to build the site
 gem install jekyll bundler
@@ -32,7 +32,7 @@ git clone https://github.com/openwhisk/openwhisk.github.io.git
 # Move into the cloned repo.
 cd openwhisk.github.io
 
-# Install gem dependcies
+# Install gem dependencies
 bundle install
 
 # Start the development server default location http://127.0.0.1:4000
@@ -44,7 +44,7 @@ bin/develop
 If you need to generate static files, run the following:
 
 ``` sh
-# NOTE: Make sure you have already cloned the repo and moved into the directory.
+# NOTE: Make sure you have already cloned the repository and moved into the directory.
 
 # Build the site.
 bundle exec jekyll build
@@ -58,6 +58,14 @@ If you get an error 'bundle: command not found' attempting to build the site, yo
 ``` sh
  gem install bundler
 ```
+
+### Jenkins build
+
+The OpenWhisk.org website is automatically built and published to Apache at:
+http://openwhisk.incubator.apache.org/
+
+Current Jenkins build status can be checked here:
+https://builds.apache.org/view/OpenWhisk/job/OpenWhisk-site/
 
 ### Issues
 
