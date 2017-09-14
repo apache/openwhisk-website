@@ -8,12 +8,29 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
+### November 2017
+
+- [**Devoxx Morocco**](https://devoxx.ma/), November 14th-16th 2017, Casablanca, Morocco<br/>James Thomas will give a talk on building serverless applications with OpenWhisk
+- [**UA Mobile**](http://uamobile.org/topics/serverless-swift-apache-openwhisk), November 25th 2017, Kiev, Ukraine<br/>James Thomas will give a talk on building mobile APIs with Swift on OpenWhisk
+
+### October 2017
+
+- [**TopConf Duesseldorf**](https://www.topconf.com/conference//duesseldorf-2017/talk/microservices-without-servers/), October 4th-6th 2017, Cologne, Germany<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
+- [**Nordic APIs Summit**](https://nordicapis.com/?post_type=sessions&p=6682), October 10th-11th 2017, Stockholm, Sweden<br/>James Thomas will give a talk on building serverless APIs using OpenWhisk and Swift
+- [**Going Serverless**](http://certifiedfreshevents.com/events/going-serverless/), October 20th 2017, Online Webinar<br/>James Thomas will give a talk on building multi-provider serverless applications with The Serverless Framework and OpenWhisk
+- [**BristolJS October**](https://www.meetup.com/BristolJS/events/242690371/), October 25th 2017, Bristol, England<br/>James Thomas will give a talk on serverless Node.js applications with OpenWhisk
+
+### September 2017
+
+- [**SwiftConf Europe**](https://swiftconf.com/), September 6th-7th 2017, Cologne, Germany<br/>James Thomas will give a talk on Serverless Swift APIs using OpenWhisk
+- [**Pixels Camp**](https://pixels.camp/jthomas), September 28th-30th 2017, Lisbon, Portugal<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
+
+## Past Events
+
 ### June 2017
 
 - <a name="2017-06-21" href="#2017-06-21">**OpenWhisk Meetup Austin, TX**</a>, June 21st 2017, Austin, TX<br>[Carlos Santana](https://twitter.com/csantanapr) will give a talk, show demos, discuss latest features.<br>6:30PM - 8:00PM<br>IBM Bldg 908 Room: Texas Star<br>11501 BURNET RD<br>AUSTIN, TX 78758-3400, US
 - [**Acadiana Software Group**](https://www.facebook.com/events/1920692501553535/), June 14th 2017, Lafayette, USA<br/>Raymond Camden will give a talk on OpenWhisk
-
-## Past Events
 
 ### May 2017
 
