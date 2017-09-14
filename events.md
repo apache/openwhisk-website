@@ -12,6 +12,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 - [**Devoxx Morocco**](https://devoxx.ma/), November 14th-16th 2017, Casablanca, Morocco<br/>James Thomas will give a talk on building serverless applications with OpenWhisk
 - [**UA Mobile**](http://uamobile.org/topics/serverless-swift-apache-openwhisk), November 25th 2017, Kiev, Ukraine<br/>James Thomas will give a talk on building mobile APIs with Swift on OpenWhisk
+- [**µCon London**](https://skillsmatter.com/conferences/8549-con-2017-the-microservices-conference), November 6th-7th 2017, London, UK<br/>Rob Allen will give a talk on building serverless APIs in Swift
 
 ### October 2017
 
@@ -23,6 +24,7 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 ### September 2017
 
 - [**SwiftConf Europe**](https://swiftconf.com/), September 6th-7th 2017, Cologne, Germany<br/>James Thomas will give a talk on Serverless Swift APIs using OpenWhisk
+- [**APIDays Zurich**](http://www.apidays.io/events/zurich-2017), September 26th-27th 2017, Zurich, Switzerland<br/>Rob Allen will give a talk on building serverless APIs in Swift
 - [**Pixels Camp**](https://pixels.camp/jthomas), September 28th-30th 2017, Lisbon, Portugal<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 
 ## Past Events
