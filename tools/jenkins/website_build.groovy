@@ -35,9 +35,12 @@ node("git-websites") {
     git config -l --global
     git stash
     git status
+    git remote -v
+    git fetch origin
     git checkout asf-site
+    git log asf-site -3
     git status
-    rm -rf /tmp/_site 
+    rm -rf /tmp/_site
     mv _site /tmp/
     rm -rf *
     git status
