@@ -28,6 +28,7 @@ node("git-websites") {
   stage('Publish') {
     // Run git commands to push
     sh '''
+    alias
     pwd
     ls
     echo "Pushing openwhisk site to asf"
@@ -49,7 +50,10 @@ node("git-websites") {
     git diff
     git add .
     git status
+    git log asf-site -3
     git commit -m "Automatic Site Publish by Jenkins"
+    git pull --rebase
+    git log asf-site -3
     git push origin asf-site
     '''
   }
