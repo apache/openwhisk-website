@@ -8,26 +8,33 @@ The Apache Software Foundation does not endorse listed events. [Get in touch wit
 
 ## Upcoming Events
 
-### November 2017
+### September 2017
 
-- [**UA Mobile**](http://uamobile.org/topics/serverless-swift-apache-openwhisk), November 25th 2017, Kiev, Ukraine<br/>James Thomas will give a talk on building mobile APIs with Swift on OpenWhisk
-- [**Devoxx Morocco**](https://devoxx.ma/), November 14th-16th 2017, Casablanca, Morocco<br/>James Thomas will give a talk on building serverless applications with OpenWhisk
-- [**µCon London**](https://skillsmatter.com/conferences/8549-con-2017-the-microservices-conference), November 6th-7th 2017, London, UK<br/>Rob Allen will give a talk on building serverless APIs in Swift
+- [**APIDays Zurich**](http://www.apidays.io/events/zurich-2017), September 26th-27th 2017, Zurich, Switzerland<br/>Rob Allen will give a talk on building serverless APIs in Swift
+- [**Pixels Camp**](https://pixels.camp/jthomas), September 28th-30th 2017, Lisbon, Portugal<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
 
 ### October 2017
 
-- [**BristolJS October**](https://www.meetup.com/BristolJS/events/242690371/), October 25th 2017, Bristol, England<br/>James Thomas will give a talk on serverless Node.js applications with OpenWhisk
-- [**Going Serverless**](http://certifiedfreshevents.com/events/going-serverless/), October 20th 2017, Online Webinar<br/>James Thomas will give a talk on building multi-provider serverless applications with The Serverless Framework and OpenWhisk
-- [**Nordic APIs Summit**](https://nordicapis.com/?post_type=sessions&p=6682), October 10th-11th 2017, Stockholm, Sweden<br/>James Thomas will give a talk on building serverless APIs using OpenWhisk and Swift
 - [**TopConf Duesseldorf**](https://www.topconf.com/conference//duesseldorf-2017/talk/microservices-without-servers/), October 4th-6th 2017, Cologne, Germany<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
+- [**NCDevCon**](http://ncdevcon.com/) Carlos Santana will give a talk on using OpenWhisk with Websites.
+- [**ServerlessConf**](https://nyc.serverlessconf.io/agenda) October 8th-11th, NY, US<br/> Several talks on OpenWhisk
+- [**ServerlessConf NYC Meetup**](https://www.meetup.com/Serverless-NYC/events/243399016/?_cookie-check=QsFBwgKfBvP1vKyC) October 12th, NY, US<br/> Dan Krooks (IBM) and Dragos Dascalita Haut (Adobe) will be presenting on Apache OpenWhisk
+- [**Nordic APIs Summit**](https://nordicapis.com/?post_type=sessions&p=6682), October 10th-11th 2017, Stockholm, Sweden<br/>James Thomas will give a talk on building serverless APIs using OpenWhisk and Swift
+- [**Going Serverless**](http://certifiedfreshevents.com/events/going-serverless/), October 20th 2017, Online Webinar<br/>James Thomas will give a talk on building multi-provider serverless applications with The Serverless Framework and OpenWhisk
+- [**BristolJS October**](https://www.meetup.com/BristolJS/events/242690371/), October 25th 2017, Bristol, England<br/>James Thomas will give a talk on serverless Node.js applications with OpenWhisk
+
+### November 2017
+
+- [**µCon London**](https://skillsmatter.com/conferences/8549-con-2017-the-microservices-conference), November 6th-7th 2017, London, UK<br/>Rob Allen will give a talk on building serverless APIs in Swift
+- [**Devoxx Morocco**](https://devoxx.ma/), November 14th-16th 2017, Casablanca, Morocco<br/>James Thomas will give a talk on building serverless applications with OpenWhisk
+- [**UA Mobile**](http://uamobile.org/topics/serverless-swift-apache-openwhisk), November 25th 2017, Kiev, Ukraine<br/>James Thomas will give a talk on building mobile APIs with Swift on OpenWhisk
+
+
+## Past Events
 
 ### September 2017
 
-- [**Pixels Camp**](https://pixels.camp/jthomas), September 28th-30th 2017, Lisbon, Portugal<br/>James Thomas will give a talk on building serverless applications using OpenWhisk
-- [**APIDays Zurich**](http://www.apidays.io/events/zurich-2017), September 26th-27th 2017, Zurich, Switzerland<br/>Rob Allen will give a talk on building serverless APIs in Swift
 - [**SwiftConf Europe**](https://swiftconf.com/), September 6th-7th 2017, Cologne, Germany<br/>James Thomas will give a talk on Serverless Swift APIs using OpenWhisk
-
-## Past Events
 
 ### June 2017
 
