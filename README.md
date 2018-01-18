@@ -27,10 +27,10 @@ gem install jekyll bundler
 
 ``` sh
 # Clone the repository (and correct branch).
-git clone https://github.com/openwhisk/openwhisk.github.io.git
+git clone https://github.com/openwhisk/incubator-openwhisk-website.git
 
 # Move into the cloned repo.
-cd openwhisk.github.io
+cd incubator-openwhisk-website
 
 # Install gem dependencies
 bundle install
