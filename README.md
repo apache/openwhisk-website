@@ -8,7 +8,7 @@ Apache OpenWhisk is a cloud-first distributed event-based programming service. I
 
 ### Install Prerequisites
 
-* Download and install Nodejs: see [https://nodejs.org/](https://nodejs.org/)
+* Download and install Node.js: see [https://nodejs.org/](https://nodejs.org/)
 * Download and install Ruby: see [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
 
 ``` sh
@@ -27,10 +27,10 @@ gem install jekyll bundler
 
 ``` sh
 # Clone the repository (and correct branch).
-git clone https://github.com/openwhisk/openwhisk.github.io.git
+git clone https://github.com/apache/incubator-openwhisk-website.git
 
 # Move into the cloned repo.
-cd openwhisk.github.io
+cd incubator-openwhisk-website
 
 # Install gem dependencies
 bundle install
@@ -71,7 +71,7 @@ https://builds.apache.org/view/OpenWhisk/job/OpenWhisk-site/
 
 Report bugs, ask questions and request features [here on GitHub](../../issues).
 
-You can also join our slack channel and chat with developers.   To get access to our slack channel, please see the instructions [here](https://github.com/openwhisk/openwhisk/wiki).
+You can also join our slack channel and chat with developers.   To get access to our slack channel, please see the instructions [here](https://github.com/apache/incubator-openwhisk/wiki).
 
 ### License
 
