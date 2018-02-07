@@ -61,7 +61,7 @@ You can [submit an issue to the GitHub repository](https://github.com/openwhisk/
 For questions, hints and tips for developing in Apache OpenWhisk:
 
 - [Join the Dev Mailing List]({{ site.github.url }}/contact)
-- [Apache OpenWhisk on GitHub](https://github.com/openwhisk)
+- [Apache OpenWhisk on GitHub](https://github.com/search?q=org%3Aapache+openwhisk)
 - [Posts tagged with #openwhisk on StackOverflow](http://stackoverflow.com/questions/tagged/openwhisk)
 - [Apache OpenWhisk on Medium](https://medium.com/openwhisk)
 - [@openwhisk on Twitter](https://twitter.com/openwhisk)
