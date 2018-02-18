@@ -30,7 +30,7 @@ Absolutely, we even encourage you to do so. Packages represent the concept allow
 
 ### Which programming languages/runtimes does OpenWhisk support?
 
-Currently, OpenWhisk supports NodeJS and Swift; more languages will be supported soon. Additionally OpenWhisk can run any custom code put in a Docker container.
+Currently, OpenWhisk supports JavaScript, Swift, Python or PHP function, a Java method, any binary-compatible executable including Go programs; more languages will be supported soon. Additionally OpenWhisk can run any custom code put in a Docker container.
 
 ### When should I use OpenWhisk versus VMs, Containers, or Cloud Foundry apps?
 
