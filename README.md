@@ -65,7 +65,7 @@ The OpenWhisk.org website is automatically built and published to Apache at:
 http://openwhisk.incubator.apache.org/
 
 Current Jenkins build status can be checked here:
-https://builds.apache.org/view/OpenWhisk/job/OpenWhisk-site/
+https://builds.apache.org/job/OpenWhisk-website/
 
 ### Issues
 
