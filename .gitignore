@@ -6,3 +6,4 @@ node_modules/
 .bundle/
 Gemfile.lock
 js/
+package-lock.json
