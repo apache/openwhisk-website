@@ -22,7 +22,8 @@ Apache OpenWhisk uses semantic versioning. Version numbers use the form ```major
 #### 0.9.0-incubating (2018-07-17)
 
 Official Source code download:
-- [openwhisk-0.9.0-incubating-sources.tar.gz](https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz)
+- [openwhisk-0.9.0-incubating-sources.tar.gz](
+https://www.apache.org/dyn/closer.cgi?action=download&filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz)
 
 SHA-512 and PGP signature:
 - [openwhisk-0.9.0-incubating-sources.tar.gz.asc](https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc)
