@@ -1,0 +1,104 @@
+
+* {
+    box-sizing: border-box;
+    font-family: $font-family-default;
+    background: none;
+    border: 0
+}
+
+body {
+    font-family: $font-family-default;
+}
+
+strong {
+    //color: $color-blue-dark;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: $font-weight-bold;
+    //color: $color-blue-dark;
+    margin: 0;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    line-height: $h1-line-height;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    line-height: $h2-line-height;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
+}
+
+p, ul, ol, li {
+    font-size: $p-font-size;
+    font-weight: $p-font-weight;
+    line-height: $p-line-height;
+    color: $color-blue-dark-text;
+}
+
+.light-text {
+    clear: both;
+    color: $color-fg-base-light-text;
+    // TODO: make vars.
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+a {color: $color-anchors }
+a:visited { color: $color-anchors; }
+a:hover {color: $color-anchors;}
+a:active {color: $color-anchors;}
+
+a.button {
+    color: white;
+}
+
+.button {
+    color: $color-white;
+    background-color: $color-blue-dark;
+    border: solid 1px #d0d0d0;
+    border-bottom: solid 3px #b2b1b1;
+    border-radius: 6px;
+    padding: 0 20px;
+    box-shadow: inset 0 0 0 1px #f5f5f5;
+    display: inline-block;
+    font-size: 13px;
+    font-family: $font-family-default;
+    font-weight: 300;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fafafa;
+}
+
+.button:hover {
+    background: $color-blue-hover;
+    border: solid 1px #c2c2c2;
+    border-bottom: solid 3px #b2b1b1;
+    box-shadow: inset 0 0 0 1px #efefef;
+}
+
+.button:active {
+    background: #dfdfdf;
+    border: solid 1px #959595;
+    box-shadow: inset 0 10px 15px 0 #c4c4c4;
+    top:2px;
+}
