@@ -1,11 +1,16 @@
+<!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+
 
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width,minimum-scale=1,initial-scale=1">
-    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
@@ -15,496 +20,232 @@
     <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Apache OpenWhisk is a serverless, open source cloud platform</title>
-    
+        <title>Apache OpenWhisk is a serverless, open source cloud platform</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <!-- Load Index, Menu & collapsible support -->
+        <script type="text/javascript">
+            
+function applyCollapsible() {
 
+    var coll = document.getElementsByClassName("collapsible-toggle");
+    var i;
 
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var sibling = this.nextElementSibling;
+        console.log(sibling)
+        if(sibling!==null){
+          if (sibling.style.display === "block") {
+            sibling.style.display = "none";
+          } else {
+            sibling.style.display = "block";
+          }
+        }
+      });
+    }
+}
 
+function openIndex() {
+          console.log("openIndex")
+  document.getElementById("index").style.display = "block";
+}
+function closeIndex() {
+            console.log("closeIndex")
+  document.getElementById("index").style.display = "none";
+}
 
-    <script type="application/ld+json">{
-      "@context":"http://schema.org",
-      "@type": "website",
-      "url": "",
-      "image": "/images/apache-openwhisk@2x.jpg",
-      "name": "Apache OpenWhisk is a serverless, open source cloud platform"
-    }</script>
+        </script>
+    </head>
+    <!-- Once all page elements are included, register event hooks -->
+    <body onload="applyCollapsible()">
+        <script src="js/main.min.js"></script>
+        <div class="header">
 
-
-    <meta property="og:title" content="Apache OpenWhisk is a serverless, open source cloud platform">
-    <meta property="og:description" content="An open source platform for serverless, event-driven code at any scale. We handle the infrastructure & servers so you can focus on building amazing things.
-">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
-    <meta property="og:image" content="/images/apache-openwhisk@2x.jpg">
-    <meta property="fb:app_id" content="176365419499478">
-
-
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="/images/apache-openwhisk@2x.jpg"/>
-    <meta name="twitter:title" content="Apache OpenWhisk is a serverless, open source cloud platform"/>
-    <meta name="twitter:description" content="An open source platform for serverless, event-driven code at any scale. We handle the infrastructure & servers so you can focus on building amazing things.
-"/>
-    <meta name="twitter:site" content="@openwhisk"/>
-
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,700,900">
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body class="no-js">
-    <header class="site-header">
-  <div class="site-header__nav site-header__nav--primary">
-    <nav class="site-nav site-nav--main">
-      <a class="site-nav__item site-nav__item--main site-nav__item--logo"
-         href="/">
-        <img class="site-nav__image"
-             src="/images/apache-openwhisk.svg"
-             alt="Apache OpenWhisk">
-      </a>
-
-      <div class="site-nav__item site-nav__item--dropdown">
-      <a href="/about.html"
-            class="site-nav__item site-nav__item--dropdown-link">Docs</a>
-            <div class="site-nav__item site-nav__item--dropdown-container">
-              <a href="/about.html"
-                  class="site-nav__item site-nav__item--dropdown-item">About</a>
-              <a href="/serverless.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Serverless</a>
-              <a href="/faq.html"
-                  class="site-nav__item site-nav__item--dropdown-item">FAQ</a>
-              <a href="https://github.com/apache/incubator-openwhisk/tree/master/docs#readme"
-                  class="site-nav__item site-nav__item--dropdown-item">Documentation</a>
-            </div>
-      </div>
-
-      <div class="site-nav__item site-nav__item--dropdown">
-      <a href="/developers.html"
-            class="site-nav__item site-nav__item--dropdown-link">Get Started</a>
-            <div class="site-nav__item site-nav__item--dropdown-container">
-              <a href="/developers.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Developers</a>
-              <a href="/contributors.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Contributors</a>
-              <a href="/package-creators.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Package Creators</a>
-              <!--
-              <a href=""
-                  class="site-nav__item site-nav__item--dropdown-item">Live Tutorial</a>
-              <a href=""
-                  class="site-nav__item site-nav__item--dropdown-item">Sandbox</a>
-              -->
-            </div>
-      </div>
-
-      <div class="site-nav__item site-nav__item--dropdown">
-      <a href="/faq.html"
-            class="site-nav__item site-nav__item--dropdown-link">Community</a>
-            <div class="site-nav__item site-nav__item--dropdown-container">
-              <a href="/contact.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Mailing Lists</a>
-              <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki"
-                  class="site-nav__item site-nav__item--dropdown-item">Wiki</a>
-              <a href="/social"
-                  class="site-nav__item site-nav__item--dropdown-item">Social Media</a>
-              <a href="/events.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Events</a>
-              <a href="/supporters.html"
-                  class="site-nav__item site-nav__item--dropdown-item">Supporters</a>
-              <a href="https://medium.com/openwhisk"
-                  class="site-nav__item site-nav__item--dropdown-item">Blog</a>
-            </div>
-      </div>
-
-      <div class="site-nav__item site-nav__item--dropdown">
-      <a href="https://github.com/apache/incubator-openwhisk-external-resources"
-            class="site-nav__item site-nav__item--dropdown-link site-nav__item--hide-on-small">Resources</a>
-            <div class="site-nav__item site-nav__item--dropdown-container">
-              <a href="/downloads.html" class="site-nav__item site-nav__item--dropdown-item">Downloads</a>
-              <a href="https://github.com/apache/incubator-openwhisk-external-resources#feed-providers"
-                  class="site-nav__item site-nav__item--dropdown-item">Integrations</a>
-              <a href="https://github.com/apache/incubator-openwhisk-external-resources#applications"
-                  class="site-nav__item site-nav__item--dropdown-item">Demos &amp; Examples</a>
-              <a href="https://github.com/apache/incubator-openwhisk-external-resources#articles"
-                  class="site-nav__item site-nav__item--dropdown-item">Articles</a>
-              <a href="https://github.com/apache/incubator-openwhisk-external-resources#tutorials"
-                  class="site-nav__item site-nav__item--dropdown-item">Tutorials</a>
-            </div>
-      </div>
-
-    </nav>
-  </div>
-  <div class="site-header__nav site-header__nav--secondary">
-    <nav class="site-nav site-nav--social">
-      <a href="https://github.com/apache?q=openwhisk"
-         title="Apache OpenWhisk project repositories on GitHub"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-github.svg"
-             alt="Apache OpenWhisk project repositories on GitHub">
-      </a>
-      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
-         title="Apache OpenWhisk on YouTube"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-youtube.svg"
-             alt="Apache OpenWhisk on YouTube">
-      </a>
-      <a href="http://www.slideshare.net/OpenWhisk"
-         title="Apache OpenWhisk on SlideShare"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-slideshare.svg"
-             alt="Apache OpenWhisk on SlideShare">
-      </a>
-      <a href="https://twitter.com/search?q=openwhisk"
-         title="Apache OpenWhisk on Twitter"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-twitter.svg"
-             alt="Apache OpenWhisk on Twitter">
-      </a>
-      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
-         title="Apache OpenWhisk on Stack Overflow"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-stack-overflow.svg"
-             alt="Apache OpenWhisk on Stack Overflow">
-      </a>
-      <a href="slack.html"
-         title="Apache OpenWhisk on Slack"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-slack.svg"
-             alt="Apache OpenWhisk on Slack">
-      </a>
-      <a href="https://medium.com/openwhisk"
-         title="Apache OpenWhisk on Medium"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-medium.svg"
-             alt="Apache OpenWhisk on Medium">
-      </a>
-    </nav>
-  </div>
-</header>
-
-    <section class="site-section site-section--gradient">
-  <div class="main-cta">
-    <div class="main-cta__lede">
-      <p class="main-cta__text">
-        <strong class="main-cta__strong">Apache OpenWhisk</strong> (Incubating) is a
-        <a class="main-cta__link"
-           href="/serverless">serverless</a>,
-        <strong class="main-cta__strong">open source</strong> cloud platform
-        that executes functions in
-        <strong class="main-cta__strong">response to events</strong> at any
-        scale.
-      </p>
-      <a class="main-cta__button u-button"
-         href="https://github.com/apache/incubator-openwhisk/tree/master/docs#getting-started-with-openwhisk">
-        Get Started
-      </a>
+    <a class="header-section-logo" href="/">
+    </a>
+    <div class="header-section-text-links">
+        <div class="header-row-text-links">
+            <a class="header-text-link" href="/documentation.html">Documentation</a>
+            <a class="header-text-link" href="/community.html">Community</a>
+            <a class="header-text-link" href="/downloads.html">Downloads</a>
+        </div>
     </div>
-    <div class="main-cta__graphic main-cta__graphic--stick-to-top">
-      <img class="main-cta__illustration"
-           src="/images/illustration-openwhisk.svg"
-           alt="Illustration: How Apache OpenWhisk Works">
+    <div class="header-section-social-icons">
+        <div class="header-row-social-icons">
+            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
+                <img class="header-icon-image" src="/images/icon-github.svg">
+            </a>
+            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
+                <img class="header-icon-image" src="/images/icon-slack.svg">
+            </a>
+            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
+                <img class="header-icon-image" src="/images/icon-twitter.svg">
+            </a>
+            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
+                <img class="header-icon-image" src="/images/icon-medium.svg">
+            </a>
+            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
+                <img class="header-icon-image" src="/images/icon-youtube.svg">
+            </a>
+            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
+                <img class="header-icon-image" src="/images/icon-stack-overflow.svg">
+            </a>
+            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
+                <img class="header-icon-image" src="/images/icon-slideshare.svg">
+            </a>
+        </div>
     </div>
-  </div>
-</section>
+</div>
 
-<section class="site-section site-section--blue">
-  <div class="where-to-start">
-    <div class="where-to-start__animation">
-      <img class="where-to-start__image"
-           src="/images/apache-openwhisk-action-animation.gif"
-           alt="Get started with Apache OpenWhisk">
-    </div>
-    <div class="where-to-start__text">
-      <h2 class="where-to-start__heading">
-        Where to start.
-      </h2>
-      <p class="where-to-start__lede">
-        With Apache OpenWhisk you can easily create actions, test, connect to other
-        actions or debug them. Use the
-        <a class="where-to-start__link"
-           href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">
-          Apache OpenWhisk CLI
-        </a>,
-        target your Apache OpenWhisk instance, and run your first action in seconds.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!--
-<section class="site-section site-section--ultralight-blue">
-  <div class="main-content main-content--center">
-    <h2 class="main-content__heading">
-      Video Title
-    </h2>
-    <div class="main-content__video u-embed-container">
-      <iframe width="560" height="315"
-              src="https://www.youtube.com/embed/enk45wEQHzI"
-              frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
+        <!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
 -->
-
-<section class="site-section">
-  <div class="quotes quotes--compact">
-    <blockquote id="quote1" class="quotes__quote">
-      <div class="quotes__text quotes__text--compact">
-        <p>
-          “Thanks to serverless computing we can go even further. The new world
-          needs to be asynchronous and elastic by design, and OpenWhisk provides
-          the features that we need.”
-        </p>
-        <p class="quotes__attribution quotes__attribution--compact">
-          – Luis Enriquez,
-            Head of Platform Engineering &amp; Architecture at Santander Group
-        </p>
-      </div>
-    </blockquote>
-  </div>
+<section id="whiskHeader" class="light-text bot-bar">
+    <main>
+        <div>
+            <h1>Open Source Serverless Cloud Platform</h1>
+            <h5>Executes functions in response to events at any scale</h5>
+        </div>
+    </main>
 </section>
 
-<section class="site-section site-section--gray site-section--vertical-padding">
-  <ul class="why-are-we-here">
-    <li class="why-are-we-here__card">
-      <a class="why-are-we-here__section-link why-are-we-here__section-link--developers"
-         href="#developers">
-        How do I use Apache OpenWhisk?
-      </a>
-    </li>
-    <li class="why-are-we-here__card">
-      <a class="why-are-we-here__section-link why-are-we-here__section-link--service-integrations"
-         href="#service-integrations">
-        How do I integrate my service with Apache OpenWhisk?
-      </a>
-    </li>
-    <li class="why-are-we-here__card">
-      <a class="why-are-we-here__section-link why-are-we-here__section-link--contributors"
-         href="#contributors">
-        How can I contribute to Apache OpenWhisk?
-      </a>
-    </li>
-  </ul>
+<section id="whiskNodes">
+    <main>
+        <div class="content">
+            <h4>What is Apache OpenWhisk?</h4>
+            <p>
+                Apache OpenWhisk (Incubating) is an open source, distributed <a href="https://en.wikipedia.org/wiki/Serverless_computing" style="font-weight:bold">Serverless</a> platform that executes functions (<span style="font-family:Times New Roman,Georgia,Serif">fx</span>) in response to events at any scale. OpenWhisk manages the infrastructure, servers and scaling using Docker containers so you can focus on building amazing and efficient applications.
+            </p>
+            <p>
+                The OpenWhisk platform supports a programming model in which developers write functional logic (called <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md"><span style="font-weight:bold">Actions</span></a>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md"><span style="font-weight:bold">Triggers</span></a>) from external sources (<a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/feeds.md"><span style="font-weight:bold">Feeds</span></a>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
+            </p>
+            <a class="button" href="/documentation.html#openwhisk_deployment">Create Your Local Playground</a>
+        </div>
+        <div class="image-wrapper">
+            <img src="/images/elements/OW-Abstract Architecture Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
+        </div>
+    </main>
+
+    <main>
+        <div class="image-wrapper">
+            <img src="/images/deployments/OW-Deployments.png" alt="Apache OpenWhisk can deploy on your favorite Cloud container framework."/>
+        </div>
+        <div class="content">
+            <h4>Deploys anywhere</h4>
+            <p>
+                Since Apache OpenWhisk builds its components using containers it easily supports many deployment options both locally and within Cloud infrastructures. Options include many of today's popular Container frameworks such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Kubernetes</a>, <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Mesos</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Compose</a>.  Recent contributions even include deployment options such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/docs/minikube.md">Minikube</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenShift</a>.
+            </p>
+        </div>
+    </main>
+
+    <main>
+        <div class="content">
+            <h4>Write functions in any language</h4>
+            <!-- Possible text addition: "bundle larger or complex dependencies, and tailor the runtime environment to suite your needs."" -->
+            <p>
+                Work with what you know and love. Code in your favorite languages such as
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">NodeJS</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-swift">Swift</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-java">Java</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-go">Go</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-java">Scala</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-python">Python</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a></b>.  If you need languages or libraries the current "out-of-the-box" runtimes do not support, you can create and customize your own executables as Zip Actions which run on the <b><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></b> runtime by using the <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a></b>.  Some examples of how to support other languages using Docker Actions include <b><a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a></b>, and <b><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a></b>.
+            </p>
+            <a class="button" href="/documentation.html#nodejs">Create Your First Action</a>
+        </div>
+        <div class="image-wrapper">
+                <img src="/images/runtimes/OW-Runtimes.png" alt="Node Runtime"/>
+        </div>
+    </main>
+
+    <main>
+        <div class="image-wrapper">
+            <img src="/images/elements/illustration-integrators.png" alt="Apache OpenWhisk benefits for package creators"/>
+        </div>
+        <div class="content">
+            <h4>Integrate easily with many popular services</h4>
+            <p>
+                With Apache OpenWhisk you can easily create actions, test, connect to other
+                actions or debug them. Use the
+                <a href="documentation.html#using-openwhisk">wsk CLI</a>,
+                target your Apache OpenWhisk instance, and run your first action in seconds.
+            </p>
+            <p>
+                Apache OpenWhisk makes it simple for thousands of developers to
+                integrate with your service. Make it easy for developers to perform
+                actions when something happens in your service, or to send data into
+                your service when things happen somewhere else.
+            </p>
+        </div>
+    </main>
+
+    <main>
+        <div class="content">
+            <h4>Combine your functions into rich compositions</h4>
+            <p>
+                Code in different languages like JavaScript/NodeJS, Swift, Python,
+                Java or run custom logic by packaging code with Docker.
+                Invoke your code synchronously, asynchronously, or on a schedule.
+                Use higher-level programming constructs like sequences to declaratively
+                chain together multiple actions.
+                Use parameter binding to avoid hardcoding service credentials in your code.
+                And also, debug your code in realtime using variety of
+                <a href="documentation.html/#development_tools">Development Tools</a>.
+            </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="/images/elements/illustration-developers-flexible.png" alt="Apache OpenWhisk is integrates with many popular languages and apps"/>
+        </div>
+    </main>
+
+    <main>
+        <div class="image-wrapper">
+            <img src="/images/elements/illustration-cost-effective.png" alt="Apache OpenWhisk scaling and utilization">
+        </div>
+        <div class="content">
+              <h4>Scaling Per-Request &amp; Optimal Utilization</h4>
+              <p>
+                  Run your action ten thousand times in a fraction of a second, or once
+                  a week. Action instances scale to meet demand as needed, then disappear.
+                  Enjoy optimal utilization where you don't pay for idle resources.
+              </p>
+        </div>
+    </main>
+
+    <main>
+        <div class="content">
+            <h4>Join a vibrant open source community</h4>
+            <p>
+                Play a critical part in building game-changing cloud technology.
+                Share your actions and triggers with the community, add your service to
+                the Apache OpenWhisk ecosystem, or join the development effort to
+                make Apache OpenWhisk even better.
+            </p>
+            <a class="button" href="/community.html">Join the OpenWhisk Community</a>
+        </div>
+        <div class="image-wrapper">
+            <img style="max-height=174px; max-width:174px" src="/images/logo/SupportApache-small.png" alt="The Apache OpenWhisk project needs the support of contributors in all areas."/>
+        </div>
+    </main>
 </section>
 
-<section class="site-section site-section--vertical-padding"
-         id="developers">
-  <div class="persona">
-    <div class="persona__text">
-      <h2 class="persona__heading">Focus only on your code.</h2>
-      <p class="persona__lede">
-        As a developer there's no need to manage the servers that run your code.
-        Apache OpenWhisk operates and scales your application for you.
-        Spend your time innovating, not configuring infrastructure. Plus,
-        you only pay for what your app uses and needs at that moment.
-      </p>
-      <div class="persona__columns persona__columns--more-top-margin">
-        <div class="persona__column">
-          <h3 class="persona__sub-heading">
-            Fine-grained resource consumption
-          </h3>
-          <img class="persona__benefit-image"
-               src="/images/illustration-cost-effective.svg"
-               alt="Apache OpenWhisk is cost-effective for developers">
-          <p class="persona__benefit-text">
-            Pay only for the actual resources your actions use, down to the
-            millisecond. When an action is not running, it’s not in memory, so
-            you don’t pay for idle resources.
-          </p>
+        <footer>
+    <main class="light-text">
+        <div style="text-align: center;">
+            Apache OpenWhisk is an effort undergoing incubation at The Apache
+            Software Foundation (ASF), sponsored by the Incubator.
+            Incubation is required of all newly accepted projects until a further
+            review indicates that the infrastructure, communications, and decision
+            making process have stabilized in a manner consistent with other
+            successful ASF projects. While incubation status is not necessarily a
+            reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
         </div>
-        <div class="persona__column">
-          <h3 class="persona__sub-heading">
-            Use any language, any service
-          </h3>
-          <img class="persona__benefit-image"
-               src="/images/illustration-languages-and-integrations.svg"
-               alt="Apache OpenWhisk is integrates with many popular languages and apps">
-          <p class="persona__benefit-text">
-            Work with what you know and love. Integrate popular services. Code in your
-            favorite languages. All the pieces connect and are easy to extend.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="persona__cta">
-      <img class="persona__illustration"
-           src="/images/persona-developers.svg"
-           alt="Developers">
-      <a class="persona__button u-button u-button--secondary"
-         href="/developers">
-        Read More
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="site-section site-section--gray site-section--vertical-padding"
-         id="service-integrations">
-  <div class="persona">
-    <div class="persona__text">
-      <div class="persona__columns">
-        <div class="persona__column">
-          <img class="persona__benefit-image"
-               src="/images/illustration-integrators.svg"
-               alt="Apache OpenWhisk benefits for package creators">
-        </div>
-        <div class="persona__column">
-          <h2 class="persona__heading">Plug your service into Apache OpenWhisk.</h2>
-          <p class="persona__benefit-text">
-            Apache OpenWhisk makes it simple for thousands of developers to
-            integrate with your service. Make it easy for developers to perform
-            actions when something happens in your service, or to send data into
-            your service when things happen somewhere else.
-          </p>
-          <p class="persona__benefit-text">
-            Become part of a thriving, open source ecosystem. Get your service
-            in the hands of more developers, and make it easier than ever for
-            other providers to integrate with your services.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="persona__cta">
-      <img class="persona__illustration"
-           src="/images/persona-integrators.svg"
-           alt="Developers">
-      <a class="persona__button u-button u-button--secondary"
-         href="/developers">
-        Read More
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="site-section site-section--vertical-padding"
-         id="contributors">
-  <div class="persona">
-    <div class="persona__text">
-      <div class="persona__columns">
-        <div class="persona__column">
-          <img class="persona__benefit-image"
-               src="/images/illustration-contributors.svg"
-               alt="Apache OpenWhisk benefits for open source contributors">
-        </div>
-        <div class="persona__column">
-          <h2 class="persona__heading">Join a vibrant open source community.</h2>
-          <p class="persona__benefit-text">
-            Play a critical part in building game-changing cloud technology.
-            Share your actions and triggers with the community, add your service to
-            the Apache OpenWhisk ecosystem, or join the development effort to
-            make Apache OpenWhisk even better.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="persona__cta">
-      <img class="persona__illustration"
-           src="/images/persona-contributors.svg"
-           alt="Developers">
-      <a class="persona__button u-button u-button--secondary"
-         href="/contributors">
-        Read More
-      </a>
-    </div>
-  </div>
-</section>
-
-    <footer class="site-footer">
-  <nav class="site-nav site-nav--footer">
-    <a href="/about.html"
-       class="site-nav__item">About</a>
-    <a href="/serverless.html"
-       class="site-nav__item">Serverless</a>
-    <a href="/developers.html"
-       class="site-nav__item">Developers</a>
-    <a href="/package-creators.html"
-       class="site-nav__item">Package Creators</a>
-    <a href="/contributors.html"
-       class="site-nav__item">Contributors</a>
-    <a href="/events.html"
-       class="site-nav__item">Events</a>
-    <a href="/supporters.html"
-       class="site-nav__item">Supporters</a>
-    <a href="/faq.html"
-       class="site-nav__item">FAQ</a>
-    <div class="site-nav__group">
-      <a href="https://github.com/apache?q=openwhisk"
-         title="Apache OpenWhisk project repositories on GitHub"
-         class="site-nav__item site-nav__item--margin-left-auto">
-        <img class="site-nav__image"
-             src="/images/icon-github.svg"
-             alt="Apache OpenWhisk project repositories on GitHub">
-      </a>
-      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
-         title="Apache OpenWhisk on YouTube"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-youtube.svg"
-             alt="Apache OpenWhisk on YouTube">
-      </a>
-      <a href="http://www.slideshare.net/OpenWhisk"
-         title="Apache OpenWhisk on SlideShare"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-slideshare.svg"
-             alt="Apache OpenWhisk on SlideShare">
-      </a>
-      <a href="https://twitter.com/search?q=openwhisk"
-         title="Apache OpenWhisk on Twitter"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-twitter.svg"
-             alt="Apache OpenWhisk on Twitter">
-      </a>
-      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
-         title="Apache OpenWhisk on Stack Overflow"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-stack-overflow.svg"
-             alt="Apache OpenWhisk on Stack Overflow">
-      </a>
-      <a href="slack.html"
-         title="Apache OpenWhisk on Slack"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-slack.svg"
-             alt="Apache OpenWhisk on Slack">
-      </a>
-      <a href="https://medium.com/openwhisk"
-         title="Apache OpenWhisk on Medium"
-         class="site-nav__item">
-        <img class="site-nav__image"
-             src="/images/icon-medium.svg"
-             alt="Apache OpenWhisk on Medium">
-      </a>
-    </div>
-  </nav>
-  <div class="site-footer__site-disclaimer">
-    Apache OpenWhisk is an effort undergoing incubation at The Apache
-    Software Foundation (ASF), sponsored by the Incubator.
-    Incubation is required of all newly accepted projects until a further
-    review indicates that the infrastructure, communications, and decision
-    making process have stabilized in a manner consistent with other
-    successful ASF projects. While incubation status is not necessarily a
-    reflection of the completeness or stability of the code, it does indicate
-    that the project has yet to be fully endorsed by the ASF.
-  </div>
+    </main>
 </footer>
 
-    <script src="js/main.min.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-88941444-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+    </body>
 </html>
