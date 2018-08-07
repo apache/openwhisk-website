@@ -1,0 +1,204 @@
+.main-content {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3.5rem 0;
+
+  &--center {
+    text-align: center;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: $max-width-lg;
+  }
+
+  &--narrower {
+    @media (min-width: 660px) {
+      max-width: 600px;
+    }
+  }
+
+  &__columns {
+    @media (min-width: $breakpoint-md) {
+      @supports (display: flex) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: -3.25rem;
+
+        &--reverse {
+          flex-direction: row-reverse;
+        }
+
+        &--vertical-center {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__column {
+    & + & {
+      margin-top: 2rem;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      @supports (display: flex) {
+        flex: 1;
+        max-width: 48%;
+        margin-bottom: 3.25rem;
+        margin-top: 0;
+
+        & + & {
+          margin-top: 0;
+        }
+
+        &--3-across {
+          max-width: 30%;
+          min-width: 261px;
+        }
+      }
+    }
+
+    &--gray-light {
+      background-color: $color-gray-light;
+    }
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  /*
+   * Stuff gets weird in here, because this is where we have to style
+   * Mardown-generated user content.
+   */
+  &__body-content {
+    &--supporters {
+      margin-top: 0.75rem;
+      font-size: 1.125rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    > p:first-child {
+      color: $color-gray-dark;
+      font-size: 1.125rem;
+    }
+
+    /* Nested selectors AND an ID? I’m so sorry... */
+    #markdown-toc {
+      padding-left: 1.25rem;
+
+      a {
+        color: $color-blue-dark-text;
+        font-size: 1.125rem;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* Oh god, there’s more?! */
+  &__events {
+    h2 {
+      color: $color-blue-dark-text;
+      font-size: 1.125rem;
+    }
+
+    h3 {
+      margin-top: 3rem;
+      color: $color-gray-light-text;
+      font-size: 0.875rem;
+      font-weight: $font-weight-bold;
+    }
+
+    h2 + h3 {
+      margin-top: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid transparentize($color-gray-medium, 0.75);
+      font-size: 1.125rem;
+      padding: 1rem 0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+
+  &__lede {
+    font-family: $font-family-heading;
+    font-size: 1.75rem;
+  }
+
+  &__text {
+    &--no-top-margin {
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 1.5rem;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+
+    &--float-right {
+      @media (min-width: $breakpoint-md) {
+        float: right;
+        margin: 0 0 1rem 3rem;
+      }
+    }
+
+    &--side-by-side {
+      @media (min-width: $breakpoint-md) {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 50px;
+        height: 150px;
+      }
+    }
+  }
+
+  &__video {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
