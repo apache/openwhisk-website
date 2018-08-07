@@ -2,30 +2,10 @@
 # This has to be here so Jekyll knows to process this as SCSS.
 ---
 
-/*
- * # Configuration & Global Styles
- */
-@import "config/variables";
-@import "config/reset";
-@import "config/typography";
+@import "variables";
+@import "reset";
+@import "skin";
 
-/*
- * Utilities
- */
-@import "util/button";
-@import "util/embed-container";
-@import "util/typography";
-
-/*
- * Blocks
- */
-@import "block/main-content";
-@import "block/main-cta";
-@import "block/persona";
-@import "block/quotes";
-@import "block/site-footer";
-@import "block/site-header";
-@import "block/site-nav";
-@import "block/site-section";
-@import "block/where-to-start";
-@import "block/why-are-we-here";
+@import "base";
+@import "tablet";
+@import "desktop";

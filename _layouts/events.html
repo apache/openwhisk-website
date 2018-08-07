@@ -1,19 +1,26 @@
 ---
 layout: default
 ---
-<section class="site-section site-section--gray">
-  <div class="main-content">
-    <h1 class="main-content__title main-content__title--no-margin">{{ page.title }}</h1>
-    <p class="main-content__lede">
-      {{ page.lede }}
-    </p>
-  </div>
+<section id="whiskHeader" class="light-text bot-bar">
+  <main>
+      <div>
+      </div>
+  </main>
 </section>
 
-<section class="site-section">
-  <div class="main-content">
-    <div class="main-content__events">
+<section id="whiskNodes">
+  <main id="doc">
+    <div class="content">
+      <h2>{{ page.title }}</h2>
+      <p>
+        This event archive is maintained here to refer to the list of past events and access its content.
+      </p>
+    </div>
+  </main>
+  
+  <main id="doc">
+    <div class="content">
       {{ content }}
     </div>
-  </div>
+  </main>
 </section>
