@@ -1,16 +1,11 @@
-<!--
-# Licensed to the Apache Software Foundation (ASF) under one or more contributor
-# license agreements; and to You under the Apache License, Version 2.0.
--->
-
 
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1">
+    
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
@@ -20,86 +15,179 @@
     <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-        <title>Join OpenWhisk Slack</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <link rel="stylesheet" href="/css/main.css">
-        <!-- Load Index, Menu & collapsible support -->
-        <script type="text/javascript">
-            
-function applyCollapsible() {
+    <title>Join OpenWhisk Slack</title>
+    
 
-    var coll = document.getElementsByClassName("collapsible-toggle");
-    var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var sibling = this.nextElementSibling;
-        console.log(sibling)
-        if(sibling!==null){
-          if (sibling.style.display === "block") {
-            sibling.style.display = "none";
-          } else {
-            sibling.style.display = "block";
-          }
-        }
-      });
-    }
-}
 
-function openIndex() {
-          console.log("openIndex")
-  document.getElementById("index").style.display = "block";
-}
-function closeIndex() {
-            console.log("closeIndex")
-  document.getElementById("index").style.display = "none";
-}
 
-        </script>
-    </head>
-    <!-- Once all page elements are included, register event hooks -->
-    <body onload="applyCollapsible()">
-        <script src="js/main.min.js"></script>
-        <div class="header">
+    <script type="application/ld+json">{
+      "@context":"http://schema.org",
+      "@type": "WebPage",
+      "url": "",
+      "image": "/images/apache-openwhisk@2x.jpg",
+      "name": "Join OpenWhisk Slack"
+    }</script>
 
-    <a class="header-section-logo" href="/">
-    </a>
-    <div class="header-section-text-links">
-        <div class="header-row-text-links">
-            <a class="header-text-link" href="/documentation.html">Documentation</a>
-            <a class="header-text-link" href="/community.html">Community</a>
-            <a class="header-text-link" href="/downloads.html">Downloads</a>
-        </div>
-    </div>
-    <div class="header-section-social-icons">
-        <div class="header-row-social-icons">
-            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
-                <img class="header-icon-image" src="/images/icon-github.svg">
-            </a>
-            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
-                <img class="header-icon-image" src="/images/icon-slack.svg">
-            </a>
-            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
-                <img class="header-icon-image" src="/images/icon-twitter.svg">
-            </a>
-            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
-                <img class="header-icon-image" src="/images/icon-medium.svg">
-            </a>
-            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
-                <img class="header-icon-image" src="/images/icon-youtube.svg">
-            </a>
-            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
-                <img class="header-icon-image" src="/images/icon-stack-overflow.svg">
-            </a>
-            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
-                <img class="header-icon-image" src="/images/icon-slideshare.svg">
-            </a>
-        </div>
-    </div>
-</div>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    <meta property="og:title" content="Join OpenWhisk Slack">
+    <meta property="og:description" content="An open source platform for serverless, event-driven code at any scale. We handle the infrastructure & servers so you can focus on building amazing things.
+">
+    <meta property="og:type" content="WebPage">
+    <meta property="og:url" content="/slack.html">
+    <meta property="og:image" content="/images/apache-openwhisk@2x.jpg">
+    <meta property="fb:app_id" content="176365419499478">
+
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="/images/apache-openwhisk@2x.jpg"/>
+    <meta name="twitter:title" content="Join OpenWhisk Slack"/>
+    <meta name="twitter:description" content="An open source platform for serverless, event-driven code at any scale. We handle the infrastructure & servers so you can focus on building amazing things.
+"/>
+    <meta name="twitter:site" content="@openwhisk"/>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,700,900">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="no-js">
+    <header class="site-header">
+  <div class="site-header__nav site-header__nav--primary">
+    <nav class="site-nav site-nav--main">
+      <a class="site-nav__item site-nav__item--main site-nav__item--logo"
+         href="/">
+        <img class="site-nav__image"
+             src="/images/apache-openwhisk.svg"
+             alt="Apache OpenWhisk">
+      </a>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="/about.html"
+            class="site-nav__item site-nav__item--dropdown-link">Docs</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/about.html"
+                  class="site-nav__item site-nav__item--dropdown-item">About</a>
+              <a href="/serverless.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Serverless</a>
+              <a href="/faq.html"
+                  class="site-nav__item site-nav__item--dropdown-item">FAQ</a>
+              <a href="https://github.com/apache/incubator-openwhisk/tree/master/docs#readme"
+                  class="site-nav__item site-nav__item--dropdown-item">Documentation</a>
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="/developers.html"
+            class="site-nav__item site-nav__item--dropdown-link">Get Started</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/developers.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Developers</a>
+              <a href="/contributors.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Contributors</a>
+              <a href="/package-creators.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Package Creators</a>
+              <!--
+              <a href=""
+                  class="site-nav__item site-nav__item--dropdown-item">Live Tutorial</a>
+              <a href=""
+                  class="site-nav__item site-nav__item--dropdown-item">Sandbox</a>
+              -->
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="/faq.html"
+            class="site-nav__item site-nav__item--dropdown-link">Community</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/contact.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Mailing Lists</a>
+              <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki"
+                  class="site-nav__item site-nav__item--dropdown-item">Wiki</a>
+              <a href="/social"
+                  class="site-nav__item site-nav__item--dropdown-item">Social Media</a>
+              <a href="/events.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Events</a>
+              <a href="/supporters.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Supporters</a>
+              <a href="https://medium.com/openwhisk"
+                  class="site-nav__item site-nav__item--dropdown-item">Blog</a>
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="https://github.com/apache/incubator-openwhisk-external-resources"
+            class="site-nav__item site-nav__item--dropdown-link site-nav__item--hide-on-small">Resources</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/downloads.html" class="site-nav__item site-nav__item--dropdown-item">Downloads</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#feed-providers"
+                  class="site-nav__item site-nav__item--dropdown-item">Integrations</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#applications"
+                  class="site-nav__item site-nav__item--dropdown-item">Demos &amp; Examples</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#articles"
+                  class="site-nav__item site-nav__item--dropdown-item">Articles</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#tutorials"
+                  class="site-nav__item site-nav__item--dropdown-item">Tutorials</a>
+            </div>
+      </div>
+
+    </nav>
+  </div>
+  <div class="site-header__nav site-header__nav--secondary">
+    <nav class="site-nav site-nav--social">
+      <a href="https://github.com/apache?q=openwhisk"
+         title="Apache OpenWhisk project repositories on GitHub"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-github.svg"
+             alt="Apache OpenWhisk project repositories on GitHub">
+      </a>
+      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
+         title="Apache OpenWhisk on YouTube"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-youtube.svg"
+             alt="Apache OpenWhisk on YouTube">
+      </a>
+      <a href="http://www.slideshare.net/OpenWhisk"
+         title="Apache OpenWhisk on SlideShare"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slideshare.svg"
+             alt="Apache OpenWhisk on SlideShare">
+      </a>
+      <a href="https://twitter.com/search?q=openwhisk"
+         title="Apache OpenWhisk on Twitter"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-twitter.svg"
+             alt="Apache OpenWhisk on Twitter">
+      </a>
+      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
+         title="Apache OpenWhisk on Stack Overflow"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-stack-overflow.svg"
+             alt="Apache OpenWhisk on Stack Overflow">
+      </a>
+      <a href="slack.html"
+         title="Apache OpenWhisk on Slack"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slack.svg"
+             alt="Apache OpenWhisk on Slack">
+      </a>
+      <a href="https://medium.com/openwhisk"
+         title="Apache OpenWhisk on Medium"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-medium.svg"
+             alt="Apache OpenWhisk on Medium">
+      </a>
+    </nav>
+  </div>
+</header>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
   crossorigin="anonymous">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
@@ -108,44 +196,45 @@ function closeIndex() {
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
   crossorigin="anonymous"></script>
-
-<section id="whiskHeader" class="light-text bot-bar">
-    <main>
+<section>
+  <div class="main-content">
+    <div class="main-content__columns">
+      <div class="main-content__column">
+        <div><img src="https://s23.postimg.org/oy3kv2uxn/skitch.png" alt="OpenWhisk plus Slack" style="height: 60px;"> </div>
         <div>
+          <h3>Already a Team member?</h3>
+          <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
         </div>
-    </main>
-</section>
-
-<section id="whiskNodes">
-    <main id="doc">
-        <div class="content">
-            <h3>Already a Team member?</h3>
-            <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
-            <h3>If not, join us!</h3>
-            <p>Join the OpenWhisk Community to discuss the project in real-time.</p>
-            <ul style="text-align: left">
-                <li><strong>Talk</strong> to the core devs and the OpenWhisk community.</li>
-                <li><strong>Learn</strong> from others and ask questions.</li>
-                <li><strong>Share</strong> your work and demos.</li>
-            </ul>
-            <form>
-                <div>
-                    <label for="exampleInputEmail2">Email:</label>
-                    <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email">
-                </div>
-                <button type="button" class="btn btn-primary" style="margin:5px;">Send invitation</button>
-            </form>
-            <p></p>
-            <p>We are a friendly, respectful and inclusive community!</p>
-            <a href="https://openwhisk-team.slack.com/"></a>
-            <p>
-                <i>Code for Slack invite (this page) is on github:</i><br><i> </i><i>
-                <a href="https://github.com/openwhisk/openwhisk-slackinvite" target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i>
-            </p>
+        <div>
+          <h3>If not, join us!</h3>
+          <p>Join the OpenWhisk Community to discuss the project in real-time.
+          </p>
+          <ul style="text-align: left">
+            <li><strong>Talk</strong> to the core devs and the OpenWhisk community.
+            </li>
+            <li><strong>Learn</strong> from others and ask questions.</li>
+            <li><strong>Share</strong> your work and demos.</li>
+          </ul>
+          <form>
+            <div> <label for="exampleInputEmail2">Email:</label>
+              <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email"> </div>
+            <button type="button" class="btn btn-primary" style="margin:
+            5px;">Send invitation</button>
+          </form>
         </div>
-    </main>
+        <div>
+          <p>We are a friendly, respectful and inclusive community!</p>
+        </div>
+        <div><a href="https://openwhisk-team.slack.com/"> </a>
+          <p><i>Code for Slack invite (this page) is on github:</i><br>
+            <i> </i><i><a
+              href="https://github.com/openwhisk/openwhisk-slackinvite"
+              target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 <script type="text/javascript">
   $(document).ready(function () {
     var btn = $("button");
@@ -180,19 +269,97 @@ function closeIndex() {
   })
 
 </script>
-        <footer>
-    <main class="light-text">
-        <div style="text-align: center;">
-            Apache OpenWhisk is an effort undergoing incubation at The Apache
-            Software Foundation (ASF), sponsored by the Incubator.
-            Incubation is required of all newly accepted projects until a further
-            review indicates that the infrastructure, communications, and decision
-            making process have stabilized in a manner consistent with other
-            successful ASF projects. While incubation status is not necessarily a
-            reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-        </div>
-    </main>
+    <footer class="site-footer">
+  <nav class="site-nav site-nav--footer">
+    <a href="/about.html"
+       class="site-nav__item">About</a>
+    <a href="/serverless.html"
+       class="site-nav__item">Serverless</a>
+    <a href="/developers.html"
+       class="site-nav__item">Developers</a>
+    <a href="/package-creators.html"
+       class="site-nav__item">Package Creators</a>
+    <a href="/contributors.html"
+       class="site-nav__item">Contributors</a>
+    <a href="/events.html"
+       class="site-nav__item">Events</a>
+    <a href="/supporters.html"
+       class="site-nav__item">Supporters</a>
+    <a href="/faq.html"
+       class="site-nav__item">FAQ</a>
+    <div class="site-nav__group">
+      <a href="https://github.com/apache?q=openwhisk"
+         title="Apache OpenWhisk project repositories on GitHub"
+         class="site-nav__item site-nav__item--margin-left-auto">
+        <img class="site-nav__image"
+             src="/images/icon-github.svg"
+             alt="Apache OpenWhisk project repositories on GitHub">
+      </a>
+      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
+         title="Apache OpenWhisk on YouTube"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-youtube.svg"
+             alt="Apache OpenWhisk on YouTube">
+      </a>
+      <a href="http://www.slideshare.net/OpenWhisk"
+         title="Apache OpenWhisk on SlideShare"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slideshare.svg"
+             alt="Apache OpenWhisk on SlideShare">
+      </a>
+      <a href="https://twitter.com/search?q=openwhisk"
+         title="Apache OpenWhisk on Twitter"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-twitter.svg"
+             alt="Apache OpenWhisk on Twitter">
+      </a>
+      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
+         title="Apache OpenWhisk on Stack Overflow"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-stack-overflow.svg"
+             alt="Apache OpenWhisk on Stack Overflow">
+      </a>
+      <a href="slack.html"
+         title="Apache OpenWhisk on Slack"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slack.svg"
+             alt="Apache OpenWhisk on Slack">
+      </a>
+      <a href="https://medium.com/openwhisk"
+         title="Apache OpenWhisk on Medium"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-medium.svg"
+             alt="Apache OpenWhisk on Medium">
+      </a>
+    </div>
+  </nav>
+  <div class="site-footer__site-disclaimer">
+    Apache OpenWhisk is an effort undergoing incubation at The Apache
+    Software Foundation (ASF), sponsored by the Incubator.
+    Incubation is required of all newly accepted projects until a further
+    review indicates that the infrastructure, communications, and decision
+    making process have stabilized in a manner consistent with other
+    successful ASF projects. While incubation status is not necessarily a
+    reflection of the completeness or stability of the code, it does indicate
+    that the project has yet to be fully endorsed by the ASF.
+  </div>
 </footer>
 
-    </body>
+    <script src="js/main.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-88941444-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>

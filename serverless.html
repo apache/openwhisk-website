@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>What Is Serverless Computing, and Why Should I Care?</title>
+    
+
+
+
+
+    <script type="application/ld+json">{
+      "@context":"http://schema.org",
+      "@type": "WebPage",
+      "url": "",
+      "image": "/images/apache-openwhisk@2x.jpg",
+      "name": "What Is Serverless Computing, and Why Should I Care?"
+    }</script>
+
+
+    <meta property="og:title" content="What Is Serverless Computing, and Why Should I Care?">
+    <meta property="og:description" content="An open source platform for serverless, event-driven code at any scale. We handle the infrastructure & servers so you can focus on building amazing things.
+">
+    <meta property="og:type" content="WebPage">
+    <meta property="og:url" content="/serverless.html">
+    <meta property="og:image" content="/images/apache-openwhisk@2x.jpg">
+    <meta property="fb:app_id" content="176365419499478">
+
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="/images/apache-openwhisk@2x.jpg"/>
+    <meta name="twitter:title" content="What Is Serverless Computing, and Why Should I Care?"/>
+    <meta name="twitter:description" content="An open source platform for serverless, event-driven code at any scale. We handle the infrastructure & servers so you can focus on building amazing things.
+"/>
+    <meta name="twitter:site" content="@openwhisk"/>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,700,900">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="no-js">
+    <header class="site-header">
+  <div class="site-header__nav site-header__nav--primary">
+    <nav class="site-nav site-nav--main">
+      <a class="site-nav__item site-nav__item--main site-nav__item--logo"
+         href="/">
+        <img class="site-nav__image"
+             src="/images/apache-openwhisk.svg"
+             alt="Apache OpenWhisk">
+      </a>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="/about.html"
+            class="site-nav__item site-nav__item--dropdown-link">Docs</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/about.html"
+                  class="site-nav__item site-nav__item--dropdown-item">About</a>
+              <a href="/serverless.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Serverless</a>
+              <a href="/faq.html"
+                  class="site-nav__item site-nav__item--dropdown-item">FAQ</a>
+              <a href="https://github.com/apache/incubator-openwhisk/tree/master/docs#readme"
+                  class="site-nav__item site-nav__item--dropdown-item">Documentation</a>
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="/developers.html"
+            class="site-nav__item site-nav__item--dropdown-link">Get Started</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/developers.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Developers</a>
+              <a href="/contributors.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Contributors</a>
+              <a href="/package-creators.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Package Creators</a>
+              <!--
+              <a href=""
+                  class="site-nav__item site-nav__item--dropdown-item">Live Tutorial</a>
+              <a href=""
+                  class="site-nav__item site-nav__item--dropdown-item">Sandbox</a>
+              -->
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="/faq.html"
+            class="site-nav__item site-nav__item--dropdown-link">Community</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/contact.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Mailing Lists</a>
+              <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki"
+                  class="site-nav__item site-nav__item--dropdown-item">Wiki</a>
+              <a href="/social"
+                  class="site-nav__item site-nav__item--dropdown-item">Social Media</a>
+              <a href="/events.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Events</a>
+              <a href="/supporters.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Supporters</a>
+              <a href="https://medium.com/openwhisk"
+                  class="site-nav__item site-nav__item--dropdown-item">Blog</a>
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="https://github.com/apache/incubator-openwhisk-external-resources"
+            class="site-nav__item site-nav__item--dropdown-link site-nav__item--hide-on-small">Resources</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="/downloads.html" class="site-nav__item site-nav__item--dropdown-item">Downloads</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#feed-providers"
+                  class="site-nav__item site-nav__item--dropdown-item">Integrations</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#applications"
+                  class="site-nav__item site-nav__item--dropdown-item">Demos &amp; Examples</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#articles"
+                  class="site-nav__item site-nav__item--dropdown-item">Articles</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#tutorials"
+                  class="site-nav__item site-nav__item--dropdown-item">Tutorials</a>
+            </div>
+      </div>
+
+    </nav>
+  </div>
+  <div class="site-header__nav site-header__nav--secondary">
+    <nav class="site-nav site-nav--social">
+      <a href="https://github.com/apache?q=openwhisk"
+         title="Apache OpenWhisk project repositories on GitHub"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-github.svg"
+             alt="Apache OpenWhisk project repositories on GitHub">
+      </a>
+      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
+         title="Apache OpenWhisk on YouTube"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-youtube.svg"
+             alt="Apache OpenWhisk on YouTube">
+      </a>
+      <a href="http://www.slideshare.net/OpenWhisk"
+         title="Apache OpenWhisk on SlideShare"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slideshare.svg"
+             alt="Apache OpenWhisk on SlideShare">
+      </a>
+      <a href="https://twitter.com/search?q=openwhisk"
+         title="Apache OpenWhisk on Twitter"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-twitter.svg"
+             alt="Apache OpenWhisk on Twitter">
+      </a>
+      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
+         title="Apache OpenWhisk on Stack Overflow"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-stack-overflow.svg"
+             alt="Apache OpenWhisk on Stack Overflow">
+      </a>
+      <a href="slack.html"
+         title="Apache OpenWhisk on Slack"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slack.svg"
+             alt="Apache OpenWhisk on Slack">
+      </a>
+      <a href="https://medium.com/openwhisk"
+         title="Apache OpenWhisk on Medium"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-medium.svg"
+             alt="Apache OpenWhisk on Medium">
+      </a>
+    </nav>
+  </div>
+</header>
+
+    <section class="site-section">
+  <div class="main-content">
+    
+    <h1 class="main-content__title main-content__title--no-margin">What Is Serverless Computing, and Why Should I Care?</h1>
+    <div class="main-content__body-content">
+      <p>Apache OpenWhisk is a serverless, open source cloud platform that executes functions (called actions) in response to events (called triggers) without developer concern for managing the lifecycle or operations of the containers that execute the code.</p>
+
+<p>There are several technical capabilities and business factors coming together to make this approach very compelling from both an application development and deployment cost perspective.</p>
+
+<p>Key benefits of a serverless architecture include automatic scale up and down in response to current load and the associated cost model that charges only for milliseconds of compute time used when running.</p>
+
+<blockquote>
+  <p>“The most important benefit to me […] is the reduced feedback loop of creating new application components - I’m a huge fan of ‘lean’ approaches, largely because I think there is a lot of value in getting technology in front of an end user as soon as possible to get early feedback, and the reduced time-to-market that comes with Serverless fits right in with this philosophy.”</p>
+
+  <p><strong>– Mike Roberts, <a href="http://martinfowler.com/articles/serverless.html"><em>Serverless Architectures</em></a></strong></p>
+</blockquote>
+
+<p>New architectures built on this model are called serverless since a greater number of operational concerns are hidden from the developer and because the compute resources needed for applications are transient, leaving no trace on the bottom line when application code is not running.</p>
+
+<p>In the Apache OpenWhisk programming model, the developer focuses solely on the unique features of their application by narrowing the scope of their concern down to smaller units of code – the functions (actions) commonly packaged as single files – that provide their core business logic.</p>
+
+<p>Beyond automatic scale and granular cost model which tie business operations directly to resources consumed, platforms like OpenWhisk address many of the operations-focused <a href="https://12factor.net/">12 Factor</a> best practices on behalf of the developer, making it easier to build and deploy cloud native applications like microservices.</p>
+
+<blockquote>
+  <p>“Serverless will fundamentally change how we build business around technology and how you code.”</p>
+
+  <p><strong>– Simon Wardley, <a href="https://hackernoon.com/why-the-fuss-about-serverless-4370b1596da0#.9onv2dko9"><em>Why the fuss about serverless?</em></a></strong></p>
+</blockquote>
+
+<p>Another trend driving this new model of development is the emergence of many more non-web workloads that require the benefits of cloud computing (for example, elasticity, scale, and cost reduction). These IoT, cognitive, batch, and data-driven use cases join HTTP and REST based applications that have long taken advantage of IaaS and PaaS capabilities.</p>
+
+<p><a href="https://developer.ibm.com/opentech/2016/09/06/what-makes-serverless-attractive/">Learn more about what makes serverless architectures compelling.</a></p>
+
+    </div>
+  </div>
+</section>
+
+    <footer class="site-footer">
+  <nav class="site-nav site-nav--footer">
+    <a href="/about.html"
+       class="site-nav__item">About</a>
+    <a href="/serverless.html"
+       class="site-nav__item">Serverless</a>
+    <a href="/developers.html"
+       class="site-nav__item">Developers</a>
+    <a href="/package-creators.html"
+       class="site-nav__item">Package Creators</a>
+    <a href="/contributors.html"
+       class="site-nav__item">Contributors</a>
+    <a href="/events.html"
+       class="site-nav__item">Events</a>
+    <a href="/supporters.html"
+       class="site-nav__item">Supporters</a>
+    <a href="/faq.html"
+       class="site-nav__item">FAQ</a>
+    <div class="site-nav__group">
+      <a href="https://github.com/apache?q=openwhisk"
+         title="Apache OpenWhisk project repositories on GitHub"
+         class="site-nav__item site-nav__item--margin-left-auto">
+        <img class="site-nav__image"
+             src="/images/icon-github.svg"
+             alt="Apache OpenWhisk project repositories on GitHub">
+      </a>
+      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
+         title="Apache OpenWhisk on YouTube"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-youtube.svg"
+             alt="Apache OpenWhisk on YouTube">
+      </a>
+      <a href="http://www.slideshare.net/OpenWhisk"
+         title="Apache OpenWhisk on SlideShare"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slideshare.svg"
+             alt="Apache OpenWhisk on SlideShare">
+      </a>
+      <a href="https://twitter.com/search?q=openwhisk"
+         title="Apache OpenWhisk on Twitter"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-twitter.svg"
+             alt="Apache OpenWhisk on Twitter">
+      </a>
+      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
+         title="Apache OpenWhisk on Stack Overflow"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-stack-overflow.svg"
+             alt="Apache OpenWhisk on Stack Overflow">
+      </a>
+      <a href="slack.html"
+         title="Apache OpenWhisk on Slack"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-slack.svg"
+             alt="Apache OpenWhisk on Slack">
+      </a>
+      <a href="https://medium.com/openwhisk"
+         title="Apache OpenWhisk on Medium"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="/images/icon-medium.svg"
+             alt="Apache OpenWhisk on Medium">
+      </a>
+    </div>
+  </nav>
+  <div class="site-footer__site-disclaimer">
+    Apache OpenWhisk is an effort undergoing incubation at The Apache
+    Software Foundation (ASF), sponsored by the Incubator.
+    Incubation is required of all newly accepted projects until a further
+    review indicates that the infrastructure, communications, and decision
+    making process have stabilized in a manner consistent with other
+    successful ASF projects. While incubation status is not necessarily a
+    reflection of the completeness or stability of the code, it does indicate
+    that the project has yet to be fully endorsed by the ASF.
+  </div>
+</footer>
+
+    <script src="js/main.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-88941444-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
