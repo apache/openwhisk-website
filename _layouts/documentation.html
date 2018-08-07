@@ -458,15 +458,21 @@ wsk list</pre>
                 </p>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
-                    <div class="terminal">
+<div class="terminal">
+{% highlight scala tabsize=4 linenos=table %}
+{% remote_markdown https://raw.githubusercontent.com/pritidesai/helloworld/master/HelloWorld.scala %}
+{% endhighlight %}
+</div>
+<!--div class="terminal">
 <pre>function main() {
     return {payload: 'Hello world'};
 }</pre>
-                    </div>
+                    </div-->
                     <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
-                    <div class="terminal">
+                    <script src="https://gist.github.com/pritidesai/637e01432581c2c38ad1c0ef715c90e2.js"></script>
+                    <!--div class="terminal">
                         <pre>wsk action create helloJS hello.js</pre>
-                    </div>
+                    </div-->
                     <div class="terminal">
                         <pre>ok: created action helloJS</pre>
                     </div>
@@ -483,20 +489,23 @@ wsk list</pre>
 "success": true
 }</pre>
                     </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
-                        <p></p>
-                        <ol>
-                            <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
-                            <div class="terminal">
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
+                    <p>
+                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                    </p>
+                    <ol>
+                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
+                        <div class="terminal">
 <pre>packages:
     helloworld:
         actions:
             helloJS:
                 function: hello.js</pre>
-                            </div>
-                            Or
-                            <p></p>
-                            <div class="terminal">
+                        </div>
+                        Or
+                        <p></p>
+                        <div class="terminal">
 <pre>packages:
     helloworld:
         actions:
@@ -506,12 +515,12 @@ wsk list</pre>
                         return {payload: 'Hello world'};
                     }
                 runtime: nodejs:6</pre>
-                            </div>
-                            <li>Run deployment with <i>wskdeploy</i>:</li>
-                            <div class="terminal">
+                        </div>
+                        <li>Run deployment with <i>wskdeploy</i>:</li>
+                        <div class="terminal">
 <pre>wskdeploy -m manifest.yaml</pre>
-                            </div>
-                        </ol>
+                        </div>
+                    </ol>
                 </ol>
                 <a class="indexable" id="nodejs-runtime"></a>
                 <h5>OpenWhisk Runtime for NodeJS</h5>
@@ -579,20 +588,23 @@ def main(dict):
     "greeting": "Hello World!"
 }</pre>
                     </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
-                        <p></p>
-                        <ol>
-                            <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
-                            <div class="terminal">
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
+                    <p>
+                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                    </p>
+                    <ol>
+                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
+                        <div class="terminal">
 <pre>packages:
     helloworld:
         actions:
             helloPy:
                 function: hello.py</pre>
-                            </div>
-                            Or
-                            <p></p>
-                            <div class="terminal">
+                        </div>
+                        Or
+                        <p></p>
+                        <div class="terminal">
 <pre>packages:
     helloworld:
         actions:
@@ -608,12 +620,12 @@ def main(dict):
                         print(greeting)
                         return {"greeting": greeting}
                 runtime: python:2</pre>
-                            </div>
-                            <li>Run deployment with <i>wskdeploy</i>:</li>
-                            <div class="terminal">
+                        </div>
+                        <li>Run deployment with <i>wskdeploy</i>:</li>
+                        <div class="terminal">
 <pre>wskdeploy -m manifest.yaml</pre>
-                            </div>
-                        </ol>
+                        </div>
+                    </ol>
                 </ol>
                 <a class="indexable" id="python-runtime"></a>
                 <h5>OpenWhisk Runtime for Python</h5>
@@ -867,8 +879,11 @@ function main(array $args) : array
     "greeting": "Hello World!"
 }</pre>
                     </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
-                    <p></p>
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
+                    <p>
+                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                    </p>
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
