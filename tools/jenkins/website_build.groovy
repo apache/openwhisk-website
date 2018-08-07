@@ -41,11 +41,14 @@ node("git-websites") {
     git checkout asf-site
     git log asf-site -3
     git status
-    rm -rf /tmp/_site
-    mv _site /tmp/
+    mkdir -p /tmp/openwhisk/
+    rm -rf /tmp/openwhisk/_site
+    mv _site /tmp/openwhisk/
+    ls -l /tmp/openwhisk/_site/
     rm -rf *
     git status
-    mv /tmp/_site/* .
+    mv /tmp/openwhisk/_site/* .
+    ls -l .
     git status
     git diff
     git add .
