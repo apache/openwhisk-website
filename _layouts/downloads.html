@@ -1,82 +1,19 @@
 ---
 layout: default
 ---
-<!--
-# Licensed to the Apache Software Foundation (ASF) under one or more contributor
-# license agreements; and to You under the Apache License, Version 2.0.
--->
-<div id="whiskIndexedLayout">
+<section class="site-section site-section--gray">
+  <div class="main-content">
+    <h1 class="main-content__title main-content__title--no-margin">{{ page.title }}</h1>
+    <p class="main-content__lede">
+      {{ page.lede }}
+    </p>
+  </div>
+</section>
 
-    <!-- Community Index -->
-    <div id="whiskIndex">
-        <ul>
-            <li><a href="#downloads">Downloads</a></li>
-
-            <!-- Versioning -->
-            <li><a href="#versioning">Versioning</a></li>
-
-            <!-- Downloads -->
-            <li class="collapsible-toggle"><a href="#releases">Releases</a></li>
-            <ul class="collapse-content">
-                <li><a href="#verifying">Verifying</a></li>
-                <li><a href="#keys">Keys</a></li>
-                <li><a href="#versions">Versions</a></li>
-            </ul>
-        </ul>
+<section class="site-section">
+  <div class="main-content">
+    <div class="main-content__body-content">
+      {{ content }}
     </div>
-
-    <section id="whiskNodes">
-
-        <div class="content">
-          <a class="indexable" id="downloads"></a>
-          <h2>Downloads</h2>
-          <div class="collapsible-content">
-            <p>This page contains links to the official project source code downloads by release.</p>
-          </div>
-        </div>
-
-        <main id="doc">
-            <div class="content">
-                <a class="indexable" id="versioning"></a>
-                <h3>Versioning</h3>
-                <p>Apache OpenWhisk uses semantic versioning. Version numbers use the form <code>major.minor.incremental-build</code> and are incremented as follows:</p>
-                    <ul>
-                        <li><em>major version</em>: for incompatible API changes.</li>
-                        <li><em>minor version</em>: for new functionality added in a backward-compatible manner.</li>
-                        <li><em>incremental version</em>: for forward-compatible bug fixes.</li>
-                        <li><em>build</em>: optional postfix to distinguish intermediate builds.</li>
-                    </ul>
-            </div>
-        </main>
-
-        <main id="doc">
-            <div class="content">
-                <a class="indexable" id="releases"></a>
-                <h3>Releases</h3>
-                <a class="indexable" id="verifying"></a>
-                <h4>Verifying</h4>
-                <p>As an Apache project, all downloaded files are signed by a project Release Manager and can be verified following these instructions:</p>
-                <ul>
-                    <li><a href="https://www.apache.org/info/verification">How to verify downloaded files</a></li>
-                </ul>
-
-                <a class="indexable" id="keys"></a>
-                <h4>Keys</h4>
-                <p>You can access the <a href="https://www.apache.org/dist/incubator/openwhisk/KEYS">Release Keys</a> to verify the release artifacts.</p>
-
-                <a class="indexable" id="versions"></a>
-                <h4>Versions</h4>
-                <p>The following release versions are available:</p>
-                <div style="padding-top:10px;">
-                    <h5>0.9.0-incubating (2018-07-17)</h5>
-                    <ul>
-                        <li><em>source code</em>: <a href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz&action=download">openwhisk-0.9.0-incubating-sources.tar.gz</a></li>
-                        <li><em>SHA-512 checksum</em>: <a href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512">openwhisk-0.9.0-incubating-sources.tar.gz.sha512</a></li>
-                        <li><em>PGP signature</em>: <a href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc">openwhisk-0.9.0-incubating-sources.tar.gz.asc</a></li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-
-    </section>
-</div>
+  </div>
+</section>

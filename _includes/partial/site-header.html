@@ -1,37 +1,135 @@
-<div class="header">
+<header class="site-header">
+  <div class="site-header__nav site-header__nav--primary">
+    <nav class="site-nav site-nav--main">
+      <a class="site-nav__item site-nav__item--main site-nav__item--logo"
+         href="{{ site.github.url }}/">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/apache-openwhisk.svg"
+             alt="Apache OpenWhisk">
+      </a>
 
-    <a class="header-section-logo" href="/">
-    </a>
-    <div class="header-section-text-links">
-        <div class="header-row-text-links">
-            <a class="header-text-link" href="{{ site.github.url }}/documentation.html">Documentation</a>
-            <a class="header-text-link" href="{{ site.github.url }}/community.html">Community</a>
-            <a class="header-text-link" href="{{ site.github.url }}/downloads.html">Downloads</a>
-        </div>
-    </div>
-    <div class="header-section-social-icons">
-        <div class="header-row-social-icons">
-            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-github.svg">
-            </a>
-            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-slack.svg">
-            </a>
-            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-twitter.svg">
-            </a>
-            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-medium.svg">
-            </a>
-            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-youtube.svg">
-            </a>
-            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-stack-overflow.svg">
-            </a>
-            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
-                <img class="header-icon-image" src="{{ site.github.url }}/images/icon-slideshare.svg">
-            </a>
-        </div>
-    </div>
-</div>
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="{{ site.github.url }}/about.html"
+            class="site-nav__item site-nav__item--dropdown-link">Docs</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="{{ site.github.url }}/about.html"
+                  class="site-nav__item site-nav__item--dropdown-item">About</a>
+              <a href="{{ site.github.url }}/serverless.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Serverless</a>
+              <a href="{{ site.github.url }}/faq.html"
+                  class="site-nav__item site-nav__item--dropdown-item">FAQ</a>
+              <a href="https://github.com/apache/incubator-openwhisk/tree/master/docs#readme"
+                  class="site-nav__item site-nav__item--dropdown-item">Documentation</a>
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="{{ site.github.url }}/developers.html"
+            class="site-nav__item site-nav__item--dropdown-link">Get Started</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="{{ site.github.url }}/developers.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Developers</a>
+              <a href="{{ site.github.url }}/contributors.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Contributors</a>
+              <a href="{{ site.github.url }}/package-creators.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Package Creators</a>
+              <!--
+              <a href=""
+                  class="site-nav__item site-nav__item--dropdown-item">Live Tutorial</a>
+              <a href=""
+                  class="site-nav__item site-nav__item--dropdown-item">Sandbox</a>
+              -->
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="{{ site.github.url }}/faq.html"
+            class="site-nav__item site-nav__item--dropdown-link">Community</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="{{ site.github.url }}/contact.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Mailing Lists</a>
+              <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki"
+                  class="site-nav__item site-nav__item--dropdown-item">Wiki</a>
+              <a href="{{ site.github.url }}/social"
+                  class="site-nav__item site-nav__item--dropdown-item">Social Media</a>
+              <a href="{{ site.github.url }}/events.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Events</a>
+              <a href="{{ site.github.url }}/supporters.html"
+                  class="site-nav__item site-nav__item--dropdown-item">Supporters</a>
+              <a href="https://medium.com/openwhisk"
+                  class="site-nav__item site-nav__item--dropdown-item">Blog</a>
+            </div>
+      </div>
+
+      <div class="site-nav__item site-nav__item--dropdown">
+      <a href="https://github.com/apache/incubator-openwhisk-external-resources"
+            class="site-nav__item site-nav__item--dropdown-link site-nav__item--hide-on-small">Resources</a>
+            <div class="site-nav__item site-nav__item--dropdown-container">
+              <a href="{{ site.github.url }}/downloads.html" class="site-nav__item site-nav__item--dropdown-item">Downloads</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#feed-providers"
+                  class="site-nav__item site-nav__item--dropdown-item">Integrations</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#applications"
+                  class="site-nav__item site-nav__item--dropdown-item">Demos &amp; Examples</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#articles"
+                  class="site-nav__item site-nav__item--dropdown-item">Articles</a>
+              <a href="https://github.com/apache/incubator-openwhisk-external-resources#tutorials"
+                  class="site-nav__item site-nav__item--dropdown-item">Tutorials</a>
+            </div>
+      </div>
+
+    </nav>
+  </div>
+  <div class="site-header__nav site-header__nav--secondary">
+    <nav class="site-nav site-nav--social">
+      <a href="https://github.com/apache?q=openwhisk"
+         title="Apache OpenWhisk project repositories on GitHub"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-github.svg"
+             alt="Apache OpenWhisk project repositories on GitHub">
+      </a>
+      <a href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA"
+         title="Apache OpenWhisk on YouTube"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-youtube.svg"
+             alt="Apache OpenWhisk on YouTube">
+      </a>
+      <a href="http://www.slideshare.net/OpenWhisk"
+         title="Apache OpenWhisk on SlideShare"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-slideshare.svg"
+             alt="Apache OpenWhisk on SlideShare">
+      </a>
+      <a href="https://twitter.com/search?q=openwhisk"
+         title="Apache OpenWhisk on Twitter"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-twitter.svg"
+             alt="Apache OpenWhisk on Twitter">
+      </a>
+      <a href="http://stackoverflow.com/questions/tagged/openwhisk"
+         title="Apache OpenWhisk on Stack Overflow"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-stack-overflow.svg"
+             alt="Apache OpenWhisk on Stack Overflow">
+      </a>
+      <a href="slack.html"
+         title="Apache OpenWhisk on Slack"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-slack.svg"
+             alt="Apache OpenWhisk on Slack">
+      </a>
+      <a href="https://medium.com/openwhisk"
+         title="Apache OpenWhisk on Medium"
+         class="site-nav__item">
+        <img class="site-nav__image"
+             src="{{ site.github.url }}/images/icon-medium.svg"
+             alt="Apache OpenWhisk on Medium">
+      </a>
+    </nav>
+  </div>
+</header>
