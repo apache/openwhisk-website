@@ -458,21 +458,15 @@ wsk list</pre>
                 </p>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
-<div class="terminal">
-{% highlight scala tabsize=4 linenos=table %}
-{% remote_markdown https://raw.githubusercontent.com/pritidesai/helloworld/master/HelloWorld.scala %}
-{% endhighlight %}
-</div>
-<!--div class="terminal">
+                    <div class="terminal">
 <pre>function main() {
     return {payload: 'Hello world'};
 }</pre>
-                    </div-->
+                    </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
-                    <script src="https://gist.github.com/pritidesai/637e01432581c2c38ad1c0ef715c90e2.js"></script>
-                    <!--div class="terminal">
+                    <div class="terminal">
                         <pre>wsk action create helloJS hello.js</pre>
-                    </div-->
+                    </div>
                     <div class="terminal">
                         <pre>ok: created action helloJS</pre>
                     </div>
