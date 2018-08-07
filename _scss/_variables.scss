@@ -81,6 +81,13 @@ $color-blue-gray-dark: #131920;
 $color-blue-gray-light-text: #9da6ab;
 $color-blue-dark-text: #00091a;
 $color-white: #fff;
+$color-gray-percent-56: #959595;
+$color-gray-percent-70: #b2b2b2;
+$color-gray-percent-76: #c2c2c2;
+$color-gray-percent-78: #c6c6c6;
+$color-gray-percent-82: #d0d0d0;
+$color-gray-percent-94: #efefef;
+$color-gray-percent-96: #f5f5f5;
 
 /*
  * Logo Colors
@@ -96,12 +103,12 @@ $color-logo-deeper-aquamarine: #6eedd8;
  */
 
 $color-fg-base-light-text: ghostwhite;
-$color-bg-base-main: white;
-$color-bg-base-image-wrapper: white;
+$color-bg-base-main: $color-white;
+$color-bg-base-image-wrapper: $color-white;
 $color-bg-base-content: ghostwhite;
 $color-bg-base-img: transparent;
-$color-bg-tablet-main: white;
-$color-bg-desktop-main: white;
+$color-bg-tablet-main: $color-white;
+$color-bg-desktop-main: $color-white;
 
 $color-header-bg: $color-blue-dark;
 $color-header-bg-section-logo: transparent;
@@ -202,15 +209,26 @@ $header-base-h5-line-height: $header-tablet-h5-line-height;
  * Index
  */
 
-$index-menu-width: 200px;
+$index-menu-width: 220px;
 
 // position menu relative to header
-$index-menu-top-offset: $header-height + 18px;
-$index-menu-left-offset: 0px;
-$index-menu-font-size: 10pt;
+$index-menu-top-offset: $header-height + 10px;
+$index-menu-margin: 10px;
 
-$color-index-bg: $color-white;
+// left offset matches main body nodes
+$index-menu-left-offset: $whisk-nodes-padding-base-X;
+$index-menu-font-size: 12.5px;
+$index-menu-font-weight: 500;
+$index-menu-font-letter-spacing: 0.5px;
+
+$index-menuitem-padding: 2px;
+$index-menuitem-line-height: normal;
+$index-menuitem-font-weight-hover: 400;
+
+$color-index-bg: $color-bg-base-content;
 $color-index-fg: $color-blue-gray-dark;
+$color-index-bg-highlight: $color-blue-gray-medium;
+$color-index-fg-highlight: $color-white;
 $color-index-border: transparent;
 $color-index-list-bg: transparent;
 $color-index-list-border: transparent;
@@ -218,7 +236,7 @@ $color-index-item-bg: transparent;
 $color-index-item-border: transparent;
 
 $index-border: 0px solid $color-index-list-border;
-$index-item-border: 0px solid $color-index-item-border;
+$index-item-border: 2px solid $color-index-item-border;
 
 /*
  * Expandable/Collapsible (WIP)

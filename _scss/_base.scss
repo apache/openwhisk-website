@@ -13,7 +13,7 @@ section, header {
     main {
         width: $main-width;
         // !Important.  Home page scrolls horz. without this width constraint (affected by SVG <img> issues)
-        max-width: $media-size-max-width;;
+        max-width: $media-size-max-width;
     }
 }
 
@@ -78,6 +78,7 @@ pre {
     border: 0px;
     padding: 0px;
     background-color: $color-header-bg-section-logo;
+    // TODO: make a variable
     background-image: url(/images/apache-openwhisk.png);
     background-size: $logo-width $logo-height !important;
     background-repeat: no-repeat;
@@ -88,6 +89,7 @@ pre {
 .header-section-text-links {
     display: table-row-group;
     background: $color-header-bg-section-menu-text;
+    // TODO: make image sizes variables
     width: 33%;
     min-width: 280px;
     color: white;
@@ -161,7 +163,6 @@ pre {
 }
 
 // Header is only shown on the "home" page
-// TODO: add padding to title/tag line for small media
 #whiskHeader {
     background-color: $color-blue-dark;
     color: $color-white;
@@ -197,6 +198,8 @@ pre {
     padding-bottom: $whisk-nodes-padding-base-Y;
     padding-left: $whisk-nodes-padding-base-X;
     padding-right: $whisk-nodes-padding-base-X;
+    // YYY
+    padding-top: 20px;
 
     main {
         display: table;
@@ -230,17 +233,11 @@ pre {
             height: 100%;
         }
     }
-
-    h3 {
-        margin-bottom: $whisk-nodes-h3-margin-bottom;
-    }
 }
 
 #doc {
     position: relative;
     overflow: hidden;
-    // TODO: evaluate this value's effect
-    padding-top: 10px;
     text-align: left;
 }
 
@@ -256,8 +253,8 @@ pre {
 }
 
 .flow-item-container {
+    background: $color-white;
     width: 260px;
-    background: $color-blue-gray-light;
     margin: 10px;
 }
 
@@ -276,9 +273,6 @@ pre {
     background-color: $color-menu-collapsible-bg;
     border: 1px solid $color-menuitem-collapsible-border;
     cursor: pointer;  // finger shown to let ppl know you can click it
-    width: 100%;
-    outline: none;
-    padding-left: 10px;
 }
 
 .collapsible-toggle:hover {
@@ -332,51 +326,52 @@ a.indexable {
     // Note: we will turn this off for small/base media, allow other profiles to turn on.
     display: none;
     background-color: $color-index-bg;
-    color: $color-index-fg;
     width: $index-menu-width;
-    // Pad the overall index <ul> (and not all the nested <ul>s)
-    padding: 10px;
+    // Pad the overall index <div> (and not all the nested <ul>s)
+    margin: $index-menu-margin;
 
     ul {
         background-color: $color-index-list-bg;
-        font-size: $index-menu-font-size;
-        font-weight: 500;
-
-        //list-style-type: square;
-        //list-style-position: inside;
-        //list-style-image: url('abc.png')
-        //list-style: square inside url("abc.png");
         list-style-type: none;
         list-style-position: inside;
 
         // Override <ul> defaults:
-        // default margin: 16px (top and bottom)
-        // TODO: make variables
         margin: 0px;
-        padding-left: 10px;
-        padding-right: 0px;
-        padding-top: 2px;
-        padding-bottom: 2px;
+        padding: 0px;
     }
 
     li {
         background-color: $color-index-item-bg;
+        color: $color-index-fg;
         border: $index-item-border;
         font-size: $index-menu-font-size;
-        font-weight: 500;
-        // TODO: make variables
-        padding-left: 4px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        margin-left: 4px;
+        font-weight: $index-menu-font-weight;
+        padding: $index-menuitem-padding;
+        line-height: $index-menuitem-line-height;
+
+        // Control index-item (anchor) text color regardless by state
+        a {
+            color: $color-index-fg;
+            text-decoration: none;
+        }
+        a:hover {
+            // use different color on index-item hover
+            color: $color-index-fg-highlight;
+        }
+        a:visited {
+            color:$color-index-fg;
+        }
+        a:active {
+            color: $color-index-fg;
+        }
     }
 
-    a {
-        color: $color-index-fg;
-        text-decoration: none;
+    li:hover {
+        background-color: $color-index-bg-highlight;
+        font-weight: $index-menuitem-font-weight-hover;
+        a {
+            color: $color-index-fg-highlight;
+        }
     }
 
-    a:visited {color:$color-index-fg;}
-    a:hover {color: $color-index-fg;}
-    a:active {color: $color-index-fg;}
 }

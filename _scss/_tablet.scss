@@ -50,7 +50,8 @@
         #whiskNodes {
             display: table-cell;
             // NOTE: margin does not work here, must use left padding
-            padding-left: $index-menu-width;
+            // TODO: make a variable
+            padding-left: $index-menu-width + 40px;
         }
     }
 
@@ -83,10 +84,6 @@
                 // Note: we have a border in side-by-side layout, but do not in vertical layout.
                 border: $color-bg-tablet-image-wrapper-border;
             }
-        }
-        h3 {
-            text-align: left;
-            margin-bottom: 18px;
         }
     }
 }
