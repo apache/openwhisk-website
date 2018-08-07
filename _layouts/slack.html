@@ -10,45 +10,44 @@ layout: default
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
   crossorigin="anonymous"></script>
-<section>
-  <div class="main-content">
-    <div class="main-content__columns">
-      <div class="main-content__column">
-        <div><img src="https://s23.postimg.org/oy3kv2uxn/skitch.png" alt="OpenWhisk plus Slack" style="height: 60px;"> </div>
+
+<section id="whiskHeader" class="light-text bot-bar">
+    <main>
         <div>
-          <h3>Already a Team member?</h3>
-          <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
         </div>
-        <div>
-          <h3>If not, join us!</h3>
-          <p>Join the OpenWhisk Community to discuss the project in real-time.
-          </p>
-          <ul style="text-align: left">
-            <li><strong>Talk</strong> to the core devs and the OpenWhisk community.
-            </li>
-            <li><strong>Learn</strong> from others and ask questions.</li>
-            <li><strong>Share</strong> your work and demos.</li>
-          </ul>
-          <form>
-            <div> <label for="exampleInputEmail2">Email:</label>
-              <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email"> </div>
-            <button type="button" class="btn btn-primary" style="margin:
-            5px;">Send invitation</button>
-          </form>
-        </div>
-        <div>
-          <p>We are a friendly, respectful and inclusive community!</p>
-        </div>
-        <div><a href="https://openwhisk-team.slack.com/"> </a>
-          <p><i>Code for Slack invite (this page) is on github:</i><br>
-            <i> </i><i><a
-              href="https://github.com/openwhisk/openwhisk-slackinvite"
-              target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i></p>
-        </div>
-      </div>
-    </div>
-  </div>
+    </main>
 </section>
+
+<section id="whiskNodes">
+    <main id="doc">
+        <div class="content">
+            <h3>Already a Team member?</h3>
+            <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
+            <h3>If not, join us!</h3>
+            <p>Join the OpenWhisk Community to discuss the project in real-time.</p>
+            <ul style="text-align: left">
+                <li><strong>Talk</strong> to the core devs and the OpenWhisk community.</li>
+                <li><strong>Learn</strong> from others and ask questions.</li>
+                <li><strong>Share</strong> your work and demos.</li>
+            </ul>
+            <form>
+                <div>
+                    <label for="exampleInputEmail2">Email:</label>
+                    <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email">
+                </div>
+                <button type="button" class="btn btn-primary" style="margin:5px;">Send invitation</button>
+            </form>
+            <p></p>
+            <p>We are a friendly, respectful and inclusive community!</p>
+            <a href="https://openwhisk-team.slack.com/"></a>
+            <p>
+                <i>Code for Slack invite (this page) is on github:</i><br><i> </i><i>
+                <a href="https://github.com/openwhisk/openwhisk-slackinvite" target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i>
+            </p>
+        </div>
+    </main>
+</section>
+
 <script type="text/javascript">
   $(document).ready(function () {
     var btn = $("button");
