@@ -70,8 +70,6 @@ $logo-height: 80px;
  * Theme Colors
  */
 
-$color-blue-light: #ebf1f9;
-$color-blue-medium: #88addd;
 $color-blue-dark: #29558f;
 $color-blue-black: #0b1828;
 $color-blue-hover: transparentize($color-blue-dark, 0.94);
@@ -184,26 +182,25 @@ $p-line-height: $line-height-default;
 /*
  * Header
  */
+ $header-base-h1-font-size: 32px;
+ $header-base-h1-font-weight: 300;
+ $header-base-h1-font-style: normal;
+ $header-base-h1-line-height: 42px;
 
-$header-tablet-h1-font-size: 36px;
-$header-tablet-h1-font-weight: 300;
-$header-tablet-h1-font-style: normal;
-$header-tablet-h1-line-height: 44px;
+ $header-base-h5-font-size: 14px;
+ $header-base-h5-font-weight: 300;
+ $header-base-h5-font-style: normal;
+ $header-base-h5-line-height: 28px;
 
-$header-tablet-h5-font-size: 16px;
-$header-tablet-h5-font-weight: 300;
-$header-tablet-h5-font-style: normal;
-$header-tablet-h5-line-height: 28px;
+ $header-tablet-h1-font-size: $header-base-h1-font-size + 4px;
+ $header-tablet-h1-font-weight: $header-base-h1-font-weight;
+ $header-tablet-h1-font-style: $header-base-h1-font-style;
+ $header-tablet-h1-line-height: $header-base-h1-line-height + 2px;
 
-$header-base-h1-font-size: 32px;
-$header-base-h1-font-weight: $header-tablet-h1-font-weight;
-$header-base-h1-font-style: $header-tablet-h1-font-style;
-$header-base-h1-line-height: 42px;
-
-$header-base-h5-font-size: 14px;
-$header-base-h5-font-weight: $header-tablet-h5-font-weight;
-$header-base-h5-font-style: $header-tablet-h5-font-style;
-$header-base-h5-line-height: $header-tablet-h5-line-height;
+ $header-tablet-h5-font-size: $header-base-h5-font-size + 2px;
+ $header-tablet-h5-font-weight: $header-base-h5-font-weight;
+ $header-tablet-h5-font-style: $header-base-h5-font-style;
+ $header-tablet-h5-line-height: $header-base-h5-line-height;
 
 /*
  * Index
@@ -252,5 +249,6 @@ $color-menuitem-collapsible-border: 1px solid transparent;
  */
 
 $color-terminal-border: $color-blue-gray-light;
+// TODO if we adopt a color, we should add it to our theme colors
 $color-terminal-bg: #001a33;
-$color-terminal-fg: white;
+$color-terminal-fg: $color-white;

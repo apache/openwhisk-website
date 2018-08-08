@@ -1,7 +1,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: $font-family-default;
     background: none;
     border: 0
 }
@@ -56,10 +55,9 @@ p, ul, ol, li {
     line-height: 18px;
 }
 
-a {color: $color-anchors }
-a:visited { color: $color-anchors; }
-a:hover { color: $color-anchors; }
-a:active { color: $color-anchors; }
+a, a:visited, a:hover, a:active {
+    color: $color-anchors;
+}
 
 a.button {
     color: white;
@@ -97,4 +95,41 @@ a.button {
     border: solid 1px $color-gray-percent-56;
     box-shadow: inset 0 10px 15px 0 $color-gray-percent-78;
     top:2px;
+}
+
+/*
+ *  Terminal / Code formatting
+ */
+// TODO: move sizes to variables.
+.terminal {
+    background: $color-terminal-bg;
+    color: $color-terminal-fg;
+    border: 1px solid $color-terminal-border;
+    padding: 4px 4px 4px 8px;
+    width: 700px;
+    margin-bottom: 10px;
+
+    // Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
+    // Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
+    pre {
+        white-space: pre;
+        display: inline;
+        margin: 0px;
+        font-family: $font-family-code;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+
+// Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
+// Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
+pre {
+    white-space: pre;
+    display: inline;
+    margin: 0px;
+    font-family: $font-family-code;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
 }
