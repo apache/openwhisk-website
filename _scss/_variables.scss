@@ -42,6 +42,7 @@ $header-height: 80px;
 // Allow for a fixed top banner on all content pages
 $whisk-header-base-padding-top: 168px;
 $whisk-header-tablet-padding-top: $header-height;
+$whisk-header-desktop-padding-top: $header-height;
 
 /*
  * Layout: Footer
@@ -151,7 +152,7 @@ $color-bg-tablet-image-wrapper-border: 8px solid $color-logo-deeper-aquamarine;
  * Fonts
  */
 
-$font-family-default: 'Roboto', sans-serif;
+$font-family-default: "Roboto", sans-serif;
 $font-family-code: "Courier New", Courier, monospace;
 $font-size-default: 14px;
 $font-weight-default: 300;
