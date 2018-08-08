@@ -461,9 +461,9 @@ wsk list</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
                     <div class="terminal">
-<pre>function main() {
-    return {payload: 'Hello world'};
-}</pre>
+{% highlight javascript linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.js %}
+{% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
                     <div class="terminal">
@@ -493,24 +493,16 @@ wsk list</pre>
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloJS:
-                function: hello.js</pre>
+{% highlight yaml linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloJS-1.yaml %}
+{% endhighlight %}
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloJS:
-                code: |
-                    function main() {
-                        return {payload: 'Hello world'};
-                    }
-                runtime: nodejs:6</pre>
+{% highlight yaml linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloJS-2.yaml %}
+{% endhighlight %}
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
@@ -558,15 +550,9 @@ wsk list</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:</li>
                     <div class="terminal">
-<pre>import sys
-def main(dict):
-    if 'name' in dict:
-        name = dict['name']
-    else:
-        name = "stranger"
-    greeting = "Hello " + name + "!"
-    print(greeting)
-    return {"greeting": greeting}</pre>
+{% highlight python linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.py %}
+{% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
                     <div class="terminal">
@@ -592,30 +578,16 @@ def main(dict):
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPy:
-                function: hello.py</pre>
+{% highlight yaml linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPy-1.yaml %}
+{% endhighlight %}
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPy:
-                code: |
-                    import sys
-                    def main(dict):
-                        if 'name' in dict:
-                            name = dict['name']
-                        else:
-                            name = "stranger"
-                        greeting = "Hello " + name + "!"
-                        print(greeting)
-                        return {"greeting": greeting}
-                runtime: python:2</pre>
+{% highlight yaml linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPy-2.yaml %}
+{% endhighlight %}
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
@@ -662,31 +634,9 @@ def main(dict):
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.go</i>:</li>
                     <div class="terminal">
-<pre>package main
-
-import "encoding/json"
-import "fmt"
-import "os"
-
-func main() {
-    //program receives one argument: the JSON object as a string
-    arg := os.Args[1]
-
-    // unmarshal the string to a JSON object
-    var obj map[string]interface{}
-    json.Unmarshal([]byte(arg), &obj)
-
-    // can optionally log to stdout (or stderr)
-    fmt.Println("hello Go action")
-
-    name, ok := obj["name"].(string)
-    if !ok { name = "Stranger" }
-
-    // last line of stdout is the result JSON object as a string
-    msg := map[string]string{"msg": ("Hello, " + name + "!")}
-    res, _ := json.Marshal(msg)
-    fmt.Println(string(res))
-}</pre>
+{% highlight go linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.go %}
+{% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
                     <div class="terminal">
@@ -745,25 +695,9 @@ zip exec.zip exec</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>Hello.java</i>:</li>
                     <div class="terminal">
-<pre>package hello;
-
-import com.google.gson.JsonObject;
-
-public class Hello {
-    public static JsonObject main(JsonObject args)
-        String name;
-
-        try {
-            name = args.getAsJsonPrimitive("name").getAsString();
-        } catch(Exception e) {
-            name = "stranger";
-        }
-
-        JsonObject response = new JsonObject();
-        response.addProperty("greeting", "Hello " + name + "!");
-        return response;
-    }
-}</pre>
+{% highlight java linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/Hello.java %}
+{% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows</li>
                     <div class="terminal">
@@ -850,14 +784,9 @@ jar cvf hello.jar Hello.class</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.php</i>:</li>
                     <div class="terminal">
-<pre>&lt;?php
-function main(array $args) : array
-{
-    $name = $args["name"] ?? "stranger";
-    $greeting = "Hello $name!";
-    echo $greeting;
-    return ["greeting" => $greeting];
-}</pre>
+{% highlight php linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.php %}
+{% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPHP</i> using <i>hello.php</i>:</li>
                     <div class="terminal">
@@ -883,29 +812,16 @@ function main(array $args) : array
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPHP:
-                function: hello.php</pre>
+{% highlight yaml linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPhp-1.yaml %}
+{% endhighlight %}
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPHP:
-                code: |
-                    &lt;?php
-                    function main(array $args) : array
-                    {
-                        $name = $args["name"] ?? "stranger";
-                        $greeting = "Hello $name!";
-                        echo $greeting;
-                        return ["greeting" => $greeting];
-                    }
-                runtime: php:7.1</pre>
+{% highlight yaml linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPhp-2.yaml %}
+{% endhighlight %}
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
@@ -1100,10 +1016,9 @@ function main(array $args) : array
                     <li>Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
                     <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.</li>
                     <div class="terminal">
-<pre>
-function main(params) {
-    return {payload: 'Hello, ' + params.name + ' from ' + params.place};
-}</pre>
+{% highlight javascript linenos %}
+{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello-with-params.js %}
+{% endhighlight %}
                     </div>
                     <div class="terminal">
 <pre>wsk action create hello hello.js</pre>
