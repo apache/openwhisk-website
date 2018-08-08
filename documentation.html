@@ -581,9 +581,14 @@ wsk list</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
                     <div class="terminal">
-<pre>function main() {
-    return {payload: 'Hello world'};
-}</pre>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="na">payload</span><span class="p">:</span> <span class="s1">'Hello world'</span><span class="p">};</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
                     <div class="terminal">
@@ -613,24 +618,42 @@ wsk list</pre>
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloJS:
-                function: hello.js</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">helloJS</span><span class="pi">:</span>
+                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.js</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloJS:
-                code: |
-                    function main() {
-                        return {payload: 'Hello world'};
-                    }
-                runtime: nodejs:6</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">helloJS</span><span class="pi">:</span>
+                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="no">function main() {</span>
+                        <span class="no">return {payload: 'Hello world'};</span>
+                    <span class="no">}</span>
+                <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:6</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
@@ -678,15 +701,24 @@ wsk list</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:</li>
                     <div class="terminal">
-<pre>import sys
-def main(dict):
-    if 'name' in dict:
-        name = dict['name']
-    else:
-        name = "stranger"
-    greeting = "Hello " + name + "!"
-    print(greeting)
-    return {"greeting": greeting}</pre>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s">'name'</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span>
+    <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s">"greeting"</span><span class="p">:</span> <span class="n">greeting</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
                     <div class="terminal">
@@ -712,30 +744,54 @@ def main(dict):
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPy:
-                function: hello.py</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">helloPy</span><span class="pi">:</span>
+                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.py</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPy:
-                code: |
-                    import sys
-                    def main(dict):
-                        if 'name' in dict:
-                            name = dict['name']
-                        else:
-                            name = "stranger"
-                        greeting = "Hello " + name + "!"
-                        print(greeting)
-                        return {"greeting": greeting}
-                runtime: python:2</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">helloPy</span><span class="pi">:</span>
+                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="no">import sys</span>
+                    <span class="no">def main(dict):</span>
+                        <span class="no">if 'name' in dict:</span>
+                            <span class="no">name = dict['name']</span>
+                        <span class="no">else:</span>
+                            <span class="no">name = "stranger"</span>
+                        <span class="no">greeting = "Hello " + name + "!"</span>
+                        <span class="no">print(greeting)</span>
+                        <span class="no">return {"greeting": greeting}</span>
+                <span class="s">runtime</span><span class="pi">:</span> <span class="s">python:2</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
@@ -782,31 +838,58 @@ def main(dict):
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.go</i>:</li>
                     <div class="terminal">
-<pre>package main
 
-import "encoding/json"
-import "fmt"
-import "os"
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
 
-func main() {
-    //program receives one argument: the JSON object as a string
-    arg := os.Args[1]
+</span><span class="k">import</span><span class="x"> </span><span class="s">"encoding/json"</span><span class="x">
+</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+</span><span class="k">import</span><span class="x"> </span><span class="s">"os"</span><span class="x">
 
-    // unmarshal the string to a JSON object
-    var obj map[string]interface{}
-    json.Unmarshal([]byte(arg), &obj)
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">//program receives one argument: the JSON object as a string</span><span class="x">
+    </span><span class="n">arg</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">os</span><span class="o">.</span><span class="n">Args</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="x">
 
-    // can optionally log to stdout (or stderr)
-    fmt.Println("hello Go action")
+    </span><span class="c">// unmarshal the string to a JSON object</span><span class="x">
+    </span><span class="k">var</span><span class="x"> </span><span class="n">obj</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{}</span><span class="x">
+    </span><span class="n">json</span><span class="o">.</span><span class="n">Unmarshal</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">arg</span><span class="p">),</span><span class="x"> </span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="x">
 
-    name, ok := obj["name"].(string)
-    if !ok { name = "Stranger" }
+    </span><span class="c">// can optionally log to stdout (or stderr)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"hello Go action"</span><span class="p">)</span><span class="x">
 
-    // last line of stdout is the result JSON object as a string
-    msg := map[string]string{"msg": ("Hello, " + name + "!")}
-    res, _ := json.Marshal(msg)
-    fmt.Println(string(res))
-}</pre>
+    </span><span class="n">name</span><span class="p">,</span><span class="x"> </span><span class="n">ok</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">obj</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="x">
+    </span><span class="k">if</span><span class="x"> </span><span class="o">!</span><span class="n">ok</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="n">name</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"Stranger"</span><span class="x"> </span><span class="p">}</span><span class="x">
+
+    </span><span class="c">// last line of stdout is the result JSON object as a string</span><span class="x">
+    </span><span class="n">msg</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">"msg"</span><span class="o">:</span><span class="x"> </span><span class="p">(</span><span class="s">"Hello, "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">name</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="s">"!"</span><span class="p">)}</span><span class="x">
+    </span><span class="n">res</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">json</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="kt">string</span><span class="p">(</span><span class="n">res</span><span class="p">))</span><span class="x">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
                     <div class="terminal">
@@ -865,25 +948,46 @@ zip exec.zip exec</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>Hello.java</i>:</li>
                     <div class="terminal">
-<pre>package hello;
 
-import com.google.gson.JsonObject;
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre><span class="kn">package</span> <span class="n">hello</span><span class="o">;</span>
 
-public class Hello {
-    public static JsonObject main(JsonObject args)
-        String name;
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
 
-        try {
-            name = args.getAsJsonPrimitive("name").getAsString();
-        } catch(Exception e) {
-            name = "stranger";
-        }
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">JsonObject</span> <span class="nf">main</span><span class="o">(</span><span class="n">JsonObject</span> <span class="n">args</span><span class="o">)</span>
+        <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
 
-        JsonObject response = new JsonObject();
-        response.addProperty("greeting", "Hello " + name + "!");
-        return response;
-    }
-}</pre>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">getAsJsonPrimitive</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">getAsString</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="n">JsonObject</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JsonObject</span><span class="o">();</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">addProperty</span><span class="o">(</span><span class="s">"greeting"</span><span class="o">,</span> <span class="s">"Hello "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows</li>
                     <div class="terminal">
@@ -970,14 +1074,24 @@ jar cvf hello.jar Hello.class</pre>
                 <ol>
                     <li style="list-style-type: decimal">Create a file named <i>hello.php</i>:</li>
                     <div class="terminal">
-<pre>&lt;?php
-function main(array $args) : array
-{
-    $name = $args["name"] ?? "stranger";
-    $greeting = "Hello $name!";
-    echo $greeting;
-    return ["greeting" => $greeting];
-}</pre>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="nf">main</span><span class="p">(</span><span class="k">array</span> <span class="nv">$args</span><span class="p">)</span> <span class="o">:</span> <span class="k">array</span>
+<span class="p">{</span>
+    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$args</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">??</span> <span class="s2">"stranger"</span><span class="p">;</span>
+    <span class="nv">$greeting</span> <span class="o">=</span> <span class="s2">"Hello </span><span class="nv">$name</span><span class="s2">!"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="nv">$greeting</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s2">"greeting"</span> <span class="o">=&gt;</span> <span class="nv">$greeting</span><span class="p">];</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPHP</i> using <i>hello.php</i>:</li>
                     <div class="terminal">
@@ -1003,29 +1117,52 @@ function main(array $args) : array
                     <ol>
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPHP:
-                function: hello.php</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">helloPHP</span><span class="pi">:</span>
+                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.php</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
-<pre>packages:
-    helloworld:
-        actions:
-            helloPHP:
-                code: |
-                    &lt;?php
-                    function main(array $args) : array
-                    {
-                        $name = $args["name"] ?? "stranger";
-                        $greeting = "Hello $name!";
-                        echo $greeting;
-                        return ["greeting" => $greeting];
-                    }
-                runtime: php:7.1</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">helloPHP</span><span class="pi">:</span>
+                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="no">&lt;?php</span>
+                    <span class="no">function main(array $args) : array</span>
+                    <span class="no">{</span>
+                        <span class="no">$name = $args["name"] ?? "stranger";</span>
+                        <span class="no">$greeting = "Hello $name!";</span>
+                        <span class="no">echo $greeting;</span>
+                        <span class="no">return ["greeting" =&gt; $greeting];</span>
+                    <span class="no">}</span>
+                <span class="s">runtime</span><span class="pi">:</span> <span class="s">php:7.1</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
@@ -1097,11 +1234,11 @@ function main(array $args) : array
                 <ul>
                     <li>Get a list of packages:</li>
                     <div class="terminal">
-                        <pre>wsk package list /whisk.system</pre>
+<pre>wsk package list /whisk.system</pre>
                     </div>
                     <li>Get a list of entities in a package:</li>
                     <div class="terminal">
-                        <pre>wsk package get --summary /whisk.system/&lt;package-name&gt;</pre>
+<pre>wsk package get --summary /whisk.system/&lt;package-name&gt;</pre>
                     </div>
                 </ul>
                 <p>
@@ -1115,48 +1252,48 @@ function main(array $args) : array
                     <ul>
                         <li style="list-style: circle">Get a description of the /whisk.system/samples/greeting action:</li>
                         <div class="terminal">
-                            <pre>wsk action get --summary /whisk.system/samples/greeting</pre>
+<pre>wsk action get --summary /whisk.system/samples/greeting</pre>
                         </div>
                         <div class="terminal">
-                            <pre>action /whisk.system/samples/greeting: Returns a friendly greeting
-                                (parameters: name, place)</pre>
+<pre>action /whisk.system/samples/greeting: Returns a friendly greeting
+    (parameters: name, place)</pre>
                         </div>
                         <li style="list-style: circle">Invoking action in a package:</li>
                         <div class="terminal">
-                            <pre>wsk action invoke --result /whisk.system/samples/greeting</pre>
+<pre>wsk action invoke --result /whisk.system/samples/greeting</pre>
                         </div>
                         <div class="terminal">
-                            <pre>{
-                                "payload": "Hello, stranger from somewhere!"
-                            }</pre>
+<pre>{
+    "payload": "Hello, stranger from somewhere!"
+}</pre>
                         </div>
                         <li style="list-style: circle">Invoke the action with parameters:</li>
                         <div class="terminal">
-                            <pre>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</pre>
+<pre>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</pre>
                         </div>
                         <div class="terminal">
-                            <pre>{
-                                "payload": "Hello, Bernie from Vermont!"
-                            }</pre>
+<pre>{
+    "payload": "Hello, Bernie from Vermont!"
+}</pre>
                         </div>
                     </ul>
                     <li>Creating package binding and invoking action from the binding:</li>
                     <ul>
                         <li style="list-style: circle">Creating and using package bindings:</li>
                         <div class="terminal">
-                            <pre>wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla</pre>
+<pre>wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla</pre>
                         </div>
                         <div class="terminal">
-                            <pre>ok: created binding valhallaSamples</pre>
+<pre>ok: created binding valhallaSamples</pre>
                         </div>
                         <li style="list-style: circle">Invoke an action in the package binding:</li>
                         <div class="terminal">
-                            <pre>wsk action invoke --result valhallaSamples/greeting --param name Odin</pre>
+<pre>wsk action invoke --result valhallaSamples/greeting --param name Odin</pre>
                         </div>
                         <div class="terminal">
-                            <pre>{
-                                "payload": "Hello, Odin from Valhalla!"
-                            }</pre>
+<pre>{
+    "payload": "Hello, Odin from Valhalla!"
+}</pre>
                         </div>
                     </ul>
                 </ul>
@@ -1220,10 +1357,14 @@ function main(array $args) : array
                     <li>Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
                     <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.</li>
                     <div class="terminal">
-<pre>
-function main(params) {
-    return {payload: 'Hello, ' + params.name + ' from ' + params.place};
-}</pre>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="na">payload</span><span class="p">:</span> <span class="s1">'Hello, '</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">' from '</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">place</span><span class="p">};</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>wsk action create hello hello.js</pre>
