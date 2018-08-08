@@ -893,11 +893,11 @@ jar cvf hello.jar Hello.class</pre>
                 <ul>
                     <li>Get a list of packages:</li>
                     <div class="terminal">
-                        <pre>wsk package list /whisk.system</pre>
+<pre>wsk package list /whisk.system</pre>
                     </div>
                     <li>Get a list of entities in a package:</li>
                     <div class="terminal">
-                        <pre>wsk package get --summary /whisk.system/&lt;package-name&gt;</pre>
+<pre>wsk package get --summary /whisk.system/&lt;package-name&gt;</pre>
                     </div>
                 </ul>
                 <p>
@@ -911,48 +911,48 @@ jar cvf hello.jar Hello.class</pre>
                     <ul>
                         <li style="list-style: circle">Get a description of the /whisk.system/samples/greeting action:</li>
                         <div class="terminal">
-                            <pre>wsk action get --summary /whisk.system/samples/greeting</pre>
+<pre>wsk action get --summary /whisk.system/samples/greeting</pre>
                         </div>
                         <div class="terminal">
-                            <pre>action /whisk.system/samples/greeting: Returns a friendly greeting
-                                (parameters: name, place)</pre>
+<pre>action /whisk.system/samples/greeting: Returns a friendly greeting
+    (parameters: name, place)</pre>
                         </div>
                         <li style="list-style: circle">Invoking action in a package:</li>
                         <div class="terminal">
-                            <pre>wsk action invoke --result /whisk.system/samples/greeting</pre>
+<pre>wsk action invoke --result /whisk.system/samples/greeting</pre>
                         </div>
                         <div class="terminal">
-                            <pre>{
-                                "payload": "Hello, stranger from somewhere!"
-                            }</pre>
+<pre>{
+    "payload": "Hello, stranger from somewhere!"
+}</pre>
                         </div>
                         <li style="list-style: circle">Invoke the action with parameters:</li>
                         <div class="terminal">
-                            <pre>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</pre>
+<pre>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</pre>
                         </div>
                         <div class="terminal">
-                            <pre>{
-                                "payload": "Hello, Bernie from Vermont!"
-                            }</pre>
+<pre>{
+    "payload": "Hello, Bernie from Vermont!"
+}</pre>
                         </div>
                     </ul>
                     <li>Creating package binding and invoking action from the binding:</li>
                     <ul>
                         <li style="list-style: circle">Creating and using package bindings:</li>
                         <div class="terminal">
-                            <pre>wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla</pre>
+<pre>wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla</pre>
                         </div>
                         <div class="terminal">
-                            <pre>ok: created binding valhallaSamples</pre>
+<pre>ok: created binding valhallaSamples</pre>
                         </div>
                         <li style="list-style: circle">Invoke an action in the package binding:</li>
                         <div class="terminal">
-                            <pre>wsk action invoke --result valhallaSamples/greeting --param name Odin</pre>
+<pre>wsk action invoke --result valhallaSamples/greeting --param name Odin</pre>
                         </div>
                         <div class="terminal">
-                            <pre>{
-                                "payload": "Hello, Odin from Valhalla!"
-                            }</pre>
+<pre>{
+    "payload": "Hello, Odin from Valhalla!"
+}</pre>
                         </div>
                     </ul>
                 </ul>
