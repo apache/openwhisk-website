@@ -1,0 +1,5 @@
+packages:
+    default:
+        actions:
+            helloPHP:
+                function: hello.php

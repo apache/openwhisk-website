@@ -1,0 +1,10 @@
+packages:
+    default:
+        actions:
+            helloJS:
+                code: |
+                    function main() {
+                        return {payload: 'Hello world'};
+                    }
+                runtime: nodejs:6
+

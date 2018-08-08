@@ -1,0 +1,5 @@
+packages:
+    default:
+        actions:
+            helloPy:
+                function: hello.py
