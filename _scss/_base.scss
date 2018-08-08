@@ -4,54 +4,60 @@
  */
 
 body {
-    background-color: $color-white;
+  background-color: $color-white;
 }
 
-section, header {
-    padding-left: $full-width-paddingX;
-    padding-right: $full-width-paddingX;
+section,
+header {
+  padding-left: $full-width-paddingX;
+  padding-right: $full-width-paddingX;
 
-    main {
-        width: $main-width;
-        // !Important.  Home page scrolls horz. without this width constraint (affected by SVG <img> issues)
-        max-width: $media-size-max-width;
-    }
+  main {
+    width: $main-width;
+    // !Important.  Home page scrolls horz. without this width constraint (affected by SVG <img> issues)
+    max-width: $media-size-max-width;
+  }
 }
 
-section, header, footer {
-    main {
-        position: relative;
-        margin: auto;
-    }
+section,
+header,
+footer {
+  main {
+    position: relative;
+    margin: auto;
+  }
 }
 
 section {
-    position: relative;
-    background-color: $color-white;
+  position: relative;
+  background-color: $color-white;
 }
 
 footer {
-    width: 100%;
-    background-color: $color-blue-dark;
-    padding: $whisk-footer-base-padding-base
+  width: 100%;
+  background-color: $color-blue-dark;
+  padding: $whisk-footer-base-padding-base;
 }
 
 // Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
 // Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
 pre {
-    white-space: pre;
-    display: inline;
-    margin: 0px;
+  white-space: pre;
+  display: inline;
+  margin: 0px;
 }
 
 .header {
-  display: table;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column wrap;
   background-color: $color-header-bg;
   position: fixed;
   z-index: 8888;
   top: 0;
   width: 100%;
-  height: $header-height;
+  min-height: $header-height;
   padding-bottom: 20px;
 
   // Assure that menu items have white foreground and proper spacing
@@ -72,174 +78,166 @@ pre {
 // Note: use of a fixed .PNG seems to be more reliable than .SVG
 // where different browsers tend to stretch SVG despite layout properties
 .header-section-logo {
-    display: table-cell;
-    position: relative;
-    width: $logo-width !important;
-    height: $logo-height !important;
-    border: 0px;
-    padding: 0px;
-    background-color: $color-header-bg-section-logo;
-    // TODO: make a variable
-    background-image: url(/images/apache-openwhisk.png);
-    background-size: $logo-width $logo-height !important;
-    background-repeat: no-repeat;
-    border: none !important;
-    background-position: 50% 50%;
+  width: $logo-width !important;
+  height: $logo-height !important;
+  border: 0px;
+  padding: 0px;
+  background-color: $color-header-bg-section-logo;
+  // TODO: make a variable
+  background-image: url(/images/apache-openwhisk.png);
+  background-size: $logo-width $logo-height !important;
+  background-repeat: no-repeat;
+  border: none !important;
+  background-position: 50% 50%;
 }
 
 .header-section-text-links {
-    display: table-row-group;
-    background: $color-header-bg-section-menu-text;
-    // TODO: make image sizes variables
-    width: 33%;
-    min-width: 280px;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
+  background: $color-header-bg-section-menu-text;
+  // TODO: make image sizes variables
+  min-width: 280px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
 }
 
 // TODO: explore min-width had no effect for some reason...
 .header-section-social-icons {
-    display: table-footer-group;
-    background-color: $color-header-bg-section-menu-icons;
-    width: 33%;
-    vertical-align: middle;
+  background-color: $color-header-bg-section-menu-icons;
 }
 
 // TODO: change row (div) height to have no padding/margin top and bottom
 .header-row-text-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .header-row-social-icons {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .header-button-icon {
-    flex: 0 0 auto;
-    background-color: $color-header-icon-bg;
-    border: 1px solid $color-header-icon-border;
-    border-radius: 4px;
-    align: center;
-    height: 36px;
-    width: 36px;
-    margin-right: 4px;
+  flex: 0 0 auto;
+  background-color: $color-header-icon-bg;
+  border: 1px solid $color-header-icon-border;
+  border-radius: 4px;
+  align: center;
+  height: 36px;
+  width: 36px;
+  margin: 3px;
 }
 
 .header-text-link {
-    flex: 0 0 auto;
-    background-color: $color-header-icon-bg;
-    margin: 3px;
+  flex: 0 0 auto;
+  background-color: $color-header-icon-bg;
+  margin: 3px;
 }
 
 .header-icon-image {
-   background: $color-header-icon-bg-image;
-   width: 26px;
-   padding: 0px;
+  background: $color-header-icon-bg-image;
+  width: 26px;
+  padding: 0px;
 }
 
 // TODO: move sizes to variables.
 .terminal {
-    background: $color-terminal-bg;
-    color: $color-terminal-fg;
-    border: 1px solid $color-terminal-border;
-    font-family: $font-family-code;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 140%;
-    // top right bottom left
-    padding: 4px 4px 4px 8px;
-    width: 700px;
-    margin-bottom: 10px;
+  background: $color-terminal-bg;
+  color: $color-terminal-fg;
+  border: 1px solid $color-terminal-border;
+  font-family: $font-family-code;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  // top right bottom left
+  padding: 4px 4px 4px 8px;
+  max-width: 700px;
+  margin-bottom: 10px;
 }
 
 // Header is only shown on the "home" page
 #whiskHeader {
-    background-color: $color-blue-dark;
+  background-color: $color-blue-dark;
+  color: $color-white;
+  text-align: center;
+  padding-top: $whisk-header-base-padding-top;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-bottom: $whisk-nodes-padding-base-Y;
+
+  h1 {
+    font-size: $header-base-h1-font-size;
+    font-weight: $header-base-h1-font-weight;
+    font-style: $header-base-h1-font-style;
+    line-height: $header-base-h1-line-height;
+    margin-bottom: 12px;
+  }
+  h5 {
+    font-size: $header-base-h5-font-size;
+    font-weight: $header-base-h5-font-weight;
+    font-style: $header-base-h5-font-style;
+    line-height: $header-base-h5-line-height;
+    margin-bottom: 4px;
+  }
+
+  h1,
+  h5 {
     color: $color-white;
-    text-align: center;
-    padding-top: $whisk-header-base-padding-top;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    margin-bottom: $whisk-nodes-padding-base-Y;
-
-    h1 {
-        font-size: $header-base-h1-font-size;
-        font-weight: $header-base-h1-font-weight;
-        font-style: $header-base-h1-font-style;
-        line-height: $header-base-h1-line-height;
-        margin-bottom: 12px;
-    }
-    h5 {
-        font-size: $header-base-h5-font-size;
-        font-weight: $header-base-h5-font-weight;
-        font-style: $header-base-h5-font-style;
-        line-height: $header-base-h5-line-height;
-        margin-bottom: 4px;
-    }
-
-    h1, h5 {
-        color: $color-white;
-    }
+  }
 }
 
 #whiskNodes {
-    // Note: pad only the bottom for each "node" (so we do not double up)
-    padding-bottom: $whisk-nodes-padding-base-Y;
-    padding-left: $whisk-nodes-padding-base-X;
-    padding-right: $whisk-nodes-padding-base-X;
-    // YYY
-    padding-top: 20px;
+  // Note: pad only the bottom for each "node" (so we do not double up)
+  padding-bottom: $whisk-nodes-padding-base-Y;
+  padding-left: $whisk-nodes-padding-base-X;
+  padding-right: $whisk-nodes-padding-base-X;
+  // YYY
+  padding-top: 20px;
 
-    main {
-        display: table;
-        background: $color-bg-base-main;
-        margin-bottom: $whisk-nodes-padding-base-Y;
+  main {
+    display: table;
+    background: $color-bg-base-main;
+    margin-bottom: $whisk-nodes-padding-base-Y;
+  }
+  .content {
+    background: $color-bg-base-content;
+    // Provide for space around content's text
+    padding: $whisk-nodes-main-content-padding-base;
+    // TODO: ????
+    height: 100%;
+
+    // Provide a space between image and content when vertical
+    margin-top: 20px;
+  }
+  .image-wrapper {
+    background: $color-bg-base-image-wrapper;
+    display: table-header-group;
+
+    // NOTE: margin ONLY works in horz. layout and has no impact in vert. layout
+    // margin: (top right bottom left)
+    margin: $main-image-wrapper-margin-base;
+
+    // NOTE: SVG files and the <img> tags do not work well together
+    // Important! without this style, the image will not stretch and display properly
+    img {
+      background: $color-bg-base-img;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
-    .content {
-        background: $color-bg-base-content;
-        // Provide for space around content's text
-        padding: $whisk-nodes-main-content-padding-base;
-        // TODO: ????
-        height: 100%;
-
-        // Provide a space between image and content when vertical
-        margin-top: 20px;
-    }
-    .image-wrapper {
-        background: $color-bg-base-image-wrapper;
-        display: table-header-group;
-
-        // NOTE: margin ONLY works in horz. layout and has no impact in vert. layout
-        // margin: (top right bottom left)
-        margin: $main-image-wrapper-margin-base;
-
-        // NOTE: SVG files and the <img> tags do not work well together
-        // Important! without this style, the image will not stretch and display properly
-        img {
-            background: $color-bg-base-img;
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-    }
+  }
 }
 
 #doc {
-    position: relative;
-    overflow: hidden;
-    text-align: left;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
 /*
@@ -247,22 +245,22 @@ pre {
  */
 
 .flow-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .flow-item-container {
-    background: $color-white;
-    width: 260px;
-    margin: 10px;
+  background: $color-white;
+  width: 260px;
+  margin: 10px;
 }
 
 .flow-item-image {
-    border-image-width: 0px;
-    max-width: 240px;
-    width: 240px;
+  border-image-width: 0px;
+  max-width: 240px;
+  width: 240px;
 }
 
 /*
@@ -270,21 +268,21 @@ pre {
  */
 
 .collapsible-toggle {
-    color: $color-menu-collapsible-fg;
-    background-color: $color-menu-collapsible-bg;
-    border: 1px solid $color-menuitem-collapsible-border;
-    cursor: pointer;  // finger shown to let ppl know you can click it
+  color: $color-menu-collapsible-fg;
+  background-color: $color-menu-collapsible-bg;
+  border: 1px solid $color-menuitem-collapsible-border;
+  cursor: pointer; // finger shown to let ppl know you can click it
 }
 
 .collapsible-toggle:hover {
-    background-color: $color-menu-collapsible-hover-bg;
+  background-color: $color-menu-collapsible-hover-bg;
 }
 
 .collapse-content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: white;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
 }
 
 /*
@@ -294,85 +292,84 @@ pre {
 // Need to create custom anchors that are aware of our fixed header
 // (i.e., position below it on click)
 a.indexable {
-    display: block;
-    position: relative;
-    // TODO: make a variable
-    top: -100px;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  // TODO: make a variable
+  top: -100px;
+  visibility: hidden;
 }
 
 #whiskIndexedLayout {
-    display: table;
-    padding-top: $whisk-header-base-padding-top;
+  display: table;
+  padding-top: $whisk-header-base-padding-top;
 
-    #whiskIndex {
-        vertical-align: top;
-        // position menu relative to header
-        display: float;
-        position: fixed;
-        top: $index-menu-top-offset;
-        left: $index-menu-left-offset;
-        width: $index-menu-width;
-        border: $index-border;
-        z-index: 6888;
-    }
+  #whiskIndex {
+    vertical-align: top;
+    // position menu relative to header
+    display: float;
+    position: fixed;
+    top: $index-menu-top-offset;
+    left: $index-menu-left-offset;
+    width: $index-menu-width;
+    border: $index-border;
+    z-index: 6888;
+  }
 
-    #whiskNodes {
-       display: table-cell;
-       // Note: we do NOT make left padding for Index in for the 'base' media size (width too small)
-    }
+  #whiskNodes {
+    display: table-cell;
+    // Note: we do NOT make left padding for Index in for the 'base' media size (width too small)
+  }
 }
 
 #whiskIndex {
-    // Note: we will turn this off for small/base media, allow other profiles to turn on.
-    display: none;
-    background-color: $color-index-bg;
-    width: $index-menu-width;
-    // Pad the overall index <div> (and not all the nested <ul>s)
-    margin: $index-menu-margin;
+  // Note: we will turn this off for small/base media, allow other profiles to turn on.
+  display: none;
+  background-color: $color-index-bg;
+  width: $index-menu-width;
+  // Pad the overall index <div> (and not all the nested <ul>s)
+  margin: $index-menu-margin;
 
-    ul {
-        background-color: $color-index-list-bg;
-        list-style-type: none;
-        list-style-position: inside;
+  ul {
+    background-color: $color-index-list-bg;
+    list-style-type: none;
+    list-style-position: inside;
 
-        // Override <ul> defaults:
-        margin: 0px;
-        padding: 0px;
+    // Override <ul> defaults:
+    margin: 0px;
+    padding: 0px;
+  }
+
+  li {
+    background-color: $color-index-item-bg;
+    color: $color-index-fg;
+    border: $index-item-border;
+    font-size: $index-menu-font-size;
+    font-weight: $index-menu-font-weight;
+    padding: $index-menuitem-padding;
+    line-height: $index-menuitem-line-height;
+
+    // Control index-item (anchor) text color regardless by state
+    a {
+      color: $color-index-fg;
+      text-decoration: none;
     }
-
-    li {
-        background-color: $color-index-item-bg;
-        color: $color-index-fg;
-        border: $index-item-border;
-        font-size: $index-menu-font-size;
-        font-weight: $index-menu-font-weight;
-        padding: $index-menuitem-padding;
-        line-height: $index-menuitem-line-height;
-
-        // Control index-item (anchor) text color regardless by state
-        a {
-            color: $color-index-fg;
-            text-decoration: none;
-        }
-        a:hover {
-            // use different color on index-item hover
-            color: $color-index-fg-highlight;
-        }
-        a:visited {
-            color:$color-index-fg;
-        }
-        a:active {
-            color: $color-index-fg;
-        }
+    a:hover {
+      // use different color on index-item hover
+      color: $color-index-fg-highlight;
     }
-
-    li:hover {
-        background-color: $color-index-bg-highlight;
-        font-weight: $index-menuitem-font-weight-hover;
-        a {
-            color: $color-index-fg-highlight;
-        }
+    a:visited {
+      color: $color-index-fg;
     }
+    a:active {
+      color: $color-index-fg;
+    }
+  }
 
+  li:hover {
+    background-color: $color-index-bg-highlight;
+    font-weight: $index-menuitem-font-weight-hover;
+    a {
+      color: $color-index-fg-highlight;
+    }
+  }
 }

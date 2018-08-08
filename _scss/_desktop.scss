@@ -1,16 +1,25 @@
 @media screen and (min-width: $media-size-desktop-start) {
+  .header {
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    padding-bottom: 0px;
+  }
 
-    #whiskNodes{
-        main {
-            background: $color-bg-desktop-main;
+  #whiskHeader {
+    padding-top: $whisk-header-desktop-padding-top;
+  }
 
-            .content {
-                width: $main-content-width-desktop;
-            }
-            .image-wrapper {
-                // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
-                // Do NOT set any values here or image scaling will be impacted.
-            }
-        }
+  #whiskNodes {
+    main {
+      background: $color-bg-desktop-main;
+
+      .content {
+        width: $main-content-width-desktop;
+      }
+      .image-wrapper {
+        // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
+        // Do NOT set any values here or image scaling will be impacted.
+      }
     }
+  }
 }
