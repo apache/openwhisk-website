@@ -279,9 +279,11 @@ function closeIndex() {
                 The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
                 This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
                 <div class="terminal">
-<pre>git clone https://github.com/apache/incubator-openwhisk-devtools.git
-cd incubator-openwhisk-devtools/docker-compose
-make quick-start</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/apache/incubator-openwhisk-devtools.git
+<span class="gp">$ </span><span class="nb">cd </span>incubator-openwhisk-devtools/docker-compose
+<span class="gp">$ </span>make quick-start</code></pre></figure>
+
                 </div>
                 <p>
                     For more detailed instructions, see the
@@ -415,23 +417,28 @@ make quick-start</pre>
                     To get the CLI command help, execute the following command:
                 </li>
                 <div class="terminal">
-<pre>wsk --help</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk --help</code></pre></figure>
+
                 </div>
-                <p></p>
                 <li id="authentication"><strong>Authenticate wsk CLI</strong></li>
                 <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
                 <ul>
                     <li>With wsk property setup</li>
                     <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
                     <div class="terminal">
-<pre>wsk property set --apihost &lt;API_HOST&gt; --auth &lt;AUTH_KEY&gt; --namespace guest</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk property <span class="nb">set</span> --apihost &lt;API_HOST&gt; --auth &lt;AUTH_KEY&gt; --namespace guest</code></pre></figure>
+
                     </div>
                     <p>Credentials are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
                     <li>Environment Variables Setup</li>
                     <p>Access credentials can be provided using properties file as environment variable:</p>
                     <div class="terminal">
-<pre>export WSK_CONFIG_FILE=&lt;your-config-file&gt;
-wsk list</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">export </span><span class="nv">WSK_CONFIG_FILE</span><span class="o">=</span>&lt;your-config-file&gt;
+<span class="gp">$ </span>wsk list</code></pre></figure>
+
                     </div>
                 </ul>
 
@@ -454,9 +461,10 @@ wsk list</pre>
                     Start by verifying the utility can display the command line help:
                 </li>
                 <div class="terminal">
-<pre>wskdeploy --help</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy --help</code></pre></figure>
+
                 </div>
-                <p></p>
                 <li>
                     Create Package Manifest File <i>manifest.yaml</i>:
                     Please refer to the
@@ -471,7 +479,9 @@ wsk list</pre>
                     <a href="#authentication">here</a>.</li>
                     <li>Deploying an OpenWhisk Manifest file:</li>
                     <div class="terminal">
-<pre>wskdeploy -m manifest.yaml</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+
                     </div>
                 </ul>
             </ul>
@@ -592,23 +602,29 @@ wsk list</pre>
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
                     <div class="terminal">
-                        <pre>wsk action create helloJS hello.js</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloJS hello.js</code></pre></figure>
+
                     </div>
                     <div class="terminal">
                         <pre>ok: created action helloJS</pre>
                     </div>
                     <li style="list-style-type: decimal">Invoke the <i>helloJS</i> action as a blocking activation:</li>
                     <div class="terminal">
-                        <pre>wsk action invoke helloJS --blocking</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJS --blocking</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-"result": {
-    "payload": "Hello world"
-},
-"status": "success",
-"success": true
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">result"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">world"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">success"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">success"</span><span class="pi">:</span> <span class="nv">true</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
                     <p>
@@ -657,7 +673,9 @@ wsk list</pre>
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
-<pre>wskdeploy -m manifest.yaml</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+
                         </div>
                     </ol>
                 </ol>
@@ -722,19 +740,25 @@ wsk list</pre>
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
                     <div class="terminal">
-<pre>wsk action create helloPy hello.py</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloPy hello.py</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>ok: created action helloPy</pre>
                     </div>
                     <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:</li>
                     <div class="terminal">
-<pre>wsk action invoke helloPy --blocking --param name World</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPy --blocking --param name World</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-    "greeting": "Hello World!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">World!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
                     <p>
@@ -795,7 +819,9 @@ wsk list</pre>
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
-<pre>wskdeploy -m manifest.yaml</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+
                         </div>
                     </ol>
                 </ol>
@@ -893,21 +919,29 @@ wsk list</pre>
                     </div>
                     <li style="list-style-type: decimal">Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
                     <div class="terminal">
-<pre>GOOS=linux GOARCH=amd64 go build -o exec
-zip exec.zip exec</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o <span class="nb">exec</span>
+<span class="gp">$ </span>zip exec.zip <span class="nb">exec</span></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Create an action <i>helloGo</i>:</li>
                     <div class="terminal">
-<pre>wsk action create helloGo --native exec.zip</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloGo --native exec.zip</code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Invoke an action <i>helloGo</i>:</li>
                     <div class="terminal">
-<pre>wsk action invoke helloGo -r -p name gopher</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloGo -r -p name gopher</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-    "msg": "Hello, gopher!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">msg"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">gopher!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                 </ol>
                 <a class="indexable" id="go-runtime"></a>
@@ -991,24 +1025,32 @@ zip exec.zip exec</pre>
                     </div>
                     <li style="list-style-type: decimal">Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows</li>
                     <div class="terminal">
-<pre>javac Hello.java
-jar cvf hello.jar Hello.class</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>javac Hello.java
+<span class="gp">$ </span>jar cvf hello.jar Hello.class</code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloJava</i> using <i>hello.jar</i>:</li>
                     <div class="terminal">
-<pre>wsk action create helloJava hello.jar --main Hello</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloJava hello.jar --main Hello</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>ok: created action helloJava</pre>
                     </div>
                     <li style="list-style-type: decimal">Invoke an action <i>helloJava</i>:</li>
                     <div class="terminal">
-<pre>wsk action invoke helloJava --blocking --result</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJava --blocking --result</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-"greeting": "Hello stranger!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">stranger!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                 </ol>
                 <a class="indexable" id="java-runtime"></a>
@@ -1095,19 +1137,25 @@ jar cvf hello.jar Hello.class</pre>
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPHP</i> using <i>hello.php</i>:</li>
                     <div class="terminal">
-<pre>wsk action create helloPHP hello.php</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloPHP hello.php</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>ok: created action helloPHP</pre>
                     </div>
                     <li style="list-style-type: decimal">Invoke an action <i>helloPHP</i>:</li>
                     <div class="terminal">
-<pre>wsk action invoke helloPHP --blocking --result --param name World</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPHP --blocking --result --param name World</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-    "greeting": "Hello World!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">World!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                     <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
                     <p>
@@ -1166,7 +1214,9 @@ jar cvf hello.jar Hello.class</pre>
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
                         <div class="terminal">
-<pre>wskdeploy -m manifest.yaml</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+
                         </div>
                     </ol>
                 </ol>
@@ -1234,11 +1284,15 @@ jar cvf hello.jar Hello.class</pre>
                 <ul>
                     <li>Get a list of packages:</li>
                     <div class="terminal">
-<pre>wsk package list /whisk.system</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package list /whisk.system</code></pre></figure>
+
                     </div>
                     <li>Get a list of entities in a package:</li>
                     <div class="terminal">
-<pre>wsk package get --summary /whisk.system/&lt;package-name&gt;</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package get --summary /whisk.system/&lt;package-name&gt;</code></pre></figure>
+
                     </div>
                 </ul>
                 <p>
@@ -1252,7 +1306,9 @@ jar cvf hello.jar Hello.class</pre>
                     <ul>
                         <li style="list-style: circle">Get a description of the /whisk.system/samples/greeting action:</li>
                         <div class="terminal">
-<pre>wsk action get --summary /whisk.system/samples/greeting</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action get --summary /whisk.system/samples/greeting</code></pre></figure>
+
                         </div>
                         <div class="terminal">
 <pre>action /whisk.system/samples/greeting: Returns a friendly greeting
@@ -1260,40 +1316,54 @@ jar cvf hello.jar Hello.class</pre>
                         </div>
                         <li style="list-style: circle">Invoking action in a package:</li>
                         <div class="terminal">
-<pre>wsk action invoke --result /whisk.system/samples/greeting</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result /whisk.system/samples/greeting</code></pre></figure>
+
                         </div>
                         <div class="terminal">
-<pre>{
-    "payload": "Hello, stranger from somewhere!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">stranger</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">somewhere!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                         </div>
                         <li style="list-style: circle">Invoke the action with parameters:</li>
                         <div class="terminal">
-<pre>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</code></pre></figure>
+
                         </div>
                         <div class="terminal">
-<pre>{
-    "payload": "Hello, Bernie from Vermont!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">Bernie</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Vermont!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                         </div>
                     </ul>
                     <li>Creating package binding and invoking action from the binding:</li>
                     <ul>
                         <li style="list-style: circle">Creating and using package bindings:</li>
                         <div class="terminal">
-<pre>wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package <span class="nb">bind</span> /whisk.system/samples valhallaSamples --param place Valhalla</code></pre></figure>
+
                         </div>
                         <div class="terminal">
 <pre>ok: created binding valhallaSamples</pre>
                         </div>
                         <li style="list-style: circle">Invoke an action in the package binding:</li>
                         <div class="terminal">
-<pre>wsk action invoke --result valhallaSamples/greeting --param name Odin</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result valhallaSamples/greeting --param name Odin</code></pre></figure>
+
                         </div>
                         <div class="terminal">
-<pre>{
-    "payload": "Hello, Odin from Valhalla!"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">Odin</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Valhalla!"</span>
+<span class="pi">}</span></code></pre></figure>
+
                         </div>
                     </ul>
                 </ul>
@@ -1326,11 +1396,15 @@ jar cvf hello.jar Hello.class</pre>
                 <ul>
                     <li >Create a trigger to send user location updates:</li>
                     <div class="terminal">
-                        <pre>wsk trigger create locationUpdate</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger create locationUpdate</code></pre></figure>
+
                     </div>
                     <li>Check you have created the trigger by listing the set of triggers:</li>
                     <div class="terminal">
-                        <pre>wsk trigger list</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger list</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>triggers
@@ -1338,7 +1412,9 @@ jar cvf hello.jar Hello.class</pre>
                     </div>
                     <li>Fire the trigger by specifying its name and parameters:</li>
                     <div class="terminal">
-<pre>wsk trigger fire locationUpdate --param name Bob --param place NYC</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger fire locationUpdate --param name Bob --param place NYC</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>ok: triggered locationUpdate</pre>
@@ -1367,33 +1443,45 @@ jar cvf hello.jar Hello.class</pre>
 
                     </div>
                     <div class="terminal">
-<pre>wsk action create hello hello.js</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create hello hello.js</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>wsk action invoke --result hello --param name Bernie --param place Vermont</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result hello --param name Bernie --param place Vermont</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-    "payload": "Hello, Bernie from Vermont"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">Bernie</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Vermont"</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                     <li>Create the rule:</li>
                     <div class="terminal">
-<pre>wsk rule create myRule locationUpdate hello</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk rule create myRule locationUpdate hello</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>ok: created rule myRule</pre>
                     </div>
                     <li>Fire the <i>locationUpdate</i> trigger:</li>
                     <div class="terminal">
-<pre>wsk trigger fire locationUpdate --param name Bob --param place NYC</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger fire locationUpdate --param name Bob --param place NYC</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>ok: triggered /_/locationUpdate with id abcd...</pre>
                     </div>
                     <li>Verify that the action was invoked by checking the activations list:</li>
                     <div class="terminal">
-<pre>wsk activation list --limit 2</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk activation list --limit 2</code></pre></figure>
+
                     </div>
                     <div class="terminal">
 <pre>activations
@@ -1403,12 +1491,16 @@ abcd.... locationUpdate
                     </div>
                     <li>Retrieving the trigger activation record:</li>
                     <div class="terminal">
-<pre>wsk activation result 1234....</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk activation result 1234....</code></pre></figure>
+
                     </div>
                     <div class="terminal">
-<pre>{
-    "payload": "Hello, Bob from NYC"
-}</pre>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">Bob</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">NYC"</span>
+<span class="pi">}</span></code></pre></figure>
+
                     </div>
                     You can see that the hello action received the event payload and returned the expected string.
                 </ul>
@@ -1435,7 +1527,9 @@ abcd.... locationUpdate
                 The catalog is available as packages under <i>/whisk.system</i> namespace.
                 Using the following command, you can get a list of packages under <i>/whisk.system:</i></li>
                 <div class="terminal">
-<pre>wsk package list /whisk.system</pre>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package list /whisk.system</code></pre></figure>
+
                 </div>
                 <div class="terminal">
 <pre>packages
