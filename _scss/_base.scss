@@ -41,7 +41,7 @@ footer {
 
 .header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-flow: column wrap;
   background-color: $color-header-bg;
@@ -50,6 +50,10 @@ footer {
   top: 0;
   width: 100%;
   min-height: $header-height;
+
+  // adjust padding so that the logo and icons have same margin as content
+  padding-right: $whisk-header-base-padding-X;
+  padding-left: $whisk-header-base-padding-X;
   padding-bottom: 20px;
 
   // Assure that menu items have white foreground and proper spacing
