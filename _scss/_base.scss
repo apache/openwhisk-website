@@ -299,6 +299,16 @@ footer {
   border: dashed $color-darkgoldenrod 2px;
 }
 
+.theme-darkred {
+  background-color: rgba($color-darkred, 0.25);
+  border: dashed $color-darkred 2px;
+}
+
+.theme-darkorange {
+  background-color: rgba($color-darkorange, 0.25);
+  border: dashed $color-darkorange 2px;
+}
+
 .border-deeper-sea-green {
   border: solid $color-logo-deeper-sea-green 2px;
 }
@@ -317,6 +327,14 @@ footer {
 
 .border-darkgoldenrod {
   border: solid $color-darkgoldenrod 2px;
+}
+
+.border-darkred {
+  border: solid $color-darkred 2px;
+}
+
+.border-darkorange {
+  border: solid $color-darkorange 2px;
 }
 
 /*
