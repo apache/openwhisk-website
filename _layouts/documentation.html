@@ -119,7 +119,8 @@ layout: default
             <h2>Project Structure</h2>
             <p>OpenWhisk is comprised of multiple repositories that can be found in Apache GitHub (using a name query by repository):</p>
             <p><a href="https://github.com/apache?q=openwhisk">https://github.com/apache?q=openwhisk</a></p>
-            <p>For convenience, here is a listing of current Apache OpenWhisk project repositories (by category):</p>
+            <p>For convenience, here is a listing of current Apache OpenWhisk project repositories (by category).</p>
+            <p><strong>Note:</strong> OpenWhisk repositories follow a naming convention where all repo starts with <i>incubator</i>, for example, <i>openwhisk-cli</i> GitHub repository is named <i>incubator-openwhisk-cli</i>.</p>
             <div class="flow-columns">
                 <div class="project-structure-repo theme-deeper-sea-green">
                     <h4>Platform</h4>
@@ -139,6 +140,16 @@ layout: default
                     <p class="repo-title border-deeper-sky-blue"><a href="https://github.com/apache/incubator-openwhisk-runtime-swift">openwhisk-runtime-swift</a></p>
                     <p class="repo-title border-deeper-sky-blue"><a href="https://github.com/apache/incubator-openwhisk-runtime-php">openwhisk-runtime-php</a></p>
                     <p class="repo-title border-deeper-sky-blue"><a href="https://github.com/apache/incubator-openwhisk-runtime-java">openwhisk-runtime-java</a></p>
+                </div>
+                <div class="project-structure-repo theme-darkgoldenrod">
+                    <h4>Deployments</h4>
+                    <p>OpenWhisk can be deployed and configured on variety of platforms.</p>
+                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-deploy-kube">openwhisk-deploy-kube</a></p>
+                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">openwhisk-devtools/docker-compose</a></p>
+                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-deploy-mesos">openwhisk-deploy-mesos</a></p>
+                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-deploy-openshift">openwhisk-deploy-openshift</a></p>
+                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md#deploying-openwhisk-using-ansible">openwhisk/ansible</a></p>
+                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">openwhisk/vagrant-setup</a></p>
                 </div>
                 <div class="project-structure-repo theme-deeper-aquamarine">
                     <h4>Tooling</h4>
@@ -162,25 +173,30 @@ layout: default
                     <p class="repo-title border-darksalmon"><a href="https://github.com/apache/incubator-openwhisk-package-jira">openwhisk-package-jira</a></p>
                     <p class="repo-title border-darksalmon"><a href="https://github.com/apache/incubator-openwhisk-package-template">openwhisk-package-template</a></p>
                 </div>
-                <div class="project-structure-repo theme-darkgoldenrod">
-                    <h4>Deployments</h4>
-                    <p>OpenWhisk can be deployed and configured on variety of platforms.</p>
-                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-deploy-kube">openwhisk-deploy-kube</a></p>
-                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">openwhisk-devtools/docker-compose</a></p>
-                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-deploy-mesos">openwhisk-deploy-mesos</a></p>
-                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk-deploy-openshift">openwhisk-deploy-openshift</a></p>
-                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md#deploying-openwhisk-using-ansible">openwhisk/ansible</a></p>
-                    <p class="repo-title border-darkgoldenrod"><a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">openwhisk/vagrant-setup</a></p>
-                </div>
-                <div class="project-structure-repo theme-darkred">
+                <div class="project-structure-repo theme-deeper-aquamarine">
                     <h4>Clients and SDK</h4>
                     <p>Here are the clients to access to OpenWhisk API:</p>
-                    <p class="repo-title  border-darkred"><a href="https://github.com/apache/incubator-openwhisk-client-go">openwhisk-client-go</a></p>
-                    <p class="repo-title  border-darkred"><a href="https://github.com/apache/incubator-openwhisk-client-js">openwhisk-client-js</a></p>
-                    <p class="repo-title  border-darkred"><a href="https://github.com/apache/incubator-openwhisk-client-swift">openwhisk-client-swift</a></p>
-                    <p class="repo-title  border-darkred"><a href="https://github.com/apache/incubator-openwhisk-client-python">openwhisk-client-python</a></p>
+                    <p class="repo-title  border-deeper-aquamarine"><a href="https://github.com/apache/incubator-openwhisk-client-go">openwhisk-client-go</a></p>
+                    <p class="repo-title  border-deeper-aquamarine"><a href="https://github.com/apache/incubator-openwhisk-client-js">openwhisk-client-js</a></p>
+                    <p class="repo-title  border-deeper-aquamarine"><a href="https://github.com/apache/incubator-openwhisk-client-swift">openwhisk-client-swift</a></p>
+                    <p class="repo-title  border-deeper-aquamarine"><a href="https://github.com/apache/incubator-openwhisk-client-python">openwhisk-client-python</a></p>
                 </div>
-                
+                <div class="project-structure-repo theme-darkorange">
+                    <h4>Samples</h4>
+                    <p>Few example applications to demonstrate OpenWhisk features and functionalities:</p>
+                    <p class="repo-title border-darkorange"><a href="https://github.com/apache/incubator-openwhisk-sample-slackbot">openwhisk-sample-slackbot</a></p>
+                    <p class="repo-title border-darkorange"><a href="https://github.com/apache/incubator-openwhisk-slackinvite">openwhisk-slackinvite</a></p>
+                    <p class="repo-title border-darkorange"><a href="https://github.com/apache/incubator-openwhisk-GitHubSlackBot">openwhisk-GitHubSlackBot</a></p>
+                    <p class="repo-title border-darkorange"><a href="https://github.com/apache/incubator-openwhisk-sample-matos">openwhisk-sample-matos</a></p>
+                    <p class="repo-title border-darkorange"><a href="https://github.com/apache/incubator-openwhisk-tutorial">openwhisk-tutorial</a></p>
+                    <p class="repo-title border-darkorange"><a href="https://github.com/apache/incubator-openwhisk-workshop">openwhisk-workshop</a></p>
+                </div>
+                <div class="project-structure-repo theme-darkred">
+                    <h4>Others</h4>
+                    <p class="repo-title border-darkred"><a href="https://github.com/apache/incubator-openwhisk-release">openwhisk-release</a></p>
+                    <p class="repo-title border-darkred"><a href="https://github.com/apache/incubator-openwhisk-website">openwhisk-website</a></p>
+                    <p class="repo-title border-darkred"><a href="https://github.com/apache/incubator-openwhisk-external-resources">openwhisk-external-resources</a></p>
+                </div>
             </div>
         </div>
     </main>
