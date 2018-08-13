@@ -15,7 +15,10 @@
    height="1306.6667"
    viewBox="0 0 1226.6667 1306.6667"
    sodipodi:docname="alarm-clock.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/Users/Matt/openwhisk/release/incubator-openwhisk-website/images/elements/alarm.png"
+   inkscape:export-xdpi="98.790001"
+   inkscape:export-ydpi="98.790001">
   <metadata
      id="metadata1183">
     <rdf:RDF>
@@ -47,26 +50,26 @@
      inkscape:zoom="0.53418364"
      inkscape:cx="613.33337"
      inkscape:cy="578.45276"
-     inkscape:window-x="93"
-     inkscape:window-y="29"
+     inkscape:window-x="105"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1177" />
   <circle
-     style="fill:#eafaff;fill-opacity:1;stroke:#a7ddff;stroke-width:60;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#d5f6ff;fill-opacity:1;stroke:#d4aa00;stroke-width:60;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path1187"
      cx="622.93469"
      cy="679.09509"
      r="453.47415"
      inkscape:label="clock face" />
   <path
-     style="fill:none;stroke:#707070;stroke-width:40;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;stroke:#325c80;stroke-width:40;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 606.53299,329.47471 608.405,713.23787 902.31143,892.95134"
      id="path2015"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ccc"
      inkscape:label="hands" />
   <path
-     style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#ffcc00;fill-opacity:1;stroke:#550000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="M 169.55377,405.56556 415.44532,201.45325 298.93877,137.23462 124.99275,290.33072 Z"
      id="path2023"
      inkscape:connector-curvature="0"
@@ -77,10 +80,10 @@
      inkscape:connector-curvature="0"
      id="path2025"
      d="M 1077.4811,405.1816 831.58955,201.06929 948.09615,136.85066 1122.0421,289.94676 Z"
-     style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#ffcc00;fill-opacity:1;stroke:#550000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      inkscape:label="right ringer" />
   <circle
-     style="fill:#a7ddff;fill-opacity:1;stroke:#a7ddff;stroke-width:59.99999619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#d4aa00;fill-opacity:1;stroke:#d4aa00;stroke-width:59.99999619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path2039"
      cx="351.00293"
      cy="-1125.0106"
@@ -93,7 +96,7 @@
      cy="-1125.0106"
      cx="903.24744"
      id="circle2041"
-     style="fill:#a7ddff;fill-opacity:1;stroke:#a7ddff;stroke-width:59.99999619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#d4aa00;fill-opacity:1;stroke:#d4aa00;stroke-width:59.99999619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      inkscape:label="rght foot" />
   <path
      style="fill:none;stroke:#707070;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.94117647;stroke-miterlimit:4;stroke-dasharray:none"
