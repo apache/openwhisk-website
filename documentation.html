@@ -131,6 +131,7 @@ function closeIndex() {
     <div id="whiskIndex">
         <ul>
             <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#project-structure">Project Structure</a></li>
 
             <!-- Operators -->
             <li class="collapsible-toggle"><a href="#operators">Operators</a></li>
@@ -229,6 +230,356 @@ function closeIndex() {
             <h2>Documentation</h2>
             <div>
                <p>There are many resources for learning about OpenWhisk; this page attempts to organize, describe, index and link to the essential information, wherever it resides, to help users in getting started.  In general, much of the best information is in the actual project repositories and we encourage you to seek detailed and in-depth information there.</p>
+            </div>
+        </div>
+    </main>
+    <main id="doc">
+        <div class="content">
+            <a class="indexable" id="project-structure"></a>
+            <h2>Project Structure</h2>
+            <p>OpenWhisk is comprised of multiple repositories that can be found in Apache GitHub (using a name query by repository):</p>
+            <p><a href="https://github.com/apache?q=openwhisk">https://github.com/apache?q=openwhisk</a></p>
+            <p>For convenience, here is a listing of current Apache OpenWhisk project repositories (by category).</p>
+            <p><strong>Note:</strong> OpenWhisk repositories follow a naming convention where all repo starts with <i>incubator</i>, for example, <i>openwhisk-cli</i> GitHub repository is named <i>incubator-openwhisk-cli</i>.</p>
+            <div class="flow-columns">
+                <div class="project-structure-repo theme-deeper-sea-green">
+                    <h4>Platform</h4>
+                    <p>Primary source code repositories including platform code, run books, tests and more.</p>
+                    <p class="repo-title border-deeper-sea-green">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk"
+                            title="Core OpenWhisk repository including controller, invoker, run books, and more.">
+                                openwhisk
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sea-green">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-cli"
+                            title="Pluggable Command Line Interface (CLI) for wsk command using the Cobra framework.">
+                                openwhisk-cli
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sea-green">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-apigateway"
+                            title="A performant API Gateway based on Openresty and NGINX.">
+                                openwhisk-apigateway
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sea-green">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-catalog"
+                            title="Catalog of built-in system, utility, test and sample Actions, Feeds and provider integration services and catalog packaging tooling.">
+                                openwhisk-catalog
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-deeper-sky-blue">
+                    <h4>Runtimes</h4>
+                    <p>OpenWhisk supports several languages and runtimes.</p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-nodejs"
+                            title="Apache openwhisk nodejs runtime">
+                                openwhisk-runtime-nodejs
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-docker"
+                            title="Apache openwhisk docker runtime">
+                                openwhisk-runtime-docker
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-python"
+                            title="Apache openwhisk python runtime">
+                                openwhisk-runtime-python
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-go"
+                            title="Apache openwhisk go runtime">
+                                openwhisk-runtime-go
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-swift"
+                            title="Apache openwhisk swift runtime">
+                                openwhisk-runtime-swift
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-php"
+                            title="Apache openwhisk php runtime">
+                                openwhisk-runtime-php
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-java"
+                            title="Apache openwhisk java runtime">
+                                openwhisk-runtime-java
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-darkgoldenrod">
+                    <h4>Deployments</h4>
+                    <p>OpenWhisk can be deployed and configured on variety of platforms.</p>
+                    <p class="repo-title border-darkgoldenrod">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-deploy-kube"
+                            title="This project can be used to deploy Apache OpenWhisk to a Kubernetes cluster">
+                                openwhisk-deploy-kube
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkgoldenrod">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md"
+                            title="An easy way to try OpenWhisk locally is to use Docker Compose.">
+                                openwhisk-devtools/docker-compose
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkgoldenrod">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-deploy-mesos"
+                            title="Apache OpenWhisk deployment scripts and configuration files for running under Apache Mesos.">
+                                openwhisk-deploy-mesos
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkgoldenrod">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-deploy-openshift"
+                            title="This project can be used to deploy Apache OpenWhisk to the OpenShift platform">
+                                openwhisk-deploy-openshift
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkgoldenrod">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md#deploying-openwhisk-using-ansible"
+                            title="Deploy OpenWhisk locally using Ansible">
+                                openwhisk/ansible
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkgoldenrod">
+                        <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup" title="Deploy OpenWhisk locally using Vagrant">
+                            openwhisk/vagrant-setup
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-deeper-aquamarine">
+                    <h4>Tooling</h4>
+                    <p>OpenWhisk provides variety of tools around deployment and development.</p>
+                    <p class="repo-title border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-wskdeploy"
+                            title="Utility to deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command!">
+                                openwhisk-wskdeploy
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-devtools"
+                            title="This repository provides developer tools that help with local development, testing and operation of OpenWhisk.">
+                                openwhisk-devtools
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-debugger"
+                            title="This repository provides wskdb, the OpenWhisk debugger">
+                                openwhisk-debugger
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-playground"
+                            title="This library provides functionality of executing a snippet of source code as OpenWhisk action for OpenWhisk Xcode Source Editor Extension in order to test Swift OpenWhisk functions quickly.">
+                                openwhisk-playground
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-vscode"
+                            title="This is a prototype extension for Visual Studio Code that enables complete round trip cycles for authoring OpenWhisk actions inside the editor. ">
+                                openwhisk-vscode
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-xcode"
+                            title="This repository has three projects, OpenWhisk Xcode Extension, WhiskBot - OpenWhisk Watson Conversation Chatbot, and wskTools">
+                                openwhisk-xcode
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-darksalmon">
+                    <h4>Packages</h4>
+                    <p>Several packages are registered with OpenWhisk under /whisk.system/. These are the list of packages:</p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-alarms"
+                            title="Apache OpenWhisk package that can be used to create periodic, time-based alarms">
+                                openwhisk-package-alarms
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-cloudant"
+                            title="The /whisk.system/cloudant package enables you to work with a Cloudant database">
+                                openwhisk-package-cloudant
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-kafka"
+                            title="Apache OpenWhisk package for communicating with Kafka or Message Hub">
+                                openwhisk-package-kafka
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-deploy"
+                            title="The /whisk.system/deploy package offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.">
+                                openwhisk-package-deploy
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-pushnotifications"
+                            title="The /whisk.system/pushnotifications package enables you to work with a push service.">
+                                openwhisk-package-pushnotifications
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-rss"
+                            title="This package allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.">
+                                openwhisk-package-rss
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-jira"
+                            title="This package includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.">
+                                openwhisk-package-jira
+                        </a>
+                    </p>
+                    <p class="repo-title border-darksalmon">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-package-template"
+                            title="This package is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.">
+                                openwhisk-package-template
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-deeper-aquamarine">
+                    <h4>Clients and SDK</h4>
+                    <p>Here are the clients to access to OpenWhisk API:</p>
+                    <p class="repo-title  border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-client-go"
+                            title="This project openwhisk-client-go is a Go client library to access Openwhisk API">
+                                openwhisk-client-go
+                        </a>
+                    </p>
+                    <p class="repo-title  border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-client-js"
+                            title="JavaScript client library for the OpenWhisk platform">
+                                openwhisk-client-js
+                        </a>
+                    </p>
+                    <p class="repo-title  border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-client-swift"
+                            title="Swift client SDK for OpenWhisk with support for iOS, WatchOS2, and Darwin CLI apps">
+                                openwhisk-client-swift
+                        </a>
+                    </p>
+                    <p class="repo-title  border-deeper-aquamarine">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-client-python"
+                            title="REST API of OpenWhisk can be used directly from Python">
+                                openwhisk-client-python
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-darkorange">
+                    <h4>Samples</h4>
+                    <p>Few example applications to demonstrate OpenWhisk features and functionalities:</p>
+                    <p class="repo-title border-darkorange">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-sample-slackbot"
+                            title="This repository contains proof-of-concept-quality code to deploy a Slackbot with the capability to run OpenWhisk actions.">
+                                openwhisk-sample-slackbot
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkorange">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-slackinvite"
+                            title="Invite for Apache OpenWhisk Team on Slack">
+                                openwhisk-slackinvite
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkorange">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-GitHubSlackBot"
+                            title="This bot is designed to post updates to Slack when a GitHub pull request is ready to merge or a list of pull requests are under review for certain days and haven't merged.">
+                                openwhisk-GitHubSlackBot
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkorange">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-sample-matos"
+                            title="Sample application with Message Hub and Object Store">
+                                openwhisk-sample-matos
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkorange">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-tutorial"
+                            title="An interactive learning environment for the Apache OpenWhisk command line">
+                                openwhisk-tutorial
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkorange">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-workshop"
+                            title="OpenWhisk workshop to help developers learn how to build serverless applications using the platform.">
+                                openwhisk-workshop
+                        </a>
+                    </p>
+                </div>
+                <div class="project-structure-repo theme-darkred">
+                    <h4>Others</h4>
+                    <p>Few other misc. but crucial repositories.</p>
+                    <p class="repo-title border-darkred">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-release"
+                            title="This repository provides Release Management of all designated Apache OpenWhisk project repositories">
+                                openwhisk-release
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkred">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-website"
+                            title="This repository contains source of this website (openwhisk.incubator.apache.org) which is built using Jekyll">
+                                openwhisk-website
+                        </a>
+                    </p>
+                    <p class="repo-title border-darkred">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-external-resources"
+                            title="Curated list of awesome OpenWhisk things">
+                                openwhisk-external-resources
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </main>
