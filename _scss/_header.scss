@@ -116,21 +116,16 @@
   a {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+    border-bottom: solid 1px $color-white;
+    display: inline;
+    padding-bottom: 1px;
   }
 
   a, a:visited, a:hover, a:active {
       color: $color-white;
-  }
-
-  hr {
-    display: inline-flex;
-    height: 1px;
-    border-top: 1px solid $color-white;
-    margin: 0px;
-    padding: 0px;
-    width: 10%;
   }
 }
 
@@ -143,10 +138,10 @@
 .footer-row-text-links {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
+  flex-wrap: wrap;
+  justify-content: space-around; // space-between;
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
