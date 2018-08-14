@@ -254,7 +254,15 @@ $color-menuitem-collapsible-border: 1px solid transparent;
  * Terminal
  */
 
-$color-terminal-border: $color-blue-gray-light;
 // TODO if we adopt a color, we should add it to our theme colors
 $color-terminal-bg: #001a33;
 $color-terminal-fg: $color-white;
+$terminal-padding: 8px 8px 8px 8px;
+$terminal-default-border: 1px solid $color-blue-gray-light;
+$terminal-width: 700px;
+$terminal-margin-bottom: 10px;
+$terminal-font-weight: 300;
+$terminal-font-size: 14px;
+$terminal-line-height: 140%;
+$terminal-pre-margin: 0px;
+$terminal-line-number-padding: 10px;
