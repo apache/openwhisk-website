@@ -47,3 +47,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - src/
+
+iis_slider_array: []
