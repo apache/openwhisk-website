@@ -113,28 +113,41 @@
   padding-right: $whisk-header-base-padding-X;
   padding-left: $whisk-header-base-padding-X;
 
-  // Assure that menu items have white foreground and proper spacing
-  // a {
-  //   // TODO: explore moving this to an outer div
-  //   padding: 4px;
-  //
-  //   // TODO: explore turning text links into buttons as well
-  //   border: 2px solid $color-header-icon-border;
-  //   border-radius: 4px;
-  // }
   a {
     display: flex;
-    padding-left: 4px;
-    padding-right: 4px;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   a, a:visited, a:hover, a:active {
       color: $color-white;
   }
+
+  hr {
+    display: inline-flex;
+    height: 1px;
+    border-top: 1px solid $color-white;
+    margin: 0px;
+    padding: 0px;
+    width: 10%;
+  }
 }
 
 .footer-row {
+  text-align: center;
   padding-bottom: 10px;
+  width: 100%;
+}
+
+.footer-row-text-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 // primarily used in the footer for finely printed text
