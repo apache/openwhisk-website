@@ -245,6 +245,99 @@ footer {
 }
 
 /*
+ * Project Structure
+ */
+.project-structure-repo {
+  width: 260px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+  a {
+    text-align: center;
+    font-size: $font-size-default;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .repo-title {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background: $color-white;
+    text-align: center;
+    font-size: $index-menu-font-size;
+    font-weight: $index-menu-font-weight;
+  }
+}
+
+.theme-deeper-sea-green {
+  background-color: rgba($color-logo-deeper-sea-green, 0.25);
+  border: dashed $color-logo-deeper-sea-green 2px;
+}
+
+.theme-deeper-sky-blue {
+  background-color: rgba($color-logo-deeper-sky-blue, 0.25);
+  border: dashed $color-logo-deeper-sky-blue 2px;
+}
+
+.theme-deeper-aquamarine {
+  background-color: rgba($color-logo-deeper-aquamarine, 0.25);
+  border: dashed $color-logo-deeper-aquamarine 2px;
+}
+
+.theme-darksalmon {
+  background-color: rgba($color-darksalmon, 0.25);
+  border: dashed $color-darksalmon 2px;
+}
+
+.theme-darkgoldenrod {
+  background-color: rgba($color-darkgoldenrod, 0.25);
+  border: dashed $color-darkgoldenrod 2px;
+}
+
+.theme-darkred {
+  background-color: rgba($color-darkred, 0.25);
+  border: dashed $color-darkred 2px;
+}
+
+.theme-darkorange {
+  background-color: rgba($color-darkorange, 0.25);
+  border: dashed $color-darkorange 2px;
+}
+
+.border-deeper-sea-green {
+  border: solid $color-logo-deeper-sea-green 2px;
+}
+
+.border-deeper-sky-blue {
+  border: solid $color-logo-deeper-sky-blue 2px;
+}
+
+.border-deeper-aquamarine {
+  border: solid $color-logo-deeper-aquamarine 2px;
+}
+
+.border-darksalmon {
+  border: solid $color-darksalmon 2px;
+}
+
+.border-darkgoldenrod {
+  border: solid $color-darkgoldenrod 2px;
+}
+
+.border-darkred {
+  border: solid $color-darkred 2px;
+}
+
+.border-darkorange {
+  border: solid $color-darkorange 2px;
+}
+
+/*
  * Expandable/Collapsible
  */
 
