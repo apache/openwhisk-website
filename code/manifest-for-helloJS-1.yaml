@@ -1,5 +1,0 @@
-packages:
-    default:
-        actions:
-            helloJS:
-                function: hello.js
