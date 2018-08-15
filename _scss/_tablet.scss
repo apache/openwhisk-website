@@ -22,6 +22,7 @@
   // "Turn on" left index in this profile, as we have width to support it
   #whiskIndexedLayout {
     padding-top: $whisk-header-tablet-padding-top;
+
     // Show the index area
     #whiskIndex {
       display: block;
@@ -56,6 +57,7 @@
         // No top margin needed when content & image-wrapper are horz.
         margin-top: 0px;
       }
+      
       .image-wrapper {
         // Alter to a 'block' display to get side-by-side layout
         display: block;

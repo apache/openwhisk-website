@@ -1,23 +1,38 @@
 @media screen and (min-width: $media-size-desktop-start) {
   .header {
     flex-flow: row wrap;
+    // no margin needed when header is a single row
     padding-bottom: 0px;
   }
 
-  #whiskHeader {
-    padding-top: $whisk-header-desktop-padding-top;
+  a.indexable {
+    // when index item is selected offset content based upon header height
+    top: $indexed-content-top-offset-desktop;
   }
 
-  #whiskNodes {
-    main {
-      background: $color-bg-desktop-main;
+  #whiskHeader {
+      padding-top: $whisk-header-desktop-padding-top;
+  }
 
-      .content {
-        width: $main-content-width-desktop;
-      }
-      .image-wrapper {
-        // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
-        // Do NOT set any values here or image scaling will be impacted.
+  #whiskIndexedLayout {
+    padding-top: $whisk-header-desktop-padding-top;
+
+    #whiskIndex {
+      top: $index-menu-top-offset-desktop;
+    }
+
+    #whiskNodes {
+      main {
+        background: $color-bg-desktop-main;
+
+        .content {
+          width: $main-content-width-desktop;
+        }
+
+        .image-wrapper {
+          // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
+          // Do NOT set any values here or image scaling will be impacted.
+        }
       }
     }
   }

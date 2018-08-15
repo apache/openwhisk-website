@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     background: none;
@@ -51,20 +50,12 @@ a, a:visited, a:hover, a:active {
 }
 
 a.button {
-    color: white;
+    color: $color-white;
 }
 
+// The syntax highlighter uses the "figure" element, but we want to override its default margins
 figure {
   margin: 0px;
-}
-
-.light-text {
-    clear: both;
-    color: $color-fg-base-light-text;
-    // TODO: make vars.
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 18px;
 }
 
 .button {
@@ -99,34 +90,4 @@ figure {
     border: solid 1px $color-gray-percent-56;
     box-shadow: inset 0 10px 15px 0 $color-gray-percent-78;
     top:2px;
-}
-
-/*
- *  Terminal / Code formatting
- */
-// TODO: move sizes to variables.
-.terminal {
-    background: $color-terminal-bg;
-    color: $color-terminal-fg;
-    border: $terminal-default-border;
-    padding: $terminal-padding;
-    width: $terminal-width;
-    margin-bottom: $terminal-margin-bottom;
-
-    // Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
-    // Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
-    pre {
-        white-space: pre;
-        display: inline;
-        margin: $terminal-pre-margin;
-        font-family: $font-family-code;
-        font-weight: $terminal-font-weight;
-        font-size: $terminal-font-size;
-        line-height: $terminal-line-height;
-    }
-}
-
-// Adjust code syntax padding when line numbers present
-.code {
-    padding-left: $terminal-line-number-padding;
 }

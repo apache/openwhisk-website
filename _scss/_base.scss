@@ -1,3 +1,7 @@
+// Import the various layout elements
+@import "header";
+@import "terminal";
+
 /*
  * Base stylesheet for small form factors
  * less than tablets
@@ -39,114 +43,13 @@ footer {
   padding: $whisk-footer-base-padding-base;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: column wrap;
-  background-color: $color-header-bg;
-  position: fixed;
-  z-index: 8888;
-  top: 0;
-  width: 100%;
-  min-height: $header-height;
-
-  // adjust padding so that the logo and icons have same margin as content
-  padding-right: $whisk-header-base-padding-X;
-  padding-left: $whisk-header-base-padding-X;
-  padding-bottom: 20px;
-
-  // Assure that menu items have white foreground and proper spacing
-  a {
-    color: $color-header-fg;
-    // TODO: explore moving this to an outer div
-    padding: 4px;
-
-    // TODO: explore turning text links into buttons as well
-    border: 2px solid $color-header-icon-border;
-    border-radius: 4px;
-  }
-}
-
-// Note: ideally, we should use table-cell, but using an anchor to display
-// the logo has implication on layout we should look at later
-// Note: the use if !important may be superfluous
-// Note: use of a fixed .PNG seems to be more reliable than .SVG
-// where different browsers tend to stretch SVG despite layout properties
-.header-section-logo {
-  width: $logo-width !important;
-  height: $logo-height !important;
-  border: 0px;
-  padding: 0px;
-  background-color: $color-header-bg-section-logo;
-  // TODO: make a variable
-  background-image: url(/images/apache-openwhisk.png);
-  background-size: $logo-width $logo-height !important;
-  background-repeat: no-repeat;
-  border: none !important;
-  background-position: 50% 50%;
-}
-
-.header-section-text-links {
-  background: $color-header-bg-section-menu-text;
-  // TODO: make image sizes variables
-  min-width: 280px;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-}
-
-// TODO: explore min-width had no effect for some reason...
-.header-section-social-icons {
-  background-color: $color-header-bg-section-menu-icons;
-}
-
-// TODO: change row (div) height to have no padding/margin top and bottom
-.header-row-text-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.header-row-social-icons {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-}
-
-.header-button-icon {
-  flex: 0 0 auto;
-  background-color: $color-header-icon-bg;
-  border: 1px solid $color-header-icon-border;
-  border-radius: 4px;
-  align: center;
-  height: 36px;
-  width: 36px;
-  margin: 3px;
-}
-
-.header-text-link {
-  flex: 0 0 auto;
-  background-color: $color-header-icon-bg;
-  margin: 3px;
-}
-
-.header-icon-image {
-  background: $color-header-icon-bg-image;
-  width: 26px;
-  padding: 0px;
-}
-
 // Header is only shown on the "home" page
 #whiskHeader {
   background-color: $color-blue-dark;
   color: $color-white;
   text-align: center;
-  padding-top: $whisk-header-base-padding-top;
+  // 20px accounts for the extra margin we add below fixed header in multi-line format
+  padding-top: $whisk-header-base-padding-top + 20px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -173,6 +76,32 @@ footer {
   }
 }
 
+// Footer is shown on all content pages
+#whiskFooter {
+}
+
+#whiskIndexedLayout {
+  display: table;
+  padding-top: $whisk-header-base-padding-top;
+
+  #whiskIndex {
+    vertical-align: top;
+    // position menu relative to header
+    display: float;
+    position: fixed;
+    top: $index-menu-top-offset-base;
+    left: $index-menu-left-offset;
+    width: $index-menu-width;
+    border: $index-border;
+    z-index: 6888;
+  }
+
+  #whiskNodes {
+    display: table-cell;
+    // Note: we do NOT make left padding for Index in for the 'base' media size (width too small)
+  }
+}
+
 #whiskNodes {
   // Note: pad only the bottom for each "node" (so we do not double up)
   padding-bottom: $whisk-nodes-padding-base-Y;
@@ -190,8 +119,6 @@ footer {
     background: $color-bg-base-content;
     // Provide for space around content's text
     padding: $whisk-nodes-main-content-padding-base;
-    // TODO: ????
-    height: 100%;
 
     // Provide a space between image and content when vertical
     margin-top: 20px;
@@ -209,12 +136,16 @@ footer {
     img {
       background: $color-bg-base-img;
       display: block;
+      max-width: 500px; // prevent images from appearing too large
+      align-self: center;
       width: 100%;
       height: 100%;
+      margin: auto;  // allows centering in all layouts
     }
   }
 }
 
+// TODO look to remove this ID
 #doc {
   position: relative;
   overflow: hidden;
@@ -249,7 +180,7 @@ footer {
  */
 .project-structure-repo {
   width: 240px;
-  margin: 10px;
+  margin: 8px;
   padding: 10px;
   border-radius: 10px;
 
@@ -265,12 +196,13 @@ footer {
   .repo-title {
     box-sizing: border-box;
     width: 100%;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 4px;
+    padding: 4px;
     background: $color-white;
     text-align: center;
-    font-size: $index-menu-font-size;
+    font-size: 4px; //$index-menu-font-size;
     font-weight: $index-menu-font-weight;
+    line-height: 14px;
   }
 }
 
@@ -368,31 +300,9 @@ footer {
 a.indexable {
   display: block;
   position: relative;
-  // TODO: make a variable
-  top: -100px;
+  // when index item is selected offset content based upon header height
+  top: $indexed-content-top-offset-base;
   visibility: hidden;
-}
-
-#whiskIndexedLayout {
-  display: table;
-  padding-top: $whisk-header-base-padding-top;
-
-  #whiskIndex {
-    vertical-align: top;
-    // position menu relative to header
-    display: float;
-    position: fixed;
-    top: $index-menu-top-offset;
-    left: $index-menu-left-offset;
-    width: $index-menu-width;
-    border: $index-border;
-    z-index: 6888;
-  }
-
-  #whiskNodes {
-    display: table-cell;
-    // Note: we do NOT make left padding for Index in for the 'base' media size (width too small)
-  }
 }
 
 #whiskIndex {
