@@ -37,17 +37,15 @@
 // Note: use of a fixed .PNG seems to be more reliable than .SVG
 // where different browsers tend to stretch SVG despite layout properties
 .header-section-logo {
-  width: $logo-width !important;
+  width:  $logo-width !important;
   height: $logo-height !important;
-  border: 0px;
-  padding: 0px;
+  border: none !important;
+  transform: none;
   background-color: $color-header-bg-section-logo;
-  // TODO: make a variable
-  background-image: url(/images/apache-openwhisk.png);
+  background-image: url($logo-relative-filename);
   background-size: $logo-width $logo-height !important;
   background-repeat: no-repeat;
-  border: none !important;
-  background-position: 50% 50%;
+  background-position: center center;
 }
 
 .header-section-text-links {
