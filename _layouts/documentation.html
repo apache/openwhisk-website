@@ -816,7 +816,7 @@ $ wsk list
                     <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
                     <div class="terminal">
 {% highlight javascript linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.js %}
+{% include code/hello.js %}
 {% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
@@ -849,14 +849,14 @@ $ wsk list
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
 {% highlight yaml linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloJS-1.yaml %}
+{% include code/manifest-for-helloJS-1.yaml %}
 {% endhighlight %}
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
 {% highlight yaml linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloJS-2.yaml %}
+{% include code/manifest-for-helloJS-2.yaml %}
 {% endhighlight %}
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
@@ -906,7 +906,7 @@ $ wsk list
                     <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:</li>
                     <div class="terminal">
 {% highlight python linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.py %}
+{% include code/hello.py %}
 {% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
@@ -936,14 +936,14 @@ $ wsk list
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
 {% highlight yaml linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPy-1.yaml %}
+{% include code/manifest-for-helloPy-1.yaml %}
 {% endhighlight %}
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
 {% highlight yaml linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPy-2.yaml %}
+{% include code/manifest-for-helloPy-2.yaml %}
 {% endhighlight %}
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
@@ -992,7 +992,7 @@ $ wsk list
                     <li style="list-style-type: decimal">Create a file named <i>hello.go</i>:</li>
                     <div class="terminal">
 {% highlight go linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.go %}
+{% include code/hello.go %}
 {% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
@@ -1057,7 +1057,7 @@ $ zip exec.zip exec
                     <li style="list-style-type: decimal">Create a file named <i>Hello.java</i>:</li>
                     <div class="terminal">
 {% highlight java linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/Hello.java %}
+{% include code/Hello.java %}
 {% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows</li>
@@ -1150,7 +1150,7 @@ $ jar cvf hello.jar Hello.class
                     <li style="list-style-type: decimal">Create a file named <i>hello.php</i>:</li>
                     <div class="terminal">
 {% highlight php linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello.php %}
+{% include code/hello.php %}
 {% endhighlight %}
                     </div>
                     <li style="list-style-type: decimal">Create an action called <i>helloPHP</i> using <i>hello.php</i>:</li>
@@ -1180,14 +1180,14 @@ $ jar cvf hello.jar Hello.class
                         <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
                         <div class="terminal">
 {% highlight yaml linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPhp-1.yaml %}
+{% include code/manifest-for-helloPhp-1.yaml %}
 {% endhighlight %}
                         </div>
                         Or
                         <p></p>
                         <div class="terminal">
 {% highlight yaml linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/manifest-for-helloPhp-2.yaml %}
+{% include code/manifest-for-helloPhp-2.yaml %}
 {% endhighlight %}
                         </div>
                         <li>Run deployment with <i>wskdeploy</i>:</li>
@@ -1390,7 +1390,7 @@ $ jar cvf hello.jar Hello.class
                     <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.</li>
                     <div class="terminal">
 {% highlight javascript linenos %}
-{% remotefile https://raw.githubusercontent.com/apache/incubator-openwhisk-website/master/code/hello-with-params.js %}
+{% include code/hello-with-params.js %}
 {% endhighlight %}
                     </div>
                     <div class="terminal">
