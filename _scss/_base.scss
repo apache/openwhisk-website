@@ -9,6 +9,7 @@
 
 body {
   background-color: $color-white;
+  -webkit-text-size-adjust: none;
 }
 
 section,
@@ -85,7 +86,7 @@ footer {
   padding-top: $whisk-header-base-padding-top;
 
   #whiskIndex {
-    vertical-align: top;
+    //vertical-align: top;
     // position menu relative to header
     display: float;
     position: fixed;
@@ -98,7 +99,8 @@ footer {
 
   #whiskNodes {
     display: table-cell;
-    // Note: we do NOT make left padding for Index in for the 'base' media size (width too small)
+    // Apply extra top padding to the (set of) whiskNodes on all content pages
+    padding-top: 20px;
   }
 }
 
@@ -107,8 +109,6 @@ footer {
   padding-bottom: $whisk-nodes-padding-base-Y;
   padding-left: $whisk-nodes-padding-base-X;
   padding-right: $whisk-nodes-padding-base-X;
-  // YYY
-  padding-top: 20px;
 
   main {
     display: table;
@@ -312,6 +312,8 @@ a.indexable {
   width: $index-menu-width;
   // Pad the overall index <div> (and not all the nested <ul>s)
   margin: $index-menu-margin;
+  // Add padding around overall index to visually match content padding
+  padding: $index-menu-padding;
 
   ul {
     background-color: $color-index-list-bg;

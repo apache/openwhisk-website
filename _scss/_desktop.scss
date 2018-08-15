@@ -11,10 +11,12 @@
   }
 
   #whiskHeader {
+      // This padding applies only to the home page which has a banner
       padding-top: $whisk-header-desktop-padding-top;
   }
 
   #whiskIndexedLayout {
+    // This padding applies to all content pages (no banner)
     padding-top: $whisk-header-desktop-padding-top;
 
     #whiskIndex {

@@ -37,8 +37,8 @@ $main-image-wrapper-margin-base: 10px 10px 10px 10px;
  * Layout: Header
  */
 
-$header-single-row-height: 80px;
-$header-multi-row-height: 156px;
+$header-single-row-height: 60px;
+$header-multi-row-height: $header-single-row-height + 76px;
 
 // Allow for a fixed top banner on all content pages
 $whisk-header-base-padding-top: $header-multi-row-height;
@@ -66,8 +66,9 @@ $full-width-paddingX: 10px;
 
 // Note: this is the actual size of the .PNG file which has built-in spacing
 // so we do not need to add any margins/padding/borders.
-$logo-width: 320px;
-$logo-height: 80px;
+$logo-relative-filename: "/images/apache-openwhisk.svg";
+$logo-width: 240px;
+$logo-height: 60px;
 
 /*
  * Theme Colors
@@ -193,6 +194,8 @@ $index-menu-width: 220px;
 
 // position menu relative to header
 $index-menu-margin: 10px;
+$index-menu-padding: 8px;
+
 $index-menu-top-offset-base: $header-multi-row-height + 10px;
 $index-menu-top-offset-desktop: $header-single-row-height + 10px;
 $indexed-content-top-offset-base: -$index-menu-top-offset-base - 20px;

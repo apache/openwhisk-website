@@ -31,7 +31,6 @@
     // Make room on left for the Index
     #whiskNodes {
       display: table-cell;
-      // NOTE: margin does not work here, must use left padding
       // TODO: make a variable
       padding-left: $index-menu-width + 40px;
     }
@@ -54,10 +53,10 @@
         width: $main-content-width-tablet;
         padding: $whisk-nodes-main-content-padding-tablet;
 
-        // No top margin needed when content & image-wrapper are horz.
-        margin-top: 0px;
+        // YYY No top margin needed when content & image-wrapper are horz.
+        //margin-top: 0px;
       }
-      
+
       .image-wrapper {
         // Alter to a 'block' display to get side-by-side layout
         display: block;
