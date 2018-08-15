@@ -747,13 +747,13 @@ $ wsk list
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
                     is the list of runtimes supported by OpenWhisk:
                     <ul>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
+                        <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
                         <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go</a> - OpenWhisk runtime for Go lang</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
+                        <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
+                        <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
+                        <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
                         <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java</a> - OpenWhisk runtime for Java 8</li>
+                        <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
                     </ul>
                 </p>
                 <p>
@@ -989,6 +989,7 @@ $ wsk list
                     please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
                 </p>
                 <ol>
+                    <a class="indexable" id="hello-go"></a>
                     <li style="list-style-type: decimal">Create a file named <i>hello.go</i>:</li>
                     <div class="terminal">
 {% highlight go linenos %}
@@ -1017,6 +1018,31 @@ $ zip exec.zip exec
 }
 {% endhighlight %}
                     </div>
+                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
+                    <p>
+                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                    </p>
+                    <ol>
+                        <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
+                        <li>Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
+                        <div class="terminal">
+{% highlight bash %}
+$ cd actions/
+$ GOOS=linux GOARCH=amd64 go build -o exec
+{% endhighlight %}
+                        </div>
+                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
+                        <div class="terminal">
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloGo.yaml %}
+{% endhighlight %}
+                        </div>
+                        <li>Run deployment with <i>wskdeploy</i>:</li>
+                        <div class="terminal">
+{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
+                        </div>
+                    </ol>
                 </ol>
                 <a class="indexable" id="go-runtime"></a>
                 <h5>OpenWhisk Runtime for Go</h5>
