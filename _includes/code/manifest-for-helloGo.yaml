@@ -1,0 +1,6 @@
+packages:
+    default:
+        actions:
+            helloGo:
+                function: actions/
+                native: true
