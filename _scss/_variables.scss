@@ -38,7 +38,7 @@ $main-image-wrapper-margin-base: 10px 10px 10px 10px;
  */
 
 $header-single-row-height: 80px;
-$header-multi-row-height: 176px;
+$header-multi-row-height: 156px;
 
 // Allow for a fixed top banner on all content pages
 $whisk-header-base-padding-top: $header-multi-row-height;
@@ -192,9 +192,11 @@ $p-line-height: $line-height-default;
 $index-menu-width: 220px;
 
 // position menu relative to header
+$index-menu-margin: 10px;
 $index-menu-top-offset-base: $header-multi-row-height + 10px;
 $index-menu-top-offset-desktop: $header-single-row-height + 10px;
-$index-menu-margin: 10px;
+$indexed-content-top-offset-base: -$index-menu-top-offset-base - 20px;
+$indexed-content-top-offset-desktop: -$index-menu-top-offset-desktop - 20px;
 
 // left offset matches main body nodes
 $index-menu-left-offset: $whisk-nodes-padding-base-X;

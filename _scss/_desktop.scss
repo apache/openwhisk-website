@@ -1,19 +1,21 @@
 @media screen and (min-width: $media-size-desktop-start) {
   .header {
     flex-flow: row wrap;
+    // no margin needed when header is a single row
     padding-bottom: 0px;
   }
 
   a.indexable {
-    top: -100px;
+    // when index item is selected offset content based upon header height
+    top: $indexed-content-top-offset-desktop;
+  }
+
+  #whiskHeader {
+      padding-top: $whisk-header-desktop-padding-top;
   }
 
   #whiskIndexedLayout {
     padding-top: $whisk-header-desktop-padding-top;
-
-    #whiskHeader {
-      // no changes
-    }
 
     #whiskIndex {
       top: $index-menu-top-offset-desktop;

@@ -48,7 +48,8 @@ footer {
   background-color: $color-blue-dark;
   color: $color-white;
   text-align: center;
-  padding-top: $whisk-header-base-padding-top;
+  // 20px accounts for the extra margin we add below fixed header in multi-line format
+  padding-top: $whisk-header-base-padding-top + 20px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -299,8 +300,8 @@ footer {
 a.indexable {
   display: block;
   position: relative;
-  // TODO: make a variable
-  top: -$index-menu-top-offset-base;
+  // when index item is selected offset content based upon header height
+  top: $indexed-content-top-offset-base;
   visibility: hidden;
 }
 
