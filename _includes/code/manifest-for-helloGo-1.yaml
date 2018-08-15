@@ -1,7 +1,0 @@
-packages:
-    default:
-        actions:
-            helloGo:
-                function: helloGo
-                runtime: go
-                native: true
