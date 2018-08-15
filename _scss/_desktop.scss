@@ -4,20 +4,33 @@
     padding-bottom: 0px;
   }
 
-  #whiskHeader {
-    padding-top: $whisk-header-desktop-padding-top;
+  a.indexable {
+    top: -100px;
   }
 
-  #whiskNodes {
-    main {
-      background: $color-bg-desktop-main;
+  #whiskIndexedLayout {
+    padding-top: $whisk-header-desktop-padding-top;
 
-      .content {
-        width: $main-content-width-desktop;
-      }
-      .image-wrapper {
-        // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
-        // Do NOT set any values here or image scaling will be impacted.
+    #whiskHeader {
+      // no changes
+    }
+
+    #whiskIndex {
+      top: $index-menu-top-offset-desktop;
+    }
+
+    #whiskNodes {
+      main {
+        background: $color-bg-desktop-main;
+
+        .content {
+          width: $main-content-width-desktop;
+        }
+
+        .image-wrapper {
+          // Note: the image-wrapper will automatically consume the remaining % (i.e., 40%)
+          // Do NOT set any values here or image scaling will be impacted.
+        }
       }
     }
   }
