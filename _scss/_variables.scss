@@ -249,3 +249,11 @@ $terminal-font-size: 14px;
 $terminal-line-height: 140%;
 $terminal-pre-margin: 0px;
 $terminal-line-number-padding: 10px;
+
+/*
+ * Image Wrapper
+ */
+
+ // prevent images from renmdering too large using width to determine scale
+$image-wrapper-width: 100%;
+$image-wrapper-max-width: 500px;

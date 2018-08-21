@@ -134,12 +134,11 @@ footer {
     // NOTE: SVG files and the <img> tags do not work well together
     // Important! without this style, the image will not stretch and display properly
     img {
-      background: $color-bg-base-img;
       display: block;
-      max-width: 500px; // prevent images from appearing too large
+      background: $color-bg-base-img;
+      width: $image-wrapper-width;
+      max-width: $image-wrapper-max-width;
       align-self: center;
-      width: 100%;
-      height: 100%;
       margin: auto;  // allows centering in all layouts
     }
   }
