@@ -1,0 +1,154 @@
+/*
+ *  Header formatting
+ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: $color-header-bg;
+  position: fixed;
+  z-index: 8888;
+  top: 0;
+  width: 100%;
+  min-height: $header-single-row-height;
+
+  // adjust padding so that the logo and icons have same margin as content
+  padding-right: $whisk-header-base-padding-X;
+  padding-left: $whisk-header-base-padding-X;
+  padding-bottom: 20px;
+
+  // Assure that menu items have white foreground and proper spacing
+  a {
+    color: $color-header-fg;
+    // TODO: explore moving this to an outer div
+    padding: 4px;
+
+    // TODO: explore turning text links into buttons as well
+    border: 2px solid $color-header-icon-border;
+    border-radius: 4px;
+  }
+}
+
+// Note: ideally, we should use table-cell, but using an anchor to display
+// the logo has implication on layout we should look at later
+// Note: the use if !important may be superfluous
+// Note: use of a fixed .PNG seems to be more reliable than .SVG
+// where different browsers tend to stretch SVG despite layout properties
+.header-section-logo {
+  width:  $logo-width !important;
+  height: $logo-height !important;
+  border: none !important;
+  transform: none;
+  background-color: $color-header-bg-section-logo;
+  background-image: url($logo-relative-filename);
+  background-size: $logo-width $logo-height !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header-section-text-links {
+  background: $color-header-bg-section-menu-text;
+  // TODO: make image sizes variables
+  min-width: 280px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header-section-social-icons {
+  background-color: $color-header-bg-section-menu-icons;
+}
+
+.header-row-text-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header-row-social-icons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.header-button-icon {
+  flex: 0 0 auto;
+  background-color: $color-header-icon-bg;
+  border: 1px solid $color-header-icon-border;
+  border-radius: 4px;
+  align: center;
+  height: 36px;
+  width: 36px;
+  margin: 3px;
+}
+
+.header-text-link {
+  flex: 0 0 auto;
+  background-color: $color-header-icon-bg;
+  margin: 3px;
+}
+
+.header-icon-image {
+  background: $color-header-icon-bg-image;
+  width: 26px;
+  padding: 0px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: $color-header-bg;
+
+  // adjust padding so that the logo and icons have same margin as content
+  padding-right: $whisk-header-base-padding-X;
+  padding-left: $whisk-header-base-padding-X;
+
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+    border-bottom: solid 1px $color-white;
+    display: inline;
+    padding-bottom: 1px;
+  }
+
+  a, a:visited, a:hover, a:active {
+      color: $color-white;
+  }
+}
+
+.footer-row {
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.footer-row-text-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; // space-between;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+// primarily used in the footer for finely printed text
+.light-text {
+    clear: both;
+    color: $color-fg-base-light-text;
+    // TODO: make vars.
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 18px;
+}

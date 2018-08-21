@@ -1,7 +1,5 @@
-
 * {
     box-sizing: border-box;
-    font-family: $font-family-default;
     background: none;
     border: 0
 }
@@ -47,22 +45,17 @@ p, ul, ol, li {
     color: $color-blue-dark-text;
 }
 
-.light-text {
-    clear: both;
-    color: $color-fg-base-light-text;
-    // TODO: make vars.
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 18px;
+a, a:visited, a:hover, a:active {
+    color: $color-anchors;
 }
 
-a {color: $color-anchors }
-a:visited { color: $color-anchors; }
-a:hover { color: $color-anchors; }
-a:active { color: $color-anchors; }
-
 a.button {
-    color: white;
+    color: $color-white;
+}
+
+// The syntax highlighter uses the "figure" element, but we want to override its default margins
+figure {
+  margin: 0px;
 }
 
 .button {

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg1177"
+   width="1226.6667"
+   height="1306.6667"
+   viewBox="0 0 1226.6667 1306.6667"
+   sodipodi:docname="alarm-clock.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/Users/Matt/openwhisk/release/incubator-openwhisk-website/images/elements/alarm.png"
+   inkscape:export-xdpi="98.790001"
+   inkscape:export-ydpi="98.790001">
+  <metadata
+     id="metadata1183">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1181" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1536"
+     inkscape:window-height="911"
+     id="namedview1179"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.53418364"
+     inkscape:cx="613.33337"
+     inkscape:cy="653.33337"
+     inkscape:window-x="101"
+     inkscape:window-y="34"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1177" />
+  <circle
+     style="fill:#f0fcff;fill-opacity:1;stroke:#ffcf0a;stroke-width:60;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path1187"
+     cx="622.93469"
+     cy="679.09509"
+     r="453.47415"
+     inkscape:label="clock face" />
+  <path
+     style="fill:none;stroke:#325c80;stroke-width:40;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 606.53299,329.47471 608.405,713.23787 902.31143,892.95134"
+     id="path2015"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     inkscape:label="hands" />
+  <path
+     style="fill:#ffcc00;fill-opacity:1;stroke:#ffcf0a;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 169.55377,405.56556 415.44532,201.45325 298.93877,137.23462 124.99275,290.33072 Z"
+     id="path2023"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc"
+     inkscape:label="left ringer" />
+  <path
+     sodipodi:nodetypes="ccccc"
+     inkscape:connector-curvature="0"
+     id="path2025"
+     d="M 1077.4811,405.1816 831.58955,201.06929 948.09615,136.85066 1122.0421,289.94676 Z"
+     style="fill:#ffcc00;fill-opacity:1;stroke:#ffcf0a;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     inkscape:label="right ringer" />
+  <circle
+     style="fill:#d4aa00;fill-opacity:1;stroke:#ffcf0a;stroke-width:59.99999619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path2039"
+     cx="351.00293"
+     cy="-1125.0106"
+     r="19.65616"
+     transform="scale(1,-1)"
+     inkscape:label="left foot" />
+  <circle
+     transform="scale(1,-1)"
+     r="19.65616"
+     cy="-1125.0106"
+     cx="903.24744"
+     id="circle2041"
+     style="fill:#d4aa00;fill-opacity:1;stroke:#ffcf0a;stroke-width:59.99999619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:label="rght foot" />
+  <path
+     style="fill:none;stroke:#707070;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.94117647;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 226.51386,685.15764 h 91.72876"
+     id="path2043"
+     inkscape:connector-curvature="0"
+     inkscape:label="9pm" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2045"
+     d="m 924.7756,677.66958 h 91.7288"
+     style="display:inline;fill:none;stroke:#707070;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
+     inkscape:label="3pm" />
+  <path
+     style="display:inline;fill:none;stroke:#707070;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
+     d="m 614.95707,974.384 v 91.7288"
+     id="path2047"
+     inkscape:connector-curvature="0"
+     inkscape:label="6pm" />
+</svg>
