@@ -6,3 +6,4 @@ function main(array $args) : array
     echo $greeting;
     return ["greeting" => $greeting];
 }
+?>
