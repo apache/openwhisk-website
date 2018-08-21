@@ -635,17 +635,36 @@ $ make quick-start
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a>.
                 Also, use the <strong>192.168.33.13</strong> address as the whisk API host.
             </p>
+            <a class="indexable" id="wsk-cli-install"></a>
+            <h5>Install the wsk CLI</h5>
+<!--
+            <h6>(Option 1). Install the wsk with Homebrew (Mac &amp; Linux only)</h6>
+            <p>To easily install the OpenWhisk CLI (wsk) you can use <a href="https://brew.sh">Homebrew for Mac</a> or <a href="http://linuxbrew.sh">Homebrew for Linux</a>.</p>
+            <div class="terminal">
+{% highlight bash %}
+$ brew update
+$ brew install wsk
+{% endhighlight %}
+            </div>
+            <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
+            <h6>(Option 2). Install the wsk CLI from a tar.gz:</h6>
+            <p>If for any reason you can't or don't want to use one of the previous installation methods, you can still download the OpenWhisk CLI in a standalone .tar.gz file with everything you need to get started.</p>
+-->
+            <p>The latest files can be found on the Releases page at GitHub: <a href="https://github.com/apache/incubator-openwhisk-cli/releases">https://github.com/apache/incubator-openwhisk-cli/releases</a></p>
+            <p>Download the file for your platform and uncompress it. Inside it you will have a <code>wsk</code> executable.</p>
+            <p>To make it simpler to use, you can create a symbolic link available in the path:</p>
+
+            <div class="terminal">
+            {% highlight bash %}$ ln -s [full path to downloaded wsk] /usr/local/bin/wsk{% endhighlight %}
+            </div>
+
+            <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
             <a class="indexable" id="wsk-cli"></a>
             <h5>Configure the wsk CLI</h5>
             <p>
                 OpenWhisk offers wsk Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
             </p>
             <ul>
-                <li>
-                    <strong>Download the wsk CLI:</strong>
-                    Download wsk binary for your local environment into a location in your shell path from
-                    <a href="https://github.com/apache/incubator-openwhisk-cli/releases">here</a>.
-                </li>
                 <li>
                     <strong>CLI Help:</strong>
                     To get the CLI command help, execute the following command:
