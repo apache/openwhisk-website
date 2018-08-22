@@ -470,9 +470,7 @@ layout: default
 
     <main id="doc">
         <div class="content">
-            <p>
-                <h5>OpenWhisk documentation is organized by the following roles:</h5>
-            </p>
+            <h5>OpenWhisk documentation is organized by the following roles:</h5>
             <ul>
                 <li><a href="#operators">Operators</a>: users who deploy, configure, and host the Apache OpenWhisk Function-as-a-Service platform
                 for development, testing and/or production.</li>
@@ -512,17 +510,17 @@ layout: default
             <p>
                 The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
                 This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
-                <div class="terminal">
+            </p>
+            <div class="terminal">
 {% highlight bash %}
 $ git clone https://github.com/apache/incubator-openwhisk-devtools.git
 $ cd incubator-openwhisk-devtools/docker-compose
 $ make quick-start
 {% endhighlight %}
-                </div>
-                <p>
-                    For more detailed instructions, see the
-                    <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
-                </p>
+            </div>
+            <p>
+                For more detailed instructions, see the
+                <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
             </p>
             <a class="indexable" id="deploy_kubernetes"></a>
             <h4>Kubernetes</h4>
@@ -576,10 +574,10 @@ $ make quick-start
             <h3>Administrative Operations</h3>
             <p>
                 This section contains a list of resources which can be utilized to administer the running OpenWhisk instance.
-                <ul>
-                    <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
-                </ul>
             </p>
+            <ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
+            </ul>
         </div>
     </main>
 
@@ -757,16 +755,18 @@ $ wsk list
                     An action can be created from a function written using any of the supported runtimes.
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
                     is the list of runtimes supported by OpenWhisk:
-                    <ul>
-                        <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
-                        <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
-                        <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
-                        <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
-                        <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
-                    </ul>
                 </p>
+                
+                <ul>
+                    <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
+                    <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
+                    <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
+                    <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
+                    <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
+                </ul>
+                
                 <p>
                     While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
                     invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
@@ -781,13 +781,14 @@ $ wsk list
                     Please reach out to other whiskers on dev mailing list at
                     <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
                     once you have followed the guide on creating a new language/runtimes. Here are some examples of runtimes added by community:
-                    <ul>
-                        <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
-                        <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
-                        <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
-                        <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
-                    </ul>
-                    </p>
+                </p>
+            
+                <ul>
+                    <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
+                    <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
+                    <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
+                    <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
+                </ul>
 
                 <p>
                     <strong>After you create an action, how can you invoke that action?</strong>
@@ -898,13 +899,11 @@ $ wsk list
                 </p>
                 <a class="indexable" id="nodejs-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
-                        <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
-                        <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
+                    <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
+                    <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
+                </ul>
             </div>
         </main>
 
@@ -990,12 +989,10 @@ $ wsk list
                 </p>
                 <a class="indexable" id="python-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
-                        <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
+                    <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1097,12 +1094,10 @@ $ GOOS=linux GOARCH=amd64 go build -o exec
                 </p>
                 <a class="indexable" id="go-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="http://jamesthom.as/blog/2017/01/17/openwhisk-and-go/">Running Go Binaries on OpenWhisk</a></li>
-                        <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="http://jamesthom.as/blog/2017/01/17/openwhisk-and-go/">Running Go Binaries on OpenWhisk</a></li>
+                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1174,11 +1169,9 @@ $ jar cvf hello.jar Hello.class
                 </p>
                 <a class="indexable" id="java-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="https://www.ibm.com/blogs/bluemix/2017/02/building-openwhisk-actions-java-gradle/">Building OpenWhisk actions with Java and Gradle</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="https://www.ibm.com/blogs/bluemix/2017/02/building-openwhisk-actions-java-gradle/">Building OpenWhisk actions with Java and Gradle</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1295,12 +1288,10 @@ $ jar cvf hello.jar Hello.class
                 </p>
                 <a class="indexable" id="php-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
-                        <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
+                    <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1460,110 +1451,110 @@ $ jar cvf hello.jar Hello.class
             </p>
             <p>
                 <strong>How to create and fire triggers?</strong>
-                <ul>
-                    <li>
-                        Create a trigger to send user location updates:
-                        <div class="terminal">
+            </p>
+            <ul>
+                <li>
+                    Create a trigger to send user location updates:
+                    <div class="terminal">
 {% highlight bash %}$ wsk trigger create locationUpdate{% endhighlight %}
-                        </div>
-                    </li>
-                    <li>
-                        Check you have created the trigger by listing the set of triggers:</li>
-                        <div class="terminal">
+                    </div>
+                </li>
+                <li>
+                    Check you have created the trigger by listing the set of triggers:</li>
+                    <div class="terminal">
 {% highlight bash %}$ wsk trigger list{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 <pre>triggers
 /someNamespace/locationUpdate                            private</pre>
-                        </div>
-                    </li>
-                    <li>
-                        Fire the trigger by specifying its name and parameters:
-                        <div class="terminal">
+                    </div>
+                </li>
+                <li>
+                    Fire the trigger by specifying its name and parameters:
+                    <div class="terminal">
 {% highlight bash %}$ wsk trigger fire locationUpdate --param name Bob --param place NYC{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 <pre>ok: triggered locationUpdate</pre>
-                        </div>
-                        <p>
-                            Firing a trigger like this currently does not do anything. We need to associate this trigger with an action.
-                            This kind of association is called a rule.
-                        </p>
-                    </li>
-                </ul>
-            </p>
+                    </div>
+                    <p>
+                        Firing a trigger like this currently does not do anything. We need to associate this trigger with an action.
+                        This kind of association is called a rule.
+                    </p>
+                </li>
+            </ul>
             <p>
                 <strong>What are the rules?</strong>
                 Rules are used to associate a trigger with an action. After this kind of association is created, each time
                 a trigger event is fired, the action is invoked.
-                <ul>
-                    <li>
-                        Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
-                        <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.
-                        <div class="terminal">
+            </p>
+            <ul>
+                <li>
+                    Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
+                    <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.
+                    <div class="terminal">
 {% highlight javascript linenos %}
 {% include code/hello-with-params.js %}
 {% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 {% highlight bash %}$ wsk action create hello hello.js{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 {% highlight bash %}$ wsk action invoke --result hello --param name Bernie --param place Vermont{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 {% highlight yaml %}
 {
     "payload": "Hello, Bernie from Vermont"
 }
 {% endhighlight %}
-                        </div>
-                    </li>
-                    <li>
-                        Create the rule:
-                        <div class="terminal">
+                    </div>
+                </li>
+                <li>
+                    Create the rule:
+                    <div class="terminal">
 {% highlight bash %}$ wsk rule create myRule locationUpdate hello{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 <pre>ok: created rule myRule</pre>
-                        </div>
-                    </li>
-                    <li>
-                        Fire the <i>locationUpdate</i> trigger:
-                        <div class="terminal">
+                    </div>
+                </li>
+                <li>
+                    Fire the <i>locationUpdate</i> trigger:
+                    <div class="terminal">
 {% highlight bash %}$ wsk trigger fire locationUpdate --param name Bob --param place NYC{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 <pre>ok: triggered /_/locationUpdate with id abcd...</pre>
-                        </div>
-                    </li>
-                    <li>
-                        Verify that the action was invoked by checking the activations list:
-                        <div class="terminal">
+                    </div>
+                </li>
+                <li>
+                    Verify that the action was invoked by checking the activations list:
+                    <div class="terminal">
 {% highlight bash %}$ wsk activation list --limit 2{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 <pre>activations
 1234.... hello
 abcd.... locationUpdate
 </pre>
-                        </div>
-                    </li>
-                    <li>
-                        Retrieving the trigger activation record:
-                        <div class="terminal">
+                    </div>
+                </li>
+                <li>
+                    Retrieving the trigger activation record:
+                    <div class="terminal">
 {% highlight bash %}$ wsk activation result 1234....{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                    </div>
+                    <div class="terminal">
 {% highlight yaml %}{
     "payload": "Hello, Bob from NYC"
 }
 {% endhighlight %}
-                        </div>
-                        You can see that the hello action received the event payload and returned the expected string.
-                    </li>
-                </ul>
-            </p>
+                    </div>
+                    You can see that the hello action received the event payload and returned the expected string.
+                </li>
+            </ul>
             <p>
                 Please read
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">Creating Triggers and Rules</a>
@@ -1584,11 +1575,12 @@ abcd.... locationUpdate
             </p>
             <p>
                 The catalog is available as packages under <i>/whisk.system</i> namespace.
-                Using the following command, you can get a list of packages under <i>/whisk.system:</i></li>
-                <div class="terminal">
+                Using the following command, you can get a list of packages under <i>/whisk.system:</i>
+            </p>
+            <div class="terminal">
 {% highlight bash %}$ wsk package list /whisk.system{% endhighlight %}
-                </div>
-                <div class="terminal">
+            </div>
+            <div class="terminal">
 <pre>packages
 /whisk.system/alarms                                shared
 /whisk.system/system                                shared
@@ -1598,45 +1590,44 @@ abcd.... locationUpdate
 /whisk.system/github                                shared
 ...
 </pre>
-                </div>
-            </p>
+            </div>
             <p>
                 Each of the packages under
                 <a href="https://github.com/apache/incubator-openwhisk-catalog#openwhisk-catalog">OpenWhisk Catalog</a>
                 is hosted in a GitHub repo.
                 Please refer to these package repositories for further details:
-                <ul>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
-                        is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
-                        enables you to work with a Cloudant database.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
-                        allows you to communicate with Kafka or Message Hub instances for publishing and consuming messages
-                        using native high performance Kafka API.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
-                        allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-deploy/blob/master/README.md">incubator-openwhisk-package-deploy</a>
-                        offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
-                        includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
-                        is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.
-                    </li>
-                </ul>
             </p>
+            <ul>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
+                    is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
+                    enables you to work with a Cloudant database.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
+                    allows you to communicate with Kafka or Message Hub instances for publishing and consuming messages
+                    using native high performance Kafka API.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
+                    allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-deploy/blob/master/README.md">incubator-openwhisk-package-deploy</a>
+                    offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
+                    includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
+                    is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.
+                </li>
+            </ul>
         </div>
     </main>
 
