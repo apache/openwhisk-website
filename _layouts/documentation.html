@@ -1359,17 +1359,19 @@ $ jar cvf hello.jar Hello.class
                     (2) Creating a package binding and then invoking an action in the binding.
                 </p>
                 <ul>
-                    <li>Invoking an action from a public package:</li>
-                    <ul>
-                        <li style="list-style: circle">
-                            Get a description of the /whisk.system/samples/greeting action:
-                            <div class="terminal">
+                    <li>
+                        Invoking an action from a public package:
+                        <ul>
+                            <li style="list-style: circle">
+                                Get a description of the /whisk.system/samples/greeting action:
+                                <div class="terminal">
 {% highlight bash %}$ wsk action get --summary /whisk.system/samples/greeting{% endhighlight %}
-                            </div>
-                            <div class="terminal">
+                                </div>
+                                <div class="terminal">
 <pre>action /whisk.system/samples/greeting: Returns a friendly greeting
     (parameters: name, place)</pre>
-                            </div>
+                                </div>
+                            </li>
                             <li style="list-style: circle">
                                 Invoking action in a package:
                                 <div class="terminal">
@@ -1460,7 +1462,7 @@ $ jar cvf hello.jar Hello.class
                     </div>
                 </li>
                 <li>
-                    Check you have created the trigger by listing the set of triggers:</li>
+                    Check you have created the trigger by listing the set of triggers:
                     <div class="terminal">
 {% highlight bash %}$ wsk trigger list{% endhighlight %}
                     </div>
