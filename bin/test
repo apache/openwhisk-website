@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+
+# Make sure we have the required dependencies.
+echo "$ npm install"
+npm install
+
+# Create the JavaScript bundle.
+echo "$ npm run build:js"
+npm run build:js
+
+# build site with jekyll
+echo "$ bundle exec jekyll build"
+bundle exec jekyll build
+
+if [[ $DISABLE_EXTERNAL_SITE_CHECK = "true" ]]; then
+  # run htmlproofer to test the site
+  echo "$ bundle exec htmlproofer ./_site --check-html --disable-external"
+  bundle exec htmlproofer ./_site --check-html --disable-external true
+else
+  # run htmlproofer to test the site
+  echo "$ bundle exec htmlproofer ./_site --check-html"
+  bundle exec htmlproofer ./_site --check-html
+fi
