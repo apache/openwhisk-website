@@ -590,9 +590,7 @@ function closeIndex() {
 
     <main id="doc">
         <div class="content">
-            <p>
-                <h5>OpenWhisk documentation is organized by the following roles:</h5>
-            </p>
+            <h5>OpenWhisk documentation is organized by the following roles:</h5>
             <ul>
                 <li><a href="#operators">Operators</a>: users who deploy, configure, and host the Apache OpenWhisk Function-as-a-Service platform
                 for development, testing and/or production.</li>
@@ -632,17 +630,17 @@ function closeIndex() {
             <p>
                 The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
                 This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
-                <div class="terminal">
+            </p>
+            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/apache/incubator-openwhisk-devtools.git
 <span class="gp">$ </span><span class="nb">cd </span>incubator-openwhisk-devtools/docker-compose
 <span class="gp">$ </span>make quick-start</code></pre></figure>
 
-                </div>
-                <p>
-                    For more detailed instructions, see the
-                    <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
-                </p>
+            </div>
+            <p>
+                For more detailed instructions, see the
+                <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
             </p>
             <a class="indexable" id="deploy_kubernetes"></a>
             <h4>Kubernetes</h4>
@@ -696,10 +694,10 @@ function closeIndex() {
             <h3>Administrative Operations</h3>
             <p>
                 This section contains a list of resources which can be utilized to administer the running OpenWhisk instance.
-                <ul>
-                    <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
-                </ul>
             </p>
+            <ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
+            </ul>
         </div>
     </main>
 
@@ -769,33 +767,38 @@ function closeIndex() {
                 <li>
                     <strong>CLI Help:</strong>
                     To get the CLI command help, execute the following command:
-                </li>
-                <div class="terminal">
+                    <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk --help</code></pre></figure>
 
-                </div>
-                <li id="authentication"><strong>Authenticate wsk CLI</strong></li>
-                <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
-                <ul>
-                    <li>With wsk property setup</li>
-                    <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
-                    <div class="terminal">
+                    </div>
+                </li>
+                <li id="authentication">
+                    <strong>Authenticate wsk CLI</strong>
+                    <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
+                    <ul>
+                        <li>
+                            With wsk property setup
+                            <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
+                            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk property <span class="nb">set</span> --apihost &lt;API_HOST&gt; --auth &lt;AUTH_KEY&gt; --namespace guest</code></pre></figure>
 
-                    </div>
-                    <p>Credentials are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
-                    <li>Environment Variables Setup</li>
-                    <p>Access credentials can be provided using properties file as environment variable:</p>
-                    <div class="terminal">
+                            </div>
+                            <p>Credentials are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
+                        </li>
+                        <li>
+                            Environment Variables Setup
+                            <p>Access credentials can be provided using properties file as environment variable:</p>
+                            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">export </span><span class="nv">WSK_CONFIG_FILE</span><span class="o">=</span>&lt;your-config-file&gt;
 <span class="gp">$ </span>wsk list</code></pre></figure>
 
-                    </div>
-                </ul>
-
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <a class="indexable" id="wskdeploy"></a>
             <h5>Whisk Deploy</h5>
@@ -809,16 +812,15 @@ function closeIndex() {
                     Binaries of <i>wskdeploy</i> are available for download on the project's GitHub release page:
                     <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases.</a>
                 </li>
-                <p></p>
                 <li>
                     wskdeploy Help:
                     Start by verifying the utility can display the command line help:
-                </li>
-                <div class="terminal">
+                    <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy --help</code></pre></figure>
 
-                </div>
+                    </div>
+                </li>
                 <li>
                     Create Package Manifest File <i>manifest.yaml</i>:
                     Please refer to the
@@ -826,18 +828,21 @@ function closeIndex() {
                     for all manifest file grammar and syntax. This programming guide has step-by-step instructions for deploying OpenWhisk applications
                     using wskdeploy.
                 </li>
-                <p></p>
-                <li>Deploy your Application:</li>
-                <ul>
-                    <li><strong>Note:</strong> Before you proceed with the deployment, please make sure you have the authentication setup as described
-                    <a href="#authentication">here</a>.</li>
-                    <li>Deploying an OpenWhisk Manifest file:</li>
-                    <div class="terminal">
+                <li>
+                    Deploy your Application:
+                    <ul>
+                        <li><strong>Note:</strong> Before you proceed with the deployment, please make sure you have the authentication setup as described
+                        <a href="#authentication">here</a>.</li>
+                        <li>
+                            Deploying an OpenWhisk Manifest file:
+                            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
 
-                    </div>
-                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <a class="indexable" id="rest-api"></a>
             <h5>OpenWhisk REST API</h5>
@@ -876,16 +881,18 @@ function closeIndex() {
                     An action can be created from a function written using any of the supported runtimes.
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
                     is the list of runtimes supported by OpenWhisk:
-                    <ul>
-                        <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
-                        <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
-                        <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
-                        <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
-                        <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
-                        <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
-                    </ul>
                 </p>
+                
+                <ul>
+                    <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
+                    <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
+                    <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
+                    <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
+                    <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
+                    <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
+                </ul>
+                
                 <p>
                     While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
                     invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
@@ -900,13 +907,14 @@ function closeIndex() {
                     Please reach out to other whiskers on dev mailing list at
                     <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
                     once you have followed the guide on creating a new language/runtimes. Here are some examples of runtimes added by community:
-                    <ul>
-                        <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
-                        <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
-                        <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
-                        <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
-                    </ul>
-                    </p>
+                </p>
+            
+                <ul>
+                    <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
+                    <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
+                    <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
+                    <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
+                </ul>
 
                 <p>
                     <strong>After you create an action, how can you invoke that action?</strong>
@@ -943,8 +951,9 @@ function closeIndex() {
                     please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named <i>hello.js</i>:</li>
-                    <div class="terminal">
+                    <li style="list-style-type: decimal">
+                        Create a file named <i>hello.js</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -953,23 +962,27 @@ function closeIndex() {
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Create an action called <i>helloJS</i> using <i>hello.js</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action called <i>helloJS</i> using <i>hello.js</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloJS hello.js</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
-                        <pre>ok: created action helloJS</pre>
-                    </div>
-                    <li style="list-style-type: decimal">Invoke the <i>helloJS</i> action as a blocking activation:</li>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
+                            <pre>ok: created action helloJS</pre>
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke the <i>helloJS</i> action as a blocking activation:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJS --blocking</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
   <span class="s2">"</span><span class="s">result"</span><span class="pi">:</span> <span class="pi">{</span>
@@ -979,15 +992,18 @@ function closeIndex() {
     <span class="s2">"</span><span class="s">success"</span><span class="pi">:</span> <span class="nv">true</span>
 <span class="pi">}</span></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
-                    <p>
-                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                    </p>
-                    <ol>
-                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
-                        <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>
+                                Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1000,11 +1016,11 @@ function closeIndex() {
                 <span class="s">function</span><span class="pi">:</span> <span class="s">hello.js</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        Or
-                        <p></p>
-                        <div class="terminal">
-
+                                </div>
+                                Or
+                                <p></p>
+                                <div class="terminal">
+        
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
@@ -1013,25 +1029,35 @@ function closeIndex() {
 6
 7
 8
-9</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
+9
+10
+11
+12</pre></td><td class="code"><pre>        <span class="s">packages</span><span class="pi">:</span>
+<span class="err">    </span><span class="s">default</span><span class="pi">:</span>
         <span class="s">actions</span><span class="pi">:</span>
             <span class="s">helloJS</span><span class="pi">:</span>
                 <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
                     <span class="no">function main() {</span>
                         <span class="no">return {payload: 'Hello world'};</span>
                     <span class="no">}</span>
-                <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:6</span><span class="w">
+                <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:6</span>
+
+
+        <span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        <li>Run deployment with <i>wskdeploy</i>:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li>
+                                Run deployment with <i>wskdeploy</i>:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
 
-                        </div>
-                    </ol>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
                 </ol>
                 <a class="indexable" id="nodejs-runtime"></a>
                 <h5>OpenWhisk Runtime for NodeJS</h5>
@@ -1043,13 +1069,11 @@ function closeIndex() {
                 </p>
                 <a class="indexable" id="nodejs-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
-                        <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
-                        <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
+                    <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
+                    <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1071,8 +1095,8 @@ function closeIndex() {
                     please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:</li>
-                    <div class="terminal">
+                    <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1091,37 +1115,38 @@ function closeIndex() {
     <span class="k">return</span> <span class="p">{</span><span class="s">"greeting"</span><span class="p">:</span> <span class="n">greeting</span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:</li>
-                    <div class="terminal">
+                        </div>
+                        <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
+                            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloPy hello.py</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                            </div>
+                            <div class="terminal">
 <pre>ok: created action helloPy</pre>
-                    </div>
-                    <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:</li>
-                    <div class="terminal">
+                            </div>
+                        </li>
+                        <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPy --blocking --param name World</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">World!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
-                    <p>
-                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                    </p>
-                    <ol>
-                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
-                        <div class="terminal">
+                        </div>
+                        <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1134,10 +1159,10 @@ function closeIndex() {
                 <span class="s">function</span><span class="pi">:</span> <span class="s">hello.py</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        Or
-                        <p></p>
-                        <div class="terminal">
+                                </div>
+                                Or
+                                <p></p>
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1170,14 +1195,18 @@ function closeIndex() {
                 <span class="s">runtime</span><span class="pi">:</span> <span class="s">python:2</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        <li>Run deployment with <i>wskdeploy</i>:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li>
+                                Run deployment with <i>wskdeploy</i>:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
 
-                        </div>
-                    </ol>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
                 </ol>
                 <a class="indexable" id="python-runtime"></a>
                 <h5>OpenWhisk Runtime for Python</h5>
@@ -1189,12 +1218,10 @@ function closeIndex() {
                 </p>
                 <a class="indexable" id="python-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
-                        <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
+                    <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1216,9 +1243,10 @@ function closeIndex() {
                     please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
                 </p>
                 <ol>
-                    <a class="indexable" id="hello-go"></a>
-                    <li style="list-style-type: decimal">Create a file named <i>hello.go</i>:</li>
-                    <div class="terminal">
+                    <li style="list-style-type: decimal">
+                        <a class="indexable" id="hello-go"></a>
+                        Create a file named <i>hello.go</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-go" data-lang="go"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1271,49 +1299,60 @@ function closeIndex() {
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an executable called <i>exec</i> using <i>hello.go</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o <span class="nb">exec</span>
 <span class="gp">$ </span>zip exec.zip <span class="nb">exec</span></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Create an action <i>helloGo</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action <i>helloGo</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloGo --native exec.zip</code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Invoke an action <i>helloGo</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke an action <i>helloGo</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloGo -r -p name gopher</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">msg"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">gopher!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
-                    <p>
-                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                    </p>
-                    <ol>
-                        <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
-                        <li>Create an executable called <i>exec</i> using <i>hello.go</i>:</li>
-                        <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
+                            <li>
+                                Create an executable called <i>exec</i> using <i>hello.go</i>:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd </span>actions/
 <span class="gp">$ </span><span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o <span class="nb">exec</span></code></pre></figure>
 
-                        </div>
-                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li>
+                                Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1328,14 +1367,18 @@ function closeIndex() {
                 <span class="s">native</span><span class="pi">:</span> <span class="s">true</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        <li>Run deployment with <i>wskdeploy</i>:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li>
+                                Run deployment with <i>wskdeploy</i>:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
 
-                        </div>
-                    </ol>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
                 </ol>
                 <a class="indexable" id="go-runtime"></a>
                 <h5>OpenWhisk Runtime for Go</h5>
@@ -1346,12 +1389,10 @@ function closeIndex() {
                 </p>
                 <a class="indexable" id="go-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="http://jamesthom.as/blog/2017/01/17/openwhisk-and-go/">Running Go Binaries on OpenWhisk</a></li>
-                        <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="http://jamesthom.as/blog/2017/01/17/openwhisk-and-go/">Running Go Binaries on OpenWhisk</a></li>
+                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1373,8 +1414,9 @@ function closeIndex() {
                     please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named <i>Hello.java</i>:</li>
-                    <div class="terminal">
+                    <li style="list-style-type: decimal">
+                        Create a file named <i>Hello.java</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1415,38 +1457,45 @@ function closeIndex() {
 <span class="o">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Compile <i>Hello.Java</i> into a JAR file <i>hello.jar</i> as follows
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>javac Hello.java
 <span class="gp">$ </span>jar cvf hello.jar Hello.class</code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Create an action called <i>helloJava</i> using <i>hello.jar</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action called <i>helloJava</i> using <i>hello.jar</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloJava hello.jar --main Hello</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ok</span><span class="pi">:</span> <span class="s">created action helloJava</span></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Invoke an action <i>helloJava</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke an action <i>helloJava</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJava --blocking --result</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">stranger!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                    </div>
+                        </div>
+                    </li>
                 </ol>
                 <a class="indexable" id="java-runtime"></a>
                 <h5>OpenWhisk Runtime for Java</h5>
@@ -1458,11 +1507,9 @@ function closeIndex() {
                 </p>
                 <a class="indexable" id="java-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="https://www.ibm.com/blogs/bluemix/2017/02/building-openwhisk-actions-java-gradle/">Building OpenWhisk actions with Java and Gradle</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="https://www.ibm.com/blogs/bluemix/2017/02/building-openwhisk-actions-java-gradle/">Building OpenWhisk actions with Java and Gradle</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1509,8 +1556,9 @@ function closeIndex() {
                     please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
                 </p>
                 <ol>
-                    <li style="list-style-type: decimal">Create a file named <i>hello.php</i>:</li>
-                    <div class="terminal">
+                    <li style="list-style-type: decimal">
+                        Create a file named <i>hello.php</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-php" data-lang="php"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1531,39 +1579,46 @@ function closeIndex() {
 <span class="cp">?&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Create an action called <i>helloPHP</i> using <i>hello.php</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action called <i>helloPHP</i> using <i>hello.php</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloPHP hello.php</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">ok: created action helloPHP</code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Invoke an action <i>helloPHP</i>:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke an action <i>helloPHP</i>:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPHP --blocking --result --param name World</code></pre></figure>
 
-                    </div>
-                    <div class="terminal">
+                        </div>
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">World!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                    </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:</li>
-                    <p>
-                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                    </p>
-                    <ol>
-                        <li>Create <i>manifest.yaml</i> with the following YAML content:</li>
-                        <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>
+                                Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1576,10 +1631,10 @@ function closeIndex() {
                 <span class="s">function</span><span class="pi">:</span> <span class="s">hello.php</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        Or
-                        <p></p>
-                        <div class="terminal">
+                                </div>
+                                Or
+                                <p></p>
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -1610,14 +1665,18 @@ function closeIndex() {
                 <span class="s">runtime</span><span class="pi">:</span> <span class="s">php:7.1</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-                        </div>
-                        <li>Run deployment with <i>wskdeploy</i>:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li>
+                                Run deployment with <i>wskdeploy</i>:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
 
-                        </div>
-                    </ol>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
                 </ol>
                 <a class="indexable" id="php-runtime"></a>
                 <h5>OpenWhisk Runtime for PHP</h5>
@@ -1628,12 +1687,10 @@ function closeIndex() {
                 </p>
                 <a class="indexable" id="php-additional-resources"></a>
                 <h5>Additional Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
-                        <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
-                    </ul>
-                </p>
+                <ul>
+                    <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
+                    <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
+                </ul>
             </div>
         </main>
 
@@ -1681,18 +1738,22 @@ function closeIndex() {
                     You can get a list of packages available in shared namespace by using wsk CLI:
                 </p>
                 <ul>
-                    <li>Get a list of packages:</li>
-                    <div class="terminal">
+                    <li>
+                        Get a list of packages:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package list /whisk.system</code></pre></figure>
 
-                    </div>
-                    <li>Get a list of entities in a package:</li>
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li>
+                        Get a list of entities in a package:
+                        <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package get --summary /whisk.system/&lt;package-name&gt;</code></pre></figure>
 
-                    </div>
+                        </div>
+                    </li>
                 </ul>
                 <p>
                     <strong>How do I invoke an action from a public package?</strong>
@@ -1701,72 +1762,85 @@ function closeIndex() {
                     (2) Creating a package binding and then invoking an action in the binding.
                 </p>
                 <ul>
-                    <li>Invoking an action from a public package:</li>
-                    <ul>
-                        <li style="list-style: circle">Get a description of the /whisk.system/samples/greeting action:</li>
-                        <div class="terminal">
+                    <li>
+                        Invoking an action from a public package:
+                        <ul>
+                            <li style="list-style: circle">
+                                Get a description of the /whisk.system/samples/greeting action:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action get --summary /whisk.system/samples/greeting</code></pre></figure>
 
-                        </div>
-                        <div class="terminal">
+                                </div>
+                                <div class="terminal">
 <pre>action /whisk.system/samples/greeting: Returns a friendly greeting
     (parameters: name, place)</pre>
-                        </div>
-                        <li style="list-style: circle">Invoking action in a package:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li style="list-style: circle">
+                                Invoking action in a package:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result /whisk.system/samples/greeting</code></pre></figure>
 
-                        </div>
-                        <div class="terminal">
+                                </div>
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">stranger</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">somewhere!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                        </div>
-                        <li style="list-style: circle">Invoke the action with parameters:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li style="list-style: circle">
+                                Invoke the action with parameters:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</code></pre></figure>
 
-                        </div>
-                        <div class="terminal">
+                                </div>
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">Bernie</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Vermont!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                        </div>
-                    </ul>
-                    <li>Creating package binding and invoking action from the binding:</li>
-                    <ul>
-                        <li style="list-style: circle">Creating and using package bindings:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Creating package binding and invoking action from the binding:
+                        <ul>
+                            <li style="list-style: circle">
+                                Creating and using package bindings:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package <span class="nb">bind</span> /whisk.system/samples valhallaSamples --param place Valhalla</code></pre></figure>
 
-                        </div>
-                        <div class="terminal">
+                            </div>
+                            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">ok: created binding valhallaSamples</code></pre></figure>
 
-                        </div>
-                        <li style="list-style: circle">Invoke an action in the package binding:</li>
-                        <div class="terminal">
+                                </div>
+                            </li>
+                            <li style="list-style: circle">
+                                Invoke an action in the package binding:
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result valhallaSamples/greeting --param name Odin</code></pre></figure>
 
-                        </div>
-                        <div class="terminal">
+                                </div>
+                                <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello,</span><span class="nv"> </span><span class="s">Odin</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Valhalla!"</span>
 <span class="pi">}</span></code></pre></figure>
 
-                        </div>
-                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 <p>
                     <strong>Where do I get more information on packages?</strong>
@@ -1794,14 +1868,18 @@ function closeIndex() {
             </p>
             <p>
                 <strong>How to create and fire triggers?</strong>
-                <ul>
-                    <li >Create a trigger to send user location updates:</li>
+            </p>
+            <ul>
+                <li>
+                    Create a trigger to send user location updates:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger create locationUpdate</code></pre></figure>
 
                     </div>
-                    <li>Check you have created the trigger by listing the set of triggers:</li>
+                </li>
+                <li>
+                    Check you have created the trigger by listing the set of triggers:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger list</code></pre></figure>
@@ -1811,7 +1889,9 @@ function closeIndex() {
 <pre>triggers
 /someNamespace/locationUpdate                            private</pre>
                     </div>
-                    <li>Fire the trigger by specifying its name and parameters:</li>
+                </li>
+                <li>
+                    Fire the trigger by specifying its name and parameters:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger fire locationUpdate --param name Bob --param place NYC</code></pre></figure>
@@ -1824,15 +1904,17 @@ function closeIndex() {
                         Firing a trigger like this currently does not do anything. We need to associate this trigger with an action.
                         This kind of association is called a rule.
                     </p>
-                </ul>
-            </p>
+                </li>
+            </ul>
             <p>
                 <strong>What are the rules?</strong>
                 Rules are used to associate a trigger with an action. After this kind of association is created, each time
                 a trigger event is fired, the action is invoked.
-                <ul>
-                    <li>Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
-                    <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.</li>
+            </p>
+            <ul>
+                <li>
+                    Please make sure you have the <i>hello</i> action created. If not, you can follow instruction in the section
+                    <a href="#nodejs-actions">above</a> with the following <i>hello.js</i>.
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -1860,7 +1942,9 @@ function closeIndex() {
 <span class="pi">}</span></code></pre></figure>
 
                     </div>
-                    <li>Create the rule:</li>
+                </li>
+                <li>
+                    Create the rule:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk rule create myRule locationUpdate hello</code></pre></figure>
@@ -1869,7 +1953,9 @@ function closeIndex() {
                     <div class="terminal">
 <pre>ok: created rule myRule</pre>
                     </div>
-                    <li>Fire the <i>locationUpdate</i> trigger:</li>
+                </li>
+                <li>
+                    Fire the <i>locationUpdate</i> trigger:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger fire locationUpdate --param name Bob --param place NYC</code></pre></figure>
@@ -1878,7 +1964,9 @@ function closeIndex() {
                     <div class="terminal">
 <pre>ok: triggered /_/locationUpdate with id abcd...</pre>
                     </div>
-                    <li>Verify that the action was invoked by checking the activations list:</li>
+                </li>
+                <li>
+                    Verify that the action was invoked by checking the activations list:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk activation list --limit 2</code></pre></figure>
@@ -1890,7 +1978,9 @@ function closeIndex() {
 abcd.... locationUpdate
 </pre>
                     </div>
-                    <li>Retrieving the trigger activation record:</li>
+                </li>
+                <li>
+                    Retrieving the trigger activation record:
                     <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk activation result 1234....</code></pre></figure>
@@ -1904,8 +1994,8 @@ abcd.... locationUpdate
 
                     </div>
                     You can see that the hello action received the event payload and returned the expected string.
-                </ul>
-            </p>
+                </li>
+            </ul>
             <p>
                 Please read
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">Creating Triggers and Rules</a>
@@ -1926,13 +2016,14 @@ abcd.... locationUpdate
             </p>
             <p>
                 The catalog is available as packages under <i>/whisk.system</i> namespace.
-                Using the following command, you can get a list of packages under <i>/whisk.system:</i></li>
-                <div class="terminal">
+                Using the following command, you can get a list of packages under <i>/whisk.system:</i>
+            </p>
+            <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package list /whisk.system</code></pre></figure>
 
-                </div>
-                <div class="terminal">
+            </div>
+            <div class="terminal">
 <pre>packages
 /whisk.system/alarms                                shared
 /whisk.system/system                                shared
@@ -1942,45 +2033,44 @@ abcd.... locationUpdate
 /whisk.system/github                                shared
 ...
 </pre>
-                </div>
-            </p>
+            </div>
             <p>
                 Each of the packages under
                 <a href="https://github.com/apache/incubator-openwhisk-catalog#openwhisk-catalog">OpenWhisk Catalog</a>
                 is hosted in a GitHub repo.
                 Please refer to these package repositories for further details:
-                <ul>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
-                        is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
-                        enables you to work with a Cloudant database.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
-                        allows you to communicate with Kafka or Message Hub instances for publishing and consuming messages
-                        using native high performance Kafka API.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
-                        allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-deploy/blob/master/README.md">incubator-openwhisk-package-deploy</a>
-                        offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
-                        includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
-                    </li>
-                    <li>
-                        <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
-                        is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.
-                    </li>
-                </ul>
             </p>
+            <ul>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
+                    is an Apache OpenWhisk alarm package that can be used to create periodic, time-based alarms.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
+                    enables you to work with a Cloudant database.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
+                    allows you to communicate with Kafka or Message Hub instances for publishing and consuming messages
+                    using native high performance Kafka API.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
+                    allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-deploy/blob/master/README.md">incubator-openwhisk-package-deploy</a>
+                    offers a convenient way for you to describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
+                    includes actions that interact with JIRA software software development tool used for issue tracking, and project management functions.
+                </li>
+                <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
+                    is a template for Openwhisk Packages, it can be used to build, test and integrate new packages.
+                </li>
+            </ul>
         </div>
     </main>
 
@@ -2086,31 +2176,35 @@ abcd.... locationUpdate
             <a class="indexable" id="faq"></a>
             <h2>Frequently Asked Questions</h2>
             <ul>
-    <a class="indexable" id="get-involved"></a>
-    <li><a href="#get-involved">How do I get involved?</a></li>
-    <p>
-        If you are interested in contributing to OpenWhisk project, please join
-        <a href="community.html#mailing-lists">openwhisk mailing list</a>
-        and reach out to other whiskers.
-    </p>
-    <a class="indexable" id="report-problem-with-this-site"></a>
-    <li><a href="#report-problem-with-this-site">How do I report a problem with this site or suggest an improvement?</a></li>
-    <p>
-        You can submit an issue to
-        <a href="https://github.com/apache/incubator-openwhisk-website/issues">the GitHub repository</a>
-        for this site. You can also submit a
-        <a href="https://github.com/apache/incubator-openwhisk-website/pulls">pull request</a>
-        if you have signed the Apache ICLA.
-    </p>
-    <a class="indexable" id="need-another-question-answered"></a>
-    <li><a href="#need-another-question-answered">Need another question answered?</a></li>
-    <p>
-        For questions, hints, and tips for developing in Apache OpenWhisk:
+    <li>
+        <a class="indexable" id="get-involved"></a>
+        <a href="#get-involved">How do I get involved?</a>
+        <p>
+            If you are interested in contributing to OpenWhisk project, please join
+            <a href="community.html#mailing-lists">openwhisk mailing list</a>
+            and reach out to other whiskers.
+        </p>
+    </li>
+    <li>
+        <a class="indexable" id="report-problem-with-this-site"></a>
+        <a href="#report-problem-with-this-site">How do I report a problem with this site or suggest an improvement?</a>
+        <p>
+            You can submit an issue to
+            <a href="https://github.com/apache/incubator-openwhisk-website/issues">the GitHub repository</a>
+            for this site. You can also submit a
+            <a href="https://github.com/apache/incubator-openwhisk-website/pulls">pull request</a>
+            if you have signed the Apache ICLA.
+        </p>
+    </li>
+    <li>
+        <a class="indexable" id="need-another-question-answered"></a>
+        <p><a href="#need-another-question-answered">Need another question answered?</a></p>
+        <p>For questions, hints, and tips for developing in Apache OpenWhisk:</p>
         <ul>
             <li><a href="community.html#mailing-lists">Join the Dev Mailing List</a></li>
             <li><a href="community.html#social">Follow OpenWhisk Media</a></li>
         </ul>
-    </p>
+    </li>
 </ul>
 
         </div>
