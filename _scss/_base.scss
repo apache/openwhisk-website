@@ -140,13 +140,12 @@ footer {
       height: $image-wrapper-height;
       max-width: $image-wrapper-max-width;
       align-self: center;
-      margin: auto;  // allows centering in all layouts
+      margin: auto; // allows centering in all layouts
     }
   }
 }
 
-// TODO look to remove this ID
-#doc {
+.doc {
   position: relative;
   overflow: hidden;
   text-align: left;
