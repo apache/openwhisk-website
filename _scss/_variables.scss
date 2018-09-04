@@ -159,6 +159,9 @@ $h4-line-height: 28px;
 $h5-font-size: 16px;
 $h5-line-height: 28px;
 
+$h6-font-size: $font-size-default;
+$h6-line-height: 24px;
+
 $p-font-size: $font-size-default;
 $p-font-weight: $font-weight-default;
 $p-line-height: $line-height-default;
@@ -166,25 +169,25 @@ $p-line-height: $line-height-default;
 /*
  * Header
  */
- $header-base-h1-font-size: 32px;
- $header-base-h1-font-weight: 300;
- $header-base-h1-font-style: normal;
- $header-base-h1-line-height: 42px;
+$header-base-h1-font-size: 32px;
+$header-base-h1-font-weight: 300;
+$header-base-h1-font-style: normal;
+$header-base-h1-line-height: 42px;
 
- $header-base-h5-font-size: 14px;
- $header-base-h5-font-weight: 300;
- $header-base-h5-font-style: normal;
- $header-base-h5-line-height: 28px;
+$header-base-h5-font-size: 14px;
+$header-base-h5-font-weight: 300;
+$header-base-h5-font-style: normal;
+$header-base-h5-line-height: 28px;
 
- $header-tablet-h1-font-size: $header-base-h1-font-size + 4px;
- $header-tablet-h1-font-weight: $header-base-h1-font-weight;
- $header-tablet-h1-font-style: $header-base-h1-font-style;
- $header-tablet-h1-line-height: $header-base-h1-line-height + 2px;
+$header-tablet-h1-font-size: $header-base-h1-font-size + 4px;
+$header-tablet-h1-font-weight: $header-base-h1-font-weight;
+$header-tablet-h1-font-style: $header-base-h1-font-style;
+$header-tablet-h1-line-height: $header-base-h1-line-height + 2px;
 
- $header-tablet-h5-font-size: $header-base-h5-font-size + 2px;
- $header-tablet-h5-font-weight: $header-base-h5-font-weight;
- $header-tablet-h5-font-style: $header-base-h5-font-style;
- $header-tablet-h5-line-height: $header-base-h5-line-height;
+$header-tablet-h5-font-size: $header-base-h5-font-size + 2px;
+$header-tablet-h5-font-weight: $header-base-h5-font-weight;
+$header-tablet-h5-font-style: $header-base-h5-font-style;
+$header-tablet-h5-line-height: $header-base-h5-line-height;
 
 /*
  * Index
@@ -254,7 +257,7 @@ $terminal-line-number-padding: 10px;
  * Image Wrapper
  */
 
- // prevent images from renmdering too large using width to determine scale
+// prevent images from renmdering too large using width to determine scale
 $image-wrapper-width: 100%;
 $image-wrapper-height: 100%;
 $image-wrapper-max-width: 500px;
