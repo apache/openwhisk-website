@@ -145,8 +145,7 @@ footer {
   }
 }
 
-// TODO look to remove this ID
-#doc {
+.doc {
   position: relative;
   overflow: hidden;
   text-align: left;
@@ -338,6 +337,7 @@ a.indexable {
     a {
       color: $color-index-fg;
       text-decoration: none;
+      display: block;
     }
     a:hover {
       // use different color on index-item hover
