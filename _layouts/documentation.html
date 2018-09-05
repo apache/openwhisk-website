@@ -6,115 +6,95 @@ layout: default
 # license agreements; and to You under the Apache License, Version 2.0.
 -->
 
-<div class="whiskIndexedLayout">
+<div id="whiskIndexedLayout">
     <!-- Documentation Index -->
-    <div class="whiskIndex">
+    <div id="whiskIndex">
         <ul>
             <li><a href="#documentation">Documentation</a></li>
             <li><a href="#project-structure">Project Structure</a></li>
 
             <!-- Operators -->
-            <li class="collapsible-toggle">
-                <a href="#operators">Operators</a>
+            <li class="collapsible-toggle"><a href="#operators">Operators</a></li>
+            <ul class="collapse-content">
+                <li><a href="#openwhisk_architecture">OpenWhisk Architecture</a></li>
+                <li class="collapsible-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
                 <ul class="collapse-content">
-                    <li class="collapsible-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a>
-                        <ul class="collapse-content">
-                            <li><a href="#deploy_docker_compose">Docker Compose</a></li>
-                            <li><a href="#deploy_kubernetes">Kubernetes</a></li>
-                            <li><a href="#deploy_mesos">Mesos</a></li>
-                            <li><a href="#deploy_openshift">OpenShift</a></li>
-                            <li><a href="#deploy_ansible">Ansible</a></li>
-                            <li><a href="#deploy_vagrant">Vagrant</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#deployment_admin">Administrative Operations</a></li>
-                    <li><a href="#operators_resources">Operators Resources</a></li>
+                    <li><a href="#deploy_docker_compose">Docker Compose</a></li>
+                    <li><a href="#deploy_kubernetes">Kubernetes</a></li>
+                    <li><a href="#deploy_mesos">Mesos</a></li>
+                    <li><a href="#deploy_openshift">OpenShift</a></li>
+                    <li><a href="#deploy_ansible">Ansible</a></li>
+                    <li><a href="#deploy_vagrant">Vagrant</a></li>
                 </ul>
-            </li>
+                <li><a href="#deployment_admin">Administrative Operations</a></li>
+                <li><a href="#operators_resources">Operators Resources</a></li>
+            </ul>
 
             <!-- Developers -->
-            <li class="collapsible-toggle">
-                <a href="#developers">Developers</a>
+            <li class="collapsible-toggle"><a href="#developers">Developers</a></li>
+            <ul class="collapse-content">
+                <li><a href="#pre-requisites">Pre-requisites</a></li>
+                <li class="collapsible-toggle"><a href="#using-openwhisk">Using OpenWhisk</a></li>
                 <ul class="collapse-content">
-                    <li><a href="#pre-requisites">Pre-requisites</a></li>
-                    <li class="collapsible-toggle">
-                        <a href="#using-openwhisk">Using OpenWhisk</a>
-                        <ul class="collapse-content">
-                            <li><a href="#wsk-cli-install">Installing wsk CLI</a></li>
-                            <li><a href="#wsk-cli">Configuring wsk CLI</a></li>
-                            <li><a href="#wskdeploy">Deployment Tool - wskdeploy</a></li>
-                            <li><a href="#rest-api">OpenWhisk REST API</a></li>
-                            <li><a href="#openwhisk-clients">OpenWhisk Clients</a></li>
-                        </ul>
-                    </li>
-                    <li class="collapsible-toggle">
-                        <a href="#actions">Actions</a>
-                        <ul class="collapse-content">
-                            <li class="collapsible-toggle">
-                                <a href="#nodejs">NodeJS</a>
-                                <ul class="collapse-content">
-                                    <li><a href="#nodejs-actions">Creating and Invoking Sample Action</a></li>
-                                    <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
-                                    <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
-                                </ul>
-                            </li>
-                            <li class="collapsible-toggle">
-                                <a href="#python">Python</a>
-                                <ul class="collapse-content">
-                                    <li><a href="#python-actions">Creating and Invoking Sample Action</a></li>
-                                    <li><a href="#python-runtime">Python Runtime</a></li>
-                                    <li><a href="#python-additional-resources">Additional Resources</a></li>
-                                </ul>
-                            </li>
-                            <!--li><a href="#docker">Docker</a>
-                            <ul>
-                                <li>Zip Action</li>
-                                <li>SDK (Writing Your Own Runtime)</li>
-                                <li>Other Resources</li>
-                            </ul></li>-->
-                            <li class="collapsible-toggle">
-                                <a href="#go">Go</a>
-                                <ul class="collapse-content">
-                                    <li><a href="#go-actions">Creating and Invoking Action</a></li>
-                                    <li><a href="#go-runtime">Go Runtime</a></li>
-                                    <li><a href="#go-additional-resources">Additional Resources</a></li>
-                                </ul>
-                            </li>
-                            <li class="collapsible-toggle">
-                                <a href="#java">Java</a>
-                                <ul class="collapse-content">
-                                    <li><a href="#java-actions">Creating and Invoking Action</a></li>
-                                    <li><a href="#java-runtime">Java Runtime</a></li>
-                                    <li><a href="#java-additional-resources">Additional Resources</a></li>
-                                </ul>
-                            </li>
-                            <li class="collapsible-toggle">
-                                <a href="#php">PHP</a>
-                                <ul class="collapse-content">
-                                    <li><a href="#php-actions">Creating and Invoking Action</a></li>
-                                    <li><a href="#php-runtime">PHP Runtime</a></li>
-                                    <li><a href="#php-additional-resources">Additional Resources</a></li>
-                                </ul>
-                            </li>
-                            <!--li class="collapsible-toggle">
-                              <a href="#swift">Swift</a>
-                                <ul class="collapse-content">
-                                    <li><a href="#swift-actions">Creating and Invoking Action</a></li>
-                                    <li><a href="#swift-runtime">Swift Runtime</a></li>
-                                    <li><a href="#swift-additional-resources">Additional Resources</a></li>
-                                </ul>
-                            </li>-->
-                        </ul>
-                    </li>
-                    <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
-                    <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
-                    <li><a href="#using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li>
-                    <!--li><a href="#exposing_apis_from_actions">Exposing APIs from Actions</a></li-->
-                    <li><a href="#sample_openwhisk_applications">Sample OpenWhisk Applications</a></li>
-                    <li><a href="#tutorial_and_workshop">Tutorial And Workshop</a></li>
-                    <li><a href="#development_tools">Development Tools</a></li>
+                    <li><a href="#wsk-cli-install">Installing wsk CLI</a></li>
+                    <li><a href="#wsk-cli">OpenWhisk CLI (wsk)</a></li>
+                    <li><a href="#wskdeploy">Whisk Deploy (wskdeploy)</a></li>
+                    <li><a href="#rest-api">OpenWhisk REST API</a></li>
+                    <li><a href="#openwhisk-clients">OpenWhisk Clients (language)</a></li>
                 </ul>
-            </li>
+                <li class="collapsible-toggle"><a href="#actions">Actions</a></li>
+                <ul class="collapse-content">
+                    <li class="collapsible-toggle"><a href="#nodejs">NodeJS</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#nodejs-actions">Creating and Invoking Sample Action</a></li>
+                        <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
+                        <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
+                    </ul>
+                    <li class="collapsible-toggle"><a href="#python">Python</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#python-actions">Creating and Invoking Sample Action</a></li>
+                        <li><a href="#python-runtime">Python Runtime</a></li>
+                        <li><a href="#python-additional-resources">Additional Resources</a></li>
+                    </ul>
+                    <!--li><a href="#docker">Docker</a></li>
+                    <ul>
+                        <li>Zip Action</li>
+                        <li>SDK (Writing Your Own Runtime)</li>
+                        <li>Other Resources</li>
+                    </ul-->
+                    <li class="collapsible-toggle"><a href="#go">Go</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#go-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#go-runtime">Go Runtime</a></li>
+                        <li><a href="#go-additional-resources">Additional Resources</a></li>
+                    </ul>
+                    <li class="collapsible-toggle"><a href="#java">Java</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#java-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#java-runtime">Java Runtime</a></li>
+                        <li><a href="#java-additional-resources">Additional Resources</a></li>
+                    </ul>
+                    <li class="collapsible-toggle"><a href="#php">PHP</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#php-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#php-runtime">PHP Runtime</a></li>
+                        <li><a href="#php-additional-resources">Additional Resources</a></li>
+                    </ul>
+                    <!--li class="collapsible-toggle"><a href="#swift">Swift</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#swift-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#swift-runtime">Swift Runtime</a></li>
+                        <li><a href="#swift-additional-resources">Additional Resources</a></li>
+                    </ul-->
+                </ul>
+                <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
+                <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
+                <li><a href="#using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li>
+                <!--li><a href="#exposing_apis_from_actions">Exposing APIs from Actions</a></li-->
+                <li><a href="#sample_openwhisk_applications">Sample OpenWhisk Applications</a></li>
+                <li><a href="#tutorial_and_workshop">Tutorial And Workshop</a></li>
+                <li><a href="#development_tools">Development Tools</a></li>
+            </ul>
 
             <!-- Contributors -->
             <li><a href="#contributors">Contributors</a></li>
@@ -182,7 +162,7 @@ layout: default
                 </div>
                 <div class="project-structure-repo theme-deeper-sky-blue">
                     <h4>Runtimes</h4>
-                    <p>OpenWhisk supports several languages and runtimes.</p>
+                    <p>OpenWhisk supports several languages via Docker runtime containers.</p>
                     <p class="repo-title border-deeper-sky-blue">
                         <a
                             href="https://github.com/apache/incubator-openwhisk-runtime-nodejs"
@@ -325,7 +305,7 @@ layout: default
                 </div>
                 <div class="project-structure-repo theme-darksalmon">
                     <h4>Packages</h4>
-                    <p>Several packages are registered with OpenWhisk under /whisk.system/. These are the list of packages:</p>
+                    <p>Several common service integrations are made available as packages. By default they are registered in the catalog under /whisk.system/ and include:</p>
                     <p class="repo-title border-darksalmon">
                         <a
                             href="https://github.com/apache/incubator-openwhisk-package-alarms"
@@ -514,8 +494,8 @@ layout: default
     <!-- Deployment section under Operator -->
     <main class="doc">
         <div class="content">
-            <a class="indexable" id="openwhisk_deployment"></a>
-            <h3>OpenWhisk Deployment</h3>
+            <a class="indexable" id="openwhisk_architecture"></a>
+            <h3>OpenWhisk Architecture</h3>
             <img style="padding-top:20px;" width="400px" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
             <p>
                 The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
@@ -523,6 +503,8 @@ layout: default
                 You can read about the list of OpenWhisk components and its internal flow of processing
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">here</a>.
             </p>
+            <a class="indexable" id="openwhisk_deployment"></a>
+            <h3>OpenWhisk Deployment</h3>
             <p>
                 OpenWhisk supports different installation methods for core OpenWhisk components.
                 You can choose one of the following deployment methods based on your platform:
@@ -703,10 +685,11 @@ $ brew install wsk
 
 
             <a class="indexable" id="wsk-cli"></a>
-            <h5>Configure the wsk CLI</h5>
+            <h5>OpenWhisk CLI</h5>
             <p>
                 OpenWhisk offers wsk Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
             </p>
+            <h6>Configuring the CLI</h6>
             <ul>
                 <li>
                     <strong>CLI Help:</strong>
