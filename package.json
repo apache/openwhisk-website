@@ -28,8 +28,5 @@
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^2.5.0"
-  },
-  "dependencies": {
-    "latest-version": "^4.0.0"
   }
 }
