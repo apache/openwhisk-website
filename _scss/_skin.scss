@@ -1,11 +1,11 @@
 * {
-    box-sizing: border-box;
-    background: none;
-    border: 0
+  box-sizing: border-box;
+  background: none;
+  border: 0;
 }
 
 body {
-    font-family: $font-family-default;
+  font-family: $font-family-default;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,28 +14,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: $h1-font-size;
-    line-height: $h1-line-height;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
 }
 
 h2 {
-    font-size: $h2-font-size;
-    line-height: $h2-line-height;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
 }
 
 h3 {
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
 }
 
 h4 {
-    font-size: $h4-font-size;
-    line-height: $h4-line-height;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
 }
 
 h5 {
-    font-size: $h5-font-size;
-    line-height: $h5-line-height;
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
 }
 
 h6 {
@@ -51,12 +51,15 @@ p, ul, ol, li {
     color: $color-blue-dark-text;
 }
 
-a, a:visited, a:hover, a:active {
-    color: $color-anchors;
+a,
+a:visited,
+a:hover,
+a:active {
+  color: $color-anchors;
 }
 
 a.button {
-    color: $color-white;
+  color: $color-white;
 }
 
 // The syntax highlighter uses the "figure" element, but we want to override its default margins
@@ -65,35 +68,35 @@ figure {
 }
 
 .button {
-    background-color: $color-blue-dark;
-    border-bottom: solid 3px #b2b1b1;
-    border-radius: 6px;
-    border: solid 1px $color-gray-percent-82;
-    box-shadow: inset 0 0 0 1px $color-gray-percent-96;
-    color: $color-blue-dark;
-    display: inline-block;
-    font-family: $font-family-default;
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 40px;
-    padding: 0 20px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba($color-blue-dark, 0.6);
+  background-color: $color-blue-dark;
+  border-bottom: solid 3px #b2b1b1;
+  border-radius: 6px;
+  border: solid 1px $color-gray-percent-82;
+  box-shadow: inset 0 0 0 1px $color-gray-percent-96;
+  color: $color-blue-dark;
+  display: inline-block;
+  font-family: $font-family-default;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba($color-blue-dark, 0.6);
 }
 
 .button:hover {
-    background: $color-blue-gray-medium;
-    border: solid 1px $color-gray-percent-76;
-    border-bottom: solid 3px $color-gray-percent-70;
-    box-shadow: inset 0 0 0 1px $color-gray-percent-94;
+  background: $color-blue-gray-medium;
+  border: solid 1px $color-gray-percent-76;
+  border-bottom: solid 3px $color-gray-percent-70;
+  box-shadow: inset 0 0 0 1px $color-gray-percent-94;
 }
 
 .button:active {
-    background: #dfdfdf;
-    border: solid 1px $color-gray-percent-56;
-    box-shadow: inset 0 10px 15px 0 $color-gray-percent-78;
-    top:2px;
+  background: #dfdfdf;
+  border: solid 1px $color-gray-percent-56;
+  box-shadow: inset 0 10px 15px 0 $color-gray-percent-78;
+  top: 2px;
 }
