@@ -16,6 +16,7 @@ layout: default
             <!-- Operators -->
             <li class="collapsible-toggle"><a href="#operators">Operators</a></li>
             <ul class="collapse-content">
+                <li><a href="#openwhisk_architecture">OpenWhisk Architecture</a></li>
                 <li class="collapsible-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
                 <ul class="collapse-content">
                     <li><a href="#deploy_docker_compose">Docker Compose</a></li>
@@ -35,10 +36,10 @@ layout: default
                 <li><a href="#pre-requisites">Pre-requisites</a></li>
                 <li class="collapsible-toggle"><a href="#using-openwhisk">Using OpenWhisk</a></li>
                 <ul class="collapse-content">
-                    <li><a href="#wsk-cli">Configuring wsk CLI</a></li>
-                    <li><a href="#wskdeploy">Deployment Tool - wskdeploy</a></li>
+                    <li><a href="#wsk-cli">OpenWhisk CLI (wsk)</a></li>
+                    <li><a href="#wskdeploy">Whisk Deploy (wskdeploy)</a></li>
                     <li><a href="#rest-api">OpenWhisk REST API</a></li>
-                    <li><a href="#openwhisk-clients">OpenWhisk Clients</a></li>
+                    <li><a href="#openwhisk-clients">OpenWhisk Clients (language)</a></li>
                 </ul>
                 <li class="collapsible-toggle"><a href="#actions">Actions</a></li>
                 <ul class="collapse-content">
@@ -492,8 +493,8 @@ layout: default
     <!-- Deployment section under Operator -->
     <main class="doc">
         <div class="content">
-            <a class="indexable" id="openwhisk_deployment"></a>
-            <h3>OpenWhisk Deployment</h3>
+            <a class="indexable" id="openwhisk_architecture"></a>
+            <h3>OpenWhisk Architecture</h3>
             <img style="padding-top:20px;" width="400px" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
             <p>
                 The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
@@ -501,6 +502,8 @@ layout: default
                 You can read about the list of OpenWhisk components and its internal flow of processing
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">here</a>.
             </p>
+            <a class="indexable" id="openwhisk_deployment"></a>
+            <h3>OpenWhisk Deployment</h3>
             <p>
                 OpenWhisk supports different installation methods for core OpenWhisk components.
                 You can choose one of the following deployment methods based on your platform:
@@ -634,10 +637,11 @@ $ make quick-start
                 Also, use the <strong>192.168.33.13</strong> address as the whisk API host.
             </p>
             <a class="indexable" id="wsk-cli"></a>
-            <h5>Configure the wsk CLI</h5>
+            <h5>OpenWhisk CLI</h5>
             <p>
                 OpenWhisk offers wsk Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
             </p>
+            <h6>Configuring the CLI</h6>
             <ul>
                 <li>
                     <strong>Download the wsk CLI:</strong>
@@ -756,7 +760,7 @@ $ wsk list
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
                     is the list of runtimes supported by OpenWhisk:
                 </p>
-                
+
                 <ul>
                     <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
                     <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
@@ -766,7 +770,7 @@ $ wsk list
                     <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
                     <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
                 </ul>
-                
+
                 <p>
                     While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
                     invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
@@ -782,7 +786,7 @@ $ wsk list
                     <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
                     once you have followed the guide on creating a new language/runtimes. Here are some examples of runtimes added by community:
                 </p>
-            
+
                 <ul>
                     <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
                     <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>

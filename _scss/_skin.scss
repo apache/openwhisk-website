@@ -8,7 +8,7 @@ body {
     font-family: $font-family-default;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: $font-weight-bold;
     margin: 0;
 }
@@ -36,6 +36,12 @@ h4 {
 h5 {
     font-size: $h5-font-size;
     line-height: $h5-line-height;
+}
+
+h6 {
+    font-size: $h6-font-size;
+    font-style: italic;
+    line-height: $h6-line-height;
 }
 
 p, ul, ol, li {
