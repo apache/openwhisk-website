@@ -81,11 +81,11 @@ footer {
 #whiskFooter {
 }
 
-.whiskIndexedLayout {
+#whiskIndexedLayout {
   display: table;
   padding-top: $whisk-header-base-padding-top;
 
-  .whiskIndex {
+  #whiskIndex {
     //vertical-align: top;
     // position menu relative to header
     display: float;
@@ -279,24 +279,15 @@ footer {
   cursor: pointer; // finger shown to let ppl know you can click it
 }
 
-.collapsible-toggle > a {
-  background: url(../images/elements/arrow-right-12px.png) center left no-repeat;
-  padding-left: 18px !important;
+.collapsible-toggle:hover {
+  background-color: $color-menu-collapsible-hover-bg;
 }
 
-.collapsible-toggle.collapsible-toggle-toggled > a {
-  background-image: url(../images/elements/arrow-down-12px.png);
-}
-
-.collapsible-toggle > .collapse-content {
-  margin-left: 20px;
+.collapse-content {
+  padding: 0 18px;
   display: none;
   overflow: hidden;
-}
-
-.collapsible-toggle.collapsible-toggle.collapsible-toggle-toggled
-  > .collapse-content {
-  display: block;
+  background-color: white;
 }
 
 /*
@@ -313,7 +304,7 @@ a.indexable {
   visibility: hidden;
 }
 
-.whiskIndex {
+#whiskIndex {
   // Note: we will turn this off for small/base media, allow other profiles to turn on.
   display: none;
   background-color: $color-index-bg;
@@ -336,18 +327,21 @@ a.indexable {
   li {
     background-color: $color-index-item-bg;
     color: $color-index-fg;
+    border: $index-item-border;
     font-size: $index-menu-font-size;
     font-weight: $index-menu-font-weight;
-    padding: 0;
+    padding: $index-menuitem-padding;
     line-height: $index-menuitem-line-height;
 
     // Control index-item (anchor) text color regardless by state
     a {
-      border: $index-item-border;
       color: $color-index-fg;
       text-decoration: none;
       display: block;
-      padding: $index-menuitem-padding;
+    }
+    a:hover {
+      // use different color on index-item hover
+      color: $color-index-fg-highlight;
     }
     a:visited {
       color: $color-index-fg;
@@ -355,11 +349,13 @@ a.indexable {
     a:active {
       color: $color-index-fg;
     }
-    a:hover {
-      // use different color on index-item hover
+  }
+
+  li:hover {
+    background-color: $color-index-bg-highlight;
+    font-weight: $index-menuitem-font-weight-hover;
+    a {
       color: $color-index-fg-highlight;
-      background-color: $color-index-bg-highlight;
-      font-weight: $index-menuitem-font-weight-hover;
     }
   }
 }

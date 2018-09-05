@@ -19,11 +19,11 @@
   }
 
   // "Turn on" left index in this profile, as we have width to support it
-  .whiskIndexedLayout {
+  #whiskIndexedLayout {
     padding-top: $whisk-header-tablet-padding-top;
 
     // Show the index area
-    .whiskIndex {
+    #whiskIndex {
       display: block;
     }
 
