@@ -15,11 +15,11 @@
     padding-top: $whisk-header-desktop-padding-top;
   }
 
-  .whiskIndexedLayout {
+  #whiskIndexedLayout {
     // This padding applies to all content pages (no banner)
     padding-top: $whisk-header-desktop-padding-top;
 
-    .whiskIndex {
+    #whiskIndex {
       top: $index-menu-top-offset-desktop;
     }
 
