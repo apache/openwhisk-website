@@ -16,6 +16,7 @@ layout: default
             <!-- Operators -->
             <li class="collapsible-toggle"><a href="#operators">Operators</a></li>
             <ul class="collapse-content">
+                <li><a href="#openwhisk_architecture">OpenWhisk Architecture</a></li>
                 <li class="collapsible-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
                 <ul class="collapse-content">
                     <li><a href="#deploy_docker_compose">Docker Compose</a></li>
@@ -35,9 +36,12 @@ layout: default
                 <li><a href="#pre-requisites">Pre-requisites</a></li>
                 <li class="collapsible-toggle"><a href="#using-openwhisk">Using OpenWhisk</a></li>
                 <ul class="collapse-content">
-                    <li><a href="#wsk-cli-install">Installing wsk CLI</a></li>
-                    <li><a href="#wsk-cli">Configuring wsk CLI</a></li>
-                    <li><a href="#wskdeploy">Deployment Tool - wskdeploy</a></li>
+                    <li class="collapsible-toggle"><a href="#wsk-cli">OpenWhisk CLI (wsk)</a></li>
+                    <ul class="collapse-content">
+                        <li><a href="#wsk-cli-install">Installing</a></li>
+                        <li><a href="#wsk-cli-configure">Configuring</a></li>
+                    </ul>
+                    <li><a href="#wskdeploy">Whisk Deploy (wskdeploy)</a></li>
                     <li><a href="#rest-api">OpenWhisk REST API</a></li>
                     <li><a href="#openwhisk-clients">OpenWhisk Clients</a></li>
                 </ul>
@@ -161,7 +165,7 @@ layout: default
                 </div>
                 <div class="project-structure-repo theme-deeper-sky-blue">
                     <h4>Runtimes</h4>
-                    <p>OpenWhisk supports several languages and runtimes.</p>
+                    <p>OpenWhisk supports several languages via Docker runtime containers.</p>
                     <p class="repo-title border-deeper-sky-blue">
                         <a
                             href="https://github.com/apache/incubator-openwhisk-runtime-nodejs"
@@ -304,7 +308,7 @@ layout: default
                 </div>
                 <div class="project-structure-repo theme-darksalmon">
                     <h4>Packages</h4>
-                    <p>Several packages are registered with OpenWhisk under /whisk.system/. These are the list of packages:</p>
+                    <p>Several common service integrations are made available as packages. By default they are registered in the OpenWHisk catalog, under the <em>/whisk.system/</em> namespace, and include:</p>
                     <p class="repo-title border-darksalmon">
                         <a
                             href="https://github.com/apache/incubator-openwhisk-package-alarms"
@@ -493,8 +497,8 @@ layout: default
     <!-- Deployment section under Operator -->
     <main class="doc">
         <div class="content">
-            <a class="indexable" id="openwhisk_deployment"></a>
-            <h3>OpenWhisk Deployment</h3>
+            <a class="indexable" id="openwhisk_architecture"></a>
+            <h3>OpenWhisk Architecture</h3>
             <img style="padding-top:20px;" width="400px" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
             <p>
                 The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
@@ -502,9 +506,10 @@ layout: default
                 You can read about the list of OpenWhisk components and its internal flow of processing
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">here</a>.
             </p>
+            <a class="indexable" id="openwhisk_deployment"></a>
+            <h3>OpenWhisk Deployment</h3>
             <p>
-                OpenWhisk supports different installation methods for core OpenWhisk components.
-                You can choose one of the following deployment methods based on your platform:
+                OpenWhisk supports different installation methods for core OpenWhisk platform components. You can choose one of the following deployment methods based on your platform:
             </p>
             <a class="indexable" id="deploy_docker_compose"></a>
             <h4>Docker Compose</h4>
@@ -586,7 +591,7 @@ $ make quick-start
     <main class="doc">
         <div class="content">
             <a class="indexable" id="operators_resources"></a>
-            <h3>Operators Resources</h3>
+            <h3>Operator Resources</h3>
             <ul>
                 <li><a href="https://medium.com/openwhisk/five-minute-intro-to-open-source-serverless-development-with-openwhisk-328b0ebfa160">Five minute intro to open source serverless development with OpenWhisk</a></li>
                 <li><a href="https://thenewstack.io/behind-scenes-apache-openwhisk-serverless-platform/">An Architectural View of Apache OpenWhisk</a></li>
@@ -640,9 +645,14 @@ $ make quick-start
 
     <main class="doc">
         <div class="content">
+            <a class="indexable" id="wsk-cli"></a>
+            <h4>OpenWhisk CLI (wsk)</h4>
+            <p>
+                OpenWhisk offers the <em>wsk</em> Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
+            </p>
 
             <a class="indexable" id="wsk-cli-install"></a>
-            <h5>Install the wsk CLI</h5>
+            <h5>Installing</h5>
 
             <h6>Install the wsk with Homebrew (Mac &amp; Linux)</h6>
             <p>To easily install the OpenWhisk CLI (wsk) you can use <a href="https://brew.sh">Homebrew for Mac</a> or <a href="http://linuxbrew.sh">Homebrew for Linux</a>.</p>
@@ -674,18 +684,8 @@ $ brew install wsk
 
             <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
 
-        </div>
-    </main>
-
-    <main class="doc">
-        <div class="content">
-
-
-            <a class="indexable" id="wsk-cli"></a>
-            <h5>Configure the wsk CLI</h5>
-            <p>
-                OpenWhisk offers wsk Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
-            </p>
+            <a class="indexable" id="wsk-cli-verify"></a>
+            <h5>Verifying</h5>
             <ul>
                 <li>
                     <strong>CLI Help:</strong>
@@ -694,6 +694,10 @@ $ brew install wsk
 {% highlight bash %}$ wsk --help{% endhighlight %}
                     </div>
                 </li>
+            </ul>
+            <a class="indexable" id="wsk-cli-configure"></a>
+            <h5>Configuring</h5>
+            <ul>
                 <li id="authentication">
                     <strong>Authenticate wsk CLI</strong>
                     <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
@@ -721,11 +725,17 @@ $ wsk list
                     </ul>
                 </li>
             </ul>
+
+        </div>
+    </main>
+
+    <main class="doc">
+        <div class="content">
             <a class="indexable" id="wskdeploy"></a>
-            <h5>Whisk Deploy</h5>
+            <h4>Whisk Deploy (wskdeploy)</h4>
             <p>
                 <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
-                is an utility to help deploy all your OpenWhisk Packages, Actions, Triggers, and Rules using a single command.
+                is a utility, named <em>wskdeploy</em>, to help deploy and manage all your OpenWhisk Packages, Actions, Triggers, Rules and APIs using a single command.
             </p>
             <ul>
                 <li>
@@ -761,16 +771,26 @@ $ wsk list
                     </ul>
                 </li>
             </ul>
+        </div>
+    </main>
+
+    <main class="doc">
+        <div class="content">
             <a class="indexable" id="rest-api"></a>
-            <h5>OpenWhisk REST API</h5>
+            <h4>OpenWhisk REST API</h4>
             <p>
                 After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
                 For more details about the APIs for actions, activations, packages, rules, and triggers, see the
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
                 documentation.
             </p>
+        </div>
+    </main>
+
+    <main class="doc">
+        <div class="content">
             <a class="indexable" id="openwhisk-clients"></a>
-            <h5>OpenWhisk Clients</h5>
+            <h4>OpenWhisk Clients</h4>
             <p>OpenWhisk provides a wrapper around the OpenWhisk APIs in multiple different languages.:</p>
             <ul>
                 <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md">JavaScript</a></li>
@@ -788,7 +808,7 @@ $ wsk list
                 <h4>Actions</h4>
                 <p>
                     <strong>What is an OpenWhisk action?</strong>
-                    Actions are stateless functions(code snippets) that run on the OpenWhisk platform.
+                    Actions are stateless functions (code snippets) that run on the OpenWhisk platform.
                     Actions encapsulates application logic to be executed in response to events.
                     You can find more details on specifics of an action in main OpenWhisk GitHub repo at
                     <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">incubator-openwhisk</a>.

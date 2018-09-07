@@ -39,24 +39,19 @@ h5 {
 }
 
 h6 {
-  font-size: $h6-font-size;
-  line-height: $h6-line-height;
+    font-size: $h6-font-size;
+    font-style: italic;
+    line-height: $h6-line-height;
 }
 
-p,
-ul,
-ol,
-li {
-  font-size: $p-font-size;
-  font-weight: $p-font-weight;
-  line-height: $p-line-height;
-  color: $color-blue-dark-text;
+p, ul, ol, li {
+    font-size: $p-font-size;
+    font-weight: $p-font-weight;
+    line-height: $p-line-height;
+    color: $color-blue-dark-text;
 }
 
-a,
-a:visited,
-a:hover,
-a:active {
+a, a:visited, a:hover, a:active {
   color: $color-anchors;
 }
 
