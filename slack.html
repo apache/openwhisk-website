@@ -1,0 +1,258 @@
+<!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+        <title>Join OpenWhisk Slack</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main-v1.css">
+        <!-- Load Index, Menu & collapsible support -->
+        <script type="text/javascript">
+            
+function applyCollapsible() {
+
+    var coll = document.getElementsByClassName("collapsible-toggle");
+    var i;
+
+    // Apply exapandable (arrows) to all menuitems with a sibling
+    for (i = 0; i < coll.length; i++) {
+      var sibling = coll[i].nextElementSibling;
+
+      if(sibling!==null){
+          coll[i].style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+          // (top right bottom left)
+          sibling.style.padding = "0px 0px 0px 20px";
+      }
+
+      // Set "click" event listener on all menuitems
+      coll[i].addEventListener("click", function() {
+        var sibling = this.nextElementSibling;
+        // toggle menu open/close states
+        if(sibling!==null){
+          if (sibling.style.display === "block") {
+            this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+            sibling.style.display = "none";
+          } else {
+            this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+            sibling.style.display = "block";
+          }
+        }
+
+      });
+    }
+}
+
+function openIndex() {
+          console.log("openIndex")
+  document.getElementById("index").style.display = "block";
+}
+function closeIndex() {
+            console.log("closeIndex")
+  document.getElementById("index").style.display = "none";
+}
+
+        </script>
+    </head>
+    <!-- Once all page elements are included, register event hooks -->
+    <body onload="applyCollapsible()">
+        <script src="js/main.min.js"></script>
+        <div class="header">
+
+    <a class="header-section-logo" href="/">
+    </a>
+    <div class="header-section-text-links">
+        <div class="header-row-text-links">
+            <a class="header-text-link" href="/documentation.html">Documentation</a>
+            <a class="header-text-link" href="/community.html">Community</a>
+            <a class="header-text-link" href="/downloads.html">Downloads</a>
+        </div>
+    </div>
+    <div class="header-section-social-icons">
+        <div class="header-row-social-icons">
+            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
+                <img class="header-icon-image" alt="Github" src="/images/icons/icon-github-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
+                <img class="header-icon-image" alt="Slack" src="/images/icons/icon-slack-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
+                <img class="header-icon-image" alt="Twitter" src="/images/icons/icon-twitter-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
+                <img class="header-icon-image" alt="Medium" src="/images/icons/icon-medium-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
+                <img class="header-icon-image" alt="YouTube" src="/images/icons/icon-youtube-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
+                <img class="header-icon-image" alt="Overflow" src="/images/icons/icon-stack-overflow-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
+                <img class="header-icon-image" alt="SlideShare" src="/images/icons/icon-slideshare-white.svg">
+            </a>
+        </div>
+    </div>
+</div>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+  crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+
+<section id="whiskHeader" class="light-text bot-bar">
+    <main>
+        <div>
+        </div>
+    </main>
+</section>
+
+<section id="whiskNodes">
+    <main class="doc">
+        <div class="content">
+            <h3>Already a Team member?</h3>
+            <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
+            <h3>If not, join us!</h3>
+            <p>Join the OpenWhisk Community to discuss the project in real-time.</p>
+            <ul style="text-align: left">
+                <li><strong>Talk</strong> to the core devs and the OpenWhisk community.</li>
+                <li><strong>Learn</strong> from others and ask questions.</li>
+                <li><strong>Share</strong> your work and demos.</li>
+            </ul>
+            <form>
+                <div>
+                    <label for="exampleInputEmail2">Email:</label>
+                    <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email">
+                </div>
+                <button type="button" class="btn btn-primary" style="margin:5px;">Send invitation</button>
+            </form>
+            <p></p>
+            <p>We are a friendly, respectful and inclusive community!</p>
+            <a href="https://openwhisk-team.slack.com/"></a>
+            <p>
+                <i>Code for Slack invite (this page) is on github:</i><br><i> </i><i>
+                <a href="https://github.com/openwhisk/openwhisk-slackinvite" target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i>
+            </p>
+        </div>
+    </main>
+</section>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var btn = $("button");
+    var res = $("#result");
+    var email = $('#inputEmail');
+    var actionUrl = "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/3e172721d7ba44ac0cb5633eae516fb1284fd9a45633e4172dbe7a780b6572c6/api/slackinvite";
+    function handler() {
+      var email = $("input")[0].value;
+      $.get(actionUrl, { email: email })
+        .done(function (data) {
+          btn.addClass("btn-success");
+          btn.html("WOOT. CHECK YOUR EMAIL!");
+          res.html(data.message);
+        })
+        .fail(function (err) {
+          res.html(err.statusText + ":Your invitation didn't work :-( ");
+          btn.addClass("btn-error");
+        });
+    }
+    btn.click(handler);
+    btn.prop("disabled", true);
+
+    function validate() {
+      console.log("validate")
+      if (email[0].validity.typeMismatch) {
+        btn.prop("disabled", true);
+      } else {
+        btn.prop("disabled", false);
+      }
+    }
+    email.keyup(validate);
+  })
+
+</script>
+        <!--
+/*
+ *   Required ASF website links (scanned)
+ *
+ *   Name: Regex: URL
+ *   ====  =====  ===
+ *   Foundation:  apache|asf|foundation:                        http://www.apache.org/
+ *   Events:      ^https?://.*apache.org/events/current-event:  See: https://www.apache.org/events/README.txt
+ *   License:     ^https?://.*apache.org/licenses/$:            http://www.apache.org/licenses/
+ *   Thanks:      ^https?://.*apache.org/foundation/thanks:     http://www.apache.org/foundation/thanks.html
+ *   Security:    ^https?://.*apache.org/.*[Ss]ecurity:         http://www.apache.org/security/
+ *   Sponsorship: ^https?://.*apache.org/foundation/sponsorship http://www.apache.org/foundation/sponsorship.html
+ *   Trademarks:  \btrademarks\b All project or product homepages must feature a prominent trademark attribution of all applicable Apache trademarks.
+ *   Copyright:   ((Copyright|©).*apache|apache.*(Copyright|©)): All website content SHOULD include a copyright notice for the ASF.
+ *   Image:       .   Projects SHOULD include a 212px wide copy of their logo in https://www.apache.org/img/ to be included in ASF homepage.
+ *                    See: https://www.apache.org/img/
+ */
+-->
+
+<footer class="footer light-text">
+  <main class="footer-row">
+    <div>
+        <div class="footer-row-text-links">
+            <a class="" href="http://www.apache.org/">Apache&nbsp;Software&nbsp;Foundation</a>
+            <a class="" href="https://apache.org/events/current-event">Events</a>
+            <a class="" href="http://www.apache.org/licenses/">License</a>
+            <a class="" href="http://www.apache.org/security/">Security</a>
+            <a class="" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+            <a class="" href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+        </div>
+    </div>
+  </main>
+  <main class="footer-row">
+    <div>
+      Apache OpenWhisk, OpenWhisk, Apache, the Apache feather logo, and
+      the Apache OpenWhisk project logo are either registered trademarks
+      or trademarks of The Apache Software Foundation
+      in the United States and other countries.
+      See guidance on use of Apache OpenWhisk trademarks.
+      All other marks mentioned may be trademarks or registered trademarks
+      of their respective owners.
+    </div>
+  </main>
+  <main class="footer-row">
+      <div>
+          Apache OpenWhisk is an effort undergoing incubation at The Apache
+          Software Foundation (ASF), sponsored by the Incubator.
+          Incubation is required of all newly accepted projects until a further
+          review indicates that the infrastructure, communications, and decision
+          making process have stabilized in a manner consistent with other
+          successful ASF projects. While incubation status is not necessarily a
+          reflection of the completeness or stability of the code,
+          it does indicate that the project has yet to be fully endorsed
+          by the ASF.
+      </div>
+  </main>
+  <main class="footer-row">
+      Copyright © 2016-present The Apache Software Foundation,
+      Licensed under the Apache License, Version 2.0.
+  </main>
+</footer>
+
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="33.854946mm"
+   height="40.217831mm"
+   viewBox="0 0 33.854946 40.217831"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="drawing-satellite-dish.svg"
+   enable-background="new">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath924">
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:0.8"
+         id="rect926"
+         width="33.708839"
+         height="40.022179"
+         x="166.24661"
+         y="213.6862" />
+    </clipPath>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1385">
+      <feBlend
+         inkscape:collect="always"
+         mode="lighten"
+         in2="BackgroundImage"
+         id="feBlend1387" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.9406467"
+     inkscape:cx="63.97785"
+     inkscape:cy="76.002196"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="964"
+     inkscape:window-x="21"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="dish"
+     id="layer1"
+     transform="translate(-182.93666,-219.4011)"
+     style="display:inline;filter:url(#filter1385)">
+    <path
+       style="display:inline;fill:#7f7f7f;fill-opacity:1;stroke:none;stroke-width:0.35277778;stroke-opacity:0.49803922"
+       d="m 204.14044,258.63139 c -0.41636,-0.30445 -0.58707,-0.80651 -0.50839,-1.49513 0.10257,-0.89769 0.2983,-1.06575 1.45931,-1.2529 0.73747,-0.11888 1.49021,-0.3655 1.67275,-0.54804 0.50213,-0.50213 1.16125,-4.20112 0.91412,-5.13005 -0.49164,-1.84803 -0.72437,-1.90618 -2.92976,-0.73208 -5.71727,3.04376 -13.15044,2.66563 -18.7505,-0.95386 -1.19867,-0.77475 -2.17941,-1.56821 -2.17941,-1.76325 0,-0.19504 2.46062,-2.92525 5.46805,-6.06712 3.00744,-3.14187 5.46279,-5.96231 5.45634,-6.26765 -0.006,-0.30534 -0.44957,-1.18853 -0.98472,-1.96266 -0.75713,-1.09521 -1.2686,-1.45554 -2.30529,-1.62405 -2.35266,-0.38241 -3.30296,-2.27464 -1.98427,-3.95108 1.49281,-1.8978 4.22767,-0.80854 4.22767,1.68383 0,1.10957 0.17599,1.3281 1.83074,2.27317 1.00692,0.57507 2.01106,0.93547 2.23143,0.80088 0.22038,-0.13458 2.74484,-2.70532 5.60991,-5.71275 2.86507,-3.00743 5.4624,-5.46805 5.77184,-5.46805 0.8605,0 3.41853,4.10311 4.34424,6.96819 1.63437,5.05844 0.88748,11.20016 -1.92995,15.87018 l -1.22138,2.02449 1.02935,0.73296 c 1.3393,0.95366 1.63599,2.19523 0.89561,3.74783 -0.44709,0.93755 -0.50768,1.5264 -0.25936,2.52041 0.17822,0.71338 0.42199,1.73216 0.54171,2.26396 0.18001,0.7996 0.45969,1.00561 1.61622,1.19055 0.7692,0.123 1.57801,0.43989 1.79737,0.7042 0.58959,0.71041 0.0973,2.13653 -0.82262,2.38303 -1.60896,0.43113 -10.33517,0.24455 -10.99101,-0.23501 z"
+       id="path1044"
+       inkscape:connector-curvature="0"
+       inkscape:label="gray - 127" />
+    <path
+       style="display:inline;fill:#5aaafa;fill-opacity:1;stroke:none;stroke-width:0.35277778;stroke-opacity:1"
+       d="m 203.64467,258.66643 c -1.13257,-1.13257 -0.0489,-3.10445 1.70612,-3.10445 1.18682,0 1.50787,-0.48238 2.05972,-3.0948 0.30283,-1.4336 0.29227,-2.04025 -0.046,-2.64584 -0.24143,-0.43216 -0.46759,-0.84083 -0.50257,-0.90815 -0.035,-0.0673 -1.06686,0.36604 -2.29306,0.96302 -1.32033,0.64281 -3.52132,1.3066 -5.39754,1.62782 -2.8541,0.48865 -3.45675,0.48832 -6.0806,-0.003 -1.60188,-0.30016 -3.64364,-0.85915 -4.53724,-1.24219 -1.90686,-0.81738 -4.61488,-2.69433 -4.87851,-3.38135 -0.11078,-0.2887 1.99458,-2.75192 5.27124,-6.16722 3.00064,-3.12759 5.4557,-5.92817 5.4557,-6.22351 0,-0.60051 -1.34693,-2.94781 -1.92165,-3.34888 -0.20427,-0.14255 -0.87834,-0.26162 -1.49793,-0.26459 -1.35859,-0.007 -2.22486,-1.05939 -2.22486,-2.70412 0,-1.31093 1.33961,-2.59295 2.70944,-2.59295 1.27484,0 2.58222,1.49312 2.58222,2.94906 0,1.07141 0.19208,1.32979 1.60331,2.15683 0.88181,0.51678 1.74333,0.88905 1.91448,0.82727 0.17114,-0.0618 2.71516,-2.65232 5.65337,-5.75677 2.93821,-3.10444 5.54986,-5.69205 5.80367,-5.75023 0.51584,-0.11825 2.53035,2.49268 3.6796,4.76899 1.7043,3.37567 2.28497,9.13315 1.33019,13.18922 -0.25601,1.08758 -1.10925,3.17094 -1.89609,4.62969 l -1.43061,2.65226 1.05665,0.92719 c 0.96356,0.84552 1.0353,1.05922 0.81432,2.42587 -0.67194,4.1556 -0.0223,6.70834 1.75844,6.90976 0.58065,0.0657 1.25417,0.28354 1.4967,0.48416 0.64494,0.53347 0.56006,2.62663 -0.11704,2.88646 -1.09369,0.41968 -11.62505,0.23717 -12.07143,-0.2092 z"
+       id="path1046"
+       inkscape:connector-curvature="0"
+       inkscape:label="blue - 5aaafa" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path1395"
+       d="m 208.23078,249.84698 c -0.23283,-0.23283 -0.42333,-0.66071 -0.42333,-0.95083 0,-0.82636 1.80942,-2.50639 2.69942,-2.50639 1.39799,0 2.0595,2.24624 0.97955,3.32619 -0.65447,0.65447 -2.65181,0.73486 -3.25564,0.13103 z"
+       style="display:inline;fill:#325c80;fill-opacity:1;stroke:none;stroke-width:0.35277778;stroke-opacity:0.49803922"
+       inkscape:label="joint" />
+  </g>
+</svg>

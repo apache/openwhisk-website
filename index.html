@@ -1,0 +1,345 @@
+<!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+        <title>Apache OpenWhisk is a serverless, open source cloud platform</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main-v1.css">
+        <!-- Load Index, Menu & collapsible support -->
+        <script type="text/javascript">
+            
+function applyCollapsible() {
+
+    var coll = document.getElementsByClassName("collapsible-toggle");
+    var i;
+
+    // Apply exapandable (arrows) to all menuitems with a sibling
+    for (i = 0; i < coll.length; i++) {
+      var sibling = coll[i].nextElementSibling;
+
+      if(sibling!==null){
+          coll[i].style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+          // (top right bottom left)
+          sibling.style.padding = "0px 0px 0px 20px";
+      }
+
+      // Set "click" event listener on all menuitems
+      coll[i].addEventListener("click", function() {
+        var sibling = this.nextElementSibling;
+        // toggle menu open/close states
+        if(sibling!==null){
+          if (sibling.style.display === "block") {
+            this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+            sibling.style.display = "none";
+          } else {
+            this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+            sibling.style.display = "block";
+          }
+        }
+
+      });
+    }
+}
+
+function openIndex() {
+          console.log("openIndex")
+  document.getElementById("index").style.display = "block";
+}
+function closeIndex() {
+            console.log("closeIndex")
+  document.getElementById("index").style.display = "none";
+}
+
+        </script>
+    </head>
+    <!-- Once all page elements are included, register event hooks -->
+    <body onload="applyCollapsible()">
+        <script src="js/main.min.js"></script>
+        <div class="header">
+
+    <a class="header-section-logo" href="/">
+    </a>
+    <div class="header-section-text-links">
+        <div class="header-row-text-links">
+            <a class="header-text-link" href="/documentation.html">Documentation</a>
+            <a class="header-text-link" href="/community.html">Community</a>
+            <a class="header-text-link" href="/downloads.html">Downloads</a>
+        </div>
+    </div>
+    <div class="header-section-social-icons">
+        <div class="header-row-social-icons">
+            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
+                <img class="header-icon-image" alt="Github" src="/images/icons/icon-github-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
+                <img class="header-icon-image" alt="Slack" src="/images/icons/icon-slack-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
+                <img class="header-icon-image" alt="Twitter" src="/images/icons/icon-twitter-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
+                <img class="header-icon-image" alt="Medium" src="/images/icons/icon-medium-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
+                <img class="header-icon-image" alt="YouTube" src="/images/icons/icon-youtube-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
+                <img class="header-icon-image" alt="Overflow" src="/images/icons/icon-stack-overflow-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
+                <img class="header-icon-image" alt="SlideShare" src="/images/icons/icon-slideshare-white.svg">
+            </a>
+        </div>
+    </div>
+</div>
+
+        <!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+<section id="whiskHeader" class="light-text bot-bar">
+    <main>
+        <div>
+            <h1>Open Source Serverless Cloud Platform</h1>
+            <h5>Executes functions in response to events at any scale</h5>
+        </div>
+    </main>
+</section>
+
+<section id="whiskNodes">
+    <main>
+        <a class="indexable" id="what-is-openwhisk"></a>
+        <div class="content">
+            <h4>What is Apache OpenWhisk?</h4>
+            <p>
+                Apache OpenWhisk (Incubating) is an open source, distributed <a href="https://en.wikipedia.org/wiki/Serverless_computing" style="font-weight:bold">Serverless</a> platform that executes functions (<span style="font-family:Times New Roman,Georgia,Serif">fx</span>) in response to events at any scale. OpenWhisk manages the infrastructure, servers and scaling using Docker containers so you can focus on building amazing and efficient applications.
+            </p>
+            <p>
+                The OpenWhisk platform supports a programming model in which developers write functional logic (called <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md"><span style="font-weight:bold">Actions</span></a>), in any supported programming language, that can be dynamically scheduled and run in response to associated events (via <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md"><span style="font-weight:bold">Triggers</span></a>) from external sources (<a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/feeds.md"><span style="font-weight:bold">Feeds</span></a>) or from HTTP requests. The project includes a REST API-based Command Line Interface (CLI) along with other tooling to support packaging, catalog services and many popular container deployment options.
+            </p>
+            <a class="button" href="/documentation.html#openwhisk_deployment">Create Your Local Playground</a>
+        </div>
+        <div class="image-wrapper">
+            <img src="/images/illustrations/OW-Abstract Architecture Diagram.png" alt="Events trigger the Apache OpenWhisk platform to run Actions or functions in various supported languages."/>
+        </div>
+    </main>
+
+    <main>
+        <a class="indexable" id="openwhisk-deployments"></a>
+        <div class="image-wrapper">
+            <img src="/images/illustrations/OW-Deployments.png" alt="Apache OpenWhisk can deploy on your favorite Cloud container framework."/>
+        </div>
+        <div class="content">
+            <h4>Deploys anywhere</h4>
+            <p>
+                Since Apache OpenWhisk builds its components using containers it easily supports many deployment options both locally and within Cloud infrastructures. Options include many of today's popular Container frameworks such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Kubernetes</a>, <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Mesos</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">Compose</a>.  Recent contributions even include deployment options such as <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/docs/minikube.md">Minikube</a> and <a style="font-weight:bold" href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenShift</a>.
+            </p>
+        </div>
+    </main>
+
+    <main>
+        <a class="indexable" id="openwhisk-languages"></a>
+        <div class="content">
+            <h4>Write functions in any language</h4>
+            <!-- Possible text addition: "bundle larger or complex dependencies, and tailor the runtime environment to suite your needs."" -->
+            <p>
+                Work with what you know and love. OpenWhisk supports a growing list of your favorite languages such as
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">NodeJS</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-swift">Swift</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-java">Java</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-go">Go</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-java">Scala</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-python">Python</a></b>,
+                <b><a href="https://github.com/apache/incubator-openwhisk-runtime-php">PHP</a></b>.
+            </p>
+            <p>
+                If you need languages or libraries the current "out-of-the-box" runtimes do not support, you can create and customize your own executables as Zip Actions which run on the <b><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a></b> runtime by using the <b><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker SDK</a></b>.  Some examples of how to support other languages using Docker Actions include <b><a href="https://medium.com/openwhisk/openwhisk-and-rust-lang-24025734a834">Rust</a></b>, and <b><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell</a></b>.
+            </p>
+            <p>
+                Once you have your function written, use the
+                <a href="documentation.html#using-openwhisk">wsk CLI</a>, to
+                target your Apache OpenWhisk instance, and run your first action in seconds.
+            </p>
+            <a class="button" href="/documentation.html#nodejs">Create Your First Action</a>
+        </div>
+        <div class="image-wrapper">
+                <img src="/images/illustrations/OW-Runtimes.png" alt="Node Runtime"/>
+        </div>
+    </main>
+
+    <main>
+        <a class="indexable" id="openwhisk-packages"></a>
+        <div class="image-wrapper">
+            <img src="/images/illustrations/OW-Integrations.png" alt="OpenWhisk's out-of-box packages easily integrate with our own services"/>
+        </div>
+        <div class="content">
+            <h4>Integrate easily with many popular services</h4>
+            <p>
+                OpenWhisk makes it simple for developers to integrate their
+                Actions with many popular services using
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md"><span style="font-weight:bold">Packages</span></a>
+                that are provided either as independently developed
+                projects under the OpenWhisk family or as part of
+                our default
+                <a href="https://github.com/apache/incubator-openwhisk-catalog">catalog</a>.
+            </p>
+            <p>
+              Packages offer integrations with general services such as
+                <a href="https://github.com/apache/incubator-openwhisk-package-kafka">Kafka</a> message queues,
+                databases including <a href="https://github.com/apache/incubator-openwhisk-package-cloudant">Cloudant</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-package-pushnotifications">Push Notifications</a> from mobile applications,
+                <a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/packages/slack">Slack</a> messaging,
+                and <a href="https://github.com/apache/incubator-openwhisk-package-rss">RSS</a> feeds.
+                Development pipelines can take advantage of integrations with
+                <a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/packages/github">GitHub</a>,
+                <a href="https://github.com/apache/incubator-openwhisk-package-jira">JIRA</a>,
+                or easily connect with custom data services from
+                IBM Watson for <a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/packages/watson-translator">Translation</a>
+                or <a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/packages/watson-speechToText">Speech-to-Text</a>, as well as the
+                <a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/packages/weather">Weather</a> company.
+            </p>
+            <p>
+                You can even use the <a href="https://github.com/apache/incubator-openwhisk-package-alarms">Alarms</a>
+                package to schedule times or recurring intervals to run your Actions.
+            </p>
+        </div>
+    </main>
+
+    <main>
+        <a class="indexable" id="openwhisk-compositions"></a>
+        <div class="content">
+            <h4>Combine your functions into rich compositions</h4>
+            <p>
+                Code in different languages like JavaScript/NodeJS, Swift, Python,
+                Java or run custom logic by packaging code with Docker.
+                Invoke your code synchronously, asynchronously, or on a schedule.
+                Use higher-level programming constructs like sequences to declaratively
+                chain together multiple actions.
+                Use parameter binding to avoid hardcoding service credentials in your code.
+                And also, debug your code in realtime using variety of
+                <a href="documentation.html/#development_tools">Development Tools</a>.
+            </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="/images/illustrations/OW-Runtime-Compositions.png" alt="OpenWhiks allows you to create compositions from Actions in any supported language."/>
+        </div>
+    </main>
+
+    <main>
+        <a class="indexable" id="openwhisk-benefits"></a>
+        <div class="image-wrapper">
+            <img src="/images/illustrations/OW-Utilization-Scaling.png" alt="Apache OpenWhisk automatically scales and maximizes and server utilization as events trigger action functions.">
+        </div>
+        <div class="content">
+              <h4>Scaling Per-Request &amp; Optimal Utilization</h4>
+              <p>
+                  Run your action ten thousand times in a fraction of a second, or once
+                  a week. Action instances scale to meet demand as needed, then disappear.
+                  Enjoy optimal utilization where you don't pay for idle resources.
+              </p>
+        </div>
+    </main>
+
+    <main>
+        <a class="indexable" id="openwhisk-community"></a>
+        <div class="content">
+            <h4>Join a vibrant open source community</h4>
+            <p>
+                Play a critical part in building game-changing cloud technology.
+                Share your actions and triggers with the community, add your
+                Runtimes, Package integrations and plug-ins to the Apache
+                OpenWhisk ecosystem, or join our community of developers to
+                make Apache OpenWhisk the best open source Serverless platform.
+            </p>
+            <a class="button" href="/community.html">Join the OpenWhisk Community</a>
+        </div>
+        <div class="image-wrapper">
+            <a href="http://www.apache.org/foundation/sponsorship.html">
+              <img style="max-height=174px; max-width:174px;" src="/images/logo/SupportApache-small.png"
+              alt="The Apache OpenWhisk project needs the support of contributors in all areas."/></a>
+        </div>
+    </main>
+</section>
+
+        <!--
+/*
+ *   Required ASF website links (scanned)
+ *
+ *   Name: Regex: URL
+ *   ====  =====  ===
+ *   Foundation:  apache|asf|foundation:                        http://www.apache.org/
+ *   Events:      ^https?://.*apache.org/events/current-event:  See: https://www.apache.org/events/README.txt
+ *   License:     ^https?://.*apache.org/licenses/$:            http://www.apache.org/licenses/
+ *   Thanks:      ^https?://.*apache.org/foundation/thanks:     http://www.apache.org/foundation/thanks.html
+ *   Security:    ^https?://.*apache.org/.*[Ss]ecurity:         http://www.apache.org/security/
+ *   Sponsorship: ^https?://.*apache.org/foundation/sponsorship http://www.apache.org/foundation/sponsorship.html
+ *   Trademarks:  \btrademarks\b All project or product homepages must feature a prominent trademark attribution of all applicable Apache trademarks.
+ *   Copyright:   ((Copyright|©).*apache|apache.*(Copyright|©)): All website content SHOULD include a copyright notice for the ASF.
+ *   Image:       .   Projects SHOULD include a 212px wide copy of their logo in https://www.apache.org/img/ to be included in ASF homepage.
+ *                    See: https://www.apache.org/img/
+ */
+-->
+
+<footer class="footer light-text">
+  <main class="footer-row">
+    <div>
+        <div class="footer-row-text-links">
+            <a class="" href="http://www.apache.org/">Apache&nbsp;Software&nbsp;Foundation</a>
+            <a class="" href="https://apache.org/events/current-event">Events</a>
+            <a class="" href="http://www.apache.org/licenses/">License</a>
+            <a class="" href="http://www.apache.org/security/">Security</a>
+            <a class="" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
+            <a class="" href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+        </div>
+    </div>
+  </main>
+  <main class="footer-row">
+    <div>
+      Apache OpenWhisk, OpenWhisk, Apache, the Apache feather logo, and
+      the Apache OpenWhisk project logo are either registered trademarks
+      or trademarks of The Apache Software Foundation
+      in the United States and other countries.
+      See guidance on use of Apache OpenWhisk trademarks.
+      All other marks mentioned may be trademarks or registered trademarks
+      of their respective owners.
+    </div>
+  </main>
+  <main class="footer-row">
+      <div>
+          Apache OpenWhisk is an effort undergoing incubation at The Apache
+          Software Foundation (ASF), sponsored by the Incubator.
+          Incubation is required of all newly accepted projects until a further
+          review indicates that the infrastructure, communications, and decision
+          making process have stabilized in a manner consistent with other
+          successful ASF projects. While incubation status is not necessarily a
+          reflection of the completeness or stability of the code,
+          it does indicate that the project has yet to be fully endorsed
+          by the ASF.
+      </div>
+  </main>
+  <main class="footer-row">
+      Copyright © 2016-present The Apache Software Foundation,
+      Licensed under the Apache License, Version 2.0.
+  </main>
+</footer>
+
+    </body>
+</html>
