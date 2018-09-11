@@ -16,8 +16,8 @@ layout: default
             <li><a href="#versioning">Versioning</a></li>
 
             <!-- Downloads -->
-            <li class="collapsible-toggle"><a href="#releases">Releases</a></li>
-            <ul class="collapse-content">
+            <li class="index-menu-toggle"><a href="#releases">Releases</a></li>
+            <ul class="index-menuitems">
                 <li><a href="#verifying">Verifying</a></li>
                 <li><a href="#keys">Keys</a></li>
                 <li><a href="#versions">Versions</a></li>
@@ -54,6 +54,8 @@ layout: default
             <div class="content">
                 <a class="indexable" id="releases"></a>
                 <h3>Releases</h3>
+                <p>The Apache OpenWhisk project provides releases of source code, by component groupings, as TAR compressed archives files denoted by the <em>.tar.gz</em> extension.)
+                </p>
                 <a class="indexable" id="verifying"></a>
                 <h4>Verifying</h4>
                 <p>As an Apache project, all downloaded files are signed by a project Release Manager and can be verified following these instructions:</p>
@@ -67,9 +69,11 @@ layout: default
 
                 <a class="indexable" id="versions"></a>
                 <h4>Versions</h4>
-                <p>The following release versions are available:</p>
-                <h5>0.9.x-incubating (2018-07-17)</h5>
-                <div class="content">
+                <p>The following release versions are available.</p>
+                <p>Please click on the version name to see its downloadable components:</p>
+                <h5 class="section-toggle-start-open section-toggle">0.9.x-incubating (2018-07-17)</h5>
+                <div class="section-start-open">
+                  <div class="content">
                    <div class="flow-columns">
                       <div class="project-structure-repo theme-deeper-sea-green">
                         <h4>OpenWhisk</h4>
@@ -163,6 +167,7 @@ layout: default
                         </p>
                       </div>
                    </div>
+                </div>
                 </div>
             </div>
         </main>
