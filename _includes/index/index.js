@@ -16,6 +16,7 @@ function addListenersToIndex()
     if(sibling!==null){
         coll[i].style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
         // (top right bottom left)
+        // make room on left for image/icon
         sibling.style.padding = "0px 0px 0px 20px";
     }
 
@@ -47,6 +48,7 @@ function addListenersToSections()
     var sibling = coll[i].nextElementSibling;
 
     if(sibling!==null){
+      sibling.setAttribute('data-display', sibling.style.display);
       if(coll[i].classList.contains("section-toggle-start-open")){
         coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
       } else {
@@ -60,7 +62,7 @@ function addListenersToSections()
       // toggle menu open/close states
       if(sibling!==null){
         console.log("sibling.style.display: ["+sibling.style.display+"]");
-        if (sibling.style.display === "block") {
+        if (sibling.style.display !== "none") {
           console.log("collapsing");
           sibling.style.display = "none";
           this.style.backgroundImage = "url('../images/elements/circle-plus.png')";
@@ -74,3 +76,15 @@ function addListenersToSections()
     });
   }
 }
+
+/*
+ *  Debug
+ */
+// function dumpCSSText(element){
+//   var s = '';
+//   var o = getComputedStyle(element);
+//   for(var i = 0; i < o.length; i++){
+//     s+= ">> " + o[i] + ':' + o.getPropertyValue(o[i])+';\n';
+//   }
+//   return s;
+// }

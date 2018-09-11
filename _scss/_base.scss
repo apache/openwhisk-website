@@ -363,14 +363,11 @@ footer {
 
 .section-toggle-start-open {
   // empty class
-  //display: block;
-  //background-repeat: no-repeat;
-  //background-image: url('../images/elements/circle-minus.png');
 }
 
 .section-start-open {
-  // empty class
   display: block;
+  data-display: foo;
 }
 
 .section-toggle:hover {
@@ -378,9 +375,9 @@ footer {
 }
 
 .section-content {
+  // vertical | horizontal
   padding: 0 18px;
   display: none;
-  overflow: hidden;
   background-color: white;
 }
 
