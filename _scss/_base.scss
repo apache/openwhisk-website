@@ -100,7 +100,7 @@ footer {
       display: flex-direction;
     }
 
-    li:not(.collapsible-toggle) {
+    li:not(.index-menu-toggle) {
       a {
         display: inline-flex;
         width: 100%;
@@ -109,7 +109,7 @@ footer {
       }
     }
 
-    li.collapsible-toggle {
+    li.index-menu-toggle {
 
       // TODO: try to render our own bullet/images so we can control layout
       /** the image will be vertically aligned in the center **/
@@ -299,21 +299,21 @@ footer {
 }
 
 /*
- * Expandable/Collapsible
+ * Index (collapsible menus)
  */
 
-.collapsible-toggle {
+.index-menu-toggle {
   color: $color-menu-collapsible-fg;
   background-color: $color-menu-collapsible-bg;
   border: 1px solid $color-menuitem-collapsible-border;
   cursor: pointer; // finger shown to let ppl know you can click it
 }
 
-.collapsible-toggle:hover {
+.index-menu-toggle:hover {
   background-color: $color-menu-collapsible-hover-bg;
 }
 
-.collapse-content {
+.index-menuitems {
   padding: 0 18px;
   display: none;
   overflow: hidden;
@@ -321,7 +321,67 @@ footer {
 }
 
 /*
- * Index
+ * Index (collapsible)
+ */
+
+.index-menu-toggle {
+  color: $color-menu-collapsible-fg;
+  background-color: $color-menu-collapsible-bg;
+  border: 1px solid $color-menuitem-collapsible-border;
+  cursor: pointer; // finger shown to let ppl know you can click it
+}
+
+.index-menu-toggle:hover {
+  background-color: $color-menu-collapsible-hover-bg;
+}
+
+.index-menuitems {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+/*
+ * Section (collapsible)
+ */
+
+.section-header, .section-toggle{
+  padding-left: 8px;
+  color: $color-menu-collapsible-fg;
+  background-color: $color-menu-collapsible-bg;
+  border: 1px solid $color-menuitem-collapsible-border;
+}
+
+.section-toggle {
+  padding-left: 30px;
+  background-size: 12px 12px;
+  background-position: 8px 50%;
+  background-repeat: no-repeat;
+  cursor: pointer; // finger shown to let ppl know you can click it
+}
+
+.section-toggle-start-open {
+  // empty class
+}
+
+.section-start-open {
+  display: block;
+}
+
+.section-toggle:hover {
+  background-color: $color-menu-collapsible-hover-bg;
+}
+
+.section-content {
+  // vertical | horizontal
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+}
+
+/*
+ * Indexable Content Anchors
  */
 
 // Need to create custom anchors that are aware of our fixed header
