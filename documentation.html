@@ -241,6 +241,12 @@ function addListenersToSections()
                         <li><a href="#php-runtime">PHP Runtime</a></li>
                         <li><a href="#php-additional-resources">Additional Resources</a></li>
                     </ul>
+                    <li class="index-menu-toggle"><a href="#ruby">Ruby</a></li>
+                    <ul class="index-menuitems">
+                        <li><a href="#ruby-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#ruby-runtime">Ruby Runtime</a></li>
+                        <li><a href="#ruby-additional-resources">Additional Resources</a></li>
+                    </ul>
                     <!--li class="index-menu-toggle"><a href="#swift">Swift</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#swift-actions">Creating and Invoking Action</a></li>
@@ -371,6 +377,13 @@ function addListenersToSections()
                             href="https://github.com/apache/incubator-openwhisk-runtime-java"
                             title="Apache openwhisk java runtime">
                                 openwhisk-runtime-java
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-ruby"
+                            title="Apache openwhisk ruby runtime">
+                                openwhisk-runtime-ruby
                         </a>
                     </p>
                 </div>
@@ -994,6 +1007,7 @@ function addListenersToSections()
                     <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
                     <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
                     <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
+                    <li><a href="#ruby">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
                 </ul>
 
                 <p>
@@ -1793,6 +1807,147 @@ function addListenersToSections()
                 <ul>
                     <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
                     <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="ruby"></a>
+                <h4>Ruby</h4>
+                <p></p>
+                <a class="indexable" id="ruby-actions"></a>
+                <h5>Creating and Invoking Ruby actions</h5>
+                <p>
+                    Let's look at how to write a sample hello world action in Ruby. You can visit
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-ruby.md#creating-and-invoking-ruby-actions">Creating and Invoking Ruby actions</a>
+                    page for further details.
+                </p>
+                <p>
+                    <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                    please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+                </p>
+                <ol>
+                    <li style="list-style-type: decimal">
+                        Create a file named <i>hello.rb</i>:
+                        <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">params</span> <span class="o">=</span> <span class="p">{})</span>
+  <span class="nb">name</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">||</span> <span class="s2">"stranger"</span>
+  <span class="n">greeting</span> <span class="o">=</span> <span class="s2">"Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">!"</span>
+  <span class="p">{</span> <span class="s2">"greeting"</span><span class="p">:</span> <span class="n">greeting</span> <span class="p">}</span>
+<span class="k">end</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action called <i>hello_ruby</i> using <i>hello.rb</i>:
+                        <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create hello_ruby hello.rb</code></pre></figure>
+
+                        </div>
+                        <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ok: created action hello_ruby</code></pre></figure>
+
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke an action <i>hello_ruby</i>:
+                        <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke hello_ruby --blocking --result --param name World</code></pre></figure>
+
+                        </div>
+                        <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">World!"</span>
+<span class="pi">}</span></code></pre></figure>
+
+                        </div>
+                    </li>
+                    <!--TODO: wskdeploy doesn't support ruby yet, uncomment the following once this pull request has been merged and released: https://github.com/apache/incubator-openwhisk-wskdeploy/pull/983 -->
+                    <!--<li style="list-style-type: decimal">
+                        Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>
+                                Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">hello_ruby</span><span class="pi">:</span>
+                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.rb</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+                                </div>
+                                Or
+                                <p></p>
+                                <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+    <span class="s">default</span><span class="pi">:</span>
+        <span class="s">actions</span><span class="pi">:</span>
+            <span class="s">hello_ruby</span><span class="pi">:</span>
+                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="no">def main(params = {})</span>
+                      <span class="no">name = params["name"] || "stranger"</span>
+                      <span class="no">greeting = "Hello #{name}!"</span>
+                      <span class="no">{ "greeting": greeting }</span>
+                    <span class="no">end</span>
+                <span class="s">runtime</span><span class="pi">:</span> <span class="s">ruby:2.5</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+                                </div>
+                            </li>
+                            <li>
+                                Run deployment with <i>wskdeploy</i>:
+                                <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+
+                                </div>
+                            </li>
+                        </ol>
+                    </li>-->
+                </ol>
+                <a class="indexable" id="ruby-runtime"></a>
+                <h5>OpenWhisk Runtime for Ruby</h5>
+                <p>
+                    OpenWhisk supports <strong>Ruby 2.5</strong> runtime.
+                    If you wish to learn more about Ruby runtime, please visit
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-ruby/blob/master/README.md">Ruby Runtime GitHub Repository</a>.
+                </p>
+                <a class="indexable" id="ruby-additional-resources"></a>
+                <h5>Additional Resources</h5>
+                <ul>
+                    <li>Coming soon...</li>
                 </ul>
             </div>
         </main>
