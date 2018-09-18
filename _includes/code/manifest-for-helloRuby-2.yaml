@@ -1,0 +1,11 @@
+packages:
+    default:
+        actions:
+            hello_ruby:
+                code: |
+                    def main(params = {})
+                      name = params["name"] || "stranger"
+                      greeting = "Hello #{name}!"
+                      { "greeting": greeting }
+                    end
+                runtime: ruby:2.5

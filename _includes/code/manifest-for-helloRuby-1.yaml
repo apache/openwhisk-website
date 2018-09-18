@@ -1,0 +1,5 @@
+packages:
+    default:
+        actions:
+            hello_ruby:
+                function: hello.rb

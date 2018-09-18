@@ -83,6 +83,12 @@ layout: default
                         <li><a href="#php-runtime">PHP Runtime</a></li>
                         <li><a href="#php-additional-resources">Additional Resources</a></li>
                     </ul>
+                    <li class="index-menu-toggle"><a href="#ruby">Ruby</a></li>
+                    <ul class="index-menuitems">
+                        <li><a href="#ruby-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#ruby-runtime">Ruby Runtime</a></li>
+                        <li><a href="#ruby-additional-resources">Additional Resources</a></li>
+                    </ul>
                     <!--li class="index-menu-toggle"><a href="#swift">Swift</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#swift-actions">Creating and Invoking Action</a></li>
@@ -213,6 +219,13 @@ layout: default
                             href="https://github.com/apache/incubator-openwhisk-runtime-java"
                             title="Apache openwhisk java runtime">
                                 openwhisk-runtime-java
+                        </a>
+                    </p>
+                    <p class="repo-title border-deeper-sky-blue">
+                        <a
+                            href="https://github.com/apache/incubator-openwhisk-runtime-ruby"
+                            title="Apache openwhisk ruby runtime">
+                                openwhisk-runtime-ruby
                         </a>
                     </p>
                 </div>
@@ -828,6 +841,7 @@ $ wsk list
                     <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
                     <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
                     <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
+                    <li><a href="#ruby">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
                 </ul>
 
                 <p>
@@ -1354,6 +1368,100 @@ $ jar cvf hello.jar Hello.class
                 <ul>
                     <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
                     <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="ruby"></a>
+                <h4>Ruby</h4>
+                <p></p>
+                <a class="indexable" id="ruby-actions"></a>
+                <h5>Creating and Invoking Ruby actions</h5>
+                <p>
+                    Let's look at how to write a sample hello world action in Ruby. You can visit
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-ruby.md#creating-and-invoking-ruby-actions">Creating and Invoking Ruby actions</a>
+                    page for further details.
+                </p>
+                <p>
+                    <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                    please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+                </p>
+                <ol>
+                    <li style="list-style-type: decimal">
+                        Create a file named <i>hello.rb</i>:
+                        <div class="terminal">
+{% highlight ruby linenos %}
+{% include code/hello.rb %}
+{% endhighlight %}
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action called <i>hello_ruby</i> using <i>hello.rb</i>:
+                        <div class="terminal">
+{% highlight bash %}$ wsk action create hello_ruby hello.rb{% endhighlight %}
+                        </div>
+                        <div class="terminal">
+{% highlight bash %}ok: created action hello_ruby{% endhighlight %}
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke an action <i>hello_ruby</i>:
+                        <div class="terminal">
+{% highlight bash %}$ wsk action invoke hello_ruby --blocking --result --param name World{% endhighlight %}
+                        </div>
+                        <div class="terminal">
+{% highlight yaml %}
+{
+    "greeting": "Hello World!"
+}
+{% endhighlight %}
+                        </div>
+                    </li>
+                    <!--TODO: wskdeploy doesn't support ruby yet, uncomment the following once this pull request has been merged and released: https://github.com/apache/incubator-openwhisk-wskdeploy/pull/983 -->
+                    <!--<li style="list-style-type: decimal">
+                        Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>
+                                Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloRuby-1.yaml %}
+{% endhighlight %}
+                                </div>
+                                Or
+                                <p></p>
+                                <div class="terminal">
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloRuby-2.yaml %}
+{% endhighlight %}
+                                </div>
+                            </li>
+                            <li>
+                                Run deployment with <i>wskdeploy</i>:
+                                <div class="terminal">
+{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
+                                </div>
+                            </li>
+                        </ol>
+                    </li>-->
+                </ol>
+                <a class="indexable" id="ruby-runtime"></a>
+                <h5>OpenWhisk Runtime for Ruby</h5>
+                <p>
+                    OpenWhisk supports <strong>Ruby 2.5</strong> runtime.
+                    If you wish to learn more about Ruby runtime, please visit
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-ruby/blob/master/README.md">Ruby Runtime GitHub Repository</a>.
+                </p>
+                <a class="indexable" id="ruby-additional-resources"></a>
+                <h5>Additional Resources</h5>
+                <ul>
+                    <li>Coming soon...</li>
                 </ul>
             </div>
         </main>
