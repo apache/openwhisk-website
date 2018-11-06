@@ -264,7 +264,11 @@ function addListenersToSections()
             </ul>
 
             <!-- Contributors -->
-            <li><a href="#contributors">Contributors</a></li>
+            <li class="index-menu-toggle"><a href="#contributors">Contributors</a></li>
+            <ul class="index-menuitems">
+                <li><a href="#contributor-resources">Resources</a></li>
+                <li><a href="#contributing-runtimes">Adding Runtimes</a></li>
+            </ul>
 
             <!-- Other Resources -->
             <li><a href="#other-resources">Other Resources</a></li>
@@ -2401,17 +2405,39 @@ abcd.... locationUpdate
         <div class="content">
             <a class="indexable" id="contributors"></a>
             <h2>Contributors</h2>
-            <p>This section lists a number of resources for OpenWhisk Contributors:</p>
+
+            <p>The Apache OpenWhisk project welcomes any and all developers to
+            become a Contributor to any part of our project.  Contributions can
+            range from fixing documentation and adding testcases, to fixing
+            bugs, proposing and implementing new features and reviewing
+            others' Pull Requests (PRs).
+
+            The following Wiki pages describe the How Tos of becoming an
+            official Contributor:</p>
+
             <ul>
                 <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-how-to-contribute">How to contribute?</li>
                 <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-becoming-a-contributor">How do I become a Contributor or Committer?</li>
-                <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Proposals">Proposals (Designs)</a></li>
+            </ul>
+
+            <a class="indexable" id="contributor-resources"></a>
+            <h4>Contributor resources</h4>
+            <p>This section lists a number of resources for OpenWhisk Contributors:</p>
+            <ul>
+               <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Proposals">Proposals (Designs)</a></li>
                 <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Presentations%2C+Meeting+Notes+and+Transcripts">Meeting Notes and Transcripts</a></li>
                 <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Processes">Processes</a></li>
                 <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Project+Status">Project Status</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk/issues">Report Bugs or Request Features</a></li>
                 <li><a href="https://github.com/apache/incubator-openwhisk-release#apache-openwhisk-project-release-management">Project Release Management</a></li>
             </ul>
+            <a class="indexable" id="contributing-runtimes"></a>
+            <h4>Contributing new Action Language Runtimes</h4>
+            <p>OpenWhisk supports several languages via its Action Runtimes,
+              but there may be other languages or runtimes that you may want
+              to contribute to the project.</p>
+            <p>Read this guide on how to get started:
+              <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">Adding Action Language Runtimes</a></p>
         </div>
     </main>
 
