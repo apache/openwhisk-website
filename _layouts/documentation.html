@@ -19,8 +19,8 @@ layout: default
                 <li><a href="#openwhisk_architecture">OpenWhisk Architecture</a></li>
                 <li class="index-menu-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
                 <ul class="index-menuitems">
-                    <li><a href="#deploy_docker_compose">Docker Compose</a></li>
                     <li><a href="#deploy_kubernetes">Kubernetes</a></li>
+                    <li><a href="#deploy_docker_compose">Docker Compose</a></li>
                     <li><a href="#deploy_mesos">Mesos</a></li>
                     <li><a href="#deploy_openshift">OpenShift</a></li>
                     <li><a href="#deploy_ansible">Ansible</a></li>
@@ -528,11 +528,28 @@ layout: default
             <p>
                 OpenWhisk supports different installation methods for core OpenWhisk platform components. You can choose one of the following deployment methods based on your platform:
             </p>
+            <a class="indexable" id="deploy_kubernetes"></a>
+            <h4>Kubernetes</h4>
+            <p>
+                OpenWhisk can be deployed using <a href="https://helm.sh/">Helm</a> charts on
+                Kubernetes provisioned locally or from a public cloud provider.
+              </p>
+                <p>Please refer to:
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Deploy OpenWhisk to a Kubernetes Cluster</a>
+                for detailed deployment instructions which includes specific
+                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#customize-the-deployment">customizations</a>
+                including Docker Desktop (Mac, Windows), Minikube, Google, IBM Cloud, etc.).
+            </p>
             <a class="indexable" id="deploy_docker_compose"></a>
             <h4>Docker Compose</h4>
             <p>
-                The easiest way to start deploying OpenWhisk is to get Docker installed on Mac, Windows or Linux.
-                This does not give you a production deployment but gives you enough of the pieces to start writing functions and seeing them executing.
+                One of the easiest way to start deploying OpenWhisk is to get
+                Docker installed on Mac, Windows or Linux.
+                This does not give you a production deployment but gives you
+                enough of the pieces to start writing functions and seeing them
+                executing.
+                However, if you like using Docker directly, we recommend
+                using one of our <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes-Docker options</a>.
             </p>
             <div class="terminal">
 {% highlight bash %}
@@ -544,14 +561,6 @@ $ make quick-start
             <p>
                 For more detailed instructions, see the
                 <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
-            </p>
-            <a class="indexable" id="deploy_kubernetes"></a>
-            <h4>Kubernetes</h4>
-            <p>
-                OpenWhisk can be installed on Minikube, or on a managed Kubernetes cluster provisioned from a public cloud provider,
-                or on a Kubernetes cluster you manage yourself. Please refer to
-                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
-                for detailed deployment instructions.
             </p>
             <a class="indexable" id="deploy_mesos"></a>
             <h4>Mesos</h4>
@@ -637,9 +646,25 @@ $ make quick-start
         <div class="content">
             <a class="indexable" id="pre-requisites"></a>
             <h4>Pre-requisites</h4>
-            <p>Please make sure you have access to working instance of OpenWhisk. If not, refer to
-            <a href="#openwhisk_deployment">OpenWhisk Deployment</a>
-            for detailed instructions on how to install and configure OpenWhisk.
+            <p>You will need to have access to running instance of the
+              OpenWhisk platform to develop against.
+            </p>
+            <h5>Running OpenWhisk locally</h5>
+            <p>Developers can select to install and configure their own instance
+            from among any of the options listed here:
+            <a href="#openwhisk_deployment">OpenWhisk Deployment</a>.
+            </p>
+            <p>For local, "light weight" development, we recommend using
+              <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes</a>
+              enabled within Docker (i.e., Docker for Mac or Windows, Minikube for Linux).
+            <ul><li>For setup instructions, see: <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#prerequisites-kubernetes-and-helm">Simple Docker-based options</a>.</li></ul>
+          </p>
+            <h5>Using OpenWhisk on a Cloud Provider</h5>
+            <p>Again, we encourage developers to leverage Cloud-based Kubernetes
+              services to deploy OpenWhisk.<p>
+            <p>Another option would be to use Serverless provider that already
+            hosts Apache OpenWhisk and supports its Command Line Interface (CLI)
+            such as <a href="https://console.bluemix.net/openwhisk/">IBM Cloud Functions.</a>
             </p>
         </div>
     </main>
@@ -648,7 +673,7 @@ $ make quick-start
     <main class="doc">
         <div class="content">
             <a class="indexable" id="using-openwhisk"></a>
-            <h4>Using OpenWhisk</h4>
+            <h4>Using OpenWhisk locally</h4>
             <p></p>
             <p>
                 <a href="#openwhisk_deployment">OpenWhisk Deployment</a>
