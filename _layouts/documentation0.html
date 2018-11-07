@@ -516,7 +516,7 @@ layout: default
         <div class="content">
             <a class="indexable" id="openwhisk_architecture"></a>
             <h3>OpenWhisk Architecture</h3>
-            <img style="padding-top:20px;" width="400px" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
+            <img style="padding-top:20px;" width="400" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
             <p>
                 The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
                 multiple technologies are powering Apache OpenWhisk - Open Source Serverless Cloud Platform.
@@ -657,8 +657,8 @@ $ make quick-start
             <p>For local, "light weight" development, we recommend using
               <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes</a>
               enabled within Docker (i.e., Docker for Mac or Windows, Minikube for Linux).
+            </p>
             <ul><li>For setup instructions, see: <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#prerequisites-kubernetes-and-helm">Simple Docker-based options</a>.</li></ul>
-          </p>
             <h5>Using OpenWhisk on a Cloud Provider</h5>
             <p>Again, we encourage developers to leverage Cloud-based Kubernetes
               services to deploy OpenWhisk.<p>
@@ -676,23 +676,23 @@ $ make quick-start
             <h4>Using OpenWhisk</h4>
             <p></p>
             <h5>Guest account</h5>
-            <p>
-                <a href="#openwhisk_deployment">OpenWhisk Deployments</a>
-                create a guest account configured with the authentication key available at:
-                <ul><li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a></li></ul>
+            <p><a href="#openwhisk_deployment">OpenWhisk Deployments</a>
+              create a guest account configured with the authentication key available at:
             </p>
+            <ul>
+              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a></li>
+            </ul>
             <h5>API Host</h5>
             <p>Deployments set the default API host endpoint, used with
               the Command Line Interface (CLI) and the Whisk Deploy utility,
-              to:<ul><li><strong>192.168.33.13</strong>.</li></ul>
-            </p>
+              to:</p>
+            <ul><li><strong>192.168.33.13</strong>.</li></ul>
             <p>However, when running under a Kubernetes deployment installed
               using Helm, the endpoint's address and port are set in your
               "mycluster.yaml" deployment file.
               See the <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#deploy-with-helm">Deploy With Helm</a>
               instructions for details.
             </p>
-
         </div>
     </main>
 
@@ -743,68 +743,18 @@ $ brew install wsk
             <h5>Verify Installation</h5>
             <ul>
                 <li>
-                    <strong>CLI Help:</strong>
-                    To get the CLI command help, execute the following command:
-                    <div class="terminal">
-{% highlight bash %}$ wsk --help{% endhighlight %}
-                    </div>
                 </li>
             </ul>
             <a class="indexable" id="wsk-cli-configure"></a>
             <h5>Configuring</h5>
             <ul>
                 <li id="authentication">
-                    <strong>API Host and Authentication Key</strong>
-                    <p>You can configure wsk CLI to use your OpenWhisk
-                      credentials in few different ways.  See the
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">Setting up the OpenWhisk CLI</a>
-                    page for a full set of configuration options.
-                    The instructions below walk you throguh the simplest
-                    possible configuration using only an
-                    <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
-                    properties using a default <code>guest</code>
-                    namespace.</p>
                     <ul>
                         <li>
-                            <h6>wsk property setup</h6>
-                            <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
-                            <div class="terminal">
-{% highlight bash %}
-$ wsk property set --apihost <API_HOST> --auth <AUTH_KEY> --namespace guest
-{% endhighlight %}
-                            </div>
-                            <p>The OpenWhisk CLI stores the properties set
-                              in <code>~/.wskprops</code> by default.
-                              The location of this file can be altered by setting
-                              the <code>WSK_CONFIG_FILE</code> environment
-                              variable. For example:</p>
-                            <div class="terminal">
-{% highlight bash %}
-$ export WSK_CONFIG_FILE=<your-config-file>
-{% endhighlight %}
-                            </div>
                         </li>
                         <li>
-                            <h6>Verify properties</h6>
-                            <p>and you can verify your properties were
-                              properly set by using the
-                              <code>wsk property get</code> command:</p>
-                            <div class="terminal">
-{% highlight bash %}
-$ wsk property get
-{% endhighlight %}
-                            </div>
                         </li>
                         <li>
-                            <h6>Verify host connection</h6>
-                            <p>Verify your host connection and
-                              credentials using the <code>wsk list</code>
-                              command:</p>
-                            <div class="terminal">
-{% highlight bash %}
-$ wsk list
-{% endhighlight %}
-                            </div>
                         </li>
                     </ul>
                 </li>
@@ -1061,7 +1011,7 @@ $ wsk list
                 <a class="indexable" id="nodejs-additional-resources"></a>
                 <h5>Additional Resources</h5>
                 <ul>
-                    <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</li>
+                    <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</a></li>
                     <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
                     <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
                 </ul>
@@ -1603,7 +1553,7 @@ $ jar cvf hello.jar Hello.class
                     <li>
                         Get a list of entities in a package:
                         <div class="terminal">
-{% highlight bash %}$ wsk package get --summary /whisk.system/<package-name>{% endhighlight %}
+{% highlight bash %}$ wsk package get --summary /whisk.system/<i>package-name></i>{% endhighlight %}
                         </div>
                     </li>
                 </ul>
@@ -1968,8 +1918,8 @@ abcd.... locationUpdate
             official Contributor:</p>
 
             <ul>
-                <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-how-to-contribute">How to contribute?</li>
-                <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-becoming-a-contributor">How do I become a Contributor or Committer?</li>
+                <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-how-to-contribute">How to contribute?</a></li>
+                <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-becoming-a-contributor">How do I become a Contributor or Committer?</a></li>
             </ul>
 
             <a class="indexable" id="contributor-resources"></a>
