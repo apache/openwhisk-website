@@ -1185,9 +1185,18 @@ $ wsk list
                         </div>
                     </li>
                     <li style="list-style-type: decimal">
+                        Create an executable called <i>exec</i> using <i>hello.go</i>:
+                        <div class="terminal">
+{% highlight bash %}
+$ GOOS=linux GOARCH=amd64 go build -o exec
+$ zip exec.zip exec
+{% endhighlight %}
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
                         Create an action <i>helloGo</i>:
                         <div class="terminal">
-{% highlight bash %}$ wsk action create helloGo hello.go{% endhighlight %}
+{% highlight bash %}$ wsk action create helloGo --native exec.zip{% endhighlight %}
                         </div>
                     </li>
                     <li style="list-style-type: decimal">
@@ -1211,6 +1220,15 @@ $ wsk list
                         </p>
                         <ol>
                             <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
+                            <li>
+                                Create an executable called <i>exec</i> using <i>hello.go</i>:
+                                <div class="terminal">
+{% highlight bash %}
+$ cd actions/
+$ GOOS=linux GOARCH=amd64 go build -o exec
+{% endhighlight %}
+                                </div>
+                            </li>
                             <li>
                                 Create <i>manifest.yaml</i> with the following YAML content:
                                 <div class="terminal">
@@ -1238,8 +1256,8 @@ $ wsk list
                 <a class="indexable" id="go-additional-resources"></a>
                 <h5>Additional Resources</h5>
                 <ul>
+                    <li><a href="http://jamesthom.as/blog/2017/01/17/openwhisk-and-go/">Running Go Binaries on OpenWhisk</a></li>
                     <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
-                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>                   
                 </ul>
             </div>
         </main>
