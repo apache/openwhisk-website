@@ -2,5 +2,4 @@ packages:
     default:
         actions:
             helloGo:
-                function: actions/
-                native: true
+                function: hello.go
