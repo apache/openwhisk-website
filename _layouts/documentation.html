@@ -738,7 +738,7 @@ $ brew install wsk
             <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
 
             <a class="indexable" id="wsk-cli-verify"></a>
-            <h5>Verifying</h5>
+            <h5>Verify Installation</h5>
             <ul>
                 <li>
                     <strong>CLI Help:</strong>
@@ -827,35 +827,49 @@ $ wsk list
             <h4>Whisk Deploy (wskdeploy)</h4>
             <p>
                 <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
-                is a utility, named <em>wskdeploy</em>, to help deploy and manage all your OpenWhisk Packages, Actions, Triggers, Rules and APIs using a single command.
+                is a utility, named <em>wskdeploy</em>, to help deploy and
+                manage all your OpenWhisk Packages, Actions, Triggers, Rules
+                and APIs using a single command using an application manifest.
             </p>
             <ul>
                 <li>
-                    Download the Whisk Deploy:
-                    Binaries of <i>wskdeploy</i> are available for download on the project's GitHub release page:
-                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases.</a>
+                  <h5>Installing</h5>
+                  <p></p>
+                  <p><h6>Download the Whisk Deploy</h6>
+                  Binaries of <i>wskdeploy</i> are available for download on the project's GitHub release page:
+                  <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases.</a>
+                  </p>
                 </li>
                 <li>
-                    wskdeploy Help:
-                    Start by verifying the utility can display the command line help:
-                    <div class="terminal">
+                <h5>Verify Installation</h5>
+                  <p>Start by verifying the utility can display the command line help:</p>
+                  <div class="terminal">
 {% highlight bash %}$ wskdeploy --help{% endhighlight %}
-                    </div>
+                  </div>
                 </li>
                 <li>
-                    Create Package Manifest File <i>manifest.yaml</i>:
-                    Please refer to the
+                  <h5>Configure</h5>
+                  <p>Before you proceed with the deployment, please make
+                    sure you have setup the
+                    <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
+                    properties with a default namespace
+                    as described in the Whisk CLI
+                    configuration <a href="#authentication">here</a>.
+                  </p>
+                </li>
+                <li>
+                    <h5>Create Package Manifest File <i>manifest.yaml</i></h5>
+                    <p>Please refer to the
                     <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
                     for all manifest file grammar and syntax. This programming guide has step-by-step instructions for deploying OpenWhisk applications
                     using wskdeploy.
+                  </p>
                 </li>
                 <li>
-                    Deploy your Application:
+                  <h5>Deploy your Application</h5>
                     <ul>
-                        <li><strong>Note:</strong> Before you proceed with the deployment, please make sure you have the authentication setup as described
-                        <a href="#authentication">here</a>.</li>
                         <li>
-                            Deploying an OpenWhisk Manifest file:
+                            <p>Deploying an OpenWhisk Manifest file:</p>
                             <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
                             </div>
