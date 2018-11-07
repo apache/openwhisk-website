@@ -753,24 +753,63 @@ $ brew install wsk
             <ul>
                 <li id="authentication">
                     <strong>Authenticate wsk CLI</strong>
-                    <p>You can configure wsk CLI to use your OpenWhisk credentials in few different ways:</p>
+                    <p>You can configure wsk CLI to use your OpenWhisk
+                      credentials in few different ways.  See the
+                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwjisk-cli">Setting up the OpenWhisk CLI</a>
+                    page for a full set of configuration options.
+                    The instructions below walk you throguh the simplest
+                    possible configuration using only an
+                    <code>API_HOST</code> and <code>AUTH_KEY</code> using
+                    a default <code>guest</code> namespace.</p>
                     <ul>
                         <li>
-                            With wsk property setup
+                            <h6>wsk property setup</h6>
                             <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
                             <div class="terminal">
 {% highlight bash %}
 $ wsk property set --apihost <API_HOST> --auth <AUTH_KEY> --namespace guest
 {% endhighlight %}
                             </div>
-                            <p>Credentials are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
-                        </li>
-                        <li>
-                            Environment Variables Setup
-                            <p>Access credentials can be provided using properties file as environment variable:</p>
+                            <p>Credentials, and other properties, are stored in <i>~/.wskprops</i>, which you can edit directly if needed.</p>
+                            <p>The OpenWhisk CLI stores the properties set
+                              in <code>~/.wskprops</code> by default.
+                              The location of this file can be altered by setting
+                              the <code>WSK_CONFIG_FILE</code> environment
+                              variable. For example:</p>
                             <div class="terminal">
 {% highlight bash %}
 $ export WSK_CONFIG_FILE=<your-config-file>
+{% endhighlight %}
+                            </div>
+                        </li>
+                        <li>
+                            <h6>Verify properties</h6>
+                            <p>and you can verify your properties were
+                              properly set by using the
+                              <code>wsk property get</code> command:</p>
+                            <div class="terminal">
+{% highlight bash %}
+$ wsk property get
+
+client cert
+Client key
+whisk auth		    <token>
+whisk API host		<host address>
+whisk API version	v1
+whisk namespace		_
+whisk CLI version	<build version>
+whisk API build		<api version>
+whisk API build number	<build tag>
+{% endhighlight %}
+                            </div>
+                          </li>
+                          <li>
+                            <h6>Verify host connection</h6>
+                            <p>Verify your host connection and
+                              credentials using the <code>wsk list</code>
+                              command:</p>
+                            <div class="terminal">
+{% highlight bash %}
 $ wsk list
 {% endhighlight %}
                             </div>
