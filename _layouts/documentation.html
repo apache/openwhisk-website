@@ -704,8 +704,11 @@ $ make quick-start
         <div class="content">
             <a class="indexable" id="wsk-cli"></a>
             <h4>OpenWhisk CLI (wsk)</h4>
-            <p>OpenWhisk offers the <em>wsk</em> Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
+            <p>OpenWhisk offers the <em>wsk</em> Command Line Interface (CLI)
+              to easily create, run, and manage OpenWhisk entities.
             </p>
+            <p>For detailed information on using the OpenWhisk CLI, you can visit
+            the project in GitHub.</p>
 
             <!-- Install: download & installing -->
             <a class="indexable" id="wsk-cli-install"></a>
@@ -774,9 +777,9 @@ $ brew install wsk
           <a class="indexable" id="wsk-cli-configure"></a>
           <h5>Configuring</h5>
           <p>Before using the OpenWhisk CLI, you must first configure it
-            to point to the OpenWhisk platform (i.e., endpoint) you want the
-            utility to use and provide it with your platforms authentication
-            credentials.</p>
+            to point to the OpenWhisk platform you want the utility
+            to use (i.e., its API endpoint) and also provide it with your
+            associated authentication credentials.</p>
           <div class="indented">
             <h6 id="authentication">Setting the API Host and Authentication Key</h6>
             <p>You can configure wsk CLI to use your OpenWhisk
@@ -789,41 +792,42 @@ $ brew install wsk
             properties using a default <code>guest</code>
             namespace.</p>
 
-                    <h6>wsk property setup</h6>
-                    <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
-                    <div class="terminal">
+            <h6>wsk property setup</h6>
+            <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
+            <div class="terminal">
 {% highlight bash %}
 $ wsk property set --apihost <API_HOST> --auth <AUTH_KEY> --namespace guest
 {% endhighlight %}
-                    </div>
-                    <p>The OpenWhisk CLI stores the properties set
-                      in <code>~/.wskprops</code> by default.
-                      The location of this file can be altered by setting
-                      the <code>WSK_CONFIG_FILE</code> environment
-                      variable. For example:</p>
-                    <div class="terminal">
+            </div>
+            <p>The OpenWhisk CLI stores the properties set
+              in <code>~/.wskprops</code> by default.
+              The location of this file can be altered by setting the
+              <code>WSK_CONFIG_FILE</code> environment variable.
+              For example:
+            </p>
+            <div class="terminal">
 {% highlight bash %}
 $ export WSK_CONFIG_FILE=<your-config-file>
 {% endhighlight %}
-                    </div>
+            </div>
 
-                    <h6>Verify properties</h6>
-                    <p>and you can verify your properties were properly set by
-                      using the <code>wsk property get</code> command:</p>
-                    <div class="terminal">
+            <h6>Verify properties</h6>
+            <p>and you can verify your properties were properly set by
+              using the <code>wsk property get</code> command:</p>
+            <div class="terminal">
 {% highlight bash %}
 $ wsk property get
 {% endhighlight %}
-                    </div>
+            </div>
 
-                    <h6>Verify host connection</h6>
-                    <p>Verify your host connection and credentials using
-                      the <code>wsk list</code> command:</p>
-                    <div class="terminal">
+            <h6>Verify host connection</h6>
+            <p>Verify your host connection and credentials using
+              the <code>wsk list</code> command:</p>
+            <div class="terminal">
 {% highlight bash %}
 $ wsk list
 {% endhighlight %}
-                    </div>
+            </div>
           </div>
         </div>
     </main>
