@@ -671,6 +671,7 @@ $ make quick-start
     <!-- Using OpenWhisk section -->
     <main class="doc">
         <div class="content">
+
             <a class="indexable" id="using-openwhisk"></a>
             <h4>Using OpenWhisk</h4>
             <p></p>
@@ -696,6 +697,9 @@ $ make quick-start
         </div>
     </main>
 
+    <!-- ****************************************************************** -->
+    <!-- OpenWhisk CLI                                                      -->
+    <!-- ****************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="wsk-cli"></a>
@@ -703,115 +707,130 @@ $ make quick-start
             <p>OpenWhisk offers the <em>wsk</em> Command Line Interface (CLI) to easily create, run, and manage OpenWhisk entities.
             </p>
 
+            <!-- Install: download & installing -->
             <a class="indexable" id="wsk-cli-install"></a>
             <h5>Installing</h5>
+            <p>You have a couple of choices on how to install the Whisk CLI deoending on your target Operating System:</p>
 
-            <h6>Install the wsk with Homebrew (Mac &amp; Linux)</h6>
-            <p>To easily install the OpenWhisk CLI (wsk) you can
-              use <a href="https://brew.sh">Homebrew for Mac</a>
-              or <a href="http://linuxbrew.sh">Homebrew for Linux</a>.
-            </p>
-            <div class="terminal">
+            <h6>Using Homebrew (Mac &amp; Linux)</h6>
+            <div class="indented">
+              <p>To easily install the OpenWhisk CLI (wsk) you can
+                use <a href="https://brew.sh">Homebrew for Mac</a>
+                or <a href="http://linuxbrew.sh">Homebrew for Linux</a>.
+              </p>
+              <div class="terminal">
 {% highlight bash %}
 $ brew update
 $ brew install wsk
 {% endhighlight %}
-            </div>
-            <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
-            <h6>Install the wsk CLI from a tar.gz (Mac &amp; Linux):</h6>
-            <p>If for any reason you can't or don't want to use one of the previous installation method, you can still download the OpenWhisk CLI in a standalone .tar.gz file with everything you need to get started.</p>
-
-            <p>The latest files can be found on the Releases page at GitHub: <a href="https://github.com/apache/incubator-openwhisk-cli/releases">https://github.com/apache/incubator-openwhisk-cli/releases</a></p>
-            <p>Download the file for your platform and uncompress it. Inside it you will have a <code>wsk</code> executable.</p>
-            <p>To make it simpler to use, you can move the binary into your PATH:</p>
-
-            <div class="terminal">
-            {% highlight bash %}$ sudo mv [full path to downloaded wsk] /usr/local/bin/wsk{% endhighlight %}
+              </div>
+              <p>Then you can invoke the OpenWhisk CLI by just
+                typing <code>wsk</code> from the command line.</p>
             </div>
 
-            <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
-
-            <h6>Install the wsk CLI from a tar.gz (Windows):</h6>
-
-            <p>The latest files can be found on the Releases page at GitHub: <a href="https://github.com/apache/incubator-openwhisk-cli/releases">https://github.com/apache/incubator-openwhisk-cli/releases</a></p>
-            <p>Download the file for your platform and uncompress it. Inside it you will have a <code>wsk.exe</code> executable.</p>
-            <p>To make it simpler to use, you should <a href="https://www.computerhope.com/issues/ch000549.htm">add it to your PATH</a>.</p>
-
-            <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
-
-            <a class="indexable" id="wsk-cli-verify"></a>
-            <h5>Verify Installation</h5>
-            <ul>
-                <li>
-                    <strong>CLI Help:</strong>
-                    To get the CLI command help, execute the following command:
-                    <div class="terminal">
-{% highlight bash %}$ wsk --help{% endhighlight %}
-                    </div>
-                </li>
-            </ul>
-            <a class="indexable" id="wsk-cli-configure"></a>
-            <h5>Configuring</h5>
-            <ul>
-                <li id="authentication">
-                    <strong>API Host and Authentication Key</strong>
-                    <p>You can configure wsk CLI to use your OpenWhisk
-                      credentials in few different ways.  See the
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">Setting up the OpenWhisk CLI</a>
-                    page for a full set of configuration options.
-                    The instructions below walk you throguh the simplest
-                    possible configuration using only an
-                    <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
-                    properties using a default <code>guest</code>
-                    namespace.</p>
+            <h6>Download and install the wsk CLI from (Linux, Mac, Windows):</h6>
+                <ul>
+                  <li>
+                    <p> Download the OpenWhisk CLI for your Operating System as
+                      a standalone compressed TAR Archive file (<code>.tgz</code>)
+                      or ZIP file (<code>.zip</code>) from the project
+                      <a href="https://github.com/apache/incubator-openwhisk-cli/releases">Releases</a> page
+                      in GitHub:
+                      <ul>
+                        <li><a href="https://github.com/apache/incubator-openwhisk-cli/releases">https://github.com/apache/incubator-openwhisk-cli/releases</a></li>
+                      </ul>
+                    <p>where you may select to download the CLI from the
+                      "latest" release or from one of the versioned releases.</p>
+                  </li>
+                  <li><p>Uncompress the <code>wsk</code> executable from the <code>tar.gz</code> file.</p></li>
+                  <li>
+                    <p>Simplify access to the 'wsk' executable by moving or copying
+                    the binary file to a path listed in your <code>PATH</code>
+                    environemnt variable. For example:</p>
                     <ul>
-                        <li>
-                            <h6>wsk property setup</h6>
-                            <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
-                            <div class="terminal">
+                      <li><b>Linux</b>:
+                        <div class="terminal">
+                        {% highlight bash %}$ sudo mv [full path to downloaded wsk] /usr/local/bin/wsk{% endhighlight %}
+                        </div>
+                      </li>
+                      <li><b>Windows</b>:
+                        <a href="https://www.computerhope.com/issues/ch000549.htm">How to set the path and environment variables in Windows</a>.</p>
+                      </li>
+                    </ul>
+                    <p>Then you can invoke the OpenWhisk CLI by just typing <code>wsk</code>.</p>
+                  </li>
+                </ul>
+
+          <!-- Install: verify -->
+          <a class="indexable" id="wsk-cli-verify"></a>
+          <h5>Verify Installation</h5>
+          <div class="indented">
+            <p>You can verify your installation by invoking the Whisk CLI's help command:</p>
+            <div class="terminal">
+{% highlight bash %}$ wsk --help{% endhighlight %}
+            </div>
+          </div>
+
+          <a class="indexable" id="wsk-cli-configure"></a>
+          <h5>Configuring</h5>
+          <p>Before using the OpenWhisk CLI, you must first configure it
+            to point to the OpenWhisk platform (i.e., endpoint) you want the
+            utility to use and provide it with your platforms authentication
+            credentials.</p>
+          <div class="indented">
+            <h6 id="authentication">Setting the API Host and Authentication Key</h6>
+            <p>You can configure wsk CLI to use your OpenWhisk
+              credentials in few different ways.  See the
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">Setting up the OpenWhisk CLI</a>
+            page for a full set of configuration options.
+            The instructions below walk you throguh the simplest
+            possible configuration using only an
+            <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
+            properties using a default <code>guest</code>
+            namespace.</p>
+
+                    <h6>wsk property setup</h6>
+                    <p>Run the following command to set whisk API HOST and authorization key to create the configuration file:</p>
+                    <div class="terminal">
 {% highlight bash %}
 $ wsk property set --apihost <API_HOST> --auth <AUTH_KEY> --namespace guest
 {% endhighlight %}
-                            </div>
-                            <p>The OpenWhisk CLI stores the properties set
-                              in <code>~/.wskprops</code> by default.
-                              The location of this file can be altered by setting
-                              the <code>WSK_CONFIG_FILE</code> environment
-                              variable. For example:</p>
-                            <div class="terminal">
+                    </div>
+                    <p>The OpenWhisk CLI stores the properties set
+                      in <code>~/.wskprops</code> by default.
+                      The location of this file can be altered by setting
+                      the <code>WSK_CONFIG_FILE</code> environment
+                      variable. For example:</p>
+                    <div class="terminal">
 {% highlight bash %}
 $ export WSK_CONFIG_FILE=<your-config-file>
 {% endhighlight %}
-                            </div>
-                        </li>
-                        <li>
-                            <h6>Verify properties</h6>
-                            <p>and you can verify your properties were
-                              properly set by using the
-                              <code>wsk property get</code> command:</p>
-                            <div class="terminal">
+                    </div>
+
+                    <h6>Verify properties</h6>
+                    <p>and you can verify your properties were properly set by
+                      using the <code>wsk property get</code> command:</p>
+                    <div class="terminal">
 {% highlight bash %}
 $ wsk property get
 {% endhighlight %}
-                            </div>
-                        </li>
-                        <li>
-                            <h6>Verify host connection</h6>
-                            <p>Verify your host connection and
-                              credentials using the <code>wsk list</code>
-                              command:</p>
-                            <div class="terminal">
+                    </div>
+
+                    <h6>Verify host connection</h6>
+                    <p>Verify your host connection and credentials using
+                      the <code>wsk list</code> command:</p>
+                    <div class="terminal">
 {% highlight bash %}
 $ wsk list
 {% endhighlight %}
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                    </div>
+          </div>
         </div>
     </main>
 
+    <!-- ****************************************************************** -->
+    <!-- Whisk Deploy                                                       -->
+    <!-- ****************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="wskdeploy"></a>
@@ -822,52 +841,48 @@ $ wsk list
                 manage all your OpenWhisk Packages, Actions, Triggers, Rules
                 and APIs using a single command using an application manifest.
             </p>
-            <ul>
-                <li>
-                  <h5>Installing</h5>
-                  <p></p>
-                  <h6>Download the Whisk Deploy</h6>
-                  <p>Binaries of <i>wskdeploy</i> are available for download on the project's GitHub release page:
-                  <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases</a>.
-                  </p>
-                </li>
-                <li>
-                <h5>Verify Installation</h5>
-                  <p>Start by verifying the utility can display the command line help:</p>
-                  <div class="terminal">
+
+          <h5>Installing</h5>
+          <p></p>
+
+          <ul>
+            <li>
+              <h6>Download the Whisk Deploy utility</h6>
+              <p>Binaries of <i>wskdeploy</i> are available for download on the project's GitHub release page:
+              <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases</a>.
+              </p>
+            </li>
+          </ul>
+
+        <h5>Verify Installation</h5>
+          <p>Start by verifying the utility can display the command line help:</p>
+          <div class="terminal">
 {% highlight bash %}$ wskdeploy --help{% endhighlight %}
-                  </div>
-                </li>
-                <li>
-                  <h5>Configure</h5>
-                  <p>Before you proceed with the deployment, please make
-                    sure you have setup the
-                    <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
-                    properties with a default namespace
-                    as described in the Whisk CLI
-                    configuration <a href="#authentication">here</a>.
-                  </p>
-                </li>
-                <li>
-                    <h5>Create Package Manifest File <i>manifest.yaml</i></h5>
-                    <p>Please refer to the
-                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
-                    for all manifest file grammar and syntax. This programming guide has step-by-step instructions for deploying OpenWhisk applications
-                    using wskdeploy.
-                    </p>
-                </li>
-                <li>
-                  <h5>Deploy your Application</h5>
-                    <ul>
-                        <li>
-                            <p>Deploying an OpenWhisk Manifest file:</p>
-                            <div class="terminal">
+          </div>
+
+          <h5>Configure</h5>
+          <p>Before you proceed with the deployment, please make sure you have
+            setup the <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
+            properties with a default namespace as described in the
+            <a href="#authentication">Whisk CLI configuration section</a> above.
+          </p>
+
+          <h5>Create Package Manifest File <i>manifest.yaml</i></h5>
+          <p>Please refer to the
+            <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
+            for all manifest file grammar and syntax. This programming guide has step-by-step instructions for deploying OpenWhisk applications
+            using wskdeploy.
+          </p>
+
+          <h5>Deploy your Application</h5>
+          <ul>
+            <li>
+              <p>Deploying an OpenWhisk Manifest file:</p>
+              <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+              </div>
+            </li>
+          </ul>
         </div>
     </main>
 
@@ -878,7 +893,7 @@ $ wsk list
             <p>
                 After your OpenWhisk environment is enabled, you can use OpenWhisk with your web apps or mobile apps with REST API calls.
                 For more details about the APIs for actions, activations, packages, rules, and triggers, see the
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md">OpenWhisk API</a>
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md#using-rest-apis-with-openwhisk">OpenWhisk API</a>
                 documentation.
             </p>
         </div>
@@ -1926,7 +1941,7 @@ abcd.... locationUpdate
             <h4>Development Tools</h4>
             <p></p>
             <h5>The OpenWhisk Debugger</h5>
-            <p style="padding-left: 2em;">
+            <p class="indented">
                 <a href="https://github.com/apache/incubator-openwhisk-debugger/blob/master/client/README.md">incubator-openwhisk-debugger</a>
                 supports debugging OpenWhisk actions. The debugger will arrange things so that the actions you wish to debug will be offloaded from the main OpenWhisk servers
                 and instead run locally on your laptop. You can then, from within the debugger, inspect and modify values.
