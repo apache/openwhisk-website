@@ -678,7 +678,8 @@ $ make quick-start
             <h5>Guest account</h5>
             <p>
                 <a href="#openwhisk_deployment">OpenWhisk Deployments</a>
-                create a guest account configured with the authentication key available at:
+                create a guest account configured with the authentication key
+                available at:
             </p>
             <ul><li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a></li></ul>
             <h5>API Host</h5>
@@ -704,8 +705,8 @@ $ make quick-start
         <div class="content">
             <a class="indexable" id="wsk-cli"></a>
             <h4>OpenWhisk CLI (wsk)</h4>
-            <p>OpenWhisk offers the <em>wsk</em> Command Line Interface (CLI)
-              to easily create, run, and manage OpenWhisk entities.
+            <p>OpenWhisk offers the <code>wsk</code> Command Line Interface
+              (CLI) to easily create, run, and manage OpenWhisk entities.
             </p>
             <p>For detailed information on setting up and configuring the
               OpenWhisk CLI, go to the
@@ -777,24 +778,24 @@ $ brew install wsk
               </li>
             </ul>
 
-          <!-- Install: Verify -->
-          <a class="indexable" id="wsk-cli-verify"></a>
-          <h5>Verify Installation</h5>
-          <p>You can verify your installation by invoking the Whisk CLI's help command:</p>
-          <div class="indented">
-            <div class="terminal">
+            <!-- Install: Verify -->
+            <a class="indexable" id="wsk-cli-verify"></a>
+            <h5>Verify Installation</h5>
+            <p>You can verify your installation by invoking the Whisk CLI's help command:</p>
+            <div class="indented">
+              <div class="terminal">
 {% highlight bash %}$ wsk --help{% endhighlight %}
+              </div>
             </div>
-          </div>
 
-          <!-- Install: Configuring -->
-          <a class="indexable" id="wsk-cli-configure"></a>
-          <h5>Configuring</h5>
-          <p>Before using the OpenWhisk CLI, you must first configure it
-            to point to the OpenWhisk platform you want the utility
-            to use (i.e., its API endpoint) and also provide it with your
-            associated authentication credentials.</p>
-            <h6 id="authentication">Setting the API Host and
+            <!-- Install: Configuring -->
+            <a class="indexable" id="wsk-cli-configure"></a>
+            <h5>Configuring</h5>
+            <p>Before using the OpenWhisk CLI, you must first configure it
+              to point to the OpenWhisk platform you want the utility
+              to use (i.e., its API endpoint) and also provide it with your
+              associated authentication credentials.</p>
+            <h6 id="api_authentication">Setting the API Host and
               Authentication Key</h6>
             <div class="indented">
               <p>You can configure wsk CLI to use your OpenWhisk
@@ -909,7 +910,7 @@ $ wsk list
             <p>Before you proceed with the deployment, please make sure you have
               setup the <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
               properties with a default namespace as described in the
-              <a href="#authentication">Whisk CLI configuration section</a> above.
+              <a href="#api_authentication">Whisk CLI configuration section</a> above.
             </p>
           </div>
 
@@ -920,17 +921,17 @@ $ wsk list
 
                 <p>Please refer to the
                   <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
-                  for all manifest file grammar and syntax. This programming guide has step-by-step instructions for deploying OpenWhisk applications
-                  using wskdeploy.
+                  for all manifest file grammar and syntax. This programming
+                  guide has step-by-step instructions for deploying OpenWhisk
+                  applications using wskdeploy.
                 </p>
-                <p>Here is a simple YAML manifest example that has an in-line function
-                  written in JavaScript that outputs "Hello World":</p>
+                <p>Here is a simple YAML manifest example that has an in-line
+                  function written in JavaScript that outputs "Hello World":</p>
                 <div class="terminal">
 {% highlight yaml %}
 {% include code/manifest-for-helloJS-2.yaml %}
 {% endhighlight %}
                 </div>
-                </p>
 
             </li>
             <li>Save the YAML scripts as an OpenWhisk Manifest file
