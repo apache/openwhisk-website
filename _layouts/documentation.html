@@ -753,32 +753,32 @@ $ brew install wsk
                   the <code>tar.gz</code> file.</p></li>
                 <li>
                   <div id="copy_to_path_instructions">
-                  <p>Simplify access to the <code>wsk</code> executable by
-                    moving or copying the binary file to a path listed
-                    in your <code>PATH</code> environment variable.
-                    This will enable you to invoke the OpenWhisk CLI by
-                    just typing '<code>wsk</code>' on the command line
-                    from anywhere.</p>
-                  <p>For example:</p>
-                  <ul>
-                    <li><p><b>Linux</b>: Move the <code>wsk</code> executable
-                      to your local <code>bin</code> directory:</p>
-                        <div class="terminal">
-                        {% highlight bash %}$ sudo mv [full path to downloaded wsk executable] /usr/local/bin/wsk{% endhighlight %}
-                        </div>
-                    </li>
-                    <li><p><b>Windows</b>: Follow instructions as linked here:</p>
-                      <ul>
-                        <li>
-                          <a href="https://www.computerhope.com/issues/ch000549.htm">How to set the path and environment variables in Windows</a>.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-
+                    <p>Simplify access to the <code>wsk</code> executable by
+                      moving or copying the binary file to a path listed
+                      in your <code>PATH</code> environment variable.
+                      This will enable you to invoke the OpenWhisk CLI by
+                      just typing '<code>wsk</code>' on the command line
+                      from anywhere.</p>
+                    <p>For example:</p>
+                    <ul>
+                      <li><p><b>Linux</b>: Move the <code>wsk</code> executable
+                        to your local <code>bin</code> directory:</p>
+                          <div class="terminal">
+                          {% highlight bash %}$ sudo mv [full path to downloaded wsk executable] /usr/local/bin/wsk{% endhighlight %}
+                          </div>
+                      </li>
+                      <li><p><b>Windows</b>: Follow instructions as linked here:</p>
+                        <ul>
+                          <li>
+                            <a href="https://www.computerhope.com/issues/ch000549.htm">How to set the path and environment variables in Windows</a>.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
-
+                
               <!-- Install: Verify -->
               <a class="indexable" id="wsk-cli-verify"></a>
               <h5>Verify Installation</h5>
@@ -825,7 +825,7 @@ $ wsk property set --apihost API_HOST --auth AUTH_KEY --namespace guest
                 </p>
                 <div class="terminal">
 {% highlight bash %}
-$ export WSK_CONFIG_FILE=<your-config-file>
+$ export WSK_CONFIG_FILE=your-config-file
 {% endhighlight %}
                 </div>
 
@@ -1275,26 +1275,17 @@ $ wsk list -v
 {% highlight go linenos %}
 {% include code/hello.go %}
 {% endhighlight %}
-                    </div>
-                </li>
-                <li style="list-style-type: decimal">
-                    Create an executable called <i>exec</i> using <i>hello.go</i>:
-                    <div class="terminal">
-{% highlight bash %}
-$ GOOS=linux GOARCH=amd64 go build -o exec
-$ zip exec.zip exec
-{% endhighlight %}
-                    </div>
-                </li>
-                <li style="list-style-type: decimal">
-                    Create an action <i>helloGo</i>:
-                    <div class="terminal">
-{% highlight bash %}$ wsk action create helloGo --native exec.zip{% endhighlight %}
-                    </div>
-                </li>
-                <li style="list-style-type: decimal">
-                    Invoke an action <i>helloGo</i>:
-                    <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Create an action <i>helloGo</i>:
+                        <div class="terminal">
+{% highlight bash %}$ wsk action create helloGo hello.go{% endhighlight %}
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Invoke an action <i>helloGo</i>:
+                        <div class="terminal">
 {% highlight bash %}$ wsk action invoke helloGo -r -p name gopher{% endhighlight %}
                     </div>
                     <div class="terminal">
@@ -1303,28 +1294,19 @@ $ zip exec.zip exec
 "msg": "Hello, gopher!"
 }
 {% endhighlight %}
-                    </div>
-                </li>
-                <li style="list-style-type: decimal">
-                    Deploy using <i>wskdeploy</i>:
-                    <p>
-                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                    </p>
-                    <ol>
-                        <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
-                        <li>
-                            Create an executable called <i>exec</i> using <i>hello.go</i>:
-                            <div class="terminal">
-{% highlight bash %}
-$ cd actions/
-$ GOOS=linux GOARCH=amd64 go build -o exec
-{% endhighlight %}
-                            </div>
-                        </li>
-                        <li>
-                            Create <i>manifest.yaml</i> with the following YAML content:
-                            <div class="terminal">
+                        </div>
+                    </li>
+                    <li style="list-style-type: decimal">
+                        Deploy using <i>wskdeploy</i>:
+                        <p>
+                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                        </p>
+                        <ol>
+                            <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
+                            <li>
+                                Create <i>manifest.yaml</i> with the following YAML content:
+                                <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloGo.yaml %}
 {% endhighlight %}
@@ -1334,26 +1316,26 @@ $ GOOS=linux GOARCH=amd64 go build -o exec
                             Run deployment with <i>wskdeploy</i>:
                             <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                            </div>
-                        </li>
-                    </ol>
-                </li>
-            </ol>
-            <a class="indexable" id="go-runtime"></a>
-            <h5>OpenWhisk Runtime for Go</h5>
-            <p>
-                If you wish to learn more about Go runtime along with
-                the libraries that are supported or "built-in" by default, please visit
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
-            </p>
-            <a class="indexable" id="go-additional-resources"></a>
-            <h5>Additional Resources</h5>
-            <ul>
-                <li><a href="http://jamesthom.as/blog/2017/01/17/openwhisk-and-go/">Running Go Binaries on OpenWhisk</a></li>
-                <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
-            </ul>
-        </div>
-    </main>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+                <a class="indexable" id="go-runtime"></a>
+                <h5>OpenWhisk Runtime for Go</h5>
+                <p>
+                    If you wish to learn more about Go runtime along with
+                    the libraries that are supported or "built-in" by default, please visit
+                    <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
+                </p>
+                <a class="indexable" id="go-additional-resources"></a>
+                <h5>Additional Resources</h5>
+                <ul>
+                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
+                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>
+                </ul>
+            </div>
+        </main>
 
     <!-- Here we are starting with writing actions in Java -->
     <main class="doc">
