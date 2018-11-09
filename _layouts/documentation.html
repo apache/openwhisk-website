@@ -49,13 +49,13 @@ layout: default
                 <ul class="index-menuitems">
                     <li class="index-menu-toggle"><a href="#nodejs">NodeJS</a></li>
                     <ul class="index-menuitems">
-                        <li><a href="#nodejs-actions">Creating and Invoking Sample Action</a></li>
+                        <li><a href="#actions-nodejs">Creating and Invoking Sample Action</a></li>
                         <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
                         <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
                     </ul>
                     <li class="index-menu-toggle"><a href="#python">Python</a></li>
                     <ul class="index-menuitems">
-                        <li><a href="#python-actions">Creating and Invoking Sample Action</a></li>
+                        <li><a href="#actions-python">Creating and Invoking Sample Action</a></li>
                         <li><a href="#python-runtime">Python Runtime</a></li>
                         <li><a href="#python-additional-resources">Additional Resources</a></li>
                     </ul>
@@ -67,25 +67,25 @@ layout: default
                     </ul-->
                     <li class="index-menu-toggle"><a href="#go">Go</a></li>
                     <ul class="index-menuitems">
-                        <li><a href="#go-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#actions-go">Creating and Invoking Action</a></li>
                         <li><a href="#go-runtime">Go Runtime</a></li>
                         <li><a href="#go-additional-resources">Additional Resources</a></li>
                     </ul>
                     <li class="index-menu-toggle"><a href="#java">Java</a></li>
                     <ul class="index-menuitems">
-                        <li><a href="#java-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#actions-java">Creating and Invoking Action</a></li>
                         <li><a href="#java-runtime">Java Runtime</a></li>
                         <li><a href="#java-additional-resources">Additional Resources</a></li>
                     </ul>
                     <li class="index-menu-toggle"><a href="#php">PHP</a></li>
                     <ul class="index-menuitems">
-                        <li><a href="#php-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#actions-php">Creating and Invoking Action</a></li>
                         <li><a href="#php-runtime">PHP Runtime</a></li>
                         <li><a href="#php-additional-resources">Additional Resources</a></li>
                     </ul>
                     <li class="index-menu-toggle"><a href="#ruby">Ruby</a></li>
                     <ul class="index-menuitems">
-                        <li><a href="#ruby-actions">Creating and Invoking Action</a></li>
+                        <li><a href="#actions-ruby">Creating and Invoking Action</a></li>
                         <li><a href="#ruby-runtime">Ruby Runtime</a></li>
                         <li><a href="#ruby-additional-resources">Additional Resources</a></li>
                     </ul>
@@ -1067,7 +1067,7 @@ $ wsk list -v
             <a class="indexable" id="nodejs"></a>
             <h4>NodeJs</h4>
             <p></p>
-            <a class="indexable" id="nodejs-actions"></a>
+            <a class="indexable" id="actions-nodejs"></a>
             <h5>Creating and Invoking NodeJS actions</h5>
             <p>
                 Let's look at how to write a sample hello world action in NodeJS. You can visit
@@ -1165,88 +1165,90 @@ $ wsk list -v
     <main class="doc">
         <div class="content">
             <a class="indexable" id="python"></a>
-            <h4>Python</h4>
-            <p></p>
-            <a class="indexable" id="python-actions"></a>
-            <h5>Creating And Invoking Python actions</h5>
-            <p>
-                Let's look at how to write a sample hello world action in Python. You can visit
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
-                page for further details.
-            </p>
-            <p>
-                <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
-                please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
-            </p>
-            <ol>
-                <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
-                    <div class="terminal">
-{% highlight python linenos %}
-{% include code/hello.py %}
-{% endhighlight %}
-                    </div>
-                    <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
-                        <div class="terminal">
-{% highlight bash %}$ wsk action create helloPy hello.py{% endhighlight %}
-                        </div>
-                        <div class="terminal">
-<pre>ok: created action helloPy</pre>
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
-                    <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
-                    </div>
-                    <div class="terminal">
+            <h4 class="section-toggle">Python</h4>
+            <div class="section-toggleable">
+              <p></p>
+              <a class="indexable" id="actions-python"></a>
+              <h5>Creating And Invoking Python actions</h5>
+              <p>
+                  Let's look at how to write a sample hello world action in Python. You can visit
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
+                  page for further details.
+              </p>
+              <p>
+                  <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                  please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+              </p>
+              <ol>
+                  <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
+                      <div class="terminal">
+  {% highlight python linenos %}
+  {% include code/hello.py %}
+  {% endhighlight %}
+                      </div>
+                      <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
+                          <div class="terminal">
+  {% highlight bash %}$ wsk action create helloPy hello.py{% endhighlight %}
+                          </div>
+                          <div class="terminal">
+  <pre>ok: created action helloPy</pre>
+                          </div>
+                      </li>
+                      <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
+                      <div class="terminal">
+  {% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
+                      </div>
+                      <div class="terminal">
 {% highlight yaml %}
 {
 "greeting": "Hello World!"
 }
 {% endhighlight %}
-                    </div>
-                    <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
-                    <p>
-                        <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                        please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                    </p>
-                    <ol>
-                        <li>Create <i>manifest.yaml</i> with the following YAML content:
-                            <div class="terminal">
+                      </div>
+                      <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+                      <p>
+                          <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                          please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                      </p>
+                      <ol>
+                          <li>Create <i>manifest.yaml</i> with the following YAML content:
+                              <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloPy-1.yaml %}
 {% endhighlight %}
-                            </div>
-                            Or
-                            <p></p>
-                            <div class="terminal">
+                              </div>
+                              Or
+                              <p></p>
+                              <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloPy-2.yaml %}
 {% endhighlight %}
-                            </div>
-                        </li>
-                        <li>
-                            Run deployment with <i>wskdeploy</i>:
-                            <div class="terminal">
+                              </div>
+                          </li>
+                          <li>
+                              Run deployment with <i>wskdeploy</i>:
+                              <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                            </div>
-                        </li>
-                    </ol>
-                </li>
-            </ol>
-            <a class="indexable" id="python-runtime"></a>
-            <h5>OpenWhisk Runtime for Python</h5>
-            <p>
-                OpenWhisk supports <strong>Python 2</strong> and <strong>Python 3</strong> runtimes where Python 2 being default pick by wsk CLI and Whisk Deploy.
-                If you wish to learn more about Python runtime along with
-                the libraries that are supported or "built-in" by default, please visit
-                <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
-            </p>
-            <a class="indexable" id="python-additional-resources"></a>
-            <h5>Additional Resources</h5>
-            <ul>
-                <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
-                <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
-            </ul>
+                              </div>
+                          </li>
+                      </ol>
+                  </li>
+              </ol>
+              <a class="indexable" id="python-runtime"></a>
+              <h5>OpenWhisk Runtime for Python</h5>
+              <p>
+                  OpenWhisk supports <strong>Python 2</strong> and <strong>Python 3</strong> runtimes where Python 2 being default pick by wsk CLI and Whisk Deploy.
+                  If you wish to learn more about Python runtime along with
+                  the libraries that are supported or "built-in" by default, please visit
+                  <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
+              </p>
+              <a class="indexable" id="python-additional-resources"></a>
+              <h5>Additional Resources</h5>
+              <ul>
+                  <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
+                  <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
+              </ul>
+            </div>
         </div>
     </main>
 
@@ -1256,7 +1258,7 @@ $ wsk list -v
             <a class="indexable" id="go"></a>
             <h4>Go</h4>
             <p></p>
-            <a class="indexable" id="go-actions"></a>
+            <a class="indexable" id="actions-go"></a>
             <h5>Creating And Invoking Go actions</h5>
             <p>
                 Let's look at how to write a sample hello world action in Go. You can visit
@@ -1343,7 +1345,7 @@ $ wsk list -v
             <a class="indexable" id="java"></a>
             <h4>Java</h4>
             <p></p>
-            <a class="indexable" id="java-actions"></a>
+            <a class="indexable" id="actions-java"></a>
             <h5>Creating and Invoking Java actions</h5>
             <p>
                 Let's look at how to write a sample hello world action in Java. You can visit
@@ -1442,7 +1444,7 @@ $ jar cvf hello.jar Hello.class
                 <a class="indexable" id="php"></a>
                 <h4>PHP</h4>
                 <p></p>
-                <a class="indexable" id="php-actions"></a>
+                <a class="indexable" id="actions-php"></a>
                 <h5>Creating and Invoking PHP actions</h5>
                 <p>
                     Let's look at how to write a sample hello world action in PHP. You can visit
@@ -1536,7 +1538,7 @@ $ jar cvf hello.jar Hello.class
                 <a class="indexable" id="ruby"></a>
                 <h4>Ruby</h4>
                 <p></p>
-                <a class="indexable" id="ruby-actions"></a>
+                <a class="indexable" id="actions-ruby"></a>
                 <h5>Creating and Invoking Ruby actions</h5>
                 <p>
                     Let's look at how to write a sample hello world action in Ruby. You can visit
