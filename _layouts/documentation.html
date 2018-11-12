@@ -1065,8 +1065,8 @@ $ wsk list -v
 
             <p>
                 <strong>How does OpenWhisk process Actions? </strong>
-                Find out what happens "behind the scenes" when you invoke an
-                Action in Apache OpenWhisk by reading about the
+                Find out what happens <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">"behind the scenes"</a> when you invoke an
+                Action in Apache OpenWhisk by reading about <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openwhisk-works">How OpenWhisk Works</a>.
             </p>
 
             <h5>Additional Information</h5>
@@ -1214,9 +1214,9 @@ $ wsk list -v
               <ol>
                   <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
                       <div class="terminal">
-  {% highlight python linenos %}
-  {% include code/hello.py %}
-  {% endhighlight %}
+{% highlight python linenos %}
+{% include code/hello.py %}
+{% endhighlight %}
                       </div>
                       <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
                           <div class="terminal">
@@ -1228,7 +1228,7 @@ $ wsk list -v
                       </li>
                       <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
                       <div class="terminal">
-  {% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
                       </div>
                       <div class="terminal">
 {% highlight yaml %}
@@ -1309,28 +1309,28 @@ $ wsk list -v
                       <a class="indexable" id="hello-go"></a>
                       Create a file named <i>hello.go</i>:
                       <div class="terminal">
-  {% highlight go linenos %}
-  {% include code/hello.go %}
-  {% endhighlight %}
+{% highlight go linenos %}
+{% include code/hello.go %}
+{% endhighlight %}
                           </div>
                       </li>
                       <li style="list-style-type: decimal">
                           Create an action <i>helloGo</i>:
                           <div class="terminal">
-  {% highlight bash %}$ wsk action create helloGo hello.go{% endhighlight %}
+{% highlight bash %}$ wsk action create helloGo hello.go{% endhighlight %}
                           </div>
                       </li>
                       <li style="list-style-type: decimal">
                           Invoke an action <i>helloGo</i>:
                           <div class="terminal">
-  {% highlight bash %}$ wsk action invoke helloGo -r -p name gopher{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloGo -r -p name gopher{% endhighlight %}
                       </div>
                       <div class="terminal">
-  {% highlight yaml %}
-  {
-  "msg": "Hello, gopher!"
-  }
-  {% endhighlight %}
+{% highlight yaml %}
+{
+"msg": "Hello, gopher!"
+}
+{% endhighlight %}
                           </div>
                       </li>
                       <li style="list-style-type: decimal">
@@ -1344,15 +1344,15 @@ $ wsk list -v
                               <li>
                                   Create <i>manifest.yaml</i> with the following YAML content:
                                   <div class="terminal">
-  {% highlight yaml linenos %}
-  {% include code/manifest-for-helloGo.yaml %}
-  {% endhighlight %}
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloGo.yaml %}
+{% endhighlight %}
                               </div>
                           </li>
                           <li>
                               Run deployment with <i>wskdeploy</i>:
                               <div class="terminal">
-  {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
+{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
                                   </div>
                               </li>
                           </ol>
