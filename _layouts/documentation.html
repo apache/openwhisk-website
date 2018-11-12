@@ -991,17 +991,24 @@ $ wsk list -v
         </div>
     </main>
 
-    <!-- actions section -->
+    <!-- *************************************************************** -->
+    <!-- ACTIONS section                                                 -->
+    <!-- *************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="actions"></a>
             <h4>Actions</h4>
+            <p>This section answers some typical questions about
+              creating and invoking Actions (i.e.,  functions) in OpenWhisk.
+              Please read the project documentation on
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">OpenWhisk Actions</a>
+            for more details.</p>
             <p>
                 <strong>What is an OpenWhisk action?</strong>
                 Actions are stateless functions (code snippets) that run on the OpenWhisk platform.
                 Actions encapsulates application logic to be executed in response to events.
                 You can find more details on specifics of an action in main OpenWhisk GitHub repo at
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">incubator-openwhisk</a>.
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">incubator-openwhisk</a>.
             </p>
             <p>
                 <strong>Which programming language can I use to write an OpenWhisk action?</strong>
@@ -1055,13 +1062,36 @@ $ wsk list -v
                 <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
                 Sequence can be treated as an action in terms of it creation and invocation.
             </p>
-            <p>Please read
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md">OpenWhisk Actions</a>
-            for further details.</p>
+
+            <p>
+                <strong>How does OpenWhisk process Actions? </strong>
+                Find out what happens "behind the scenes" when you invoke an
+                Action in Apache OpenWhisk by reading about the
+            </p>
+
+            <h5>Additional Information</h5>
+            <p>Listed below are some additional topics related to
+              developing OpenWhisk Actions:</p>
+            <ul>
+              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
+                - the same Namespace and Naming rules as any
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
+                OpenWhisk programming model.</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
+                - Learn about some of the
+                (operator configurable) System Limits that are imposed on
+                OpenWhisk Actions</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
+                - Find out to annotated OpenWhisk Actions to quickly enable
+                you to build web based applications</li>
+            </ul>
+
         </div>
     </main>
 
-    <!-- Here we are starting with writing actions in NodeJS -->
+    <!-- *************************************************************** -->
+    <!-- Actions - NodeJS                                                -->
+    <!-- *************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="nodejs"></a>
@@ -1129,9 +1159,9 @@ $ wsk list -v
                             Or
                             <p></p>
                             <div class="terminal">
-    {% highlight yaml linenos %}
-    {% include code/manifest-for-helloJS-2.yaml %}
-    {% endhighlight %}
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloJS-2.yaml %}
+{% endhighlight %}
                             </div>
                         </li>
                         <li>
@@ -1161,12 +1191,14 @@ $ wsk list -v
         </div>
     </main>
 
-    <!-- Here we are starting with writing actions in python -->
+    <!-- *************************************************************** -->
+    <!-- Actions - Python                                                -->
+    <!-- *************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="python"></a>
             <h4 class="section-toggle">Python</h4>
-            <div class="section-toggleable">
+            <div class="section-toggleable section-toggle-start-closed">
               <p></p>
               <a class="indexable" id="actions-python"></a>
               <h5>Creating And Invoking Python actions</h5>
@@ -1252,94 +1284,100 @@ $ wsk list -v
         </div>
     </main>
 
-    <!-- Here we are starting with writing actions in python -->
+    <!-- *************************************************************** -->
+    <!-- Actions - GoLang                                                -->
+    <!-- *************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="go"></a>
-            <h4>Go</h4>
-            <p></p>
-            <a class="indexable" id="actions-go"></a>
-            <h5>Creating And Invoking Go actions</h5>
-            <p>
-                Let's look at how to write a sample hello world action in Go. You can visit
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a>
-                page for further details.
-            </p>
-            <p>
-                <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
-                please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
-            </p>
-            <ol>
-                <li style="list-style-type: decimal">
-                    <a class="indexable" id="hello-go"></a>
-                    Create a file named <i>hello.go</i>:
-                    <div class="terminal">
-{% highlight go linenos %}
-{% include code/hello.go %}
-{% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Create an action <i>helloGo</i>:
-                        <div class="terminal">
-{% highlight bash %}$ wsk action create helloGo hello.go{% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Invoke an action <i>helloGo</i>:
-                        <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloGo -r -p name gopher{% endhighlight %}
-                    </div>
-                    <div class="terminal">
-{% highlight yaml %}
-{
-"msg": "Hello, gopher!"
-}
-{% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Deploy using <i>wskdeploy</i>:
-                        <p>
-                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                        </p>
-                        <ol>
-                            <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
-                            <li>
-                                Create <i>manifest.yaml</i> with the following YAML content:
-                                <div class="terminal">
-{% highlight yaml linenos %}
-{% include code/manifest-for-helloGo.yaml %}
-{% endhighlight %}
-                            </div>
-                        </li>
-                        <li>
-                            Run deployment with <i>wskdeploy</i>:
-                            <div class="terminal">
-{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                                </div>
-                            </li>
-                        </ol>
-                    </li>
-                </ol>
-                <a class="indexable" id="go-runtime"></a>
-                <h5>OpenWhisk Runtime for Go</h5>
-                <p>
-                    If you wish to learn more about Go runtime along with
-                    the libraries that are supported or "built-in" by default, please visit
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
-                </p>
-                <a class="indexable" id="go-additional-resources"></a>
-                <h5>Additional Resources</h5>
-                <ul>
-                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
-                    <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>
-                </ul>
+            <h4 class="section-toggle">Go</h4>
+            <div class="section-toggleable section-toggle-start-closed">
+              <p></p>
+              <a class="indexable" id="actions-go"></a>
+              <h5>Creating And Invoking Go actions</h5>
+              <p>
+                  Let's look at how to write a sample hello world action in Go. You can visit
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a>
+                  page for further details.
+              </p>
+              <p>
+                  <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                  please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+              </p>
+              <ol>
+                  <li style="list-style-type: decimal">
+                      <a class="indexable" id="hello-go"></a>
+                      Create a file named <i>hello.go</i>:
+                      <div class="terminal">
+  {% highlight go linenos %}
+  {% include code/hello.go %}
+  {% endhighlight %}
+                          </div>
+                      </li>
+                      <li style="list-style-type: decimal">
+                          Create an action <i>helloGo</i>:
+                          <div class="terminal">
+  {% highlight bash %}$ wsk action create helloGo hello.go{% endhighlight %}
+                          </div>
+                      </li>
+                      <li style="list-style-type: decimal">
+                          Invoke an action <i>helloGo</i>:
+                          <div class="terminal">
+  {% highlight bash %}$ wsk action invoke helloGo -r -p name gopher{% endhighlight %}
+                      </div>
+                      <div class="terminal">
+  {% highlight yaml %}
+  {
+  "msg": "Hello, gopher!"
+  }
+  {% endhighlight %}
+                          </div>
+                      </li>
+                      <li style="list-style-type: decimal">
+                          Deploy using <i>wskdeploy</i>:
+                          <p>
+                              <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                              please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                          </p>
+                          <ol>
+                              <li>Create a directory called <i>actions</i> with <i>hello.go</i> from step 1 <a href="#hello-go">above</a>.</li>
+                              <li>
+                                  Create <i>manifest.yaml</i> with the following YAML content:
+                                  <div class="terminal">
+  {% highlight yaml linenos %}
+  {% include code/manifest-for-helloGo.yaml %}
+  {% endhighlight %}
+                              </div>
+                          </li>
+                          <li>
+                              Run deployment with <i>wskdeploy</i>:
+                              <div class="terminal">
+  {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
+                                  </div>
+                              </li>
+                          </ol>
+                      </li>
+                  </ol>
+                  <a class="indexable" id="go-runtime"></a>
+                  <h5>OpenWhisk Runtime for Go</h5>
+                  <p>
+                      If you wish to learn more about Go runtime along with
+                      the libraries that are supported or "built-in" by default, please visit
+                      <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
+                  </p>
+                  <a class="indexable" id="go-additional-resources"></a>
+                  <h5>Additional Resources</h5>
+                  <ul>
+                      <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
+                      <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>
+                  </ul>
+                </div>
             </div>
         </main>
 
-    <!-- Here we are starting with writing actions in Java -->
+    <!-- *************************************************************** -->
+    <!-- Actions - Java                                                  -->
+    <!-- *************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="java"></a>
@@ -1413,360 +1451,371 @@ $ jar cvf hello.jar Hello.class
         </div>
     </main>
 
-        <!--main class="doc">
-            <div class="content">
-                <h4 id="docker">Docker</h4>
-                <p></p>
-                <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
-                <p>
-                    OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
-                    From this base image, you can create and run an OpenWhisk action:
-                    Let's look at how to write a sample hello world action in Docker. You can visit
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
-                    page for further details.
-                </p>
-                <h5 id="docker-runtime">OpenWhisk Runtime for Docker</h5>
-                <p>
+      <!--main class="doc">
+          <div class="content">
+              <h4 id="docker">Docker</h4>
+              <p></p>
+              <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
+              <p>
+                  OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
+                  From this base image, you can create and run an OpenWhisk action:
+                  Let's look at how to write a sample hello world action in Docker. You can visit
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
+                  page for further details.
+              </p>
+              <h5 id="docker-runtime">OpenWhisk Runtime for Docker</h5>
+              <p>
 
-                </p>
-                <h5 id="docker-other-resources">Other Resources</h5>
-                <p>
-                    <ul>
-                        <li><a href="http://jamesthom.as/blog/2017/01/16/openwhisk-docker-actions/">OpenWhisk Docker Actions</a></li>
-                        <li><a href="https://www.ibm.com/blogs/bluemix/2017/01/docker-bluemix-openwhisk/">Understanding and using Docker actions in IBM Bluemix OpenWhisk</a></li>
-                    </ul>
-                </p>
-            </div>
-        </main-->
+              </p>
+              <h5 id="docker-other-resources">Other Resources</h5>
+              <p>
+                  <ul>
+                      <li><a href="http://jamesthom.as/blog/2017/01/16/openwhisk-docker-actions/">OpenWhisk Docker Actions</a></li>
+                      <li><a href="https://www.ibm.com/blogs/bluemix/2017/01/docker-bluemix-openwhisk/">Understanding and using Docker actions in IBM Bluemix OpenWhisk</a></li>
+                  </ul>
+              </p>
+          </div>
+      </main-->
 
-        <main class="doc">
-            <div class="content">
-                <a class="indexable" id="php"></a>
-                <h4>PHP</h4>
-                <p></p>
-                <a class="indexable" id="actions-php"></a>
-                <h5>Creating and Invoking PHP actions</h5>
-                <p>
-                    Let's look at how to write a sample hello world action in PHP. You can visit
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-php.md#creating-and-invoking-php-actions">Creating and Invoking PHP actions</a>
-                    page for further details.
-                </p>
-                <p>
-                    <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
-                    please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
-                </p>
-                <ol>
-                    <li style="list-style-type: decimal">
-                        Create a file named <i>hello.php</i>:
-                        <div class="terminal">
+      <!-- *************************************************************** -->
+      <!-- Actions - PHP                                                   -->
+      <!-- *************************************************************** -->
+      <main class="doc">
+          <div class="content">
+              <a class="indexable" id="php"></a>
+              <h4>PHP</h4>
+              <p></p>
+              <a class="indexable" id="actions-php"></a>
+              <h5>Creating and Invoking PHP actions</h5>
+              <p>
+                  Let's look at how to write a sample hello world action in PHP. You can visit
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-php.md#creating-and-invoking-php-actions">Creating and Invoking PHP actions</a>
+                  page for further details.
+              </p>
+              <p>
+                  <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                  please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+              </p>
+              <ol>
+                  <li style="list-style-type: decimal">
+                      Create a file named <i>hello.php</i>:
+                      <div class="terminal">
 {% highlight php linenos %}
 {% include code/hello.php %}
 {% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Create an action called <i>helloPHP</i> using <i>hello.php</i>:
-                        <div class="terminal">
+                      </div>
+                  </li>
+                  <li style="list-style-type: decimal">
+                      Create an action called <i>helloPHP</i> using <i>hello.php</i>:
+                      <div class="terminal">
 {% highlight bash %}$ wsk action create helloPHP hello.php{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                      </div>
+                      <div class="terminal">
 {% highlight bash %}ok: created action helloPHP{% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Invoke an action <i>helloPHP</i>:
-                        <div class="terminal">
+                      </div>
+                  </li>
+                  <li style="list-style-type: decimal">
+                      Invoke an action <i>helloPHP</i>:
+                      <div class="terminal">
 {% highlight bash %}$ wsk action invoke helloPHP --blocking --result --param name World{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                      </div>
+                      <div class="terminal">
 {% highlight yaml %}
 {
-    "greeting": "Hello World!"
+  "greeting": "Hello World!"
 }
 {% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Deploy using <i>wskdeploy</i>:
-                        <p>
-                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                        </p>
-                        <ol>
-                            <li>
-                                Create <i>manifest.yaml</i> with the following YAML content:
-                                <div class="terminal">
+                      </div>
+                  </li>
+                  <li style="list-style-type: decimal">
+                      Deploy using <i>wskdeploy</i>:
+                      <p>
+                          <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                          please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                      </p>
+                      <ol>
+                          <li>
+                              Create <i>manifest.yaml</i> with the following YAML content:
+                              <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloPhp-1.yaml %}
 {% endhighlight %}
-                                </div>
-                                Or
-                                <p></p>
-                                <div class="terminal">
+                              </div>
+                              Or
+                              <p></p>
+                              <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloPhp-2.yaml %}
 {% endhighlight %}
-                                </div>
-                            </li>
-                            <li>
-                                Run deployment with <i>wskdeploy</i>:
-                                <div class="terminal">
+                              </div>
+                          </li>
+                          <li>
+                              Run deployment with <i>wskdeploy</i>:
+                              <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                                </div>
-                            </li>
-                        </ol>
-                    </li>
-                </ol>
-                <a class="indexable" id="php-runtime"></a>
-                <h5>OpenWhisk Runtime for PHP</h5>
-                <p>
-                    OpenWhisk supports <strong>PHP 7.2</strong> and <strong>PHP 7.1</strong> runtimes where PHP 7.2 being default pick by wsk CLI and Whisk Deploy.
-                    If you wish to learn more about PHP runtime, please visit
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP Runtime GitHub Repository</a>.
-                </p>
-                <a class="indexable" id="php-additional-resources"></a>
-                <h5>Additional Resources</h5>
-                <ul>
-                    <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
-                    <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
-                </ul>
-            </div>
-        </main>
+                              </div>
+                          </li>
+                      </ol>
+                  </li>
+              </ol>
+              <a class="indexable" id="php-runtime"></a>
+              <h5>OpenWhisk Runtime for PHP</h5>
+              <p>
+                  OpenWhisk supports <strong>PHP 7.2</strong> and <strong>PHP 7.1</strong> runtimes where PHP 7.2 being default pick by wsk CLI and Whisk Deploy.
+                  If you wish to learn more about PHP runtime, please visit
+                  <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP Runtime GitHub Repository</a>.
+              </p>
+              <a class="indexable" id="php-additional-resources"></a>
+              <h5>Additional Resources</h5>
+              <ul>
+                  <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
+                  <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
+              </ul>
+          </div>
+      </main>
 
-        <main class="doc">
-            <div class="content">
-                <a class="indexable" id="ruby"></a>
-                <h4>Ruby</h4>
-                <p></p>
-                <a class="indexable" id="actions-ruby"></a>
-                <h5>Creating and Invoking Ruby actions</h5>
-                <p>
-                    Let's look at how to write a sample hello world action in Ruby. You can visit
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-ruby.md#creating-and-invoking-ruby-actions">Creating and Invoking Ruby actions</a>
-                    page for further details.
-                </p>
-                <p>
-                    <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
-                    please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
-                </p>
-                <ol>
-                    <li style="list-style-type: decimal">
-                        Create a file named <i>hello.rb</i>:
-                        <div class="terminal">
+      <!-- *************************************************************** -->
+      <!-- Actions - Ruby                                                  -->
+      <!-- *************************************************************** -->
+      <main class="doc">
+          <div class="content">
+              <a class="indexable" id="ruby"></a>
+              <h4>Ruby</h4>
+              <p></p>
+              <a class="indexable" id="actions-ruby"></a>
+              <h5>Creating and Invoking Ruby actions</h5>
+              <p>
+                  Let's look at how to write a sample hello world action in Ruby. You can visit
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-ruby.md#creating-and-invoking-ruby-actions">Creating and Invoking Ruby actions</a>
+                  page for further details.
+              </p>
+              <p>
+                  <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                  please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+              </p>
+              <ol>
+                  <li style="list-style-type: decimal">
+                      Create a file named <i>hello.rb</i>:
+                      <div class="terminal">
 {% highlight ruby linenos %}
 {% include code/hello.rb %}
 {% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Create an action called <i>hello_ruby</i> using <i>hello.rb</i>:
-                        <div class="terminal">
+                      </div>
+                  </li>
+                  <li style="list-style-type: decimal">
+                      Create an action called <i>hello_ruby</i> using <i>hello.rb</i>:
+                      <div class="terminal">
 {% highlight bash %}$ wsk action create hello_ruby hello.rb{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                      </div>
+                      <div class="terminal">
 {% highlight bash %}ok: created action hello_ruby{% endhighlight %}
-                        </div>
-                    </li>
-                    <li style="list-style-type: decimal">
-                        Invoke an action <i>hello_ruby</i>:
-                        <div class="terminal">
+                      </div>
+                  </li>
+                  <li style="list-style-type: decimal">
+                      Invoke an action <i>hello_ruby</i>:
+                      <div class="terminal">
 {% highlight bash %}$ wsk action invoke hello_ruby --blocking --result --param name World{% endhighlight %}
-                        </div>
-                        <div class="terminal">
+                      </div>
+                      <div class="terminal">
 {% highlight yaml %}
 {
-    "greeting": "Hello World!"
+  "greeting": "Hello World!"
 }
 {% endhighlight %}
-                        </div>
-                    </li>
-                    <!--TODO: wskdeploy doesn't support ruby yet, uncomment the following once this pull request has been merged and released: https://github.com/apache/incubator-openwhisk-wskdeploy/pull/983 -->
-                    <!--<li style="list-style-type: decimal">
-                        Deploy using <i>wskdeploy</i>:
-                        <p>
-                            <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                            please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                        </p>
-                        <ol>
-                            <li>
-                                Create <i>manifest.yaml</i> with the following YAML content:
-                                <div class="terminal">
+                      </div>
+                  </li>
+                  <!--TODO: wskdeploy doesn't support ruby yet, uncomment the following once this pull request has been merged and released: https://github.com/apache/incubator-openwhisk-wskdeploy/pull/983 -->
+                  <!--<li style="list-style-type: decimal">
+                      Deploy using <i>wskdeploy</i>:
+                      <p>
+                          <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                          please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+                      </p>
+                      <ol>
+                          <li>
+                              Create <i>manifest.yaml</i> with the following YAML content:
+                              <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloRuby-1.yaml %}
 {% endhighlight %}
-                                </div>
-                                Or
-                                <p></p>
-                                <div class="terminal">
+                              </div>
+                              Or
+                              <p></p>
+                              <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloRuby-2.yaml %}
 {% endhighlight %}
-                                </div>
-                            </li>
-                            <li>
-                                Run deployment with <i>wskdeploy</i>:
-                                <div class="terminal">
+                              </div>
+                          </li>
+                          <li>
+                              Run deployment with <i>wskdeploy</i>:
+                              <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                                </div>
-                            </li>
-                        </ol>
-                    </li>-->
-                </ol>
-                <a class="indexable" id="ruby-runtime"></a>
-                <h5>OpenWhisk Runtime for Ruby</h5>
-                <p>
-                    OpenWhisk supports <strong>Ruby 2.5</strong> runtime.
-                    If you wish to learn more about Ruby runtime, please visit
-                    <a href="https://github.com/apache/incubator-openwhisk-runtime-ruby/blob/master/README.md">Ruby Runtime GitHub Repository</a>.
-                </p>
-                <a class="indexable" id="ruby-additional-resources"></a>
-                <h5>Additional Resources</h5>
-                <ul>
-                    <li>Coming soon...</li>
-                </ul>
-            </div>
-        </main>
+                              </div>
+                          </li>
+                      </ol>
+                  </li>-->
+              </ol>
+              <a class="indexable" id="ruby-runtime"></a>
+              <h5>OpenWhisk Runtime for Ruby</h5>
+              <p>
+                  OpenWhisk supports <strong>Ruby 2.5</strong> runtime.
+                  If you wish to learn more about Ruby runtime, please visit
+                  <a href="https://github.com/apache/incubator-openwhisk-runtime-ruby/blob/master/README.md">Ruby Runtime GitHub Repository</a>.
+              </p>
+              <a class="indexable" id="ruby-additional-resources"></a>
+              <h5>Additional Resources</h5>
+              <ul>
+                  <li>Coming soon...</li>
+              </ul>
+          </div>
+      </main>
 
-        <!--main class="doc">
-            <div class="content">
-                <a class="indexable" id="swift"></a>
-                <h4>Swift</h4>
-                <p></p>
-                <a class="indexable" id="swift-actions"></a>
-                <h5>Creating and Invoking Swift actions</h5>
-                <p>
-                    Let's look at how to write a sample hello world action in Swift.
-                </p>
-                <p>
-                    <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
-                    please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
-                </p>
-                <a class="indexable" id="swift-runtime"></a>
-                <h5>OpenWhisk Runtime for Swift</h5>
-                <p></p>
-                <a class="indexable" id="swift-additional-resources"></a>
-                <h5>Additional Resources</h5>
-                <p></p>
-            </div>
-        </main-->
+      <!--main class="doc">
+          <div class="content">
+              <a class="indexable" id="swift"></a>
+              <h4>Swift</h4>
+              <p></p>
+              <a class="indexable" id="swift-actions"></a>
+              <h5>Creating and Invoking Swift actions</h5>
+              <p>
+                  Let's look at how to write a sample hello world action in Swift.
+              </p>
+              <p>
+                  <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
+                  please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
+              </p>
+              <a class="indexable" id="swift-runtime"></a>
+              <h5>OpenWhisk Runtime for Swift</h5>
+              <p></p>
+              <a class="indexable" id="swift-additional-resources"></a>
+              <h5>Additional Resources</h5>
+              <p></p>
+          </div>
+      </main-->
 
-        <!-- Managing Actions with OpenWhisk Packages -->
-        <main class="doc">
-            <div class="content">
-                <a class="indexable" id="managing_actions_with_openwhisk_packages"></a>
-                <h4>Managing Actions with OpenWhisk Packages</h4>
-                <p>
-                    <strong>What is a package?</strong> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
-                    OpenWhisk comes with a list of packages
-                    You can get more details on OpenWhisk packages
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">here</a>.
-                </p>
-                <p>
-                    <strong>Does OpenWhisk comes with any pre-installed packages?</strong>
-                    OpenWhisk comes with a list of pre-installed public packages which can be used by anyone.
-                    OpenWhisk has created a dedicated shared namespace <strong>/whisk.system</strong> for all the public packages.
-                </p>
-                <p>
-                    <strong>Which all packages are available under /whisk.system?</strong>
-                    You can get a list of packages available in shared namespace by using wsk CLI:
-                </p>
-                <ul>
-                    <li>
-                        Get a list of packages:
-                        <div class="terminal">
+      <!-- *************************************************************** -->
+      <!-- Packages                                                        -->
+      <!-- *************************************************************** -->
+      <!-- Managing Actions with OpenWhisk Packages -->
+      <main class="doc">
+          <div class="content">
+              <a class="indexable" id="managing_actions_with_openwhisk_packages"></a>
+              <h4>Managing Actions with OpenWhisk Packages</h4>
+              <p>
+                  <strong>What is a package?</strong> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
+                  OpenWhisk comes with a list of packages
+                  You can get more details on OpenWhisk packages
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">here</a>.
+              </p>
+              <p>
+                  <strong>Does OpenWhisk comes with any pre-installed packages?</strong>
+                  OpenWhisk comes with a list of pre-installed public packages which can be used by anyone.
+                  OpenWhisk has created a dedicated shared namespace <strong>/whisk.system</strong> for all the public packages.
+              </p>
+              <p>
+                  <strong>Which all packages are available under /whisk.system?</strong>
+                  You can get a list of packages available in shared namespace by using wsk CLI:
+              </p>
+              <ul>
+                  <li>
+                      Get a list of packages:
+                      <div class="terminal">
 {% highlight bash %}$ wsk package list /whisk.system{% endhighlight %}
-                        </div>
-                    </li>
-                    <li>
-                        Get a list of entities in a package:
-                        <div class="terminal">
+                      </div>
+                  </li>
+                  <li>
+                      Get a list of entities in a package:
+                      <div class="terminal">
 {% highlight bash %}$ wsk package get --summary /whisk.system/<package-name>{% endhighlight %}
-                        </div>
-                    </li>
-                </ul>
-                <p>
-                    <strong>How do I invoke an action from a public package?</strong>
-                    There are two way to invoke an action from a package,
-                    (1) Invoking an action directly from a package
-                    (2) Creating a package binding and then invoking an action in the binding.
-                </p>
-                <ul>
-                    <li>
-                        Invoking an action from a public package:
-                        <ul>
-                            <li style="list-style: circle">
-                                Get a description of the /whisk.system/samples/greeting action:
-                                <div class="terminal">
+                      </div>
+                  </li>
+              </ul>
+              <p>
+                  <strong>How do I invoke an action from a public package?</strong>
+                  There are two way to invoke an action from a package,
+                  (1) Invoking an action directly from a package
+                  (2) Creating a package binding and then invoking an action in the binding.
+              </p>
+              <ul>
+                  <li>
+                      Invoking an action from a public package:
+                      <ul>
+                          <li style="list-style: circle">
+                              Get a description of the /whisk.system/samples/greeting action:
+                              <div class="terminal">
 {% highlight bash %}$ wsk action get --summary /whisk.system/samples/greeting{% endhighlight %}
-                                </div>
-                                <div class="terminal">
-<pre>action /whisk.system/samples/greeting: Returns a friendly greeting
-    (parameters: name, place)</pre>
-                                </div>
-                            </li>
-                            <li style="list-style: circle">
-                                Invoking action in a package:
-                                <div class="terminal">
+                              </div>
+                              <div class="terminal">
+                                <pre>action /whisk.system/samples/greeting:
+                                  Returns a friendly greeting
+                                  (parameters: name, place)</pre>
+                              </div>
+                          </li>
+                          <li style="list-style: circle">
+                              Invoking action in a package:
+                              <div class="terminal">
 {% highlight bash %}$ wsk action invoke --result /whisk.system/samples/greeting{% endhighlight %}
-                                </div>
-                                <div class="terminal">
+                              </div>
+                              <div class="terminal">
 {% highlight yaml %}
 {
-    "payload": "Hello, stranger from somewhere!"
+  "payload": "Hello, stranger from somewhere!"
 }
 {% endhighlight %}
-                                </div>
-                            </li>
-                            <li style="list-style: circle">
-                                Invoke the action with parameters:
-                                <div class="terminal">
+                              </div>
+                          </li>
+                          <li style="list-style: circle">
+                              Invoke the action with parameters:
+                              <div class="terminal">
 {% highlight bash %}$ wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont{% endhighlight %}
-                                </div>
-                                <div class="terminal">
+                              </div>
+                              <div class="terminal">
 {% highlight yaml %}
 {
-    "payload": "Hello, Bernie from Vermont!"
+  "payload": "Hello, Bernie from Vermont!"
 }
 {% endhighlight %}
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Creating package binding and invoking action from the binding:
-                        <ul>
-                            <li style="list-style: circle">
-                                Creating and using package bindings:
-                                <div class="terminal">
+                              </div>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>Creating package binding and invoking action from the binding:
+                      <ul>
+                          <li style="list-style: circle">
+                              Creating and using package bindings:
+                              <div class="terminal">
 {% highlight bash %}$ wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla{% endhighlight %}
-                            </div>
-                            <div class="terminal">
+                          </div>
+                          <div class="terminal">
 {% highlight bash %}ok: created binding valhallaSamples{% endhighlight %}
-                                </div>
-                            </li>
-                            <li style="list-style: circle">
-                                Invoke an action in the package binding:
-                                <div class="terminal">
+                              </div>
+                          </li>
+                          <li style="list-style: circle">
+                              Invoke an action in the package binding:
+                              <div class="terminal">
 {% highlight bash %}$ wsk action invoke --result valhallaSamples/greeting --param name Odin{% endhighlight %}
-                                </div>
-                                <div class="terminal">
+                              </div>
+                              <div class="terminal">
 {% highlight yaml %}
 {
-    "payload": "Hello, Odin from Valhalla!"
+  "payload": "Hello, Odin from Valhalla!"
 }
 {% endhighlight %}
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>
-                    <strong>Where do I get more information on packages?</strong>
-                    Please read
-                    <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
-                    for further details.
-                </p>
+                              </div>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+              <p>
+                  <strong>Where do I get more information on packages?</strong>
+                  Please read
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
+                  for further details.
+              </p>
         </div>
     </main>
+
     <main class="doc">
         <div class="content">
             <a class="indexable" id="connecting_actions_to_event_sources"></a>

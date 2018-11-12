@@ -366,11 +366,16 @@ footer {
 }
 
 .section-toggleable {
-  // TBD  
+  // TBD
 }
 
 .section-toggle-start-open {
   // empty class
+}
+
+.section-toggle-start-closed {
+  // empty class
+  display: none;
 }
 
 .section-start-open {
