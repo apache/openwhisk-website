@@ -13,23 +13,6 @@ layout: default
             <li><a href="#documentation">Documentation</a></li>
             <li><a href="#project-structure">Project Structure</a></li>
 
-            <!-- Operators -->
-            <li class="index-menu-toggle"><a href="#operators">Operators</a></li>
-            <ul class="index-menuitems">
-                <li><a href="#openwhisk_architecture">OpenWhisk Architecture</a></li>
-                <li class="index-menu-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
-                <ul class="index-menuitems">
-                    <li><a href="#deploy_kubernetes">Kubernetes</a></li>
-                    <li><a href="#deploy_docker_compose">Docker Compose</a></li>
-                    <li><a href="#deploy_mesos">Mesos</a></li>
-                    <li><a href="#deploy_openshift">OpenShift</a></li>
-                    <li><a href="#deploy_ansible">Ansible</a></li>
-                    <li><a href="#deploy_vagrant">Vagrant</a></li>
-                </ul>
-                <li><a href="#deployment_admin">Administrative Operations</a></li>
-                <li><a href="#operators_resources">Operators Resources</a></li>
-            </ul>
-
             <!-- Developers -->
             <li class="index-menu-toggle"><a href="#developers">Developers</a></li>
             <ul class="index-menuitems">
@@ -103,6 +86,23 @@ layout: default
                 <li><a href="#sample_openwhisk_applications">Sample OpenWhisk Applications</a></li>
                 <li><a href="#tutorial_and_workshop">Tutorial And Workshop</a></li>
                 <li><a href="#development_tools">Development Tools</a></li>
+            </ul>
+
+            <!-- Operators -->
+            <li class="index-menu-toggle"><a href="#operators">Operators</a></li>
+            <ul class="index-menuitems">
+                <li><a href="#openwhisk_architecture">OpenWhisk Architecture</a></li>
+                <li class="index-menu-toggle"><a href="#openwhisk_deployment">OpenWhisk Deployment</a></li>
+                <ul class="index-menuitems">
+                    <li><a href="#deploy_kubernetes">Kubernetes</a></li>
+                    <li><a href="#deploy_docker_compose">Docker Compose</a></li>
+                    <li><a href="#deploy_mesos">Mesos</a></li>
+                    <li><a href="#deploy_openshift">OpenShift</a></li>
+                    <li><a href="#deploy_ansible">Ansible</a></li>
+                    <li><a href="#deploy_vagrant">Vagrant</a></li>
+                </ul>
+                <li><a href="#deployment_admin">Administrative Operations</a></li>
+                <li><a href="#operators_resources">Operators Resources</a></li>
             </ul>
 
             <!-- Contributors -->
@@ -503,28 +503,32 @@ layout: default
           </div>
       </main>
 
-      <!-- Operators Section -->
-      <main class="doc">
-          <div class="content">
-              <a class="indexable" id="operators"></a>
-              <h2>Operators</h2>
-          </div>
-      </main>
-
-      <!-- Deployment section under Operator -->
+      <!-- *************************************************************** -->
+      <!-- OpenWhisk - Deployment Options                                  -->
+      <!-- *************************************************************** -->
       <main class="doc">
           <div class="content">
               <a class="indexable" id="openwhisk_architecture"></a>
               <h3>OpenWhisk Architecture</h3>
+              <p>
+                  The diagram below depicts the high-level architecture of
+                  OpenWhisk. From Nginx to Kafka to Docker, multiple
+                  technologies are powering Apache OpenWhisk which
+                  shows its committment to be a true Open Source Serverless
+                  Cloud Platform.
+              </p>
               <img style="padding-top:20px; width: 400px;" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png" alt="OpenWhisk Architecture"/>
               <p>
-                  The above diagram depicts the high-level architecture of OpenWhisk. From Nginx to Kafka to Docker,
-                  multiple technologies are powering Apache OpenWhisk - Open Source Serverless Cloud Platform.
-                  You can read about the list of OpenWhisk components and its internal flow of processing
-                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">here</a>.
+                  You can read about more about the OpenWhisk platform
+                  components along with its internal flow of processing here:
               </p>
+              <ul>
+                <li>
+                  <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openWhisk-works">How OpenWhisk works</a>.
+                </li>
+              </ul>
               <a class="indexable" id="openwhisk_deployment"></a>
-              <h3>OpenWhisk Deployment</h3>
+              <h3>OpenWhisk Deployment Options</h3>
               <p>
                   OpenWhisk supports different installation methods for core OpenWhisk platform components. You can choose one of the following deployment methods based on your platform:
               </p>
@@ -599,9 +603,20 @@ $ make quick-start
           </div>
       </main>
 
-      <!-- Operators Administrative Operations -->
+      <!-- *************************************************************** -->
+      <!-- Operators                                                       -->
+      <!-- *************************************************************** -->
       <main class="doc">
           <div class="content">
+              <a class="indexable" id="operators"></a>
+              <h2>Operators</h2>
+              <p>This section has information that is primarily focused
+                on deploying, configuring and administrating an Apache
+                OpenWhisk Serverless platform.
+              </p>
+              <!-- ******************************************************* -->
+              <!-- Operators  - Admin                                      -->
+              <!-- ******************************************************* -->
               <a class="indexable" id="deployment_admin"></a>
               <h3>Administrative Operations</h3>
               <p>
@@ -610,12 +625,9 @@ $ make quick-start
               <ul>
                   <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
               </ul>
-          </div>
-      </main>
-
-      <!-- Operators resources -->
-      <main class="doc">
-          <div class="content">
+              <!-- ******************************************************* -->
+              <!-- Operators  - Resources                                  -->
+              <!-- ******************************************************* -->
               <a class="indexable" id="operators_resources"></a>
               <h3>Operator Resources</h3>
               <ul>
@@ -629,7 +641,9 @@ $ make quick-start
           </div>
       </main>
 
-      <!-- Developers Section -->
+      <!-- *************************************************************** -->
+      <!-- Developers                                                      -->
+      <!-- *************************************************************** -->
       <main class="doc">
           <div class="content">
               <a class="indexable" id="developers"></a>
@@ -1069,7 +1083,7 @@ $ wsk list -v
                 Action in Apache OpenWhisk by reading about <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openwhisk-works">How OpenWhisk Works</a>.
             </p>
 
-            <h5>Additional Information</h5>
+            <h5>Learn more</h5>
             <p>Listed below are some additional topics related to
               developing OpenWhisk Actions:</p>
             <ul>
@@ -1080,10 +1094,10 @@ $ wsk list -v
               <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
                 - Learn about some of the
                 (operator configurable) System Limits that are imposed on
-                OpenWhisk Actions</li>
+                OpenWhisk Actions.</li>
               <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
-                - Find out to annotated OpenWhisk Actions to quickly enable
-                you to build web based applications</li>
+                - Find out how to annotate OpenWhisk Actions to quickly enable
+                you to build web based applications.</li>
             </ul>
 
         </div>
@@ -1952,13 +1966,16 @@ abcd.... locationUpdate
             <h4>Using OpenWhisk Enabled Services</h4>
             <p></p>
             <p>
-                OpenWhisk offers a catalog of packages which gives you can easy way to enhance your application with
-                useful capabilities, and to access external services in the ecosystem.
-                Examples of external services which are OpenWhisk-enabled include Slack, GitHub, Alarms, etc.
+                OpenWhisk offers a catalog of packages which gives you can easy
+                way to enhance your application with useful capabilities, and
+                to access external services in the ecosystem.
+                Examples of external services which are OpenWhisk-enabled
+                include Slack, GitHub, Alarms, etc.
             </p>
             <p>
-                The catalog is available as packages under <i>/whisk.system</i> namespace.
-                Using the following command, you can get a list of packages under <i>/whisk.system:</i>
+                The catalog is available as packages under <i>/whisk.system</i>
+                namespace. Using the following command, you can get a list of
+                packages under <i>/whisk.system:</i>
             </p>
             <div class="terminal">
 {% highlight bash %}$ wsk package list /whisk.system{% endhighlight %}
@@ -2078,7 +2095,48 @@ abcd.... locationUpdate
         </div>
     </main>
 
-    <!-- Contributors Section -->
+    <!-- *************************************************************** -->
+    <!-- Operators                                                       -->
+    <!-- *************************************************************** -->
+    <main class="doc">
+        <div class="content">
+            <a class="indexable" id="operators"></a>
+            <h2>Operators</h2>
+            <p>This section has information that is primarily focused
+              on deploying, configuring and administrating an Apache
+              OpenWhisk Serverless platform.
+            </p>
+            <!-- ******************************************************* -->
+            <!-- Operators  - Admin                                      -->
+            <!-- ******************************************************* -->
+            <a class="indexable" id="deployment_admin"></a>
+            <h3>Administrative Operations</h3>
+            <p>
+                This section contains a list of resources which can be utilized
+                to administer the running OpenWhisk instance.
+            </p>
+            <ul>
+                <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
+            </ul>
+            <!-- ******************************************************* -->
+            <!-- Operators  - Resources                                  -->
+            <!-- ******************************************************* -->
+            <a class="indexable" id="operators_resources"></a>
+            <h3>Operator Resources</h3>
+            <ul>
+                <li><a href="https://medium.com/openwhisk/five-minute-intro-to-open-source-serverless-development-with-openwhisk-328b0ebfa160">Five minute intro to open source serverless development with OpenWhisk</a></li>
+                <li><a href="https://thenewstack.io/behind-scenes-apache-openwhisk-serverless-platform/">An Architectural View of Apache OpenWhisk</a></li>
+                <li><a href="https://medium.com/@rabbah/the-state-of-openwhisk-ae8c129e8a48">The State of OpenWhisk</a></li>
+                <li><a href="https://medium.com/openwhisk/starting-openwhisk-in-sixty-seconds-9288bfb4863d">Starting OpenWhisk in Sixty Seconds</a></li>
+                <li><a href="https://medium.com/openwhisk/deploying-openwhisk-on-kubernetes-3f55f781fbab">Deploying OpenWhisk on Kubernetes</a></li>
+                <li><a href="https://medium.com/openwhisk/uncovering-the-magic-how-serverless-platforms-really-work-3cb127b05f71">Uncovering the magic: How serverless platforms really work!</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- *************************************************************** -->
+    <!-- Contributors                                                    -->
+    <!-- *************************************************************** -->
     <main class="doc">
         <div class="content">
             <a class="indexable" id="contributors"></a>
