@@ -18,6 +18,10 @@ function addListenersToIndex()
         // (top right bottom left)
         // make room on left for image/icon
         sibling.style.padding = "0px 0px 0px 20px";
+
+        if(sibling.classList.contains('index-menu-start-open')){
+          coll[i].style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+        }
     }
 
     // Set "click" event listener on all menuitems
