@@ -11,12 +11,13 @@ function toggleReferencedSection( parentId, expand )
     sectionName = parentId.replace("index", "section");
     console.log( "toggleReferencedSection(): sectionName=" + sectionName);
     sectionHeader = document.getElementById(sectionName);
-    sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
     section = sectionHeader.nextElementSibling;
     if(expand){
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
           section.style.display = "block";
     }
     else{
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-plus.png')";
           section.style.display = "none";
     }
   }
