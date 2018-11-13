@@ -38,6 +38,15 @@ function addListenersToIndex()
         }
       }
 
+      if (this.id !== ""){
+        console.log( "onClick(): id=" + this.id);
+        lang = this.id;
+        sectionHeader = document.getElementById('section-python');
+        sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        section = sectionHeader.nextElementSibling;
+        section.style.display = "block";
+      }
+
     });
   }
 }
