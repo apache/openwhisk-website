@@ -4,6 +4,24 @@ function applyCollapsible() {
   addListenersToSections();
 }
 
+function toggleReferencedSection( parentId, expand )
+{
+  console.log( "toggleReferencedSection(): parentId=" + parentId + " expand=" + expand);
+  if (parentId !== ""){
+    sectionName = parentId.replace("index", "section");
+    console.log( "toggleReferencedSection(): sectionName=" + sectionName);
+    sectionHeader = document.getElementById(sectionName);
+    sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+    section = sectionHeader.nextElementSibling;
+    if(expand){
+          section.style.display = "block";
+    }
+    else{
+          section.style.display = "none";
+    }
+  }
+}
+
 function addListenersToIndex()
 {
   var coll = document.getElementsByClassName("index-menu-toggle");
@@ -32,19 +50,18 @@ function addListenersToIndex()
         if (sibling.style.display === "block") {
           this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
           sibling.style.display = "none";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, false )
+          }
         } else {
           this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
           sibling.style.display = "block";
-        }
-      }
 
-      if (this.id !== ""){
-        console.log( "onClick(): id=" + this.id);
-        lang = this.id;
-        sectionHeader = document.getElementById('section-python');
-        sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
-        section = sectionHeader.nextElementSibling;
-        section.style.display = "block";
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, true )
+          }
+        }
       }
 
     });
