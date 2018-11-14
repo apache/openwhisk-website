@@ -555,9 +555,11 @@ $ wsk list -v
             <a class="indexable" id="openwhisk-clients"></a>
             <h4>OpenWhisk Clients</h4>
             <p>OpenWhisk provides a wrapper around the OpenWhisk APIs in
-              multiple different languages.:</p>
+              multiple different languages.  These can be imported and used
+              directly in your favorite Integrated Development
+              Environment (IDE):</p>
             <ul>
-                <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md">JavaScript</a></li>
+                <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md#openwhisk-client-for-javascript">JavaScript</a></li>
                 <li id="go-client"><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">Go</a></li>
                 <li id="swift-client"><a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">Swift</a></li>
                 <li id="python-client"><a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">Python</a></li>
@@ -573,7 +575,15 @@ $ wsk list -v
       <div class="content">
         <a class="indexable" id="actions-getting-started"></a>
         <h3>Getting Started</h3>
-
+        <p>In this section, we will show you how to create and invoke your
+          first "Hello World" Action using both the OpenWhisk CLI and the
+          Whisk Deploy utility.
+        </p>
+        <p>All the canonical examples will be provided using JavaScript
+          using the NodeJS runtime; however, we also provide the same
+          examples for all other supported runtime languages
+          (e.g., Java, Python, Swift, etc.) where possible.
+        </p>
         <!-- *********************************************************** -->
         <!-- Creating Actions                                            -->
         <!-- *********************************************************** -->
@@ -643,27 +653,29 @@ $ wsk list -v
           <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
         </ul>
 
-        <p>
+        <!-- <p>
           <strong>After you create an action, how can you invoke that action?</strong>
           You can invoke actions manually using OpenWhisk CLI or fire a
           trigger with which your action is associated with.
           If you are not faimiliar with triggers, we are looking into
           triggers in next section.
-        </p>
-        <p>
-          <strong>Can an application logic be divided into multiple actions? </strong>
-          Multiple actions from different languages may be composed together
-          to create a longer processing pipeline called a
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
-          Sequence can be treated as an action in terms of it creation
-          and invocation.
-        </p>
+        </p> -->
 
         <p>
           <strong>How does OpenWhisk process Actions? </strong>
           Find out what happens <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">"behind the scenes"</a> when you invoke an
           Action in Apache OpenWhisk by reading about <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openwhisk-works">How OpenWhisk Works</a>.
         </p>
+
+        <h5>Composing Sequences of Actions</h5>
+        <p>
+          Multiple actions, even implemented in different languages, may be
+          composed together to create a longer processing pipeline called a
+          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
+          Sequence can be treated as a single action in terms of it creation
+          and invocation.
+        </p>
+
 
         <h5>Learn more</h5>
         <p>Listed below are some additional topics related to
@@ -1740,45 +1752,6 @@ abcd.... locationUpdate
     </main>
 
     <!-- *************************************************************** -->
-    <!-- Operators                                                       -->
-    <!-- *************************************************************** -->
-    <main class="doc">
-      <div class="content">
-        <a class="indexable" id="operators"></a>
-        <h2>Operators</h2>
-        <p>This section has information that is primarily focused
-          on deploying, configuring and administrating an Apache
-          OpenWhisk Serverless platform.
-        </p>
-        <!-- ******************************************************* -->
-        <!-- Operators  - Admin                                      -->
-        <!-- ******************************************************* -->
-        <a class="indexable" id="deployment_admin"></a>
-        <h4>Administrative Operations</h4>
-        <p>
-          This section contains a list of resources which can be utilized
-          to administer the running OpenWhisk instance.
-        </p>
-        <ul>
-          <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
-        </ul>
-        <!-- ******************************************************* -->
-        <!-- Operators  - Resources                                  -->
-        <!-- ******************************************************* -->
-        <a class="indexable" id="operators_resources"></a>
-        <h4>Operator Resources</h4>
-        <ul>
-          <li><a href="https://medium.com/openwhisk/five-minute-intro-to-open-source-serverless-development-with-openwhisk-328b0ebfa160">Five minute intro to open source serverless development with OpenWhisk</a></li>
-          <li><a href="https://thenewstack.io/behind-scenes-apache-openwhisk-serverless-platform/">An Architectural View of Apache OpenWhisk</a></li>
-          <li><a href="https://medium.com/@rabbah/the-state-of-openwhisk-ae8c129e8a48">The State of OpenWhisk</a></li>
-          <li><a href="https://medium.com/openwhisk/starting-openwhisk-in-sixty-seconds-9288bfb4863d">Starting OpenWhisk in Sixty Seconds</a></li>
-          <li><a href="https://medium.com/openwhisk/deploying-openwhisk-on-kubernetes-3f55f781fbab">Deploying OpenWhisk on Kubernetes</a></li>
-          <li><a href="https://medium.com/openwhisk/uncovering-the-magic-how-serverless-platforms-really-work-3cb127b05f71">Uncovering the magic: How serverless platforms really work!</a></li>
-        </ul>
-      </div>
-    </main>
-
-    <!-- *************************************************************** -->
     <!-- Contributors                                                    -->
     <!-- *************************************************************** -->
     <main class="doc">
@@ -2221,91 +2194,115 @@ abcd.... locationUpdate
             <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openWhisk-works">How OpenWhisk works</a>.
           </li>
         </ul>
-        <a class="indexable" id="openwhisk_deployment"></a>
 
         <!-- ***************************************************** -->
         <!-- Operators - Deployment Options                        -->
         <!-- ***************************************************** -->
-        <h3>OpenWhisk Deployment Options</h3>
+        <a class="indexable" id="openwhisk_deployment"></a>
+        <h4>Deployment Options</h4>
         <p>
-          OpenWhisk supports different installation methods for core OpenWhisk platform components. You can choose one of the following deployment methods based on your platform:
+          OpenWhisk offers different deployment options
+          for installing and configuring the OpenWhisk platform components.
+          However, Kubernetes is the recommended option as it is supported
+          on most major platforms and includes great options for local
+          developers to get running quickly, as well as supports
+          operators needing to manage large scale production deployments.
         </p>
         <a class="indexable" id="deploy_kubernetes"></a>
-        <h4>Kubernetes</h4>
+        <h5>Kubernetes</h5>
         <p>
-          OpenWhisk can be deployed using <a href="https://helm.sh/">Helm</a> charts on
-          Kubernetes provisioned locally or from a public cloud provider.
+          OpenWhisk can be deployed using <a href="https://helm.sh/">Helm</a>
+          charts on any Kubernetes provisioned locally or from a
+          public cloud provider.
         </p>
           <p>Please refer to:
           <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Deploy OpenWhisk to a Kubernetes Cluster</a>
           for detailed deployment instructions which includes specific
           <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#customize-the-deployment">customizations</a>
-          including Docker Desktop (Mac, Windows), Minikube, Google, IBM Cloud, etc.).
+          including Docker Desktop (Mac, Windows), Minikube,
+          Google, IBM Cloud, etc.).
         </p>
-        <a class="indexable" id="deploy_docker_compose"></a>
-        <h4>Docker Compose</h4>
-        <p>
-          One of the easiest way to start deploying OpenWhisk is to get
-          Docker installed on Mac, Windows or Linux.
-          This does not give you a production deployment but gives you
-          enough of the pieces to start writing functions and seeing them
-          executing.
-          However, if you like using Docker directly, we recommend
-          using one of our <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes-Docker options</a>.
+
+        <h4>Alternative options</h4>
+        <p>Here are some alternate choices for deploying the OpenWhisk
+          platform:
         </p>
-        <div class="terminal">
+
+        <!-- TODO: add left margin for all these alt. options. -->
+        <div>
+          <!-- ******************************** -->
+          <!-- Docker Compose                   -->
+          <!-- ******************************** -->
+          <a class="indexable" id="deploy_docker_compose"></a>
+          <h5>Docker Compose</h5>
+          <p>
+            If you like using Docker directly, another easy local alternative
+            is to get Docker installed on Mac, Windows or Linux and use
+            Docker Compose.   Please note that this option does not give you
+            a production deployment but gives you enough of the pieces to
+            start writing functions and seeing them executing.
+          </p>
+          <div class="terminal">
 {% highlight bash %}
 $ git clone https://github.com/apache/incubator-openwhisk-devtools.git
 $ cd incubator-openwhisk-devtools/docker-compose
 $ make quick-start
 {% endhighlight %}
+          </div>
+          <p>
+            For more detailed instructions, see the
+            <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
+          </p>
+
+          <!-- ******************************** -->
+          <!-- Ansible                          -->
+          <!-- ******************************** -->
+          <a class="indexable" id="deploy_ansible"></a>
+          <h5>Ansible</h5>
+          <p>
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a>
+            is a more imperative, script-based deployment
+            option such as in a CI/CD (Travis) pipeline.
+            The OpenWhisk playbooks are structured such that it
+            allows cleaning, deploying, or re-deploying a single
+            component as well as the entire OpenWhisk stack.
+          </p>
+
+          <!-- ******************************** -->
+          <!-- Vagrant                          -->
+          <!-- ******************************** -->
+          <a class="indexable" id="deploy_vagrant"></a>
+          <h5>Vagrant</h5>
+          <p>
+            A Vagrant machine is also available to run OpenWhisk on
+            Mac, Windows PC or GNU/Linux.
+            Downloading and install VirtualBox and Vagrant for your
+            operating system and architecture.
+            You can follow the steps under
+            <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Vagrant Setup</a>
+            to run your first OpenWhisk action using Vagrant.
+          </p>
+
+          <!-- ******************************** -->
+          <!-- Mesos                            -->
+          <!-- ******************************** -->
+          <a class="indexable" id="deploy_mesos"></a>
+          <h5>Mesos</h5>
+          <p>
+            <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deploy OpenWhisk to a Mesos Cluster</a>
+            is under active development.
+          </p>
+
+          <!-- ******************************** -->
+          <!-- OpenShift                        -->
+          <!-- ******************************** -->
+          <a class="indexable" id="deploy_openshift"></a>
+          <h5>OpenShift</h5>
+          <p>
+            <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenWhisk Deployment on OpenShift</a>
+            is under active development.
+          </p>
         </div>
-        <p>
-          For more detailed instructions, see the
-          <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
-        </p>
-        <a class="indexable" id="deploy_mesos"></a>
-        <h4>Mesos</h4>
-        <p>
-          <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deploy OpenWhisk to a Mesos Cluster</a>
-          is under active development.
-        </p>
-        <a class="indexable" id="deploy_openshift"></a>
-        <h4>OpenShift</h4>
-        <p>
-          <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">Here</a>
-          are the instructions and details on how to deploy
-          OpenWhisk on OpenShift.
-        </p>
-        <a class="indexable" id="deploy_ansible"></a>
-        <h4>Ansible</h4>
-        <p>
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a>
-          is generally done for creating a development environment.
-          Most of the OpenWhisk tools follow this method of
-          deployment in their CI/CD (Travis) pipeline.
-          The OpenWhisk playbooks are structured such that it
-          allows cleaning, deploying, or re-deploying a single
-          component as well as the entire OpenWhisk stack.
-        </p>
-        <a class="indexable" id="deploy_vagrant"></a>
-        <h4>Vagrant</h4>
-        <p>
-          A Vagrant machine is also available to run OpenWhisk on
-          Mac, Windows PC or GNU/Linux.
-          Downloading and install VirtualBox and Vagrant for your
-          operating system and architecture.
-          You can follow the steps under
-          <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Vagrant Setup</a>
-          to run your first OpenWhisk action using Vagrant.
-        </p>
-        <p>
-          There are many different deployment methods available b
-          ut we recommend
-          <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md">Deploy OpenWhisk to a Kubernetes Cluster</a>
-          as its the most easy and quickest way of getting
-          OpenWhisk deployed.
-        </p>
 
         <!-- ******************************************************* -->
         <!-- Operators  - Admin                                      -->
@@ -2319,6 +2316,7 @@ $ make quick-start
         <ul>
             <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
         </ul>
+
         <!-- ******************************************************* -->
         <!-- Operators  - Resources                                  -->
         <!-- ******************************************************* -->
