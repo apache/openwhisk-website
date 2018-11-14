@@ -160,91 +160,93 @@ layout: default
           </div>
       </main>
 
-      <main class="doc">
-          <div class="content">
-
-          </div>
-      </main>
-
       <!-- *************************************************************** -->
       <!-- Developers                                                      -->
       <!-- *************************************************************** -->
       <main class="doc">
-          <div class="content">
-              <a class="indexable" id="developers"></a>
-              <h2>Developers</h2>
-              <p>
-                  The OpenWhisk project and programming model supports
-                  different kinds of developers that may wish
-                  to user different runtimes and tooling. Here is the
-                  developer relevant content to find the information
-                  you may need.
-              </p>
-          </div>
+        <div class="content">
+          <a class="indexable" id="developers"></a>
+          <h2>Developers</h2>
+          <p>
+            The OpenWhisk project and programming model supports
+            different kinds of developers that may wish to
+            use different runtimes and tooling.
+            This section contains the information and resources
+            you need to become a Serverless application
+            developer using the Apache OpenWhisk platform.
+          </p>
+        </div>
       </main>
 
       <!-- Developers Pre Requisites section -->
       <main class="doc">
-          <div class="content">
-              <a class="indexable" id="pre-requisites"></a>
-              <h3>Pre-requisites</h3>
-              <p>You will need to have access to running instance of the
-                OpenWhisk platform to develop against.
-              </p>
-              <h5>Running OpenWhisk locally</h5>
-              <p>Developers can select to install and configure their own
-                instancefrom among any of the options listed here:
-              <a href="#openwhisk_deployment">OpenWhisk Deployment Options</a>.
-              </p>
-              <p>For local, "light weight" development, we recommend using
-                <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes</a>
-                enabled within Docker (i.e., Docker for Mac or Windows,
-                Minikube for Linux).
-              <ul>
-                <li>
-                  For setup instructions, see: <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#prerequisites-kubernetes-and-helm">Simple Docker-based options</a>.
-                </li>
-              </ul>
-              <h5>Using OpenWhisk on a Cloud Provider</h5>
-              <p>Again, we encourage developers to leverage Cloud-based Kubernetes
-                services to deploy OpenWhisk.
-              </p>
-              <p>Another option would be to use Serverless provider that
-                already hosts Apache OpenWhisk and supports its Command
-                Line Interface (CLI) such as
-                <a href="https://console.bluemix.net/openwhisk/">IBM Cloud Functions.</a>
-              </p>
-          </div>
+        <div class="content">
+          <a class="indexable" id="pre-requisites"></a>
+          <h3>Pre-requisites</h3>
+          <p>You will need to have access to a running instance of the
+            OpenWhisk platform to develop against.
+          </p>
+          <h5>Running OpenWhisk locally</h5>
+          <p>Developers can select to install and configure their own
+            instancefrom among any of the options listed here:
+          <a href="#openwhisk_deployment">OpenWhisk Deployment Options</a>.
+          </p>
+          <p>For local, "light weight" development, we recommend using
+            <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes</a>
+            enabled within Docker (i.e., Docker for Mac or Windows,
+            Minikube for Linux).
+          <ul>
+            <li>
+              For setup instructions, see: <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#prerequisites-kubernetes-and-helm">Simple Docker-based options</a>.
+            </li>
+          </ul>
+          <h5>Using OpenWhisk on a Cloud Provider</h5>
+          <p>Again, we encourage developers to leverage Cloud-based Kubernetes
+            services to deploy OpenWhisk.
+          </p>
+          <p>Another option would be to use Serverless provider that
+            already hosts Apache OpenWhisk and supports its Command
+            Line Interface (CLI) such as
+            <a href="https://console.bluemix.net/openwhisk/">IBM Cloud Functions.</a>
+          </p>
+        </div>
       </main>
 
       <!-- Using OpenWhisk section -->
       <main class="doc">
-          <div class="content">
+        <div class="content">
 
-              <a class="indexable" id="using-openwhisk"></a>
-              <h3>Using OpenWhisk</h3>
-              <p></p>
-              <h5>Guest account</h5>
-              <p>
-                  <a href="#openwhisk_deployment">OpenWhisk Deployments</a>
-                  create a guest account configured with the authentication key
-                  available at:
-              </p>
-              <ul><li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a></li></ul>
-              <h5>API Host</h5>
-              <p>Deployments set the default API host endpoint, used with
-                the Command Line Interface (CLI) and the Whisk Deploy utility,
-                to:
-              </p>
-              <ul><li><strong>192.168.33.13</strong>.</li></ul>
-              <p>However, when running under a Kubernetes deployment installed
-                using Helm, the endpoint's address and port are set in your
-                "mycluster.yaml" deployment file.
-                See the <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#deploy-with-helm">Deploy With Helm</a>
-                instructions for details.
-              </p>
+          <a class="indexable" id="using-openwhisk"></a>
+          <h3>Using OpenWhisk</h3>
+          <p>By default, local deployments of Apache Openwhisk create
+            a guest account and endpoint for developers to use. However,
+            if you are running on an instance of OpenWhisk administered
+            by a Cloud provider, you will need to obtain an account and
+            endpoint information from them.
+          </p>
+          <h4>Default Guest account</h4>
+          <p>
+            <a href="#openwhisk_deployment">OpenWhisk
+              Deployments</a> create a guest account configured with
+              the authentication key available at:
+          </p>
+          <h6>Guest certificate</h6>
+          <p>
+          <ul><li><a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a></li></ul>
+          <h5>Default API Host</h5>
+          <p>Deployments of Apache Openwhisk set the default API
+            host endpoint, used with the Command Line Interface (CLI)
+            and the Whisk Deploy utility, to:
+          </p>
+          <ul><li><strong>192.168.33.13</strong>.</li></ul>
+          <p>However, when running under a Kubernetes deployment installed
+            using Helm, the endpoint's address and port are set in your
+            "mycluster.yaml" deployment file.
+            See the <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#deploy-with-helm">Deploy With Helm</a>
+            instructions for details.
+          </p>
 
-          </div>
+        </div>
       </main>
 
       <!-- *************************************************************** -->
