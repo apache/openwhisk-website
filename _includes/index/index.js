@@ -79,11 +79,12 @@ function addListenersToSections()
     var sibling = coll[i].nextElementSibling;
 
     if(sibling!==null){
-      sibling.setAttribute('data-display', sibling.style.display);
       if(coll[i].classList.contains("section-toggle-start-open")){
         coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
       } else {
         coll[i].style.backgroundImage = "url('../images/elements/circle-plus.png')";
+        sibling.style.display = "none";
       }
     }
 

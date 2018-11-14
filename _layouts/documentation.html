@@ -28,15 +28,17 @@ layout: default
                     <li><a href="#rest-api">OpenWhisk REST API</a></li>
                     <li><a href="#openwhisk-clients">OpenWhisk Clients</a></li>
                 </ul>
-                <li class="index-menu-toggle"><a href="#actions">Actions</a></li>
+
+                <li class="index-menu-toggle"><a href="#actions-getting-started">Getting Started</a></li>
                 <ul class="index-menuitems">
+                  <li class="index-menu-toggle"><a href="#actions-creating">Creating Actions</a></li>
+                  <ul class="index-menuitems">
                     <li class="index-menu-toggle"><a href="#nodejs">NodeJS</a></li>
-                    <ul class="index-menuitems">
+                      <ul class="index-menuitems">
                         <li><a href="#actions-nodejs">Creating and Invoking Sample Action</a></li>
                         <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
                         <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
-                    </ul>
-
+                      </ul>
 <!-- TEST TEST TEST TEST TEST TEST-->
 <!-- TEST TEST TEST TEST TEST TEST-->
 <!-- TEST TEST TEST TEST TEST TEST-->
@@ -82,6 +84,7 @@ layout: default
                         <li><a href="#swift-runtime">Swift Runtime</a></li>
                         <li><a href="#swift-additional-resources">Additional Resources</a></li>
                     </ul-->
+                  </ul>
                 </ul>
                 <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
                 <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
@@ -663,7 +666,7 @@ $ make quick-start
       <main class="doc">
           <div class="content">
               <a class="indexable" id="pre-requisites"></a>
-              <h4>Pre-requisites</h4>
+              <h3>Pre-requisites</h3>
               <p>You will need to have access to running instance of the
                 OpenWhisk platform to develop against.
               </p>
@@ -691,7 +694,7 @@ $ make quick-start
           <div class="content">
 
               <a class="indexable" id="using-openwhisk"></a>
-              <h4>Using OpenWhisk</h4>
+              <h3>Using OpenWhisk</h3>
               <p></p>
               <h5>Guest account</h5>
               <p>
@@ -1010,101 +1013,108 @@ $ wsk list -v
     </main>
 
     <!-- *************************************************************** -->
-    <!-- ACTIONS section                                                 -->
+    <!-- Getting Started                                                 -->
     <!-- *************************************************************** -->
+
     <main class="doc">
-        <div class="content">
-            <a class="indexable" id="actions"></a>
-            <h4>Actions</h4>
-            <p>This section answers some typical questions about
-              creating and invoking Actions (i.e.,  functions) in OpenWhisk.
-              Please read the project documentation on
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">OpenWhisk Actions</a>
-            for more details.</p>
-            <p>
-                <strong>What is an OpenWhisk action?</strong>
-                Actions are stateless functions (code snippets) that run on the OpenWhisk platform.
-                Actions encapsulates application logic to be executed in response to events.
-                You can find more details on specifics of an action in main OpenWhisk GitHub repo at
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">incubator-openwhisk</a>.
-            </p>
-            <p>
-                <strong>Which programming language can I use to write an OpenWhisk action?</strong>
-                An action can be created from a function written using any of the supported runtimes.
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
-                is the list of runtimes supported by OpenWhisk:
-            </p>
+      <div class="content">
+        <a class="indexable" id="actions-getting-started"></a>
+        <h3>Getting Started</h3>
 
-            <ul>
-                <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
-                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
-                <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
-                <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
-                <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
-                <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
-                <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
-                <li><a href="#ruby">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
-            </ul>
+        <!-- *********************************************************** -->
+        <!-- Creating Actions                                            -->
+        <!-- *********************************************************** -->
+        <a class="indexable" id="actions-creating"></a>
+        <h4>Creating Actions</h4>
+        <p>This section answers some typical questions about
+          creating and invoking Actions (i.e.,  functions) in OpenWhisk.
+          Please read the project documentation on
+        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">OpenWhisk Actions</a>
+        for more details.</p>
+        <p>
+            <strong>What is an OpenWhisk action?</strong>
+            Actions are stateless functions (code snippets) that run on the OpenWhisk platform.
+            Actions encapsulates application logic to be executed in response to events.
+            You can find more details on specifics of an action in main OpenWhisk GitHub repo at
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">incubator-openwhisk</a>.
+        </p>
+        <p>
+            <strong>Which programming language can I use to write an OpenWhisk action?</strong>
+            An action can be created from a function written using any of the supported runtimes.
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
+            is the list of runtimes supported by OpenWhisk:
+        </p>
 
-            <p>
-                While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
-                invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
-                specified in <a href="#using-openwhisk">Using OpenWhisk</a> section supports action management on OpenWhisk platform.
-            </p>
-            <p>
-                <strong>What if your preferred language/runtime is not supported by OpenWhisk?</strong>
-                If your favorite language is not listed above, you may find the Docker action or native binary path more suitable.
-                The OpenWhisk platform is extensible and you can add new languages or runtimes (with custom packages and third-party dependencies)
-                following the guide described
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">here</a>.
-                Please reach out to other whiskers on dev mailing list at
-                <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
-                once you have followed the guide on creating a new language/runtimes. Here are some examples of runtimes added by community:
-            </p>
+        <ul>
+            <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
+            <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
+            <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
+            <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
+            <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
+            <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
+            <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
+            <li><a href="#ruby">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
+        </ul>
 
-            <ul>
-                <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
-                <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
-                <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
-                <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
-            </ul>
+        <p>
+            While the actual function code will be specific to a language and runtime, the OpenWhisk operations to create,
+            invoke and manage an action are the same regardless of the implementation choice. OpenWhisk wsk CLI and Whisk Deploy
+            specified in <a href="#using-openwhisk">Using OpenWhisk</a> section supports action management on OpenWhisk platform.
+        </p>
+        <p>
+            <strong>What if your preferred language/runtime is not supported by OpenWhisk?</strong>
+            If your favorite language is not listed above, you may find the Docker action or native binary path more suitable.
+            The OpenWhisk platform is extensible and you can add new languages or runtimes (with custom packages and third-party dependencies)
+            following the guide described
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">here</a>.
+            Please reach out to other whiskers on dev mailing list at
+            <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
+            once you have followed the guide on creating a new language/runtimes. Here are some examples of runtimes added by community:
+        </p>
 
-            <p>
-                <strong>After you create an action, how can you invoke that action?</strong>
-                You can invoke actions manually using OpenWhisk CLI or fire a trigger with which your action is associated with.
-                If you are not faimiliar with triggers, we are looking into triggers in next section.
-            </p>
-            <p>
-                <strong>Can an application logic be divided into multiple actions? </strong>
-                Multiple actions from different languages may be composed together to create a longer processing pipeline called a
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
-                Sequence can be treated as an action in terms of it creation and invocation.
-            </p>
+        <ul>
+            <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
+            <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
+            <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
+            <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
+        </ul>
 
-            <p>
-                <strong>How does OpenWhisk process Actions? </strong>
-                Find out what happens <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">"behind the scenes"</a> when you invoke an
-                Action in Apache OpenWhisk by reading about <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openwhisk-works">How OpenWhisk Works</a>.
-            </p>
+        <p>
+            <strong>After you create an action, how can you invoke that action?</strong>
+            You can invoke actions manually using OpenWhisk CLI or fire a trigger with which your action is associated with.
+            If you are not faimiliar with triggers, we are looking into triggers in next section.
+        </p>
+        <p>
+            <strong>Can an application logic be divided into multiple actions? </strong>
+            Multiple actions from different languages may be composed together to create a longer processing pipeline called a
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
+            Sequence can be treated as an action in terms of it creation and invocation.
+        </p>
 
-            <h5>Learn more</h5>
-            <p>Listed below are some additional topics related to
-              developing OpenWhisk Actions:</p>
-            <ul>
-              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
-                - the same Namespace and Naming rules as any
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
-                OpenWhisk programming model.</li>
-              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
-                - Learn about some of the
-                (operator configurable) System Limits that are imposed on
-                OpenWhisk Actions.</li>
-              <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
-                - Find out how to annotate OpenWhisk Actions to quickly enable
-                you to build web based applications.</li>
-            </ul>
+        <p>
+            <strong>How does OpenWhisk process Actions? </strong>
+            Find out what happens <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">"behind the scenes"</a> when you invoke an
+            Action in Apache OpenWhisk by reading about <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openwhisk-works">How OpenWhisk Works</a>.
+        </p>
 
-        </div>
+        <h5>Learn more</h5>
+        <p>Listed below are some additional topics related to
+          developing OpenWhisk Actions:</p>
+        <ul>
+          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
+            - the same Namespace and Naming rules as any
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
+            OpenWhisk programming model.</li>
+          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
+            - Learn about some of the
+            (operator configurable) System Limits that are imposed on
+            OpenWhisk Actions.</li>
+          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
+            - Find out how to annotate OpenWhisk Actions to quickly enable
+            you to build web based applications.</li>
+        </ul>
+
+      </div>
     </main>
 
     <!-- *************************************************************** -->
