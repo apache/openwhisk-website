@@ -785,6 +785,7 @@ $ wsk list -v
                 </ol>
               </li>
             </ol>
+
             <a class="indexable" id="nodejs-runtime"></a>
             <h5>OpenWhisk Runtime for NodeJS</h5>
             <p>
@@ -832,56 +833,57 @@ $ wsk list -v
 {% include code/hello.py %}
 {% endhighlight %}
               </div>
-              <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
-                  <div class="terminal">
-{% highlight bash %}$ wsk action create helloPy hello.py{% endhighlight %}
-                  </div>
-                  <div class="terminal">
-<pre>ok: created action helloPy</pre>
-                  </div>
-              </li>
-              <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
+            </li>
+            <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
                 <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
+{% highlight bash %}$ wsk action create helloPy hello.py{% endhighlight %}
                 </div>
                 <div class="terminal">
+<pre>ok: created action helloPy</pre>
+                </div>
+            </li>
+            <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
+              <div class="terminal">
+{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
+              </div>
+              <div class="terminal">
 {% highlight yaml %}
 {
 "greeting": "Hello World!"
 }
 {% endhighlight %}
-                </div>
-              </li>
-              <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
-                <p>
-                  <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                  please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                </p>
-                <ol>
-                  <li>Create <i>manifest.yaml</i> with the following YAML content:
-                    <div class="terminal">
+              </div>
+            </li>
+            <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+              <p>
+                <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+              </p>
+              <ol>
+                <li>Create <i>manifest.yaml</i> with the following YAML content:
+                  <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloPy-1.yaml %}
 {% endhighlight %}
-                    </div>
-                    Or
-                    <p></p>
-                    <div class="terminal">
+                  </div>
+                  Or
+                  <p></p>
+                  <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloPy-2.yaml %}
 {% endhighlight %}
-                    </div>
-                  </li>
-                  <li>
-                    Run deployment with <i>wskdeploy</i>:
-                    <div class="terminal">
+                  </div>
+                </li>
+                <li>
+                  Run deployment with <i>wskdeploy</i>:
+                  <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                    </div>
-                  </li>
-                </ol>
-              </li>
+                  </div>
+                </li>
+              </ol>
             </li>
           </ol>
+
           <a class="indexable" id="python-runtime"></a>
           <h5>OpenWhisk Runtime for Python</h5>
           <p>
@@ -1194,7 +1196,7 @@ $ jar cvf hello.jar Hello.class
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
                   </div>
                 </li>
-              </ol>  
+              </ol>
             </li>
           </ol>
           <a class="indexable" id="php-runtime"></a>
