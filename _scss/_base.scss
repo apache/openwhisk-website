@@ -108,7 +108,6 @@ footer {
         display: inline-flex;
         width: 100%;
         height: 100%;
-        padding-right: auto;
       }
     }
 
@@ -120,8 +119,6 @@ footer {
       a {
         position: relative;
         height: 100%;
-        //background-color: pink;
-        //background: url('../images/elements/circle-minus.png') no-repeat left top;
       }
     }
   }
@@ -444,6 +441,10 @@ a.indexable {
     // Control index-item (anchor) text color regardless by state
     a {
       color: $color-index-fg;
+      //background-color: pink;
+      // NOTE: use this to control preservine newlines & spaces
+      // WARNING: Assure that people crearint Indexes are aware!
+      white-space: pre-wrap;
       text-decoration: none;
     }
     a:hover {

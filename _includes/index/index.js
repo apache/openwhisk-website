@@ -50,7 +50,6 @@ function addListenersToIndex()
       if(sibling!==null){
         if (sibling.style.display === "block") {
           this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
-          //console.log(dumpCSSText(this));
           //this.style.backgroundImage = "url('../images/elements/arrow-right-12px.png')";
           sibling.style.display = "none";
 
@@ -113,8 +112,9 @@ function addListenersToSections()
 }
 
 /*
- *  Debug
+ *  Debug: 
  */
+// Use: console.log(dumpCSSText(this));
 function dumpCSSText(element){
   var s = '';
   var o = getComputedStyle(element);
