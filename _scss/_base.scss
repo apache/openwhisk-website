@@ -86,7 +86,6 @@ footer {
   padding-top: $whisk-header-base-padding-top;
 
   #whiskIndex {
-    //vertical-align: top;
     // position menu relative to header
     display: float;
     position: fixed;
@@ -100,6 +99,10 @@ footer {
       display: flex-direction;
     }
 
+    li{
+      line-height: normal;
+    }
+
     li:not(.index-menu-toggle) {
       a {
         display: inline-flex;
@@ -110,19 +113,15 @@ footer {
     }
 
     li.index-menu-toggle {
-
       // TODO: try to render our own bullet/images so we can control layout
       /** the image will be vertically aligned in the center **/
       //background: url(../img/bullet.png) left center no-repeat;
       /** move the text to the right **/
-      //padding-left: 20px;
-
-      height: 24px;
       a {
-        display: inline-flex;
         position: relative;
         height: 100%;
-        max-width: 180px;
+        //background-color: pink;
+        //background: url('../images/elements/circle-minus.png') no-repeat left top;
       }
     }
   }
@@ -331,7 +330,7 @@ footer {
 .index-menu-toggle {
   color: $color-menu-collapsible-fg;
   background-color: $color-menu-collapsible-bg;
-  border: 1px solid $color-menuitem-collapsible-border;
+  border: $color-menuitem-collapsible-border;
   cursor: pointer; // finger shown to let ppl know you can click it
 }
 
@@ -438,13 +437,14 @@ a.indexable {
     font-size: $index-menu-font-size;
     font-weight: $index-menu-font-weight;
     padding: $index-menuitem-padding;
-    line-height: $index-menuitem-line-height;
+    vertical-align: top;
+    border-style: solid;
+    height: 100%;
 
     // Control index-item (anchor) text color regardless by state
     a {
       color: $color-index-fg;
       text-decoration: none;
-      //display: block;
     }
     a:hover {
       // use different color on index-item hover
