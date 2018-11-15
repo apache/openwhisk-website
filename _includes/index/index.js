@@ -40,6 +40,7 @@ function addListenersToIndex()
 
         if(sibling.classList.contains('index-menu-start-open')){
           coll[i].style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+          sibling.style.display = "block";
         }
     }
 
@@ -50,7 +51,6 @@ function addListenersToIndex()
       if(sibling!==null){
         if (sibling.style.display === "block") {
           this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
-          //this.style.backgroundImage = "url('../images/elements/arrow-right-12px.png')";
           sibling.style.display = "none";
 
           if (this.id !== ""){
@@ -58,7 +58,6 @@ function addListenersToIndex()
           }
         } else {
           this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
-          //this.style.backgroundImage = "url('../images/elements/arrow-down-12px.png')";
           sibling.style.display = "block";
 
           if (this.id !== ""){
@@ -112,14 +111,14 @@ function addListenersToSections()
 }
 
 /*
- *  Debug: 
+ *  Debug:
  */
 // Use: console.log(dumpCSSText(this));
-function dumpCSSText(element){
-  var s = '';
-  var o = getComputedStyle(element);
-  for(var i = 0; i < o.length; i++){
-    s+= ">> " + o[i] + ':' + o.getPropertyValue(o[i])+';\n';
-  }
-  return s;
-}
+// function dumpCSSText(element){
+//   var s = '';
+//   var o = getComputedStyle(element);
+//   for(var i = 0; i < o.length; i++){
+//     s+= ">> " + o[i] + ':' + o.getPropertyValue(o[i])+';\n';
+//   }
+//   return s;
+// }

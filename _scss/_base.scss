@@ -446,6 +446,7 @@ a.indexable {
       // WARNING: Assure that people crearint Indexes are aware!
       white-space: pre-wrap;
       text-decoration: none;
+      text-align: left; // set this so we do not accidentally inhereit
     }
     a:hover {
       // use different color on index-item hover
