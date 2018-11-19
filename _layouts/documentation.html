@@ -12,6 +12,9 @@ layout: default
         <ul>
             <li><a href="#documentation">Documentation</a></li>
 
+            <!-- Programming Model -->
+            <li><a href="#programming-model">Programming Model</a></li>
+
             <!-- Developers -->
             <li class="index-menu-toggle"><a href="#developers">Developers</a></li>
             <ul class="index-menuitems index-menu-start-open">
@@ -31,45 +34,37 @@ layout: default
                 style=""><a href="#actions-creating-and-invoking">Creating and
       Invoking Actions</a></li>
                 <ul class="index-menuitems">
-                  <li class="index-menu-toggle"><a href="#actions-creating">Creating Actions</a></li>
-                  <ul class="index-menuitems">
-                    <li class="index-menu-toggle"><a href="#nodejs">NodeJS</a></li>
-                      <ul class="index-menuitems">
-                        <li><a href="#actions-nodejs">Creating and Invoking Sample Action</a></li>
-                        <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
-                        <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
-                      </ul>
-                    <li id="index-python" class="index-menu-toggle"><a href="#python">Python</a></li>
+                    <li id="index-nodejs" class="index-menu-toggle"><a href="#nodejs">using NodeJS</a></li>
+                    <ul class="index-menuitems">
+                      <li><a href="#actions-nodejs">Creating and Invoking Sample Action</a></li>
+                      <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
+                      <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
+                    </ul>
+                    <li id="index-python" class="index-menu-toggle"><a href="#python">using Python</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#actions-python">Creating and Invoking Sample Action</a></li>
                         <li><a href="#python-runtime">Python Runtime</a></li>
                         <li><a href="#python-additional-resources">Additional Resources</a></li>
                     </ul>
-                    <!--li id="index-docker" ><a href="#docker">Docker</a></li>
-                    <ul>
-                        <li>Zip Action</li>
-                        <li>SDK (Writing Your Own Runtime)</li>
-                        <li>Other Resources</li>
-                    </ul-->
-                    <li id="index-go" class="index-menu-toggle"><a href="#go">Go</a></li>
+                    <li id="index-go" class="index-menu-toggle"><a href="#go">using Go</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#actions-go">Creating and Invoking Action</a></li>
                         <li><a href="#go-runtime">Go Runtime</a></li>
                         <li><a href="#go-additional-resources">Additional Resources</a></li>
                     </ul>
-                    <li id="index-java" class="index-menu-toggle"><a href="#java">Java</a></li>
+                    <li id="index-java" class="index-menu-toggle"><a href="#java">using Java</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#actions-java">Creating and Invoking Action</a></li>
                         <li><a href="#java-runtime">Java Runtime</a></li>
                         <li><a href="#java-additional-resources">Additional Resources</a></li>
                     </ul>
-                    <li id="index-php" class="index-menu-toggle"><a href="#php">PHP</a></li>
+                    <li id="index-php" class="index-menu-toggle"><a href="#php">using PHP</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#actions-php">Creating and Invoking Action</a></li>
                         <li><a href="#php-runtime">PHP Runtime</a></li>
                         <li><a href="#php-additional-resources">Additional Resources</a></li>
                     </ul>
-                    <li id="index-ruby" class="index-menu-toggle"><a href="#ruby">Ruby</a></li>
+                    <li id="index-ruby" class="index-menu-toggle"><a href="#ruby">using Ruby</a></li>
                     <ul class="index-menuitems">
                         <li><a href="#actions-ruby">Creating and Invoking Action</a></li>
                         <li><a href="#ruby-runtime">Ruby Runtime</a></li>
@@ -81,7 +76,12 @@ layout: default
                         <li><a href="#swift-runtime">Swift Runtime</a></li>
                         <li><a href="#swift-additional-resources">Additional Resources</a></li>
                     </ul-->
-                  </ul>
+                    <!--li id="index-docker" ><a href="#docker">Docker</a></li>
+                    <ul>
+                        <li>Zip Action</li>
+                        <li>SDK (Writing Your Own Runtime)</li>
+                        <li>Other Resources</li>
+                    </ul-->
                 </ul>
                 <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
                 <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
@@ -159,6 +159,137 @@ layout: default
                 </li>
               </ul>
           </div>
+      </main>
+
+      <!-- *************************************************************** -->
+      <!-- Programming Model                                               -->
+      <!-- *************************************************************** -->
+      <main class="doc">
+        <div class="content">
+          <a class="indexable" id="programming-model"></a>
+          <h2>OpenWhisk Programming Model</h2>
+          <p>
+            <img style="display:block; width:80%; margin: auto"
+            src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz.png">
+          </p>
+          <p>The OpenWhisk programming model is...</p>
+          <strong>Event-Driven</strong>
+          <p>In the OpenWhisk programming model, Events drive the
+            Serverless execution of functional code called Actions.
+            Events can come from any Event Source or Feed service
+            including:
+            <!-- TODO: Add links here -->
+            <ul>
+              <li>Datastores, Message Queues, Mobile and Web
+            Applications, Sensors, Chatbots, Scheduled tasks (via Alarms),
+            etc.
+              </li>
+            </ul>
+          </p>
+          <strong>Supports any functional programming language</strong>
+          <p>The OpenWhisk platform supports Action code written for any
+            of its ever-growing, built-in <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">language runtimes</a>:
+            <ul>
+              <!-- TODO Fix Go Runtime README so title matches other runtimes; bury "other exec. -->
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go#apache-openwhisk-runtimes-for-go">Go</a> - OpenWhisk runtime for Go lang</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java#apache-openwhisk-runtimes-for-java">Java</a> - OpenWhisk runtime for Java 8</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs#apache-openwhisk-runtimes-for-nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php#apache-openwhisk-runtimes-for-php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python#apache-openwhisk-runtimes-for-python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-ruby#apache-openwhisk-runtimes-for-ruby">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
+              <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift#apache-openwhisk-runtimes-for-swift">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
+            </ul>
+          </p>
+          <!-- TODO: fix the Docker SDK header/title to say "Docker SDK" NOT "Blackbox Actions"-->
+          <p>If you need languages or libraries the current
+            "out-of-the-box" runtimes do not support, you can create
+            and customize your own executable that run "black box"
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker Actions</a>
+            using the Docker SDK which are run on the
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker Runtime</a>.
+            <!-- TODO: cover later and link -->
+
+          </p>
+          <h4>Actions</h4>
+          <p>This section answers some typical questions about Actions
+            (i.e.,  functions) in OpenWhisk.
+            Please read the project documentation on
+          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">OpenWhisk Actions</a>
+
+            for more details.
+          </p>
+          <img width="90%" src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz-Action.png">
+          <p>
+              <strong>What is an OpenWhisk action?</strong>
+              Actions are stateless functions (code snippets) that run on
+              the OpenWhisk platform.
+              Actions encapsulates application logic to be executed in
+              response to events.
+          </p>
+
+          <p>
+            While the actual function code will be specific to a language and
+            runtime, the OpenWhisk operations to create, invoke and manage an
+            action are the same regardless of the implementation choice.
+            OpenWhisk wsk CLI and Whisk Deploy specified
+            in <a href="#using-openwhisk">Using OpenWhisk</a> section
+            supports action management on OpenWhisk platform.
+          </p>
+          <p>
+            <strong>What if your preferred language/runtime is not supported
+              by OpenWhisk?</strong>
+            If your favorite language is not listed above, you may find the
+            Docker action or native binary path more suitable.
+            The OpenWhisk platform is extensible and you can add new languages
+            or runtimes (with custom packages and third-party dependencies)
+            following the guide described
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">here</a>.
+            Please reach out to other whiskers on dev mailing list at
+            <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
+            once you have followed the guide on creating a new language/runtimes.
+            Here are some examples of runtimes added by community:
+          </p>
+
+          <ul>
+            <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
+            <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
+            <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
+            <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
+          </ul>
+
+          <h5>Composing Sequences of Actions</h5>
+          <p>
+            Multiple actions, even implemented in different languages, may be
+            composed together to create a longer processing pipeline called a
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
+            Sequence can be treated as a single action in terms of it creation
+            and invocation.
+          </p>
+
+          <h5>Learn more</h5>
+          <p>Listed below are some additional topics related to
+            developing OpenWhisk Actions:</p>
+          <ul>
+            <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
+              - the same Namespace and Naming rules as any
+              <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
+              OpenWhisk programming model.
+            </li>
+            <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
+              - Learn about some of the
+              (operator configurable) System Limits that are imposed on
+              OpenWhisk Actions.
+            </li>
+            <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
+              - Find out how to annotate OpenWhisk Actions to quickly enable
+              you to build web based applications.
+            </li>
+            <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">Action Processing</a>
+              - Find out what happens "behind the scenes" when you invoke an
+              Action in Apache OpenWhisk.
+            </li>
+          </ul>
+        </div>
       </main>
 
       <!-- *************************************************************** -->
@@ -270,7 +401,7 @@ layout: default
               <a href="#rest-api">OpenWhisk REST API</a>
             </li>
             <li>
-              <a href="##openwhisk-clients">OpenWhisk Clients</a>
+              <a href="#openwhisk-clients">OpenWhisk Clients</a>
               for JavaScript, Go, Swift and Python</a>
             </li>
           </ul>
@@ -447,149 +578,142 @@ $ wsk list -v
               the CLI sends/receives to/from the host along with the
               response codes.</p>
           </div>
-        </div>
-      </main>
 
-      <!-- *************************************************************** -->
-      <!-- Whisk Deploy                                                    -->
-      <!-- *************************************************************** -->
-      <main class="doc">
-          <div class="content">
-            <a class="indexable" id="wskdeploy"></a>
-            <h4>Whisk Deploy (wskdeploy)</h4>
-            <p>
-              <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
-              is a utility, named <em>wskdeploy</em>, to help deploy and
-              manage all your OpenWhisk Packages, Actions, Triggers, Rules
-              and APIs using a single command using an application manifest.
-            </p>
+          <!-- ********************************************************** -->
+          <!-- Whisk Deploy                                               -->
+          <!-- ********************************************************** -->
+          <a class="indexable" id="wskdeploy"></a>
+          <h4>Whisk Deploy (wskdeploy)</h4>
+          <p>
+            <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
+            is a utility, named <em>wskdeploy</em>, to help deploy and
+            manage all your OpenWhisk Packages, Actions, Triggers, Rules
+            and APIs using a single command using an application manifest.
+          </p>
 
-            <h5>Installing</h5>
-            <p>Download and Install the <code>wskdeploy</code> utility
-              for Linux, Mac or Windows.</p>
-            <div class="indented">
-              <h6>Download the Whisk Deploy utility</h6>
-              <ul>
-                <li>
-                <p> Download the Whisk Deploy utility for your Operating
-                  System as a standalone compressed TAR Archive
-                  file (<code>.tgz</code>) or ZIP file (<code>.zip</code>)
-                  from the project
-                  <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">Releases</a> page
-                  in GitHub:
-                  <ul>
-                    <li>
-                      <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases</a>
-                    </li>
-                  </ul>
-                  <p>where you may select to download the utility from the
-                "latest" release or from one of the versioned releases.</p>
-                </li>
-                <li>
-                  <p>Uncompress the <code>wskdeploy</code> executable from
-                    the <code>tar.gz</code> file.</p></li>
-                <li>
-                  <p>Simplify access to the <code>wsk</code> executable by
-                    moving or copying the binary file to a path listed
-                    in your <code>PATH</code> environment variable.
-                    This will enable you to invoke Whisk Deploy utility by
-                    just typing '<code>wskdeploy</code>' on the command line
-                    from anywhere.</p>
-                  <p>Follow the
-                    <a href="#copy_to_path_instructions">instructions</a>
-                    as shown for the Whisk CLI to learn how to do this for
-                    your development platform.
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <h5>Verify Installation</h5>
-            <div class="indented">
-              <p>Start by verifying the utility can display the command
-                line help:
-              </p>
-              <div class="terminal">
-{% highlight bash %}$ wskdeploy --help{% endhighlight %}
-              </div>
-            </div>
-
-            <h5>Configure</h5>
-            <div class="indented">
-              <p>Before you proceed with the deployment, please make sure you have
-                setup the <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
-                properties with a default namespace as described in the
-                <a href="#api_authentication">Whisk CLI configuration
-                  section</a> above.
-              </p>
-            </div>
-
-            <h5>Test configuration</h5>
+          <h5>Installing</h5>
+          <p>Download and Install the <code>wskdeploy</code> utility
+            for Linux, Mac or Windows.</p>
+          <div class="indented">
+            <h6>Download the Whisk Deploy utility</h6>
             <ul>
               <li>
-                <h6>Create and Deploy a simple OpenWhisk Manifest File</h6>
-                <p>Please refer to the
-                <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
-                for all manifest file grammar and syntax. This programming
-                guide has step-by-step instructions for deploying OpenWhisk
-                applications using wskdeploy.
+              <p> Download the Whisk Deploy utility for your Operating
+                System as a standalone compressed TAR Archive
+                file (<code>.tgz</code>) or ZIP file (<code>.zip</code>)
+                from the project
+                <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">Releases</a> page
+                in GitHub:
+                <ul>
+                  <li>
+                    <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases</a>
+                  </li>
+                </ul>
+                <p>where you may select to download the utility from the
+              "latest" release or from one of the versioned releases.</p>
+              </li>
+              <li>
+                <p>Uncompress the <code>wskdeploy</code> executable from
+                  the <code>tar.gz</code> file.</p></li>
+              <li>
+                <p>Simplify access to the <code>wsk</code> executable by
+                  moving or copying the binary file to a path listed
+                  in your <code>PATH</code> environment variable.
+                  This will enable you to invoke Whisk Deploy utility by
+                  just typing '<code>wskdeploy</code>' on the command line
+                  from anywhere.</p>
+                <p>Follow the
+                  <a href="#copy_to_path_instructions">instructions</a>
+                  as shown for the Whisk CLI to learn how to do this for
+                  your development platform.
                 </p>
-                <p>Here is a simple YAML manifest example that has an in-line
-                  function written in JavaScript that outputs "Hello World":
-                </p>
-                <div class="terminal">
+              </li>
+            </ul>
+          </div>
+
+          <h5>Verify Installation</h5>
+          <div class="indented">
+            <p>Start by verifying the utility can display the command
+              line help:
+            </p>
+            <div class="terminal">
+{% highlight bash %}$ wskdeploy --help{% endhighlight %}
+            </div>
+          </div>
+
+          <h5>Configure</h5>
+          <div class="indented">
+            <p>Before you proceed with the deployment, please make sure you have
+              setup the <code>API_HOST</code> and <code>AUTH_KEY</code> CLI
+              properties with a default namespace as described in the
+              <a href="#api_authentication">Whisk CLI configuration
+                section</a> above.
+            </p>
+          </div>
+
+          <h5>Test configuration</h5>
+          <ul>
+            <li>
+              <h6>Create and Deploy a simple OpenWhisk Manifest File</h6>
+              <p>Please refer to the
+              <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
+              for all manifest file grammar and syntax. This programming
+              guide has step-by-step instructions for deploying OpenWhisk
+              applications using wskdeploy.
+              </p>
+              <p>Here is a simple YAML manifest example that has an in-line
+                function written in JavaScript that outputs "Hello World":
+              </p>
+              <div class="terminal">
 {% highlight yaml %}
 {% include code/manifest-for-helloJS-2.yaml %}
 {% endhighlight %}
-                </div>
-              </li>
-              <li>Save the YAML scripts as an OpenWhisk Manifest file
-                called <code>manifest.yaml</code>
-              </li>
-              <li>
-                <p>Deploy the OpenWhisk Manifest file:</p>
+              </div>
+            </li>
+            <li>Save the YAML scripts as an OpenWhisk Manifest file
+              called <code>manifest.yaml</code>
+            </li>
+            <li>
+              <p>Deploy the OpenWhisk Manifest file:</p>
 
-                <div class="terminal">
+              <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                </div>
-              </li>
-            </ul>
+              </div>
+            </li>
+          </ul>
 
-          </div>
+          <!-- ********************************************************** -->
+          <!-- OpenWhisk REST API                                         -->
+          <!-- ********************************************************** -->
+          <a class="indexable" id="rest-api"></a>
+          <h4>OpenWhisk REST API</h4>
+          <p>
+              After your OpenWhisk environment is enabled, you can use
+              OpenWhisk with your web apps or mobile apps with REST API
+              calls.
+              For more details about the APIs for actions, activations,
+              packages, rules, and triggers, see the
+              <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md#using-rest-apis-with-openwhisk">OpenWhisk API</a>
+              documentation.
+          </p>
+
+          <!-- ********************************************************** -->
+          <!-- OpenWhisk Clients                                          -->
+          <!-- ********************************************************** -->
+          <a class="indexable" id="openwhisk-clients"></a>
+          <h4>OpenWhisk Clients</h4>
+          <p>OpenWhisk provides a wrapper around the OpenWhisk APIs in
+            multiple different languages.  These can be imported and used
+            directly in your favorite Integrated Development
+            Environment (IDE):</p>
+          <ul>
+              <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md#openwhisk-client-for-javascript">JavaScript</a></li>
+              <li id="go-client"><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">Go</a></li>
+              <li id="swift-client"><a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">Swift</a></li>
+              <li id="python-client"><a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">Python</a></li>
+          </ul>
+        </div>
       </main>
-
-    <main class="doc">
-        <div class="content">
-            <a class="indexable" id="rest-api"></a>
-            <h4>OpenWhisk REST API</h4>
-            <p>
-                After your OpenWhisk environment is enabled, you can use
-                OpenWhisk with your web apps or mobile apps with REST API
-                calls.
-                For more details about the APIs for actions, activations,
-                packages, rules, and triggers, see the
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md#using-rest-apis-with-openwhisk">OpenWhisk API</a>
-                documentation.
-            </p>
-        </div>
-    </main>
-
-    <main class="doc">
-        <div class="content">
-            <a class="indexable" id="openwhisk-clients"></a>
-            <h4>OpenWhisk Clients</h4>
-            <p>OpenWhisk provides a wrapper around the OpenWhisk APIs in
-              multiple different languages.  These can be imported and used
-              directly in your favorite Integrated Development
-              Environment (IDE):</p>
-            <ul>
-                <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md#openwhisk-client-for-javascript">JavaScript</a></li>
-                <li id="go-client"><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">Go</a></li>
-                <li id="swift-client"><a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">Swift</a></li>
-                <li id="python-client"><a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">Python</a></li>
-            </ul>
-        </div>
-    </main>
 
     <!-- *************************************************************** -->
     <!-- Creating and Invoking Actions                                   -->
@@ -608,157 +732,51 @@ $ wsk list -v
           examples for all other supported runtime languages
           (e.g., Java, Python, Swift, etc.) where possible.
         </p>
-        <!-- *********************************************************** -->
-        <!-- Creating Actions                                            -->
-        <!-- *********************************************************** -->
-        <a class="indexable" id="actions-creating"></a>
-        <h4>Creating Actions</h4>
-        <p>This section answers some typical questions about
-          creating and invoking Actions (i.e.,  functions) in OpenWhisk.
-          Please read the project documentation on
-        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">OpenWhisk Actions</a>
-        for more details.</p>
-        <p>
-            <strong>What is an OpenWhisk action?</strong>
-            Actions are stateless functions (code snippets) that run on
-            the OpenWhisk platform.
-            Actions encapsulates application logic to be executed in
-            response to events.
-            You can find more details on specifics of an action in main OpenWhisk GitHub repo at
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">incubator-openwhisk</a>.
-        </p>
-        <p>
-            <strong>Which programming language can I use to write an
-              OpenWhisk action?</strong>
-            An action can be created from a function written using any of
-            the supported runtimes.
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">Here</a>
-            is the list of runtimes supported by OpenWhisk:
-        </p>
 
-        <ul>
-            <li><a href="#nodejs">JavaScript</a> - OpenWhisk runtime for Node.js v6 and v8</li>
-            <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker</a> - OpenWhisk runtime for Docker Actions using SDK</li>
-            <li><a href="#go">Go</a> - OpenWhisk runtime for Go lang</li>
-            <li><a href="#php">PHP</a> - OpenWhisk runtime for PHP 7.2 and 7.1</li>
-            <li><a href="#python">Python</a> - OpenWhisk runtime for Python 2.7 and 3</li>
-            <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/README.md">Swift</a> - OpenWhisk runtime for Swift 3 and 4</li>
-            <li><a href="#java">Java</a> - OpenWhisk runtime for Java 8</li>
-            <li><a href="#ruby">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
-        </ul>
-
-        <p>
-          While the actual function code will be specific to a language and
-          runtime, the OpenWhisk operations to create, invoke and manage an
-          action are the same regardless of the implementation choice.
-          OpenWhisk wsk CLI and Whisk Deploy specified
-          in <a href="#using-openwhisk">Using OpenWhisk</a> section
-          supports action management on OpenWhisk platform.
-        </p>
-        <p>
-          <strong>What if your preferred language/runtime is not supported
-            by OpenWhisk?</strong>
-          If your favorite language is not listed above, you may find the
-          Docker action or native binary path more suitable.
-          The OpenWhisk platform is extensible and you can add new languages
-          or runtimes (with custom packages and third-party dependencies)
-          following the guide described
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">here</a>.
-          Please reach out to other whiskers on dev mailing list at
-          <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
-          once you have followed the guide on creating a new language/runtimes.
-          Here are some examples of runtimes added by community:
-        </p>
-
-        <ul>
-          <li><a href="https://github.com/rainbyte/openwhisk-wrapper">Haskell based OpenWhisk Services</a></li>
-          <li><a href="http://jamesthom.as/blog/2017/01/18/openwhisk-and-rust/">OpenWhisk and Rust</a></li>
-          <li><a href="https://github.com/gekola/openwhisk_docker_samples">Run Clojure, Erlang, Ruby, and Rust Actions on OpenWhisk using Docker</a></li>
-          <li><a href="https://github.com/imesh/openwhisk-runtime-ballerina#apache-openwhisk-runtime-for-ballerina">Ballerina</a></li>
-        </ul>
-
-        <h5>Composing Sequences of Actions</h5>
-        <p>
-          Multiple actions, even implemented in different languages, may be
-          composed together to create a longer processing pipeline called a
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
-          Sequence can be treated as a single action in terms of it creation
-          and invocation.
-        </p>
-
-
-        <h5>Learn more</h5>
-        <p>Listed below are some additional topics related to
-          developing OpenWhisk Actions:</p>
-        <ul>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
-            - the same Namespace and Naming rules as any
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
-            OpenWhisk programming model.
-          </li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
-            - Learn about some of the
-            (operator configurable) System Limits that are imposed on
-            OpenWhisk Actions.
-          </li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
-            - Find out how to annotate OpenWhisk Actions to quickly enable
-            you to build web based applications.
-          </li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">Action Processing</a>
-            - Find out what happens "behind the scenes" when you invoke an
-            Action in Apache OpenWhisk.
-          </li>
-        </ul>
-
-      </div>
-    </main>
-
-    <!-- *************************************************************** -->
-    <!-- Actions - NodeJS                                                -->
-    <!-- *************************************************************** -->
-    <main class="doc">
-        <div class="content">
-            <a class="indexable" id="nodejs"></a>
-            <h4 id="section-nodejs" >NodeJs</h4>
-            <p></p>
-            <a class="indexable" id="actions-nodejs"></a>
-            <h5>Creating and Invoking NodeJS actions</h5>
-            <p>
-              Let's look at how to write a sample hello world action in NodeJS. You can visit
-              <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
-              page for further details.
-            </p>
-            <p>
-              <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
-              section. If you don't have it installed and configured,
-              please refer to the section
-              <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
-            </p>
-            <ol>
-              <li style="list-style-type: decimal">
-                Create a file named <i>hello.js</i>:
-                <div class="terminal">
+        <!-- *************************************************************** -->
+        <!-- Actions - NodeJS                                                -->
+        <!-- *************************************************************** -->
+        <a class="indexable" id="nodejs"></a>
+        <h4 id="section-nodejs" class="section-toggle">using NodeJs</h4>
+        <div class="section-toggleable" style="display:block;">
+          <p></p>
+          <a class="indexable" id="actions-nodejs"></a>
+          <h5>Creating and Invoking NodeJS actions</h5>
+          <p>
+            Let's look at how to write a sample hello world action in NodeJS. You can visit
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
+            page for further details.
+          </p>
+          <p>
+            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
+            section. If you don't have it installed and configured,
+            please refer to the section
+            <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
+          </p>
+          <ol>
+            <li style="list-style-type: decimal">
+              Create a file named <i>hello.js</i>:
+              <div class="terminal">
 {% highlight javascript linenos %}
 {% include code/hello.js %}
 {% endhighlight %}
-                </div>
-              </li>
-              <li style="list-style-type: decimal">
-                Create an action called <i>helloJS</i> using <i>hello.js</i>:
-                <div class="terminal">
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Create an action called <i>helloJS</i> using <i>hello.js</i>:
+              <div class="terminal">
 {% highlight bash %}$ wsk action create helloJS hello.js{% endhighlight %}
-                </div>
-                <div class="terminal">
-                    <pre>ok: created action helloJS</pre>
-                </div>
-              </li>
-              <li style="list-style-type: decimal">
-                Invoke the <i>helloJS</i> action as a blocking activation:
-                <div class="terminal">
+              </div>
+              <div class="terminal">
+                  <pre>ok: created action helloJS</pre>
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Invoke the <i>helloJS</i> action as a blocking activation:
+              <div class="terminal">
 {% highlight bash %}$ wsk action invoke helloJS --blocking{% endhighlight %}
-                </div>
-                <div class="terminal">
+              </div>
+              <div class="terminal">
 {% highlight yaml %}
 {
 "result": {
@@ -767,41 +785,41 @@ $ wsk list -v
 "status": "success",
 "success": true
 }{% endhighlight %}
-                </div>
-              </li>
-              <li style="list-style-type: decimal">
-                Deploy using <i>wskdeploy</i>:
-                <p>
-                  <strong>Note:</strong> We will be using <i>wskdeploy</i>
-                  in this section. If you don't have the binary,
-                  please refer to the section on
-                  <a href="#wskdeploy">Whisk Deploy</a> to download it.
-                </p>
-                <ol>
-                  <li>
-                    Create <i>manifest.yaml</i> with the following YAML content:
-                    <div class="terminal">
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Deploy using <i>wskdeploy</i>:
+              <p>
+                <strong>Note:</strong> We will be using <i>wskdeploy</i>
+                in this section. If you don't have the binary,
+                please refer to the section on
+                <a href="#wskdeploy">Whisk Deploy</a> to download it.
+              </p>
+              <ol>
+                <li>
+                  Create <i>manifest.yaml</i> with the following YAML content:
+                  <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloJS-1.yaml %}
 {% endhighlight %}
-                    </div>
-                    Or
-                    <p></p>
-                    <div class="terminal">
+                  </div>
+                  Or
+                  <p></p>
+                  <div class="terminal">
 {% highlight yaml linenos %}
 {% include code/manifest-for-helloJS-2.yaml %}
 {% endhighlight %}
-                    </div>
-                  </li>
-                  <li>
-                    Run deployment with <i>wskdeploy</i>:
-                    <div class="terminal">
+                  </div>
+                </li>
+                <li>
+                  Run deployment with <i>wskdeploy</i>:
+                  <div class="terminal">
 {% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                    </div>
-                  </li>
-                </ol>
-              </li>
-            </ol>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ol>
 
             <a class="indexable" id="nodejs-runtime"></a>
             <h5>OpenWhisk Runtime for NodeJS</h5>
@@ -819,15 +837,12 @@ $ wsk list -v
               <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
             </ul>
         </div>
-    </main>
 
     <!-- *************************************************************** -->
     <!-- Actions - Python                                                -->
     <!-- *************************************************************** -->
-    <main class="doc">
-      <div class="content">
         <a class="indexable" id="python"></a>
-        <h4 id="section-python" class="section-toggle">Python</h4>
+        <h4 id="section-python" class="section-toggle">using Python</h4>
         <div class="section-toggleable section-toggle-start-closed">
           <p></p>
           <a class="indexable" id="actions-python"></a>
@@ -916,16 +931,12 @@ $ wsk list -v
             <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
           </ul>
         </div>
-      </div>
-    </main>
 
     <!-- *************************************************************** -->
     <!-- Actions - GoLang                                                -->
     <!-- *************************************************************** -->
-    <main class="doc">
-      <div class="content">
         <a class="indexable" id="go"></a>
-        <h4 id="section-go" class="section-toggle">Go</h4>
+        <h4 id="section-go" class="section-toggle">using Go</h4>
         <div class="section-toggleable section-toggle-start-closed">
           <p></p>
           <a class="indexable" id="actions-go"></a>
@@ -1014,16 +1025,12 @@ $ wsk list -v
             <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>
           </ul>
         </div>
-      </div>
-    </main>
 
     <!-- *************************************************************** -->
     <!-- Actions - Java                                                  -->
     <!-- *************************************************************** -->
-    <main class="doc">
-      <div class="content">
         <a class="indexable" id="java"></a>
-        <h4 id="section-java" class="section-toggle">Java</h4>
+        <h4 id="section-java" class="section-toggle">using Java</h4>
         <div class="section-toggleable section-toggle-start-closed">
           <p></p>
           <a class="indexable" id="actions-java"></a>
@@ -1099,42 +1106,12 @@ $ jar cvf hello.jar Hello.class
             </li>
           </ul>
         </div>
-      </div>
-    </main>
-
-    <!--main class="doc">
-        <div class="content">
-            <h4 id="section-docker" >Docker</h4>
-            <p></p>
-            <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
-            <p>
-                OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
-                From this base image, you can create and run an OpenWhisk action:
-                Let's look at how to write a sample hello world action in Docker. You can visit
-                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
-                page for further details.
-            </p>
-            <h5 id="docker-runtime">OpenWhisk Runtime for Docker</h5>
-            <p>
-
-            </p>
-            <h5 id="docker-other-resources">Other Resources</h5>
-            <p>
-                <ul>
-                    <li><a href="http://jamesthom.as/blog/2017/01/16/openwhisk-docker-actions/">OpenWhisk Docker Actions</a></li>
-                    <li><a href="https://www.ibm.com/blogs/bluemix/2017/01/docker-bluemix-openwhisk/">Understanding and using Docker actions in IBM Bluemix OpenWhisk</a></li>
-                </ul>
-            </p>
-        </div>
-    </main-->
 
     <!-- *************************************************************** -->
     <!-- Actions - PHP                                                   -->
     <!-- *************************************************************** -->
-    <main class="doc">
-      <div class="content">
         <a class="indexable" id="php"></a>
-        <h4 id="section-php" class="section-toggle">PHP</h4>
+        <h4 id="section-php" class="section-toggle">using PHP</h4>
         <div class="section-toggleable section-toggle-start-closed">
           <p></p>
           <a class="indexable" id="actions-php"></a>
@@ -1230,16 +1207,12 @@ $ jar cvf hello.jar Hello.class
             <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
           </ul>
         </div>
-      </div>
-    </main>
 
     <!-- *************************************************************** -->
     <!-- Actions - Ruby                                                  -->
     <!-- *************************************************************** -->
-    <main class="doc">
-      <div class="content">
         <a class="indexable" id="ruby"></a>
-        <h4 id="section-ruby" class="section-toggle">Ruby</h4>
+        <h4 id="section-ruby" class="section-toggle">using Ruby</h4>
         <div class="section-toggleable section-toggle-start-closed">
           <p></p>
           <a class="indexable" id="actions-ruby"></a>
@@ -1332,16 +1305,15 @@ $ jar cvf hello.jar Hello.class
             <li>Coming soon...</li>
           </ul>
         </div>
-      </div>
-    </main>
 
+    <!-- TODO -->
     <!-- *************************************************************** -->
     <!-- Actions - Swift                                                 -->
     <!-- *************************************************************** -->
     <!--main class="doc">
       <div class="content">
           <a class="indexable" id="swift"></a>
-          <h4 id="section-swift" >Swift</h4>
+          <h4 id="section-swift" >using Swift</h4>
           <p></p>
           <a class="indexable" id="swift-actions"></a>
           <h5>Creating and Invoking Swift actions</h5>
@@ -1360,6 +1332,37 @@ $ jar cvf hello.jar Hello.class
           <p></p>
       </div>
     </main-->
+
+    <!-- TODO -->
+    <!-- *************************************************************** -->
+    <!-- Actions - Docker                                                -->
+    <!-- *************************************************************** -->
+    <!--main class="doc">
+        <div class="content">
+            <h4 id="section-docker">using Docker</h4>
+            <p></p>
+            <h5 id="docker_actions">Creating and Invoking Docker actions</h5>
+            <p>
+                OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
+                From this base image, you can create and run an OpenWhisk action:
+                Let's look at how to write a sample hello world action in Docker. You can visit
+                <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
+                page for further details.
+            </p>
+            <h5 id="docker-runtime">OpenWhisk Runtime for Docker</h5>
+            <p>
+
+            </p>
+            <h5 id="docker-other-resources">Other Resources</h5>
+            <p>
+                <ul>
+                    <li><a href="http://jamesthom.as/blog/2017/01/16/openwhisk-docker-actions/">OpenWhisk Docker Actions</a></li>
+                    <li><a href="https://www.ibm.com/blogs/bluemix/2017/01/docker-bluemix-openwhisk/">Understanding and using Docker actions in IBM Bluemix OpenWhisk</a></li>
+                </ul>
+            </p> -->
+
+        </div>
+      </main>
 
       <!-- *************************************************************** -->
       <!-- Packages                                                        -->
