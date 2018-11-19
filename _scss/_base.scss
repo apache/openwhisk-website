@@ -44,6 +44,10 @@ footer {
   padding: $whisk-footer-base-padding-base;
 }
 
+strong {
+  color: $color-blue-dark;
+}
+
 // Header is only shown on the "home" page
 #whiskHeader {
   background-color: $color-blue-dark;
@@ -74,6 +78,9 @@ footer {
   h1,
   h5 {
     color: $color-white;
+  }
+  h6 {
+    font-style: italic;
   }
 }
 
@@ -171,6 +178,9 @@ footer {
   }
 }
 
+/*
+ * Document styles
+ */
 .doc {
   position: relative;
   overflow: hidden;
