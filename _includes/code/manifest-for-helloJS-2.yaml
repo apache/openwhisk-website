@@ -6,5 +6,5 @@ packages:
                     function main() {
                         return {payload: 'Hello world'};
                     }
-                runtime: nodejs:6
+                runtime: nodejs:10
 
