@@ -84,6 +84,19 @@ strong {
   }
 }
 
+/*
+ * General document styles
+ */
+.doc {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.indented {
+  padding-left: $p-left-indent;
+}
+
 // Footer is shown on all content pages
 #whiskFooter {
 }
@@ -176,19 +189,6 @@ strong {
       margin: auto; // allows centering in all layouts
     }
   }
-}
-
-/*
- * Document styles
- */
-.doc {
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-}
-
-.indented {
-  padding-left: $p-left-indent;
 }
 
 /*
@@ -372,24 +372,20 @@ strong {
   background-size: 12px 12px;
   background-position: 8px 50%;
   background-repeat: no-repeat;
+  margin: 10px;
   cursor: pointer; // finger shown to let ppl know you can click it
 }
 
 .section-toggleable {
-  // TBD
+  padding-left: $p-left-indent;
 }
 
 .section-toggle-start-open {
-  // empty class
+  display: block;
 }
 
 .section-toggle-start-closed {
-  // empty class
   display: none;
-}
-
-.section-start-open {
-  display: block;
 }
 
 .section-toggle:hover {

@@ -80,12 +80,16 @@ function addListenersToSections()
     var sibling = coll[i].nextElementSibling;
 
     if(sibling!==null){
-      if(coll[i].classList.contains("section-toggle-start-open")){
+      if(sibling.classList.contains("section-toggle-start-open")){
         coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
         sibling.style.display = "block";
-      } else {
+      } else if (sibling.classList.contains("section-toggle-start-closed")){
         coll[i].style.backgroundImage = "url('../images/elements/circle-plus.png')";
         sibling.style.display = "none";
+      } else {
+        console.log( "addListenersToSections(): No Toggle style foun; default to open");
+        coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
       }
     }
 
@@ -105,7 +109,7 @@ function addListenersToSections()
           this.style.backgroundImage = "url('../images/elements/circle-minus.png')";
         }
       }
-
+      
     });
   }
 }
