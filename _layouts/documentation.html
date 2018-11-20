@@ -208,34 +208,38 @@ Invoking Actions</a></li>
           using the Docker SDK which are run on the
           <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/README.md">Docker Runtime</a>.
           <!-- TODO: cover later and link -->
-
         </p>
-        <h4>Actions</h4>
-        <p>This section answers some typical questions about Actions
-          (i.e.,  functions) in OpenWhisk.
-          Please read the project documentation on
-        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">OpenWhisk Actions</a>
 
-          for more details.
+        <h4>Actions</h4>
+        <p>This section will answer some of the essential questions about
+          OpenWhisk Actions relative to the to the programming mode.
+          If you want to more detailed information,
+          please read the project documentation on
+        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">
+          OpenWhisk Actions</a>.
         </p>
         <img width="90%"
         src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz-Action.png"
         alt="OpenWhisk Programming Model: Actions">
         <p>
+          <strong>What is an Action?</strong>
           Actions are stateless functions (code snippets) that run on
-          the OpenWhisk platform.
-          Actions encapsulates application logic to be executed in
-          response to events.
+          the OpenWhisk platform. Actions encapsulate application logic
+          to be executed in response to events. Actions can be invoked
+          manually by the OpenWhisk REST API, OpenWhisk CLI,
+          simple and user-created APIs or automated via Triggers
+          which we will discuss later.
         </p>
-
         <p>
-          While the actual function code will be specific to a language and
-          runtime, the OpenWhisk operations to create, invoke and manage an
-          action are the same regardless of the implementation choice using
-          the OpenWhisk REST API.  Typically Developers utilize either the
-          OpenWhisk Command Line Interface (CLI) or the Whisk Deploy tool
-          described in the <a href="#getting-started">Getting Started</a>
-          section below.
+          <strong>Does the function's language matter?</strong>
+          No. OpenWhisk treats all languages the same; you decide what
+          languages are best for you!
+        </p>
+        <p>
+          The OpenWhisk operations to create, invoke and manage
+          an Action are the same regardless of the implementation choice using
+          any of the tooling tooling described in
+          the <a href="#getting-started">Getting Started</a> section below.
         </p>
         <p>
           <strong>What if your preferred language/runtime is not supported
@@ -735,7 +739,7 @@ $ wsk list -v
           (e.g., Java, Python, Swift, etc.) where possible.
         </p>
         <h5>Select a language</h5>
-        <p>Select from the language example you would like to see from the
+        <p>Select from the language example you would like to follow from the
           list below.
         </p>
         <!-- <ul>
