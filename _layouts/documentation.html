@@ -86,7 +86,7 @@ layout: default
             </ul-->
           </ul>
           <li><a href="#managing_actions_with_openwhisk_packages">Managing Actions with OpenWhisk Packages</a></li>
-          <li><a href="#connecting_actions_to_event_sources">Connecting Actions to Event Sources</a></li>
+          <li><a href="#automating_actions_from_event_sources">Automating Actions from Event Sources</a></li>
           <li><a href="#using_openwhisk_enabled_services">Using OpenWhisk Enabled Services</a></li>
           <!--li><a href="#exposing_apis_from_actions">Exposing APIs from Actions</a></li-->
           <li><a href="#sample_openwhisk_applications">Sample OpenWhisk Applications</a></li>
@@ -307,20 +307,15 @@ layout: default
         <img width="90%"
         src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz-Trigger-Rule.png"
         alt="OpenWhisk Programming Model: Actions">
-        <p>
-          <strong>What are Triggers and Rules?</strong>
-          OpenWhisk Triggers are named channels for specific kinds of events
-          sent from Event Sources that "fire" Actions when
-          connected by OpenWhisk Rules.
-        </p>
+
         <p>
           <strong>What is a trigger?</strong>
-          Triggers are named channels for classes or kinds of events.
+          Triggers are named channels for classes or kinds of events
           sent from Event Sources.
         </p>
         <p>
           <strong>What is a Rule?</strong>
-          Rules are used to associate a trigger with an action.
+          Rules are used to associate one trigger with one action.
           After this kind of association is created, each time
           a trigger event is fired, the action is invoked.
         </p>
@@ -333,24 +328,26 @@ layout: default
             <li>Messages arriving on Message Queues</li>
             <li>Changes in Databases</li>
             <li>Changes in Document Stores</li>
-            <li>Interactions with Websites</li>
-            <li>Appicatio APIs being invoked</li>
+            <li>Website or Web Application interactions</li>
+            <li>Service APIs being invoked</li>
+            <li>IoT Frameworks forwarding device sensor data</li>
             <li>etc.</li>
           </ul>
         </p>
         <p>
             <strong>Why do I need to connect actions to event
               sources?</strong>
-            OpenWhisk is based on event-driven architecture in which
-            actions/functions should be connected to external/internal
-            event sources such as message queues, database changes,
-            webhooks, etc. When these events happen, functions/actions
-            are automatically invoked without explicitly invoking them
-            unlike we saw before
-            in <a href="#actions-creating-and-invoking">Creating
-            and Invoking Actions</a>.
-            Now, events from these internal/external event sources
-            are channeled through a trigger.
+            OpenWhisk is based on an event-driven architecture where most
+            Actions are executed as events happen.
+            The Trigger itself is "fired" with a dictionary of
+            key-value pairs (i.e., the parameters) coming from the
+            Event Source and allows the configuration of optional default
+            values thus helping assure the data is compatible with any
+            associated Actions.
+            Rules allow for the same Trigger to be associated with multiple
+            Actions, as well as allow for specific automation to be enabled
+            or disabled dynamically without destroying the
+            Trigger definition.
         </p>
       </div>
     </main>
@@ -1555,12 +1552,15 @@ $ jar cvf hello.jar Hello.class
 
     <main class="doc">
       <div class="content">
-        <a class="indexable" id="connecting_actions_to_event_sources"></a>
-        <h4>Connecting Actions to Event Sources</h4>
-
-        <p>
-            <strong>How to create and fire triggers?</strong>
+        <a class="indexable" id="automating_actions_from_event_sources"></a>
+        <h4>Automating Actions from Event Sources</h4>
+        <p>In this section, we will show how to automate Actions in response
+          to events coming from Event Sources.
+          Specifically, we will show how to create, fire
+          and associate a basic Trigger with input parameters to an Action
+          using a Rule.
         </p>
+        <h5>Create and fire Trigger</h5>
         <ul>
           <li>
               Create a trigger to send user location updates:
@@ -1594,6 +1594,7 @@ $ jar cvf hello.jar Hello.class
               </p>
           </li>
         </ul>
+        <h5>Verify you have an Action created</h5>
         <ul>
           <li>
             Please make sure you have the <i>hello</i> action created.
@@ -1619,8 +1620,11 @@ $ jar cvf hello.jar Hello.class
 {% endhighlight %}
             </div>
           </li>
+        </ul>
+        <h5>Associate the Trigger and Action using a Rule</h5>
+        <ul>
           <li>
-            Create the rule:
+            Create the rule (i.e., an association):
             <div class="terminal">
 {% highlight bash %}$ wsk rule create myRule locationUpdate hello{% endhighlight %}
             </div>
@@ -1628,6 +1632,9 @@ $ jar cvf hello.jar Hello.class
 <pre>ok: created rule myRule</pre>
             </div>
           </li>
+        </ul>
+        <h5>Invoke the Action by Firing the Trigger</h5>
+        <ul>
           <li>
             Fire the <i>locationUpdate</i> trigger:
             <div class="terminal">
