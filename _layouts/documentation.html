@@ -13,8 +13,11 @@ layout: default
       <li><a href="#documentation">Documentation</a></li>
 
       <!-- Programming Model -->
-      <li><a href="#programming-model">Programming Model</a></li>
-
+      <li class="index-menu-toggle"><a href="#programming-model">Programming Model</a></li>
+      <ul class="index-menuitems">
+        <li><a href="#programming-model-actions">Actions</a></li>
+        <li><a href="#programming-model-triggers">Triggers & Rules</a></li>
+      </ul>
       <!-- Developers -->
       <li class="index-menu-toggle"><a href="#developers">Developers</a></li>
       <ul class="index-menuitems index-menu-start-open">
@@ -30,8 +33,7 @@ layout: default
 
           <!-- WARNING: Index anchors have style="white-space: pre-wrap;"
           DO NOT CHANGE THE SPACING OF THE ANCHOR TEXT -->
-          <li class="index-menu-toggle"
-          style=""><a href="#actions-creating-and-invoking">Creating and
+          <li class="index-menu-toggle"><a href="#actions-creating-and-invoking">Creating and
       Invoking Actions</a></li>
           <ul class="index-menuitems">
             <li id="index-nodejs" class="index-menu-toggle"><a href="#nodejs">using NodeJS</a></li>
@@ -210,9 +212,10 @@ layout: default
           <!-- TODO: cover later and link -->
         </p>
 
+        <a class="indexable" id="programming-model-actions"></a>
         <h4>Actions</h4>
         <p>This section will answer some of the essential questions about
-          OpenWhisk Actions relative to the to the programming mode.
+          OpenWhisk Actions relative to the to the programming model.
           If you want to more detailed information,
           please read the project documentation on
         <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">
@@ -232,14 +235,10 @@ layout: default
         </p>
         <p>
           <strong>Does the function's language matter?</strong>
-          No. OpenWhisk treats all languages the same; you decide what
-          languages are best for you!
-        </p>
-        <p>
-          The OpenWhisk operations to create, invoke and manage
-          an Action are the same regardless of the implementation choice using
-          any of the tooling tooling described in
-          the <a href="#getting-started">Getting Started</a> section below.
+          No, OpenWhisk is agnostic to a function's implementation language.
+          This means that OpenWhisk operations used to create, invoke and
+          manage Actions are the same regardless of implementation choice.
+          You decide what languages are best for you!
         </p>
         <p>
           <strong>What if your preferred language/runtime is not supported
@@ -295,6 +294,64 @@ layout: default
             Action in Apache OpenWhisk.
           </li>
         </ul>
+
+        <a class="indexable" id="programming-model-triggers"></a>
+        <h4>Triggers and Rules</h4>
+        <p>This section will describe how to automate OpenWhisk Actions
+          in response to events using OpenWhisk Triggers.
+          If you want to more detailed information,
+          please read the project documentation on
+        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">
+          OpenWhisk Triggers and Rules</a>.
+        </p>
+        <img width="90%"
+        src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz-Trigger-Rule.png"
+        alt="OpenWhisk Programming Model: Actions">
+        <p>
+          <strong>What are Triggers and Rules?</strong>
+          OpenWhisk Triggers are named channels for specific kinds of events
+          sent from Event Sources that "fire" Actions when
+          connected by OpenWhisk Rules.
+        </p>
+        <p>
+          <strong>What is a trigger?</strong>
+          Triggers are named channels for classes or kinds of events.
+          sent from Event Sources.
+        </p>
+        <p>
+          <strong>What is a Rule?</strong>
+          Rules are used to associate a trigger with an action.
+          After this kind of association is created, each time
+          a trigger event is fired, the action is invoked.
+        </p>
+        <p>
+          <strong>What are Event Sources?</strong>
+          These are services that generate events that often indicate
+          changes in data or carry data themselves. Some examples of
+          common Event Sources include:
+          <ul>
+            <li>Messages arriving on Message Queues</li>
+            <li>Changes in Databases</li>
+            <li>Changes in Document Stores</li>
+            <li>Interactions with Websites</li>
+            <li>Appicatio APIs being invoked</li>
+            <li>etc.</li>
+          </ul>
+        </p>
+        <p>
+            <strong>Why do I need to connect actions to event
+              sources?</strong>
+            OpenWhisk is based on event-driven architecture in which
+            actions/functions should be connected to external/internal
+            event sources such as message queues, database changes,
+            webhooks, etc. When these events happen, functions/actions
+            are automatically invoked without explicitly invoking them
+            unlike we saw before
+            in <a href="#actions-creating-and-invoking">Creating
+            and Invoking Actions</a>.
+            Now, events from these internal/external event sources
+            are channeled through a trigger.
+        </p>
       </div>
     </main>
 
@@ -1500,26 +1557,7 @@ $ jar cvf hello.jar Hello.class
       <div class="content">
         <a class="indexable" id="connecting_actions_to_event_sources"></a>
         <h4>Connecting Actions to Event Sources</h4>
-        <p>
-            <strong>Why do I need to connect actions to event
-              sources?</strong>
-            OpenWhisk is based on event-driven architecture in which
-            actions/functions should be connected to external/internal
-            event sources such as message queues, database changes,
-            webhooks, etc. When these events happen, functions/actions
-            are automatically invoked without explicitly invoking them
-            unlike we saw before
-            in <a href="#actions-creating-and-invoking">Creating
-            and Invoking Actions</a>.
-            Now, events from these internal/external event sources
-            are channeled through a trigger.
-        </p>
-        <p>
-            <strong>What is a trigger?</strong>
-            Triggers are the class of events like published
-            messages, document uploads to a website, GitHub
-            commits, etc that are emitted by event sources.
-        </p>
+
         <p>
             <strong>How to create and fire triggers?</strong>
         </p>
@@ -1556,12 +1594,6 @@ $ jar cvf hello.jar Hello.class
               </p>
           </li>
         </ul>
-        <p>
-          <strong>What are the rules?</strong>
-          Rules are used to associate a trigger with an action.
-          After this kind of association is created, each time
-          a trigger event is fired, the action is invoked.
-        </p>
         <ul>
           <li>
             Please make sure you have the <i>hello</i> action created.
