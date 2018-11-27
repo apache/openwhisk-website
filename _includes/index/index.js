@@ -4,6 +4,25 @@ function applyCollapsible() {
   addListenersToSections();
 }
 
+function toggleReferencedSection( parentId, expand )
+{
+  console.log( "toggleReferencedSection(): parentId=" + parentId + " expand=" + expand);
+  if (parentId !== ""){
+    sectionName = parentId.replace("index", "section");
+    console.log( "toggleReferencedSection(): sectionName=" + sectionName);
+    sectionHeader = document.getElementById(sectionName);
+    section = sectionHeader.nextElementSibling;
+    if(expand){
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+          section.style.display = "block";
+    }
+    else{
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-plus.png')";
+          section.style.display = "none";
+    }
+  }
+}
+
 function addListenersToIndex()
 {
   var coll = document.getElementsByClassName("index-menu-toggle");
@@ -18,6 +37,11 @@ function addListenersToIndex()
         // (top right bottom left)
         // make room on left for image/icon
         sibling.style.padding = "0px 0px 0px 20px";
+
+        if(sibling.classList.contains('index-menu-start-open')){
+          coll[i].style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+          sibling.style.display = "block";
+        }
     }
 
     // Set "click" event listener on all menuitems
@@ -28,9 +52,17 @@ function addListenersToIndex()
         if (sibling.style.display === "block") {
           this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
           sibling.style.display = "none";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, false )
+          }
         } else {
           this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
           sibling.style.display = "block";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, true )
+          }
         }
       }
 
@@ -48,11 +80,16 @@ function addListenersToSections()
     var sibling = coll[i].nextElementSibling;
 
     if(sibling!==null){
-      sibling.setAttribute('data-display', sibling.style.display);
-      if(coll[i].classList.contains("section-toggle-start-open")){
+      if(sibling.classList.contains("section-toggle-start-open")){
         coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
-      } else {
+        sibling.style.display = "block";
+      } else if (sibling.classList.contains("section-toggle-start-closed")){
         coll[i].style.backgroundImage = "url('../images/elements/circle-plus.png')";
+        sibling.style.display = "none";
+      } else {
+        console.log( "addListenersToSections(): No Toggle style foun; default to open");
+        coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
       }
     }
 
@@ -72,14 +109,15 @@ function addListenersToSections()
           this.style.backgroundImage = "url('../images/elements/circle-minus.png')";
         }
       }
-
+      
     });
   }
 }
 
 /*
- *  Debug
+ *  Debug:
  */
+// Use: console.log(dumpCSSText(this));
 // function dumpCSSText(element){
 //   var s = '';
 //   var o = getComputedStyle(element);
