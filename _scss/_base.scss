@@ -129,16 +129,15 @@ question {
     border-bottom: 2px solid $color-blue-black;
   }
 
-  h4:before {
-  //background: white;
-  content: "";
-  display: block;
-  height: 10px;
-  position: relative;
-  top: -20px;
-  width: 100%;
-  //border-bottom: 2px solid red;
-}
+// h4::before {
+//     color: $color-blue-black;
+//     display: inline-block;
+//     content: "";
+//     border-top: .1rem solid black;
+//     width: 100%;
+//     margin: 0;
+//     //transform: translateY(-1rem);
+// }
 
   #whiskIndex {
     // position menu relative to header
