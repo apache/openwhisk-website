@@ -42,12 +42,6 @@ layout: default
               <li><a href="#nodejs-runtime">NodeJS Runtime</a></li>
               <li><a href="#nodejs-additional-resources">Additional Resources</a></li>
             </ul>
-            <li id="index-python" class="index-menu-toggle"><a href="#python">using Python</a></li>
-            <ul class="index-menuitems">
-                <li><a href="#actions-python">Creating and Invoking Sample Action</a></li>
-                <li><a href="#python-runtime">Python Runtime</a></li>
-                <li><a href="#python-additional-resources">Additional Resources</a></li>
-            </ul>
             <li id="index-go" class="index-menu-toggle"><a href="#go">using Go</a></li>
             <ul class="index-menuitems">
                 <li><a href="#actions-go">Creating and Invoking Action</a></li>
@@ -66,18 +60,24 @@ layout: default
                 <li><a href="#php-runtime">PHP Runtime</a></li>
                 <li><a href="#php-additional-resources">Additional Resources</a></li>
             </ul>
+            <li id="index-python" class="index-menu-toggle"><a href="#python">using Python</a></li>
+            <ul class="index-menuitems">
+                <li><a href="#actions-python">Creating and Invoking Sample Action</a></li>
+                <li><a href="#python-runtime">Python Runtime</a></li>
+                <li><a href="#python-additional-resources">Additional Resources</a></li>
+            </ul>
             <li id="index-ruby" class="index-menu-toggle"><a href="#ruby">using Ruby</a></li>
             <ul class="index-menuitems">
                 <li><a href="#actions-ruby">Creating and Invoking Action</a></li>
                 <li><a href="#ruby-runtime">Ruby Runtime</a></li>
                 <li><a href="#ruby-additional-resources">Additional Resources</a></li>
             </ul>
-            <!--li id="index-swift" class="index-menu-toggle"><a href="#swift">Swift</a></li>
+            <li id="index-swift" class="index-menu-toggle"><a href="#swift">Swift</a></li>
             <ul class="index-menuitems">
-                <li><a href="#swift-actions">Creating and Invoking Action</a></li>
+                <li><a href="#actions-swift">Creating and Invoking Action</a></li>
                 <li><a href="#swift-runtime">Swift Runtime</a></li>
                 <li><a href="#swift-additional-resources">Additional Resources</a></li>
-            </ul-->
+            </ul>
             <!--li id="index-docker" ><a href="#docker">Docker</a></li>
             <ul>
                 <li>Zip Action</li>
@@ -796,14 +796,6 @@ $ wsk list -v
         <p>Select from the language example you would like to follow from the
           list below.
         </p>
-        <!-- <ul>
-          <li><a href="#section-nodejs">JavaScript (NodeJS)</a></li>
-          <li><a href="#section-go">Go</a></li>
-          <li><a href="#section-java">Java</a></li>
-          <li><a href="#section-php">PHP</a></li>
-          <li><a href="#section-python">Python</a></li>
-          <li><a href="#section-ruby">Ruby</a></li>
-        </ul> -->
 
         <!-- ************************************** -->
         <!-- Actions - JavaScript (NodeJS)          -->
@@ -1378,26 +1370,99 @@ $ jar cvf hello.jar Hello.class
         </div>
 
         <!-- ************************************** -->
-        <!-- TODO: Actions - Swift                  -->
+        <!-- Actions - Swift                        -->
         <!-- ************************************** -->
-
-        <!-- <a class="indexable" id="swift"></a>
-        <h4 id="section-swift" >using Swift</h4>
-        <p></p>
-        <a class="indexable" id="swift-actions"></a>
-        <h5>Creating and Invoking Swift actions</h5>
-        <p>
+        <a class="indexable" id="swift"></a>
+        <h6 id="section-swift" class="section-toggle">using Swift</h6>
+        <div class="section-toggleable section-toggle-start-closed">
+          <p></p>
+          <a class="indexable" id="actions-swift"></a>
+          <h5>Creating And Invoking Swift Actions</h5>
+          <p>
             Let's look at how to write a sample hello world action in Swift.
-        </p>
-        <p>
-            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this section. If you don't have it installed and configured,
-            please refer to the section on <a href="#wsk-cli">Configure the wsk CLI</a> to configure it.
-        </p>
-        <a class="indexable" id="swift-runtime"></a>
-        <h5>OpenWhisk Runtime for Swift</h5>
-        <p></p>
-        <a class="indexable" id="swift-additional-resources"></a>
-        <h5>Additional Resources</h5> -->
+            You can visit
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-swift#quick-swift-action">Quick Swift Action</a>
+            page for further details.
+          </p>
+          <p>
+            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
+            section. If you don't have it installed and configured,
+            please refer to the section
+            <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
+          </p>
+          <ol>
+            <li style="list-style-type: decimal">
+              <a class="indexable" id="hello-swift"></a>
+              Create a file named <i>hello.swift</i>:
+              <div class="terminal">
+{% highlight java linenos %}
+{% include code/hello.swift %}
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Create an action <i>helloSwift</i>:
+              <div class="terminal">
+{% highlight bash %}$ wsk action create helloSwift hello.swift{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+                Invoke an action <i>helloSwift</i>:
+              <div class="terminal">
+{% highlight bash %}$ wsk action invoke helloSwift -r -p name Carlos{% endhighlight %}
+              </div>
+              <div class="terminal">
+{% highlight yaml %}
+{
+"msg": "Hello Carlos!"
+}
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Deploy using <i>wskdeploy</i>:
+              <p>
+                <strong>Note:</strong> We will be using <i>wskdeploy</i> in
+                this section. If you don't have the binary,
+                please refer to the section
+                on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+              </p>
+              <ol>
+                <li>Create a directory called <i>actions</i> with
+                  <i>hello.swift</i> from step 1 <a href="#hello-swift">above</a>.
+                </li>
+                <li>
+                  Create <i>manifest.yaml</i> with the following YAML content:
+                  <div class="terminal">
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloSwift.yaml %}
+{% endhighlight %}
+                  </div>
+                </li>
+                <li>
+                  Run deployment with <i>wskdeploy</i>:
+                  <div class="terminal">
+{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <a class="indexable" id="swift-runtime"></a>
+          <h5>OpenWhisk Runtime for Swift</h5>
+          <p>
+            If you wish to learn more about Swift runtime along with
+            the libraries that are supported or "built-in" by
+            default, please visit the project REAMDE
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-swift#apache-openwhisk-runtimes-for-swift">Apache OpenWhisk runtimes for Swift</a>.
+          </p>
+          <a class="indexable" id="swift-additional-resources"></a>
+          <h5>Additional Resources</h5>
+          <ul>
+            <li>TBD</li>
+            <li>TBD</li>
+          </ul>
+        </div>
 
         <!-- ************************************** -->
         <!-- TODO: Actions - Docker                 -->
