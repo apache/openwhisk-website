@@ -225,7 +225,7 @@ layout: default
         src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz-Action.png"
         alt="OpenWhisk Programming Model: Actions">
         <p>
-          <strong>What is an Action?</strong>
+          <question>What is an Action?</question>
           Actions are stateless functions (code snippets) that run on
           the OpenWhisk platform. Actions encapsulate application logic
           to be executed in response to events. Actions can be invoked
@@ -234,15 +234,15 @@ layout: default
           which we will discuss later.
         </p>
         <p>
-          <strong>Does the function's language matter?</strong>
+          <question>Does the function's language matter?</question>
           No, OpenWhisk is agnostic to a function's implementation language.
           This means that OpenWhisk operations used to create, invoke and
           manage Actions are the same regardless of implementation choice.
           You decide what languages are best for you!
         </p>
         <p>
-          <strong>What if your preferred language/runtime is not supported
-          by OpenWhisk?</strong>
+          <question>What if your preferred language/runtime is not supported
+          by OpenWhisk?</question>
           If your favorite language is not listed above, you may find the
           Docker action or native binary path more suitable.
           The OpenWhisk platform is extensible and you can add new languages
@@ -309,18 +309,18 @@ layout: default
         alt="OpenWhisk Programming Model: Actions">
 
         <p>
-          <strong>What is a trigger?</strong>
+          <question>What is a trigger?</question>
           Triggers are named channels for classes or kinds of events
           sent from Event Sources.
         </p>
         <p>
-          <strong>What is a Rule?</strong>
+          <question>What is a Rule?</question>
           Rules are used to associate one trigger with one action.
           After this kind of association is created, each time
           a trigger event is fired, the action is invoked.
         </p>
         <p>
-          <strong>What are Event Sources?</strong>
+          <question>What are Event Sources?</question>
           These are services that generate events that often indicate
           changes in data or carry data themselves. Some examples of
           common Event Sources include:
@@ -335,8 +335,8 @@ layout: default
           <li>etc.</li>
         </ul>
         <p>
-            <strong>Why do I need to connect actions to event
-              sources?</strong>
+            <question>Why do I need to connect actions to event
+              sources?</question>
             OpenWhisk is based on an event-driven architecture where most
             Actions are executed as events happen.
             The Trigger itself is "fired" with a dictionary of
@@ -896,9 +896,20 @@ $ wsk list -v
           <a class="indexable" id="nodejs-additional-resources"></a>
           <h5>Additional Resources</h5>
           <ul>
-            <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</a></li>
-            <li><a href="https://medium.com/openwhisk/updates-to-openwhisk-node-js-actions-ed5556cd5ae9">Updates to OpenWhisk Node.js actions</a></li>
             <li><a href="https://medium.com/openwhisk/integrating-openwhisk-with-your-node-application-d489b8a20102">Integrating OpenWhisk with Your Node Applications</a></li>
+            <li><a href="https://medium.com/openwhisk/migrating-from-a-node-app-to-serverless-d76f744b22c9">Migrating from a Node App to Serverless</a></li>
+            <li><a href="https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741">Debugging Node.js OpenWhisk Actions</a></li>
+          </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/nodejs">nodejs</a>)</span></h6>
+          <ul>
+            <li><a href="https://medium.com/openwhisk/creating-zipped-actions-in-openwhisk-ccfcda553a30">Creating Zipped Actions in OpenWhisk</a></li>
+            <li><a href="https://medium.com/openwhisk/an-example-of-an-openwhisk-sequence-417d653c5952">An Example of an OpenWhisk Sequence</a></li>
+            <li><a href="https://medium.com/openwhisk/working-with-openwhisk-triggers-734fa9624ae5">Working with OpenWhisk Triggers</a></li>
+            <li><a href="https://medium.com/openwhisk/another-openwhisk-cron-example-the-blog-nag-dd0074821d2d">Another OpenWhisk Cron Example</a></li>
+            <li><a href="https://medium.com/openwhisk/building-a-serverless-api-proxy-with-openwhisk-16e5fd16f44f">Building a Serverless API Proxy with OpenWhisk</a></li>
+            <li><a href="https://medium.com/openwhisk/building-a-form-handler-service-in-openwhisk-55f15fb133a3">Building a Form Handler Service in OpenWhisk</a></li>
+            <li><a href="https://medium.com/openwhisk/deploying-express-js-apps-to-openwhisk-part-1-9133ba5f262c">Deploying Express.js apps to OpenWhisk (Part 1)</a></li>
+            <li><a href="https://medium.com/openwhisk/designing-an-openwhisk-action-for-web-action-support-4f0299481e74">Designing an OpenWhisk Action for Web Action Support</a></li>
           </ul>
         </div>
 
@@ -994,6 +1005,12 @@ $ wsk list -v
             <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
             <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
           </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/python">python</a>)</span></h6>
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
         </div>
 
         <!-- ************************************** -->
@@ -1088,6 +1105,12 @@ $ wsk list -v
             <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-go-runtime">OpenWhisk Go Runtime</a></li>
             <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>
           </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/golang">golang</a>)</span></h6>
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
         </div>
 
         <!-- ************************************** -->
@@ -1168,6 +1191,12 @@ $ jar cvf hello.jar Hello.class
             <li>
               <a href="https://www.ibm.com/blogs/bluemix/2017/02/building-openwhisk-actions-java-gradle/">Building OpenWhisk actions with Java and Gradle</a>
             </li>
+          </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/java">java</a>)</span></h6>
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
           </ul>
         </div>
 
@@ -1270,6 +1299,12 @@ $ jar cvf hello.jar Hello.class
             <li><a href="https://akrabat.com/getting-started-with-serverless-php/">Getting Started with Serverless PHP</a></li>
             <li><a href="https://lornajane.net/posts/2018/handle-webhooks-with-serverless-php">Handle Webhooks with Serverless PHP on OpenWhisk</a></li>
           </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/php">php</a>)</span></h6>
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
         </div>
 
         <!-- ************************************** -->
@@ -1366,6 +1401,12 @@ $ jar cvf hello.jar Hello.class
           <h5>Additional Resources</h5>
           <ul>
             <li>Coming soon...</li>
+          </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/ruby">ruby</a>)</span></h6>
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
           </ul>
         </div>
 
@@ -1468,7 +1509,6 @@ $ jar cvf hello.jar Hello.class
             <li><a href="https://medium.com/openwhisk/creating-swift-binaries-for-openwhisk-487526d0d576">Creating Swift Binaries for OpenWhisk</a></li>
             <li><a href="https://medium.com/openwhisk/creating-an-openwhisk-alexa-skill-583824bf58cb">Creating an OpenWhisk Alexa skill</a> using Swift</li>
           </ul>
-
         </div>
 
         <!-- ************************************** -->
@@ -1509,18 +1549,18 @@ $ jar cvf hello.jar Hello.class
         <a class="indexable" id="managing_actions_with_openwhisk_packages"></a>
         <h4>Managing Actions with OpenWhisk Packages</h4>
         <p>
-          <strong>What is a package?</strong> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
+          <question>What is a package?</question> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
           OpenWhisk comes with a list of packages
           You can get more details on OpenWhisk packages
           <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">here</a>.
         </p>
         <p>
-          <strong>Does OpenWhisk comes with any pre-installed packages?</strong>
+          <question>Does OpenWhisk comes with any pre-installed packages?</question>
           OpenWhisk comes with a list of pre-installed public packages which can be used by anyone.
           OpenWhisk has created a dedicated shared namespace <strong>/whisk.system</strong> for all the public packages.
         </p>
         <p>
-          <strong>Which all packages are available under /whisk.system?</strong>
+          <question>Which all packages are available under /whisk.system?</question>
           You can get a list of packages available in shared namespace by using wsk CLI:
         </p>
         <ul>
@@ -1538,7 +1578,7 @@ $ jar cvf hello.jar Hello.class
           </li>
         </ul>
         <p>
-          <strong>How do I invoke an action from a public package?</strong>
+          <question>How do I invoke an action from a public package?</question>
           There are two way to invoke an action from a package,
           (1) Invoking an action directly from a package
           (2) Creating a package binding and then invoking an action in the binding.
@@ -1614,7 +1654,7 @@ $ jar cvf hello.jar Hello.class
           </li>
         </ul>
         <p>
-          <strong>Where do I get more information on packages?</strong>
+          <question>Where do I get more information on packages?</question>
           Please read
           <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
           for further details.

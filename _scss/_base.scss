@@ -48,6 +48,13 @@ strong {
   color: $color-blue-dark;
 }
 
+question {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-blue-black;
+}
+
 // Header is only shown on the "home" page
 #whiskHeader {
   background-color: $color-blue-dark;
@@ -228,7 +235,6 @@ strong {
   a {
     text-align: center;
     font-size: $font-size-default;
-    font-weight: bold;
   }
 
   h4 {
