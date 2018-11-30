@@ -168,14 +168,14 @@ layout: default
     <main class="doc">
       <div class="content">
         <a class="indexable" id="programming-model"></a>
-        <h2>OpenWhisk Programming Model</h2>
+        <h3>OpenWhisk Programming Model</h3>
         <p>
           <img style="display:block; width:80%; margin: auto"
           src="{{ site.github.url }}/images/illustrations/OW-Programming-Model-Horz.png"
           alt="OpenWhisk Programming Model">
         </p>
-        <p>The OpenWhisk programming model is...</p>
-        <h5>Event-Driven</h5>
+        <p>The OpenWhisk programming model...</p>
+        <h5>Is Event-driven</h5>
         <p>In the OpenWhisk programming model, Events drive the
           Serverless execution of functional code called Actions.
           Events can come from any Event Source or Feed service
@@ -741,6 +741,18 @@ $ wsk list -v
             </div>
           </li>
         </ul>
+        <a class="indexable" id="additional-resources-wskdeploy"></a>
+        <h5>Additional Resources</h5>
+        <ul>
+          <li><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/specification#openwhisk-packaging-specification">OpenWhisk Packaging Specification</a></li>
+          <li><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Programming Guide - "<code>wskdeploy</code> utility by example"</a></li>
+        </ul>
+        <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/wskdeploy">wskdeploy</a>)</span></h6>
+        <ul>
+          <li><a href="https://medium.com/openwhisk/whisk-deploy-zip-actions-with-include-exclude-30ba6d96ad8b">Whisk Deploy - Zip Actions with file Include & Exclude</a></li>
+          <li><a href="https://medium.com/openwhisk/whisk-deploy-api-gateway-action-to-rest-api-cc52002c9d2c">Whisk Deploy - API Gateway (Action to REST API)</a></li>
+          <li><a href="https://medium.com/openwhisk/whisk-deploy-how-to-sync-openwhisk-projects-between-client-and-server-c7939f0642a1">Whisk Deploy - How to Sync OpenWhisk Projects between Client and Server?</a></li>
+        </ul>
 
         <!-- ********************************************************** -->
         <!-- OpenWhisk REST API                                         -->
@@ -914,106 +926,6 @@ $ wsk list -v
         </div>
 
         <!-- ************************************** -->
-        <!-- Actions - Python                       -->
-        <!-- ************************************** -->
-        <a class="indexable" id="python"></a>
-        <h6 id="section-python" class="section-toggle">using Python</h6>
-        <div class="section-toggleable section-toggle-start-closed">
-          <p></p>
-          <a class="indexable" id="actions-python"></a>
-          <h5>Creating And Invoking Python actions</h5>
-          <p>
-            Let's look at how to write a sample hello world action in Python. You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
-            page for further details.
-          </p>
-          <p>
-            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
-            section. If you don't have it installed and configured,
-            please refer to the section
-            <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
-          </p>
-          <ol>
-            <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
-              <div class="terminal">
-{% highlight python linenos %}
-{% include code/hello.py %}
-{% endhighlight %}
-              </div>
-            </li>
-            <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
-                <div class="terminal">
-{% highlight bash %}$ wsk action create helloPy hello.py{% endhighlight %}
-                </div>
-                <div class="terminal">
-<pre>ok: created action helloPy</pre>
-                </div>
-            </li>
-            <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
-              <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
-              </div>
-              <div class="terminal">
-{% highlight yaml %}
-{
-"greeting": "Hello World!"
-}
-{% endhighlight %}
-              </div>
-            </li>
-            <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
-              <p>
-                <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
-                please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
-              </p>
-              <ol>
-                <li>Create <i>manifest.yaml</i> with the following YAML content:
-                  <div class="terminal">
-{% highlight yaml linenos %}
-{% include code/manifest-for-helloPy-1.yaml %}
-{% endhighlight %}
-                  </div>
-                  Or
-                  <p></p>
-                  <div class="terminal">
-{% highlight yaml linenos %}
-{% include code/manifest-for-helloPy-2.yaml %}
-{% endhighlight %}
-                  </div>
-                </li>
-                <li>
-                  Run deployment with <i>wskdeploy</i>:
-                  <div class="terminal">
-{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
-                  </div>
-                </li>
-              </ol>
-            </li>
-          </ol>
-
-          <a class="indexable" id="python-runtime"></a>
-          <h5>OpenWhisk Runtime for Python</h5>
-          <p>
-            OpenWhisk supports <strong>Python 2</strong> and <strong>Python 3</strong> runtimes where Python 2 being default pick by wsk CLI and Whisk Deploy.
-            If you wish to learn more about Python runtime along with
-            the libraries that are supported or "built-in" by default, please visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
-          </p>
-          <a class="indexable" id="python-additional-resources"></a>
-          <h5>Additional Resources</h5>
-          <ul>
-            <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
-            <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
-          </ul>
-          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/python">python</a>)</span></h6>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
-        </div>
-
-        <!-- ************************************** -->
         <!-- Actions - GoLang                       -->
         <!-- ************************************** -->
         <a class="indexable" id="go"></a>
@@ -1106,6 +1018,106 @@ $ wsk list -v
             <li><a href="https://www.slideshare.net/MicheleSciabarr/openwhisk-goswiftbinaries-runtime">ActionLoop, Go and Swift</a></li>
           </ul>
           <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/golang">golang</a>)</span></h6>
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+
+        <!-- ************************************** -->
+        <!-- Actions - Python                       -->
+        <!-- ************************************** -->
+        <a class="indexable" id="python"></a>
+        <h6 id="section-python" class="section-toggle">using Python</h6>
+        <div class="section-toggleable section-toggle-start-closed">
+          <p></p>
+          <a class="indexable" id="actions-python"></a>
+          <h5>Creating And Invoking Python actions</h5>
+          <p>
+            Let's look at how to write a sample hello world action in Python. You can visit
+            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
+            page for further details.
+          </p>
+          <p>
+            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
+            section. If you don't have it installed and configured,
+            please refer to the section
+            <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
+          </p>
+          <ol>
+            <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
+              <div class="terminal">
+{% highlight python linenos %}
+{% include code/hello.py %}
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
+                <div class="terminal">
+{% highlight bash %}$ wsk action create helloPy hello.py{% endhighlight %}
+                </div>
+                <div class="terminal">
+<pre>ok: created action helloPy</pre>
+                </div>
+            </li>
+            <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
+              <div class="terminal">
+{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
+              </div>
+              <div class="terminal">
+{% highlight yaml %}
+{
+"greeting": "Hello World!"
+}
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">Deploy using <i>wskdeploy</i>:
+              <p>
+                <strong>Note:</strong> We will be using <i>wskdeploy</i> in this section. If you don't have the binary,
+                please refer to the section on <a href="#wskdeploy">Whisk Deploy</a> to download it.
+              </p>
+              <ol>
+                <li>Create <i>manifest.yaml</i> with the following YAML content:
+                  <div class="terminal">
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloPy-1.yaml %}
+{% endhighlight %}
+                  </div>
+                  Or
+                  <p></p>
+                  <div class="terminal">
+{% highlight yaml linenos %}
+{% include code/manifest-for-helloPy-2.yaml %}
+{% endhighlight %}
+                  </div>
+                </li>
+                <li>
+                  Run deployment with <i>wskdeploy</i>:
+                  <div class="terminal">
+{% highlight bash %}$ wskdeploy -m manifest.yaml{% endhighlight %}
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+
+          <a class="indexable" id="python-runtime"></a>
+          <h5>OpenWhisk Runtime for Python</h5>
+          <p>
+            OpenWhisk supports <strong>Python 2</strong> and <strong>Python 3</strong> runtimes where Python 2 being default pick by wsk CLI and Whisk Deploy.
+            If you wish to learn more about Python runtime along with
+            the libraries that are supported or "built-in" by default, please visit
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
+          </p>
+          <a class="indexable" id="python-additional-resources"></a>
+          <h5>Additional Resources</h5>
+          <ul>
+            <li><a href="http://jamesthom.as/blog/2017/04/27/python-packages-in-openwhisk/">Using External Python Libraries in OpenWhisk</a></li>
+            <li><a href="https://www.slideshare.net/CodeOps/openwhisk-by-example-auto-retweeting-example-in-python">Auto Retweeting Example in Python</a></li>
+          </ul>
+          <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/python">python</a>)</span></h6>
           <ul>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
@@ -1399,14 +1411,10 @@ $ jar cvf hello.jar Hello.class
           </p>
           <a class="indexable" id="ruby-additional-resources"></a>
           <h5>Additional Resources</h5>
-          <ul>
-            <li>Coming soon...</li>
-          </ul>
+          <p></p>
           <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/ruby">ruby</a>)</span></h6>
           <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a href="https://medium.com/openwhisk/ruby-goes-serverless-apache-openwhisk-adds-native-support-for-ruby-7134faee14e">Ruby goes Serverless! - Apache OpenWhisk adds native support for Ruby</a></li>
           </ul>
         </div>
 
@@ -1540,14 +1548,12 @@ $ jar cvf hello.jar Hello.class
     </main> <!-- creating and invoking actions -->
 
     <!-- *************************************************************** -->
-    <!-- Packages                                                        -->
+    <!-- Packages Managing Actions                                       -->
     <!-- *************************************************************** -->
-
-    <!-- Managing Actions with OpenWhisk Packages -->
     <main class="doc">
       <div class="content">
         <a class="indexable" id="managing_actions_with_openwhisk_packages"></a>
-        <h4>Managing Actions with OpenWhisk Packages</h4>
+        <h3>Managing Actions with OpenWhisk Packages</h3>
         <p>
           <question>What is a package?</question> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
           OpenWhisk comes with a list of packages
@@ -1665,7 +1671,7 @@ $ jar cvf hello.jar Hello.class
     <main class="doc">
       <div class="content">
         <a class="indexable" id="automating_actions_from_event_sources"></a>
-        <h4>Automating Actions from Event Sources</h4>
+        <h3>Automating Actions from Event Sources</h3>
         <p>In this section, we will show how to automate Actions in response
           to events coming from Event Sources.
           Specifically, we will show how to create, fire
@@ -1788,7 +1794,7 @@ abcd.... locationUpdate
     <main class="doc">
       <div class="content">
           <a class="indexable" id="using_openwhisk_enabled_services"></a>
-          <h4>Using OpenWhisk Enabled Services</h4>
+          <h3>Using OpenWhisk Enabled Services</h3>
           <p></p>
           <p>
             OpenWhisk offers a catalog of packages which gives you can easy
@@ -1867,7 +1873,7 @@ abcd.... locationUpdate
     <main class="doc">
       <div class="content">
         <a class="indexable" id="sample_openwhisk_applications"></a>
-        <h4>Sample OpenWhisk Applications</h4>
+        <h3>Sample OpenWhisk Applications</h3>
         <p></p>
         <h5>GitHub Slack Bot</h5>
         <p style="padding-left: 2em;">
@@ -1902,7 +1908,7 @@ abcd.... locationUpdate
     <main class="doc">
       <div class="content">
           <a class="indexable" id="tutorial_and_workshop"></a>
-          <h4>Tutorial and Workshop</h4>
+          <h3>Tutorial and Workshop</h3>
           <p></p>
           <h5>OpenWhisk Tutorial</h5>
           <p style="padding-left: 2em;">
@@ -1922,7 +1928,7 @@ abcd.... locationUpdate
     <main class="doc">
       <div class="content">
         <a class="indexable" id="development_tools"></a>
-        <h4>Development Tools</h4>
+        <h3>Development Tools</h3>
         <p></p>
         <h5>The OpenWhisk Debugger</h5>
         <p class="indented">
@@ -1951,7 +1957,7 @@ abcd.... locationUpdate
         others' Pull Requests (PRs).
         </p>
         <p>
-        The following Wiki pages describe the How Tos of becoming an
+        The following Wiki pages describe the "How Tos" of becoming an
         official Contributor:
         </p>
         <ul>
@@ -1963,7 +1969,7 @@ abcd.... locationUpdate
         <!-- Contributors - project Structure                        -->
         <!-- ******************************************************* -->
         <a class="indexable" id="project-structure"></a>
-        <h4>Project Structure</h4>
+        <h3>Project Structure</h3>
         <p>OpenWhisk is comprised of multiple repositories that can be
           found in Apache GitHub (using a name query by repository):</p>
         <ul>
@@ -2350,7 +2356,7 @@ abcd.... locationUpdate
         <!-- ***************************************************** -->
 
         <a class="indexable" id="openwhisk_architecture"></a>
-        <h4>OpenWhisk Architecture</h4>
+        <h3>OpenWhisk Architecture</h3>
         <p>
           The diagram below depicts the high-level architecture of
           OpenWhisk. From Nginx to Kafka to Docker, multiple
@@ -2374,7 +2380,7 @@ abcd.... locationUpdate
         <!-- Operators - Deployment Options                        -->
         <!-- ***************************************************** -->
         <a class="indexable" id="openwhisk_deployment"></a>
-        <h4>Deployment Options</h4>
+        <h3>Deployment Options</h3>
         <p>
           OpenWhisk offers different deployment options
           for installing and configuring the OpenWhisk platform components.
@@ -2398,7 +2404,7 @@ abcd.... locationUpdate
           Google, IBM Cloud, etc.).
         </p>
 
-        <h4>Alternative options</h4>
+        <h3>Alternative options</h3>
         <p>Here are some alternate choices for deploying the OpenWhisk
           platform:
         </p>
@@ -2483,7 +2489,7 @@ $ make quick-start
         <!-- Operators  - Admin                                      -->
         <!-- ******************************************************* -->
         <a class="indexable" id="deployment_admin"></a>
-        <h4>Administrative Operations</h4>
+        <h3>Administrative Operations</h3>
         <p>
           This section contains a list of resources which can be utilized
           to administer the running OpenWhisk instance.
@@ -2496,7 +2502,7 @@ $ make quick-start
         <!-- Operators  - Resources                                  -->
         <!-- ******************************************************* -->
         <a class="indexable" id="operators_resources"></a>
-        <h4>Operator Resources</h4>
+        <h3>Operator Resources</h3>
         <ul>
           <li><a href="https://medium.com/openwhisk/five-minute-intro-to-open-source-serverless-development-with-openwhisk-328b0ebfa160">Five minute intro to open source serverless development with OpenWhisk</a></li>
           <li><a href="https://thenewstack.io/behind-scenes-apache-openwhisk-serverless-platform/">An Architectural View of Apache OpenWhisk</a></li>
@@ -2512,7 +2518,7 @@ $ make quick-start
     <main class="doc">
       <div class="content">
         <a class="indexable" id="other-resources"></a>
-        <h2>Other Resources</h2>
+        <h3>Other Resources</h3>
         <ul>
           <li><a href="events.html">Events</a> - list of past OpenWhisk
             events</li>
@@ -2527,7 +2533,7 @@ $ make quick-start
     <main class="doc">
       <div class="content">
         <a class="indexable" id="faq"></a>
-        <h2>Frequently Asked Questions</h2>
+        <h3>Frequently Asked Questions</h3>
         {% include partial/faq.html %}
       </div>
     </main>
