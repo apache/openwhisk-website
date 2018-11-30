@@ -48,6 +48,13 @@ strong {
   color: $color-blue-dark;
 }
 
+question {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-blue-black;
+}
+
 // Header is only shown on the "home" page
 #whiskHeader {
   background-color: $color-blue-dark;
@@ -105,6 +112,33 @@ strong {
   display: table;
   padding-top: $whisk-header-base-padding-top;
 
+  h2 {
+    font-weight: bolder;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  h4 {
+    color: $color-blue-black;
+    display: inline;
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+    margin-top: 10px;
+    border-bottom: 2px solid $color-blue-black;
+  }
+
+// h4::before {
+//     color: $color-blue-black;
+//     display: inline-block;
+//     content: "";
+//     border-top: .1rem solid black;
+//     width: 100%;
+//     margin: 0;
+//     //transform: translateY(-1rem);
+// }
+
   #whiskIndex {
     // position menu relative to header
     display: float;
@@ -161,6 +195,7 @@ strong {
     background: $color-bg-base-main;
     margin-bottom: $whisk-nodes-padding-base-Y;
   }
+
   .content {
     background: $color-bg-base-content;
     // Provide for space around content's text
@@ -169,6 +204,7 @@ strong {
     // Provide a space between image and content when vertical
     margin-top: 20px;
   }
+
   .image-wrapper {
     background: $color-bg-base-image-wrapper;
     display: table-header-group;
