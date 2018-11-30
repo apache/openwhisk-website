@@ -113,33 +113,32 @@ question {
   padding-top: $whisk-header-base-padding-top;
 
   h2 {
-        font-weight: bolder;
+    font-weight: bolder;
   }
 
   h3 {
-        font-weight: 500;
+    font-weight: 500;
   }
 
   h4 {
     color: $color-blue-black;
     display: inline;
     font-size: $h4-font-size;
-    //font-weight: 500;
     line-height: $h4-line-height;
     margin-top: 10px;
     border-bottom: 2px solid $color-blue-black;
   }
 
-//   h4:before {
-//   background: $color-blue-black;
-//   content: "";
-//   display: block;
-//   height: 2px;
-//   position: relative;
-//   align: center;
-//   top: -10px;
-//   width: 50%;
-// }
+  h4:before {
+  //background: white;
+  content: "";
+  display: block;
+  height: 10px;
+  position: relative;
+  top: -20px;
+  width: 100%;
+  //border-bottom: 2px solid red;
+}
 
   #whiskIndex {
     // position menu relative to header
