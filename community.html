@@ -36,7 +36,7 @@ function toggleReferencedSection( parentId, expand )
   console.log( "toggleReferencedSection(): parentId=" + parentId + " expand=" + expand);
   if (parentId !== ""){
     sectionName = parentId.replace("index", "section");
-    console.log( "toggleReferencedSection(): sectionName=" + sectionName);
+    //console.log( "toggleReferencedSection(): sectionName=" + sectionName);
     sectionHeader = document.getElementById(sectionName);
     section = sectionHeader.nextElementSibling;
     if(expand){
@@ -61,8 +61,7 @@ function addListenersToIndex()
 
     if(sibling!==null){
         coll[i].style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
-        // (top right bottom left)
-        // make room on left for image/icon
+        // make room on left for image/icon (top right bottom left)
         sibling.style.padding = "0px 0px 0px 20px";
 
         if(sibling.classList.contains('index-menu-start-open')){
@@ -114,7 +113,7 @@ function addListenersToSections()
         coll[i].style.backgroundImage = "url('../images/elements/circle-plus.png')";
         sibling.style.display = "none";
       } else {
-        console.log( "addListenersToSections(): No Toggle style foun; default to open");
+        //console.log( "addListenersToSections(): No Toggle style foun; default to open");
         coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
         sibling.style.display = "block";
       }
@@ -125,18 +124,18 @@ function addListenersToSections()
       var sibling = this.nextElementSibling;
       // toggle menu open/close states
       if(sibling!==null){
-        console.log("sibling.style.display: ["+sibling.style.display+"]");
+        //console.log("sibling.style.display: ["+sibling.style.display+"]");
         if (sibling.style.display !== "none") {
-          console.log("collapsing");
+          //console.log("collapsing");
           sibling.style.display = "none";
           this.style.backgroundImage = "url('../images/elements/circle-plus.png')";
         } else {
-          console.log("expanding");
+          //console.log("expanding");
           sibling.style.display = "block";
           this.style.backgroundImage = "url('../images/elements/circle-minus.png')";
         }
       }
-      
+
     });
   }
 }
@@ -248,7 +247,7 @@ function addListenersToSections()
       <main class="doc">
           <div class="content">
               <a class="indexable" id="social"></a>
-              <h4>Media</h4>
+              <h3>Media</h3>
               <p>The Apache OpenWhisk project is active on several content sharing and social media channels which aim to make it easier for users to get started, ask questions, stay informed and to interact with our community.</p>
               <p>Icons that link to each of the following channels are located in the header of our website and include:</p>
               <ul>
@@ -273,25 +272,37 @@ function addListenersToSections()
       <main class="doc">
           <div class="content">
               <a class="indexable" id="mailing-lists"></a>
-              <h4>Mailing Lists</h4>
-              <br>
-              <h5>How to join the Apache OpenWhisk mailing list<h5>
-              <p>The Dev Mailing List is where we discuss the development of Apache OpenWhisk. It is <b><i>not</i></b> a place for technical support; if you're looking for help on the project, please try our <a style="font-weight:400;" href="/documentation.html">Documentation</a> page and engage with us on one of the Social Media channels listed above.</p>
-              <p>To subscribe, unsubscribe or post our developer list, send an email message to one of the following addresses:</p>
+              <h3>Mailing Lists</h3>
+              <p>The developer or "dev" mailing list is where we discuss the design and
+                development of Apache OpenWhisk project code.
+                It is <b><i>not</i></b> a place for technical support;
+                if you're looking for help on the project, please try our
+                <a style="font-weight:400;" href="/documentation.html">Documentation</a>
+                page and engage with us on one of the Social Media channels
+                listed above.
+              </p>
+              <question>How do I join the Apache OpenWhisk project
+                developer mailing list?</question>
+              <p>To subscribe, unsubscribe or post our developer list, send
+                an email message to one of the following addresses:</p>
                   <ul>
                       <li><b>Subscribe</b>: <a href="mailto:dev-subscribe@openwhisk.incubator.apache.org">dev-subscribe@openwhisk.incubator.apache.org</a></li>
                       <li><b>Unsubscribe</b>: <a href="mailto:dev-unsubscribe@openwhisk.incubator.apache.org">dev-unsubscribe@openwhisk.incubator.apache.org</a></li>
                       <li><b>Post</b> (new topic): <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a></li>
                   </ul>
-              <p>To comment on a thread, simply reply to the message with the same subject text.</p>
-              <p><b>NOTE:</b> Make sure you add a subject line to the subscribe/unsubscribe messages. Empty emails are ignored.</p>
-              <p>To see existing messages, <a href="https://lists.apache.org/list.html?dev@openwhisk.apache.org">https://lists.apache.org/list.html?dev@openwhisk.apache.org</a>.</p>
+              <p>To comment on a thread, simply reply to the message with
+                the same subject text.
+              </p>
+              <p><b>NOTE:</b> Make sure you add a subject line to the
+                subscribe/unsubscribe messages. Empty emails are ignored.</p>
+              <p>To see existing messages, use:
+                <a href="https://lists.apache.org/list.html?dev@openwhisk.apache.org">https://lists.apache.org/list.html?dev@openwhisk.apache.org</a>.</p>
           </div>
       </main>
       <main class="doc">
           <div class="content">
               <a class="indexable" id="wiki"></a>
-              <h4>Project Wiki</h4>
+              <h3>Project Wiki</h3>
               <p>The project maintains a <a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki">Confluence Wiki</a> site that provides the community a place to share their thoughts about and collaborate around any aspect of the project; whether it's about the platform architecture, an existing or planned feature or about its use cases and integrations. Examples include:</p>
               <ul>
                   <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/OpenWhisk+Project+Wiki#OpenWhiskProjectWiki-how-to-contribute">How to contribute?</li>
@@ -309,7 +320,7 @@ function addListenersToSections()
       <main class="doc">
           <div class="content">
               <a class="indexable" id="events"></a>
-              <h4>Events</h4>
+              <h3>Events</h3>
               <h5 style="margin-top:20px;">Apache OpenWhisk events</h5>
               <p>
                   Please reach out to community at <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a> to promote any OpenWhisk event.
@@ -331,7 +342,7 @@ function addListenersToSections()
       <main class="doc">
           <div class="content">
               <a class="indexable" id="supporters"></a>
-              <h4>Supporters</h4>
+              <h3>Supporters</h3>
               <p>The following companies and organizations have acknowledged support of the Apache OpenWhisk project as contributors or users of the technology.</p>
               <div class="flow-columns">
                   <div class="flow-item-container">
