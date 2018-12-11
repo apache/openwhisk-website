@@ -16,12 +16,16 @@ layout: default
             <li><a href="#versioning">Versioning</a></li>
 
             <!-- Downloads -->
-            <li class="index-menu-toggle"><a href="#releases">Releases</a></li>
+            <li class="index-menu-toggle"><a href="#official-releases">Official Releases</a></li>
             <ul class="index-menuitems">
                 <li><a href="#verifying">Verifying</a></li>
                 <li><a href="#keys">Keys</a></li>
                 <li><a href="#versions">Versions</a></li>
             </ul>
+
+            <!-- Nightly and incremental builds -->
+            <li class="index-menu-toggle"><a href="#developer-builds">Developer builds</a></li>
+
         </ul>
     </div>
 
@@ -40,7 +44,9 @@ layout: default
             <div class="content">
                 <a class="indexable" id="versioning"></a>
                 <h3>Versioning</h3>
-                <p>Apache OpenWhisk uses semantic versioning. Version numbers use the form <code>major.minor.incremental-build</code> and are incremented as follows:</p>
+                <p>Apache OpenWhisk uses semantic versioning. Version numbers
+                  use the form <code>major.minor.incremental-build</code> and
+                  are incremented as follows:</p>
                     <ul>
                         <li><em>major version</em>: for incompatible API changes.</li>
                         <li><em>minor version</em>: for new functionality added in a backward-compatible manner.</li>
@@ -52,13 +58,21 @@ layout: default
 
         <main class="doc">
             <div class="content">
-                <a class="indexable" id="releases"></a>
-                <h3>Releases</h3>
-                <p>The Apache OpenWhisk project provides releases of source code, by component groupings, as TAR compressed archives files denoted by the <em>.tar.gz</em> extension.)
+                <a class="indexable" id="official-releases"></a>
+                <h3>Official Releases</h3>
+                <p>The Apache OpenWhisk project provides official releases of
+                  source code, by component groupings, as TAR compressed
+                  archives files denoted by the <em>.tar.gz</em> extension.)
+                </p>
+                <p>Developers who wish to use nightly builds or interim builds
+                  should read about them below under
+                  <a style="font-weight:normal;" href="#developer-builds">Developer builds</a>.
                 </p>
                 <a class="indexable" id="verifying"></a>
                 <h4>Verifying</h4>
-                <p>As an Apache project, all downloaded files are signed by a project Release Manager and can be verified following these instructions:</p>
+                <p>As an Apache project, all downloaded files are signed by a
+                  project Release Manager and can be verified following these
+                  instructions:</p>
                 <ul>
                     <li><a href="https://www.apache.org/info/verification">How to verify downloaded files</a></li>
                 </ul>
@@ -379,6 +393,36 @@ layout: default
                 </div>
             </div>
         </main>
+
+      <main class="doc">
+        <div class="content">
+          <a class="indexable" id="developer-builds"></a>
+          <h3>Developer builds</h3>
+          <p>Most of the Apache OpenWhisk project component repositories
+            are configured within GitHub to automatically generate interim
+            builds (not
+            <a href="#official-releases">official release builds</a>)
+            for each merged Pull Request (PR) and/or on
+            a nightly basis.  These builds, by default, are tagged
+            <b><em>'latest'</em></b> and appear under their respective GitHub
+            component's release tab and are intended for developer
+            evaluation and testing only.
+          </p>
+          <p>In some special cases,
+            Committers on the project may choose to use GitHub to tag
+            certain builds as they become closer to being Release Candidate
+            (RC) builds.  However, <em>any build tagged within GitHub with
+            either <em>'latest'</em> or any other tag <strong>do NOT have
+            official Apache project release status</strong>.</i></em>
+            All official Apache OpenWhisk builds
+            undergo a rigorous process to be approved and are linked
+            <a style="font-weight:normal;" href="#official-releases">above</a>.
+          </p>
+          <p>To be clear, <strong>GitHub "releases" are not official Apache project
+            releases.</strong>
+          </p>
+        </div>
+      </main>
 
     </section>
 </div>
