@@ -78,6 +78,12 @@ layout: default
                 <li><a href="#swift-runtime">Swift Runtime</a></li>
                 <li><a href="#swift-additional-resources">Additional Resources</a></li>
             </ul>
+            <li id="index-dotnet" class="index-menu-toggle"><a href="#dotnet">using .NET Core</a></li>
+            <ul class="index-menuitems">
+                <li><a href="#actions-dotnet">Creating and Invoking Action</a></li>
+                <li><a href="#dotnet-runtime">.NET Core Runtime</a></li>
+                <li><a href="#dotnet-additional-resources">Additional Resources</a></li>
+            </ul>
             <!--li id="index-docker" ><a href="#docker">Docker</a></li>
             <ul>
                 <li>Zip Action</li>
@@ -1504,7 +1510,7 @@ $ jar cvf hello.jar Hello.class
           <p>
             If you wish to learn more about Swift runtime along with
             the libraries that are supported or "built-in" by
-            default, please visit the project REAMDE
+            default, please visit the project README
             <a href="https://github.com/apache/incubator-openwhisk-runtime-swift#apache-openwhisk-runtimes-for-swift">Apache OpenWhisk runtimes for Swift</a>.
           </p>
           <a class="indexable" id="swift-additional-resources"></a>
@@ -1519,6 +1525,115 @@ $ jar cvf hello.jar Hello.class
             <li><a href="https://medium.com/openwhisk/creating-swift-binaries-for-openwhisk-487526d0d576">Creating Swift Binaries for OpenWhisk</a></li>
             <li><a href="https://medium.com/openwhisk/creating-an-openwhisk-alexa-skill-583824bf58cb">Creating an OpenWhisk Alexa skill</a> using Swift</li>
           </ul>
+        </div>
+
+        <!-- ************************************** -->
+        <!-- Actions - .NET Core                    -->
+        <!-- ************************************** -->
+        <a class="indexable" id="dotnet"></a>
+        <h6 id="section-dotnet" class="section-toggle">using .NET Core</h6>
+        <div class="section-toggleable section-toggle-start-closed">
+          <p></p>
+          <a class="indexable" id="actions-dotnet"></a>
+          <h5>Creating And Invoking .NET Core Actions</h5>
+          <p>
+            Let's look at how to write a sample hello world action in .NET Core.
+            You can visit
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#quick-net-core-action">Quick .NET Core Action</a>
+            page for further details.
+          </p>
+          <p>
+            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
+            section. If you don't have it installed and configured,
+            please refer to the section
+            <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
+          </p>
+          <ol>
+            <li style="list-style-type: decimal">
+              <a class="indexable" id="hello-dotnet"></a>
+              Create a C# project called <i>Apache.OpenWhisk.Example.Dotnet</i>:
+              <div class="terminal">
+{% highlight bash %}
+$ dotnet new classlib -n Apache.OpenWhisk.Example.Dotnet -lang C#
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              <a class="indexable" id="hello-dotnet"></a>
+              Navigate to the <i>Apache.OpenWhisk.Example.Dotnet</i> directory:
+              <div class="terminal">
+{% highlight bash %}
+$ cd Apache.OpenWhisk.Example.Dotnet
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Install the <i>Newtonsoft.Json</i> NuGet package as follows:
+              <div class="terminal">
+{% highlight bash %}
+$ dotnet add package Newtonsoft.Json -v 12.0.1
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Create a file called <i>Hello.cs</i> with the following content:
+              <div class="terminal">
+{% highlight java linenos %}
+{% include code/Hello.cs %}
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Publish the project as follows:
+              <div class="terminal">
+{% highlight bash %}
+$ dotnet publish -c Release -o out
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Publish the project as follows:
+              <div class="terminal">
+{% highlight bash %}
+$ cd out
+$ zip -r -0 helloDotNet.zip *
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Create an action <i>helloDotNet</i>:
+              <div class="terminal">
+{% highlight bash %}
+$ wsk action create helloDotNet helloDotNet.zip --main Apache.OpenWhisk.Example.Dotnet::Apache.OpenWhisk.Example.Dotnet.Hello::Main --kind dotnet:2.2
+{% endhighlight %}
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+                Invoke an action <i>helloDotNet</i>:
+              <div class="terminal">
+{% highlight bash %}
+$ wsk action invoke helloDotNet -r -p name Shawn
+{% endhighlight %}
+              </div>
+              <div class="terminal">
+{% highlight yaml %}
+{
+"msg": "Hello Shawn!"
+}
+{% endhighlight %}
+              </div>
+            </li>
+          </ol>
+          <a class="indexable" id="dotnet-runtime"></a>
+          <h5>OpenWhisk Runtime for .NET Core</h5>
+          <p>
+            If you wish to learn more about .NET Core runtime along with
+            the libraries that are supported or "built-in" by
+            default, please visit the project README
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#apache-openwhisk-runtimes-for-net-core">Apache OpenWhisk runtimes for .NET Core</a>.
+          </p>
+          <a class="indexable" id="dotnet-additional-resources"></a>
+          <h5>Additional Resources</h5>
         </div>
 
         <!-- ************************************** -->
