@@ -273,6 +273,12 @@ function addListenersToSections()
                 <li><a href="#swift-runtime">Swift Runtime</a></li>
                 <li><a href="#swift-additional-resources">Additional Resources</a></li>
             </ul>
+            <li id="index-dotnet" class="index-menu-toggle"><a href="#dotnet">using .NET Core</a></li>
+            <ul class="index-menuitems">
+                <li><a href="#actions-dotnet">Creating and Invoking Action</a></li>
+                <li><a href="#dotnet-runtime">.NET Core Runtime</a></li>
+                <li><a href="#dotnet-additional-resources">Additional Resources</a></li>
+            </ul>
             <!--li id="index-docker" ><a href="#docker">Docker</a></li>
             <ul>
                 <li>Zip Action</li>
@@ -2035,7 +2041,7 @@ function addListenersToSections()
           <p>
             If you wish to learn more about Swift runtime along with
             the libraries that are supported or "built-in" by
-            default, please visit the project REAMDE
+            default, please visit the project README
             <a href="https://github.com/apache/incubator-openwhisk-runtime-swift#apache-openwhisk-runtimes-for-swift">Apache OpenWhisk runtimes for Swift</a>.
           </p>
           <a class="indexable" id="swift-additional-resources"></a>
@@ -2050,6 +2056,152 @@ function addListenersToSections()
             <li><a href="https://medium.com/openwhisk/creating-swift-binaries-for-openwhisk-487526d0d576">Creating Swift Binaries for OpenWhisk</a></li>
             <li><a href="https://medium.com/openwhisk/creating-an-openwhisk-alexa-skill-583824bf58cb">Creating an OpenWhisk Alexa skill</a> using Swift</li>
           </ul>
+        </div>
+
+        <!-- ************************************** -->
+        <!-- Actions - .NET Core                    -->
+        <!-- ************************************** -->
+        <a class="indexable" id="dotnet"></a>
+        <h6 id="section-dotnet" class="section-toggle">using .NET Core</h6>
+        <div class="section-toggleable section-toggle-start-closed">
+          <p></p>
+          <a class="indexable" id="actions-dotnet"></a>
+          <h5>Creating And Invoking .NET Core Actions</h5>
+          <p>
+            Let's look at how to write a sample hello world action in .NET Core.
+            You can visit
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#quick-net-core-action">Quick .NET Core Action</a>
+            page for further details.
+          </p>
+          <p>
+            <strong>Note:</strong> We will be using <i>wsk</i> CLI in this
+            section. If you don't have it installed and configured,
+            please refer to the section
+            <a href="#wsk-cli">OpenWhisk CLI (wsk)</a>.
+          </p>
+          <ol>
+            <li style="list-style-type: decimal">
+              <a class="indexable" id="hello-dotnet"></a>
+              Create a C# project called <i>Apache.OpenWhisk.Example.Dotnet</i>:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>dotnet new classlib -n Apache.OpenWhisk.Example.Dotnet -lang C#</code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              <a class="indexable" id="hello-dotnet"></a>
+              Navigate to the <i>Apache.OpenWhisk.Example.Dotnet</i> directory:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd </span>Apache.OpenWhisk.Example.Dotnet</code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Install the <i>Newtonsoft.Json</i> NuGet package as follows:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>dotnet add package Newtonsoft.Json -v 12.0.1</code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Create a file called <i>Hello.cs</i> with the following content:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td class="code"><pre><span class="n">using</span> <span class="n">System</span><span class="o">;</span>
+<span class="n">using</span> <span class="n">Newtonsoft</span><span class="o">.</span><span class="na">Json</span><span class="o">.</span><span class="na">Linq</span><span class="o">;</span>
+
+<span class="n">namespace</span> <span class="n">Apache</span><span class="o">.</span><span class="na">OpenWhisk</span><span class="o">.</span><span class="na">Example</span><span class="o">.</span><span class="na">Dotnet</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span>
+    <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">JObject</span> <span class="nf">Main</span><span class="o">(</span><span class="n">JObject</span> <span class="n">args</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">ContainsKey</span><span class="o">(</span><span class="s">"name"</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="s">"name"</span><span class="o">].</span><span class="na">ToString</span><span class="o">();</span>
+            <span class="o">}</span>
+            <span class="n">JObject</span> <span class="n">message</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JObject</span><span class="o">();</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">Add</span><span class="o">(</span><span class="s">"greeting"</span><span class="o">,</span> <span class="k">new</span> <span class="n">JValue</span><span class="o">(</span><span class="err">$</span><span class="s">"Hello, {name}!"</span><span class="o">));</span>
+            <span class="k">return</span> <span class="o">(</span><span class="n">message</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Publish the project as follows:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>dotnet publish -c Release -o out</code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Publish the project as follows:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd </span>out
+<span class="gp">$ </span>zip -r -0 helloDotNet.zip <span class="k">*</span></code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+              Create an action <i>helloDotNet</i>:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloDotNet helloDotNet.zip --main Apache.OpenWhisk.Example.Dotnet::Apache.OpenWhisk.Example.Dotnet.Hello::Main --kind dotnet:2.2</code></pre></figure>
+
+              </div>
+            </li>
+            <li style="list-style-type: decimal">
+                Invoke an action <i>helloDotNet</i>:
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloDotNet -r -p name Shawn</code></pre></figure>
+
+              </div>
+              <div class="terminal">
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<span class="s2">"</span><span class="s">msg"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">Shawn!"</span>
+<span class="pi">}</span></code></pre></figure>
+
+              </div>
+            </li>
+          </ol>
+          <a class="indexable" id="dotnet-runtime"></a>
+          <h5>OpenWhisk Runtime for .NET Core</h5>
+          <p>
+            If you wish to learn more about .NET Core runtime along with
+            the libraries that are supported or "built-in" by
+            default, please visit the project README
+            <a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#apache-openwhisk-runtimes-for-net-core">Apache OpenWhisk runtimes for .NET Core</a>.
+          </p>
+          <a class="indexable" id="dotnet-additional-resources"></a>
+          <h5>Additional Resources</h5>
         </div>
 
         <!-- ************************************** -->
