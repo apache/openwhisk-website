@@ -11,4 +11,4 @@ packages:
                         echo $greeting;
                         return ["greeting" => $greeting];
                     }
-                runtime: php:7.1
+                runtime: php:7.3
