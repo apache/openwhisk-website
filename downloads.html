@@ -215,7 +215,7 @@ function addListenersToSections()
             <ul class="index-menuitems">
                 <li><a href="#verifying">Verifying</a></li>
                 <li><a href="#keys">Keys</a></li>
-                <li><a href="#versions">Versions</a></li>
+                <li><a href="#component-releases">Component Releases</a></li>
             </ul>
 
             <!-- Nightly and incremental builds -->
@@ -279,11 +279,75 @@ function addListenersToSections()
                 <h4>Keys</h4>
                 <p>You can access the <a href="https://www.apache.org/dist/incubator/openwhisk/KEYS">Release Keys</a> to verify the release artifacts.</p>
 
-                <a class="indexable" id="versions"></a>
-                <h4>Versions</h4>
-                <p>The following release versions are available.</p>
-                <p>Please click on the version name to see its downloadable components:</p>
-                <h5 class="section-toggle section-toggle-start-open ">1.12.x-incubating (2018-09-25)</h5>
+                <a class="indexable" id="unified-releases"></a>
+                <h4>Unified Releases</h4>
+                <p>A working OpenWhisk system combines a number of
+                software components including action runtimes, CLI
+                tools, the core platform, the package catalog,
+                event providers, and deployment packaging.  The project
+                intends to start making time-based unified releases in
+                the near future. When available, these will be the
+                primary way for users to install a coherent OpenWhisk
+                system on their own machines.</p>
+
+                <a class="indexable" id="component-releases"></a>
+                <h4>Component Releases</h4>
+                <p>Individual downloads of the latest released version of each OpenWhisk component are available.  We group the components by their role in the platform.</p>
+                <p>Please click on a role to see the individual downloadable components:</p>
+                <h5 class="section-toggle section-toggle-start-open ">Core System</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
+                      <div class="project-structure-repo theme-deeper-sea-green">
+                        <h5>OpenWhisk</h5>
+                        <p>Core OpenWhisk Platform Components.</p>
+                        <p class="repo-title border-deeper-sea-green">
+                          <a
+                            href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz&action=download">
+                            Source code
+                          </a>
+                        </p>
+                        <p class="repo-title border-deeper-sea-green">
+                          <a
+                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512">
+                            SHA-512 checksum
+                          </a>
+                        </p>
+                        <p class="repo-title border-deeper-sea-green">
+                          <a
+                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc">
+                            PGP signature
+                          </a>
+                        </p>
+                      </div>
+
+                      <div class="project-structure-repo theme-darkorange">
+                        <h5>OpenWhisk Apigateway</h5>
+                        <p>A performant API Gateway based on Openresty and NGINX.</p>
+                        <p class="repo-title border-darkorange">
+                          <a
+                            href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-apigateway-0.9.0-incubating-sources.tar.gz&action=download">
+                            Source code
+                          </a>
+                        </p>
+                        <p class="repo-title border-darkorange">
+                          <a
+                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-apigateway-0.9.0-incubating-sources.tar.gz.sha512">
+                            SHA-512 checksum
+                          </a>
+                        </p>
+                        <p class="repo-title border-darkorange">
+                          <a
+                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-apigateway-0.9.0-incubating-sources.tar.gz.asc">
+                            PGP signature
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="section-toggle section-toggle-start-open ">Action Runtimes</h5>
                 <div class="section-start-open">
                   <div class="content">
                    <div class="flow-columns">
@@ -422,33 +486,10 @@ function addListenersToSections()
                   </div>
                 </div>
 
-                <h5 class="section-toggle section-toggle-start-open ">0.9.x-incubating (2018-07-17)</h5>
+                <h5 class="section-toggle section-toggle-start-open ">Command Line Tools</h5>
                 <div class="section-start-open">
                   <div class="content">
                     <div class="flow-columns">
-                      <div class="project-structure-repo theme-deeper-sea-green">
-                        <h5>OpenWhisk</h5>
-                        <p>Core service of OpenWhisk.</p>
-                        <p class="repo-title border-deeper-sea-green">
-                          <a
-                            href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz&action=download">
-                            Source code
-                          </a>
-                        </p>
-                        <p class="repo-title border-deeper-sea-green">
-                          <a
-                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512">
-                            SHA-512 checksum
-                          </a>
-                        </p>
-                        <p class="repo-title border-deeper-sea-green">
-                          <a
-                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc">
-                            PGP signature
-                          </a>
-                        </p>
-                      </div>
-
                       <div class="project-structure-repo theme-deeper-sky-blue">
                         <h5>OpenWhisk CLI</h5>
                         <p>OpenWhisk command-line interface.</p>
@@ -517,7 +558,14 @@ function addListenersToSections()
                           </a>
                         </p>
                       </div>
+                    </div>
+                  </div>
+                </div>
 
+                <h5 class="section-toggle section-toggle-start-open ">Package Catalog and Composer</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
                       <div class="project-structure-repo theme-darksalmon">
                         <h5>OpenWhisk Catalog</h5>
                         <p>Package catalogs of OpenWhisk, which provides an easy way to enhance your application with useful capabilities, and to access external services in the ecosystem.</p>
@@ -546,42 +594,19 @@ function addListenersToSections()
                         <p>Composer is a new programming model for composing cloud functions built on OpenWhisk</p>
                         <p class="repo-title border-darksalmon">
                           <a
-                            href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-composer-0.9.0-incubating-sources.tar.gz&action=download">
+                            href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.10.0-incubating/openwhisk-composer-0.10.0-incubating-sources.tar.gz&action=download">
                             Source code
                           </a>
                         </p>
                         <p class="repo-title border-darksalmon">
                           <a
-                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-composer-0.9.0-incubating-sources.tar.gz.sha512">
+                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.10.0-incubating/openwhisk-composer-0.10.0-incubating-sources.tar.gz.sha512">
                             SHA-512 checksum
                           </a>
                         </p>
                         <p class="repo-title border-darksalmon">
                           <a
-                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-composer-0.9.0-incubating-sources.tar.gz.asc">
-                            PGP signature
-                          </a>
-                        </p>
-                      </div>
-
-                      <div class="project-structure-repo theme-darkorange">
-                        <h5>OpenWhisk Apigateway</h5>
-                        <p>A performant API Gateway based on Openresty and NGINX.</p>
-                        <p class="repo-title border-darkorange">
-                          <a
-                            href="https://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-apigateway-0.9.0-incubating-sources.tar.gz&action=download">
-                            Source code
-                          </a>
-                        </p>
-                        <p class="repo-title border-darkorange">
-                          <a
-                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-apigateway-0.9.0-incubating-sources.tar.gz.sha512">
-                            SHA-512 checksum
-                          </a>
-                        </p>
-                        <p class="repo-title border-darkorange">
-                          <a
-                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-apigateway-0.9.0-incubating-sources.tar.gz.asc">
+                            href="https://www.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.10.0-incubating/openwhisk-composer-0.10.0-incubating-sources.tar.gz.asc">
                             PGP signature
                           </a>
                         </p>
