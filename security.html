@@ -20,7 +20,7 @@
     <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-        <title>Join OpenWhisk Slack</title>
+        <title>Apache OpenWhisk Security</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="/css/main-v1.css">
         <!-- Load Index, Menu & collapsible support -->
@@ -196,87 +196,52 @@ function addListenersToSections()
     </div>
 </div>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-  crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-  crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-  crossorigin="anonymous"></script>
+        <!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+<div id="whiskIndexedLayout">
 
-<section id="whiskHeader" class="light-text bot-bar">
-    <main>
-        <div>
-        </div>
-    </main>
-</section>
+    <!-- Community Index -->
+    <div id="whiskIndex">
+        <ul>
+            <li><a href="#report">Security</a></li>
+            <li><a href="#report">Report a security vulnerability</a></li>
 
-<section id="whiskNodes">
-    <main class="doc">
-        <div class="content">
-            <h3>Already a Team member?</h3>
-            <p>click here: <a href="https://openwhisk-team.slack.com/"><b>openwhisk-team.slack.com</b></a></p>
-            <h3>If not, join us!</h3>
-            <p>Join the OpenWhisk Community to discuss the project in real-time.</p>
-            <ul style="text-align: left">
-                <li><strong>Talk</strong> to the core devs and the OpenWhisk community.</li>
-                <li><strong>Learn</strong> from others and ask questions.</li>
-                <li><strong>Share</strong> your work and demos.</li>
-            </ul>
-            <form>
-                <div>
-                    <label for="exampleInputEmail2">Email:</label>
-                    <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email">
+        </ul>
+    </div>
+
+    <section id="whiskNodes">
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="downloads"></a>
+                <h2>Security</h2>
+                <div class="collapsible-content">
+                    <p>This page contains information on how to report a security vulnerability within the Apache OpenWhisk project.</p>
                 </div>
-                <button type="button" class="btn btn-primary" style="margin:5px;">Send invitation</button>
-            </form>
-            <p></p>
-            <p>We are a friendly, respectful and inclusive community!</p>
-            <a href="https://openwhisk-team.slack.com/"></a>
-            <p>
-                <i>Code for Slack invite (this page) is on github:</i><br><i> </i><i>
-                <a href="https://github.com/openwhisk/openwhisk-slackinvite" target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i>
-            </p>
-        </div>
-    </main>
-</section>
+            </div>
+        </main>
 
-<script type="text/javascript">
-  $(document).ready(function () {
-    var btn = $("button");
-    var res = $("#result");
-    var email = $('#inputEmail');
-    var actionUrl = "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/3e172721d7ba44ac0cb5633eae516fb1284fd9a45633e4172dbe7a780b6572c6/api/slackinvite";
-    function handler() {
-      var email = $("input")[0].value;
-      $.get(actionUrl, { email: email })
-        .done(function (data) {
-          btn.addClass("btn-success");
-          btn.html("WOOT. CHECK YOUR EMAIL!");
-          res.html(data.message);
-        })
-        .fail(function (err) {
-          res.html(err.statusText + ":Your invitation didn't work :-( ");
-          btn.addClass("btn-error");
-        });
-    }
-    btn.click(handler);
-    btn.prop("disabled", true);
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="report"></a>
+                <h3>Report a security vulnerability</h3>
+                <div class="collapsible-content">
+                  <p>It is strongly encouraged that security vulnerabilities be reported to our private mailing list first, rather than disclosing them in a public forum. The private security mailing address is: <a href="mailto:private@openwhisk.apache.org">private@openwhisk.apache.org</a></p>
+                  <p>Please note that this mailing list should only be used for reporting undisclosed security vulnerabilities for Apache OpenWhisk code or dependent libraries, runtimes and tooling. We do not accept regular bug reports or other queries at this address.</p>
+                  <p>The OpenWhisk project management committee upon receiving the report will follow the Apache <a href="https://www.apache.org/security/committers.html#vulnerability-handling">Vulnerability handling</a> process as documented.
+                  </p>
+                </div>
+            </div>
+        </main>
+        <main class="doc">
+            <div class="content"><p><i><b>Note</b>: The Apache OpenWhisk community works in accordance with documented Apache security processes documented here: <a href="http://www.apache.org/security/">Reporting a vulnerability</a></i></p>
+            </div>
+        </main>
+    </section>
 
-    function validate() {
-      console.log("validate")
-      if (email[0].validity.typeMismatch) {
-        btn.prop("disabled", true);
-      } else {
-        btn.prop("disabled", false);
-      }
-    }
-    email.keyup(validate);
-  })
+</div>
 
-</script>
         <!--
 /*
  *   Required ASF website links (scanned)
