@@ -8,6 +8,7 @@
     padding: $terminal-padding;
     width: $terminal-width;
     margin-bottom: $terminal-margin-bottom;
+    overflow: auto;
 
     // Note: options: white-space: normal|nowrap|pre|pre-line|pre-wrap
     // Note: non-std. options:  white-space: -moz-pre-wrap | -o-pre-wrap;
