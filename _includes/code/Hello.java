@@ -3,7 +3,7 @@ package hello;
 import com.google.gson.JsonObject;
 
 public class Hello {
-    public static JsonObject main(JsonObject args)
+    public static JsonObject main(JsonObject args){
         String name;
 
         try {
