@@ -2469,8 +2469,11 @@ abcd.... locationUpdate
         <h3>Contributing Language Runtimes</h3>
         <p>OpenWhisk supports several languages via its Action Runtimes,
           but there may be other languages you would like supported or even language variants with different frameworks for languages we support today. OpenWhisk is all about making it easy for ANY developer, using any functional language they are comfortable with, to develop Actions for our platform!</p>
-        <p>Read this guide on how to get started:
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">Adding Action Language Runtimes</a>
+        <p>You can create a new runtime in two ways:
+          <ul>
+            <li>Implementing the <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md#Adding-Action-Language-Runtimes">Runtime specification</a> yourself, <i>or by</i></li>
+            <li>Using the <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-actionloop.md#Developing-a-new-Runtime-with-the-ActionLoop-proxy">ActionLoop engine</a> that provides a simplified path for building a new runtime.</li>
+          </ul>
         </p>
       </div>
     </main>
