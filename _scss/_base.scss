@@ -281,6 +281,45 @@ question {
   }
 }
 
+/*
+ * Component releases
+ */
+
+ version {
+    font-size: $font-size-default;
+    font-style: normal;
+    font-weight: bold;
+    color: $color-blue-black;
+}
+
+.component-releases-structure {
+  width: 100%;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 10px;
+
+  h5 {
+    display: inline;
+  }
+
+  a {
+    //background: magenta;
+    text-align: left;
+    font-size: $font-size-default;
+  }
+
+  .component-release-artifact-list {
+    box-sizing: border-box;
+    //width: 100%;
+    border-radius: 4px;
+    padding: 4px;
+    background: $color-white;
+    text-align: left;
+    font-weight: $index-menu-font-weight;
+    line-height: 14px;
+  }
+}
+
 .theme-deeper-sea-green {
   background-color: rgba($color-logo-deeper-sea-green, 0.25);
   border: dashed $color-logo-deeper-sea-green 2px;
