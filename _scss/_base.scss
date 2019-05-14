@@ -55,6 +55,12 @@ question {
     color: $color-blue-black;
 }
 
+spacer {
+  display: block;
+  height:10px;
+  width: 100%;
+}
+
 // Header is only shown on the "home" page
 #whiskHeader {
   background-color: $color-blue-dark;
@@ -128,16 +134,6 @@ question {
     margin-top: 10px;
     border-bottom: 2px solid $color-blue-black;
   }
-
-// h4::before {
-//     color: $color-blue-black;
-//     display: inline-block;
-//     content: "";
-//     border-top: .1rem solid black;
-//     width: 100%;
-//     margin: 0;
-//     //transform: translateY(-1rem);
-// }
 
   #whiskIndex {
     // position menu relative to header
@@ -228,14 +224,14 @@ question {
 }
 
 /*
- * Supporter logos
+ * Supporter logos / repo. lists / component downloads
  */
 
 .flow-columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 10px;
+  background: white;
 }
 
 .flow-item-container {
@@ -276,6 +272,78 @@ question {
     background: $color-white;
     text-align: center;
     font-size: 4px; //$index-menu-font-size;
+    font-weight: $index-menu-font-weight;
+    line-height: 14px;
+  }
+}
+
+/*
+ * Component releases
+ */
+
+ version {
+    font-size: $font-size-default;
+    font-style: normal;
+    font-weight: bold;
+    color: $color-blue-black;
+}
+
+.component-releases-structure {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 10px;
+
+  ctitle {
+    display: inline;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: $header-base-h5-font-style;
+    margin: 0px;
+  }
+
+  ctitle::after {
+    content: " - ";
+  }
+
+  p {
+    margin: 0px;
+    margin-bottom: 2px;
+    font-style: italic;
+  }
+
+  a {
+    font-weight: normal;
+    text-align: left;
+    font-size: $font-size-default;
+    text-decoration-line: underline;
+  }
+
+  version:after {
+    content: ': ';
+  }
+
+  a:after {
+    margin-left: 4px;
+    margin-right: 4px;
+    content: '|';
+    font-weight: normal;
+    font-style: normal;
+    text-decoration-line: none;
+  }
+
+  a:last-child:after {
+    content: '';
+  }
+
+  .component-release-artifact-list {
+    box-sizing: border-box;
+    //width: 100%;
+    border-radius: 4px;
+    padding: 4px;
+    background: $color-white;
+    text-align: left;
     font-weight: $index-menu-font-weight;
     line-height: 14px;
   }
