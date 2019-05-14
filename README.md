@@ -82,6 +82,20 @@ bundle exec jekyll build
 
 This will build static files to a directory called `_site/` in the project root. This can be used for manual deployment to a static server or with build tools like Jenkins.
 
+## Updating CSS files
+
+Some browsers will continue to use cached copies of ".css" files even though the styles/content in the files has changed significantly.  If you make any changes that affect layout, you SHOULD increment the (artificial) version number on the query parameter on the ``<link>``` within [default.html](_layouts/default.html) which will force clients to pull down a new ```main.css``` file (and all the cascading CSS imports as well):
+
+```
+<link rel="stylesheet" href="{{ site.github.url }}/css/main-v1.css?v=1.12">
+```
+
+for example, update "?v1.12" to "?v1.13".
+
+```
+<link rel="stylesheet" href="{{ site.github.url }}/css/main-v1.css?v=1.13">
+```
+
 ## Troubleshooting
 
 If you get an error 'bundle: command not found' attempting to build the site, you may need to manually install the 'bundler' package:
