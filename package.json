@@ -1,7 +1,7 @@
 {
   "name": "openwhisk.apache.org",
-  "version": "0.1.0",
-  "description": "Website site for the Apache OpenWhisk project.",
+  "version": "0.2.0",
+  "description": "Website build for the Apache OpenWhisk project.",
   "main": "index.js",
   "scripts": {
     "build:js": "NODE_ENV=production rollup -c",
