@@ -107,16 +107,17 @@ If you get an error 'bundle: command not found' attempting to build the site, yo
 ### Jenkins build
 
 The OpenWhisk.org website is automatically built and published to Apache at:
-http://openwhisk.incubator.apache.org/
+https://openwhisk.apache.org/
 
 Current Jenkins build status can be checked here:
-https://builds.apache.org/job/OpenWhisk-website/
+[https://builds.apache.org/job/OpenWhisk-website/](https://builds.apache.org/job/OpenWhisk-website/)
 
 ### Issues
 
-Report bugs, ask questions and request features [here on GitHub](../../issues).
+Report website bugs, ask questions and request features [here on GitHub](../../issues).
 
-You can also join our slack channel and chat with developers. To get access to our slack channel, please see the instructions [here](https://github.com/apache/incubator-openwhisk/wiki).
+You can also join our slack domain and chat with developers. Please visit here to sign up:
+[https://openwhisk.apache.org/slack.html](https://openwhisk.apache.org/slack.html)
 
 ### License
 
