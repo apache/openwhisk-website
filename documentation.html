@@ -304,7 +304,6 @@ function addListenersToSections()
             <li><a href="#deploy_kubernetes">Kubernetes</a></li>
             <li><a href="#deploy_docker_compose">Docker Compose</a></li>
             <li><a href="#deploy_mesos">Mesos</a></li>
-            <li><a href="#deploy_openshift">OpenShift</a></li>
             <li><a href="#deploy_ansible">Ansible</a></li>
             <li><a href="#deploy_vagrant">Vagrant</a></li>
         </ul>
@@ -392,7 +391,7 @@ function addListenersToSections()
         </ul>
         <h5>Supports any functional programming language</h5>
         <p>The OpenWhisk platform supports Action code written for any
-          of its ever-growing, built-in <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes">language runtimes</a>.
+          of its ever-growing, built-in <a href="https://github.com/apache/openwhisk/blob/master/docs/actions.md#languages-and-runtimes">language runtimes</a>.
         </p>
         <p>The following is a list of runtimes the Apache OpenWhisk project
           has officially released and made available on
@@ -400,30 +399,30 @@ function addListenersToSections()
         </p>
         <ul>
           <!-- TODO Fix Go Runtime README so title matches other runtimes; bury "other exec. -->
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#readme">.Net</a> - OpenWhisk runtime for .Net Core 2.2</li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-go#readme">Go</a> - OpenWhisk runtime for Go</li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java#readme">Java</a> - OpenWhisk runtime for Java 8 <i>(OpenJDK 8, JVM OpenJ9)</i></li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs#readme">JavaScript</a> - OpenWhisk runtime for Node.js v6, v8 and v10</li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php#readme">PHP</a> - OpenWhisk runtime for PHP 7.3, 7.2 and 7.1</li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python#readme">Python</a> - OpenWhisk runtime for Python 2.7, 3 and a 3 runtime variant for AI/ML <i>(including packages for Tensorflow and PyTorch)</i></li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-ruby#readme">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift#readme">Swift</a> - OpenWhisk runtime for Swift 3.1.1, 4.1 and 4.2</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-dotnet#readme">.Net</a> - OpenWhisk runtime for .Net Core 2.2</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-go#readme">Go</a> - OpenWhisk runtime for Go</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-java#readme">Java</a> - OpenWhisk runtime for Java 8 <i>(OpenJDK 8, JVM OpenJ9)</i></li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-nodejs#readme">JavaScript</a> - OpenWhisk runtime for Node.js v6, v8 and v10</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-php#readme">PHP</a> - OpenWhisk runtime for PHP 7.3, 7.2 and 7.1</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-python#readme">Python</a> - OpenWhisk runtime for Python 2.7, 3 and a 3 runtime variant for AI/ML <i>(including packages for Tensorflow and PyTorch)</i></li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-ruby#readme">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-swift#readme">Swift</a> - OpenWhisk runtime for Swift 3.1.1, 4.1 and 4.2</li>
         </ul>
 
         <p>The following is a list of experimental runtimes the Apache OpenWhisk community is developing. The Apache OpenWhisk community would welcome any help bringing these runtimes to a state where they can be released.
         </p>
         <ul>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-ballerina#readme">Ballerina</a> - OpenWhisk runtime for Ballerina 0.990.2</li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-runtime-rust#readme">Rust</a> - OpenWhisk runtime for Rust 1.34</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-ballerina#readme">Ballerina</a> - OpenWhisk runtime for Ballerina 0.990.2</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-rust#readme">Rust</a> - OpenWhisk runtime for Rust 1.34</li>
         </ul>
 
         <!-- TODO: fix the Docker SDK header/title to say "Docker SDK" NOT "Blackbox Actions"-->
         <p>If you need languages or libraries the current
           "out-of-the-box" runtimes do not support, you can create
           and customize your own executable that run "black box"
-          <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker Actions</a>
+          <a href="https://github.com/apache/openwhisk-runtime-docker/blob/master/sdk/docker/README.md">Docker Actions</a>
           using the Docker SDK which are run on the
-          <a href="https://github.com/apache/incubator-openwhisk-runtime-docker#readme">Docker Runtime</a>.
+          <a href="https://github.com/apache/openwhisk-runtime-docker#readme">Docker Runtime</a>.
           <!-- TODO: cover later and link -->
         </p>
 
@@ -433,7 +432,7 @@ function addListenersToSections()
           OpenWhisk Actions relative to the to the programming model.
           If you want to more detailed information,
           please read the project documentation on
-        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#openwhisk-actions">
+        <a href="https://github.com/apache/openwhisk/blob/master/docs/actions.md#openwhisk-actions">
           OpenWhisk Actions</a>.
         </p>
         <img width="90%"
@@ -463,9 +462,9 @@ function addListenersToSections()
           The OpenWhisk platform is extensible and you can add new languages
           or runtimes (with custom packages and third-party dependencies)
           following the guide described
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md">here</a>.
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-new.md">here</a>.
           Please reach out to other whiskers on dev mailing list at
-          <a href="mailto:dev@openwhisk.incubator.apache.org">dev@openwhisk.incubator.apache.org</a>.
+          <a href="mailto:dev@openwhisk.apache.org">dev@openwhisk.apache.org</a>.
           once you have followed the guide on creating a new language/runtimes.
           Here are some examples of runtimes added by community:
         </p>
@@ -481,7 +480,7 @@ function addListenersToSections()
         <p>
           Multiple actions, even implemented in different languages, may be
           composed together to create a longer processing pipeline called a
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
           Sequence can be treated as a single action in terms of it creation
           and invocation.
         </p>
@@ -490,21 +489,21 @@ function addListenersToSections()
         <p>Listed below are some additional topics related to
           developing OpenWhisk Actions:</p>
         <ul>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
+          <li><a href="https://github.com/apache/openwhisk/blob/master/docs/reference.md#openwhisk-entities">Namespacing</a>
             - the same Namespace and Naming rules as any
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/reference.md#openwhisk-entities">OpenWhisk Entity</a> that are part of the
             OpenWhisk programming model.
           </li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
+          <li><a href="https://github.com/apache/openwhisk/blob/master/docs/reference.md#system-limits">System Limits</a>
             - Learn about some of the
             (operator configurable) System Limits that are imposed on
             OpenWhisk Actions.
           </li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
+          <li><a href="https://github.com/apache/openwhisk/blob/master/docs/webactions.md#web-actions">Web Actions</a>
             - Find out how to annotate OpenWhisk Actions to quickly enable
             you to build web based applications.
           </li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">Action Processing</a>
+          <li><a href="https://github.com/apache/openwhisk/blob/master/docs/about.md#the-internal-flow-of-processing">Action Processing</a>
             - Find out what happens "behind the scenes" when you invoke an
             Action in Apache OpenWhisk.
           </li>
@@ -516,7 +515,7 @@ function addListenersToSections()
           in response to events using OpenWhisk Triggers.
           If you want to more detailed information,
           please read the project documentation on
-        <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">
+        <a href="https://github.com/apache/openwhisk/blob/master/docs/triggers_rules.md#creating-triggers-and-rules">
           OpenWhisk Triggers and Rules</a>.
         </p>
         <img width="90%"
@@ -597,12 +596,12 @@ function addListenersToSections()
         <a href="#openwhisk_deployment">OpenWhisk Deployment Options</a>.
         </p>
         <p>For local, "light weight" development, we recommend using
-          <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes</a>
+          <a href="https://github.com/apache/openwhisk-deploy-kube/blob/master/README.md#kubernetes">Kubernetes</a>
           enabled within Docker (i.e., Docker for Mac or Windows,
           Minikube for Linux).
         <ul>
           <li>
-            For setup instructions, see: <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#prerequisites-kubernetes-and-helm">Simple Docker-based options</a>.
+            For setup instructions, see: <a href="https://github.com/apache/openwhisk-deploy-kube/blob/master/README.md#prerequisites-kubernetes-and-helm">Simple Docker-based options</a>.
           </li>
         </ul>
         <h5>Using OpenWhisk on a Cloud Provider</h5>
@@ -634,7 +633,7 @@ function addListenersToSections()
         </p>
         <ul>
           <li>
-            Guest certificate: <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/auth.guest</a>
+            Guest certificate: <a href="https://github.com/apache/openwhisk/blob/master/ansible/files/auth.guest">https://github.com/apache/openwhisk/blob/master/ansible/files/auth.guest</a>
           </li>
         </ul>
 
@@ -647,7 +646,7 @@ function addListenersToSections()
         <p>However, when running under a Kubernetes deployment installed
           using Helm, the endpoint's address and port are set in your
           "mycluster.yaml" deployment file.
-          See the <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#deploy-with-helm">Deploy With Helm</a>
+          See the <a href="https://github.com/apache/openwhisk-deploy-kube/blob/master/README.md#deploy-with-helm">Deploy With Helm</a>
           instructions for details.
         </p>
 
@@ -691,7 +690,7 @@ function addListenersToSections()
         </p>
         <p>For detailed information on setting up and configuring the
           OpenWhisk CLI, go to the
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">OpenWhisk CLI</a>
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/cli.md#openwhisk-cli">OpenWhisk CLI</a>
           documentation page in GitHub.
         </p>
 
@@ -725,12 +724,12 @@ function addListenersToSections()
             <p>Download the OpenWhisk CLI for your Operating System as
               a standalone compressed TAR Archive file (<code>.tgz</code>)
               or ZIP file (<code>.zip</code>) from the project
-              <a href="https://github.com/apache/incubator-openwhisk-cli/releases">Releases</a> page
+              <a href="https://github.com/apache/openwhisk-cli/releases">Releases</a> page
               in GitHub:
             </p>
             <ul>
               <li>
-                <a href="https://github.com/apache/incubator-openwhisk-cli/releases">https://github.com/apache/incubator-openwhisk-cli/releases</a>
+                <a href="https://github.com/apache/openwhisk-cli/releases">https://github.com/apache/openwhisk-cli/releases</a>
               </li>
             </ul>
             <p>where you may select to download the CLI from the
@@ -799,7 +798,7 @@ function addListenersToSections()
         <div class="indented">
           <p>You can configure wsk CLI to use your OpenWhisk
             credentials in few different ways.  See the
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md#openwhisk-cli">Setting up the OpenWhisk CLI</a>
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/cli.md#openwhisk-cli">Setting up the OpenWhisk CLI</a>
           page for a full set of configuration options.
           The instructions below walk you through the simplest
           possible configuration using only an
@@ -864,7 +863,7 @@ function addListenersToSections()
         <a class="indexable" id="wskdeploy"></a>
         <h4>Whisk Deploy (wskdeploy)</h4>
         <p>
-          <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
+          <a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
           is a utility, named <em>wskdeploy</em>, to help deploy and
           manage all your OpenWhisk Packages, Actions, Triggers, Rules
           and APIs using a single command using an application manifest.
@@ -881,11 +880,11 @@ function addListenersToSections()
               System as a standalone compressed TAR Archive
               file (<code>.tgz</code>) or ZIP file (<code>.zip</code>)
               from the project
-              <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">Releases</a> page
+              <a href="https://github.com/apache/openwhisk-wskdeploy/releases">Releases</a> page
               in GitHub:
               <ul>
                 <li>
-                  <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/releases">https://github.com/apache/incubator-openwhisk-wskdeploy/releases</a>
+                  <a href="https://github.com/apache/openwhisk-wskdeploy/releases">https://github.com/apache/openwhisk-wskdeploy/releases</a>
                 </li>
               </ul>
               <p>where you may select to download the utility from the
@@ -937,7 +936,7 @@ function addListenersToSections()
           <li>
             <h6>Create and Deploy a simple OpenWhisk Manifest File</h6>
             <p>Please refer to the
-            <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
+            <a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Whisk Deploy Programming Guide</a>
             for all manifest file grammar and syntax. This programming
             guide has step-by-step instructions for deploying OpenWhisk
             applications using wskdeploy.
@@ -975,8 +974,8 @@ function addListenersToSections()
         <a class="indexable" id="additional-resources-wskdeploy"></a>
         <h5>Additional Resources</h5>
         <ul>
-          <li><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/specification#openwhisk-packaging-specification">OpenWhisk Packaging Specification</a></li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Programming Guide - "<code>wskdeploy</code> utility by example"</a></li>
+          <li><a href="https://github.com/apache/openwhisk-wskdeploy/tree/master/specification#openwhisk-packaging-specification">OpenWhisk Packaging Specification</a></li>
+          <li><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/docs/programming_guide.md#wskdeploy-utility-by-example">Programming Guide - "<code>wskdeploy</code> utility by example"</a></li>
         </ul>
         <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/wskdeploy">wskdeploy</a>)</span></h6>
         <ul>
@@ -999,7 +998,7 @@ function addListenersToSections()
             calls.
             For more details about the APIs for actions, activations,
             packages, rules, and triggers, see the
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md#using-rest-apis-with-openwhisk">OpenWhisk API</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/rest_api.md#using-rest-apis-with-openwhisk">OpenWhisk API</a>
             documentation.
         </p>
 
@@ -1013,10 +1012,8 @@ function addListenersToSections()
           directly in your favorite Integrated Development
           Environment (IDE):</p>
         <ul>
-            <li id="javascript-client"><a href="https://github.com/apache/incubator-openwhisk-client-js/blob/master/README.md#openwhisk-client-for-javascript">JavaScript</a></li>
-            <li id="go-client"><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md">Go</a></li>
-            <li id="swift-client"><a href="https://github.com/apache/incubator-openwhisk-client-swift/blob/master/README.md">Swift</a></li>
-            <li id="python-client"><a href="https://github.com/apache/incubator-openwhisk-client-python/blob/master/README.md">Python</a></li>
+            <li id="javascript-client"><a href="https://github.com/apache/openwhisk-client-js/blob/master/README.md#openwhisk-client-for-javascript">JavaScript</a></li>
+            <li id="go-client"><a href="https://github.com/apache/openwhisk-client-go/blob/master/README.md">Go</a></li>
         </ul>
       </div>
     </main>
@@ -1054,7 +1051,7 @@ function addListenersToSections()
           <h5>Creating and Invoking NodeJS actions</h5>
           <p>
             Let's look at how to write a sample hello world action in NodeJS. You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
             page for further details.
           </p>
           <p>
@@ -1175,7 +1172,7 @@ function addListenersToSections()
               OpenWhisk supports <strong>Node.js 10</strong>, <strong>Node.js 8</strong>, and  <strong>Node.js 6</strong> runtimes where Node.js 6 being default pick by wsk CLI and Whisk Deploy.
               If you wish to learn more about NodeJS runtime along with
               the libraries that are supported or "built-in" by default, please visit
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/README.md">NodeJS Runtime GitHub Repository</a>.
+              <a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/README.md">NodeJS Runtime GitHub Repository</a>.
           </p>
           <a class="indexable" id="nodejs-additional-resources"></a>
           <h5>Additional Resources</h5>
@@ -1208,7 +1205,7 @@ function addListenersToSections()
           <h5>Creating And Invoking Go actions</h5>
           <p>
             Let's look at how to write a sample hello world action in Go. You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-go.md#creating-and-invoking-go-actions">Creating and Invoking Go actions</a>
             page for further details.
           </p>
           <p>
@@ -1325,7 +1322,7 @@ function addListenersToSections()
             If you wish to learn more about Go runtime along with
             the libraries that are supported or "built-in" by
             default, please visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-go/blob/master/README.md">Go Runtime GitHub Repository</a>.
           </p>
           <a class="indexable" id="go-additional-resources"></a>
           <h5>Additional Resources</h5>
@@ -1352,7 +1349,7 @@ function addListenersToSections()
           <h5>Creating And Invoking Python actions</h5>
           <p>
             Let's look at how to write a sample hello world action in Python. You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-python.md#creating-and-invoking-python-actions">Creating and Invoking Python actions</a>
             page for further details.
           </p>
           <p>
@@ -1484,7 +1481,7 @@ function addListenersToSections()
             OpenWhisk supports <strong>Python 2</strong> and <strong>Python 3</strong> runtimes where Python 2 being default pick by wsk CLI and Whisk Deploy.
             If you wish to learn more about Python runtime along with
             the libraries that are supported or "built-in" by default, please visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-python/blob/master/README.md">Python Runtime GitHub Repository</a>.
           </p>
           <a class="indexable" id="python-additional-resources"></a>
           <h5>Additional Resources</h5>
@@ -1511,7 +1508,7 @@ function addListenersToSections()
           <p>
             Let's look at how to write a sample hello world action in
             Java. You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-java.md#creating-and-invoking-java-actions">Creating and Invoking Java actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-java.md#creating-and-invoking-java-actions">Creating and Invoking Java actions</a>
             page for further details.
           </p>
           <p>
@@ -1612,7 +1609,7 @@ function addListenersToSections()
             If you wish to learn more about NodeJS runtime along with
             the libraries that are supported or "built-in" by default,
             please visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/README.md">Java Runtime GitHub Repository</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-java/blob/master/README.md">Java Runtime GitHub Repository</a>.
           </p>
           <a class="indexable" id="java-additional-resources"></a>
           <h5>Additional Resources</h5>
@@ -1642,7 +1639,7 @@ function addListenersToSections()
           <p>
             Let's look at how to write a sample hello world action in PHP.
             You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-php.md#creating-and-invoking-php-actions">Creating and Invoking PHP actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-php.md#creating-and-invoking-php-actions">Creating and Invoking PHP actions</a>
             page for further details.
           </p>
           <p>
@@ -1780,7 +1777,7 @@ function addListenersToSections()
           <p>
             OpenWhisk supports <strong>PHP 7.3</strong>, <strong>PHP 7.2</strong> and <strong>PHP 7.1</strong> runtimes where PHP 7.3 is the default pick by wsk CLI and Whisk Deploy.
             If you wish to learn more about PHP runtime, please visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/README.md">PHP Runtime GitHub Repository</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-php/blob/master/README.md">PHP Runtime GitHub Repository</a>.
           </p>
           <a class="indexable" id="php-additional-resources"></a>
           <h5>Additional Resources</h5>
@@ -1807,7 +1804,7 @@ function addListenersToSections()
           <p>
             Let's look at how to write a sample hello world action in Ruby.
             You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-ruby.md#creating-and-invoking-ruby-actions">Creating and Invoking Ruby actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-ruby.md#creating-and-invoking-ruby-actions">Creating and Invoking Ruby actions</a>
             page for further details.
           </p>
           <p>
@@ -1930,7 +1927,7 @@ function addListenersToSections()
           <p>
             OpenWhisk supports <strong>Ruby 2.5</strong> runtime.
             If you wish to learn more about Ruby runtime, please visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-ruby/blob/master/README.md">Ruby Runtime GitHub Repository</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-ruby/blob/master/README.md">Ruby Runtime GitHub Repository</a>.
           </p>
           <a class="indexable" id="ruby-additional-resources"></a>
           <h5>Additional Resources</h5>
@@ -1953,7 +1950,7 @@ function addListenersToSections()
           <p>
             Let's look at how to write a sample hello world action in Swift.
             You can visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-swift#quick-swift-action">Quick Swift Action</a>
+            <a href="https://github.com/apache/openwhisk-runtime-swift#quick-swift-action">Quick Swift Action</a>
             page for further details.
           </p>
           <p>
@@ -2054,13 +2051,13 @@ function addListenersToSections()
             If you wish to learn more about Swift runtime along with
             the libraries that are supported or "built-in" by
             default, please visit the project README
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-swift#apache-openwhisk-runtimes-for-swift">Apache OpenWhisk runtimes for Swift</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-swift#apache-openwhisk-runtimes-for-swift">Apache OpenWhisk runtimes for Swift</a>.
           </p>
           <a class="indexable" id="swift-additional-resources"></a>
           <h5>Additional Resources</h5>
           <ul>
-            <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift#swift-4x-support">Swift 4.x Codeable style example</a></li>
-            <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift#packaging-an-action-as-a-swift-executable-using-swift-4">Packaging an action as a Swift executable using Swift 4</a></li>
+            <li><a href="https://github.com/apache/openwhisk-runtime-swift#swift-4x-support">Swift 4.x Codeable style example</a></li>
+            <li><a href="https://github.com/apache/openwhisk-runtime-swift#packaging-an-action-as-a-swift-executable-using-swift-4">Packaging an action as a Swift executable using Swift 4</a></li>
           </ul>
           <h6>Medium Blogs <span style="font-weight:normal;">(tagged <a href="https://medium.com/openwhisk/tagged/swift">swift</a>)</span></h6>
           <ul>
@@ -2082,7 +2079,7 @@ function addListenersToSections()
           <p>
             Let's look at how to write a sample hello world action in .NET Core.
             You can visit
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#quick-net-core-action">Quick .NET Core Action</a>
+            <a href="https://github.com/apache/openwhisk-runtime-dotnet#quick-net-core-action">Quick .NET Core Action</a>
             page for further details.
           </p>
           <p>
@@ -2209,11 +2206,11 @@ function addListenersToSections()
             If you wish to learn more about .NET Core runtime along with
             the libraries that are supported or "built-in" by
             default, please visit the project README
-            <a href="https://github.com/apache/incubator-openwhisk-runtime-dotnet#apache-openwhisk-runtimes-for-net-core">Apache OpenWhisk runtimes for .NET Core</a>.
+            <a href="https://github.com/apache/openwhisk-runtime-dotnet#apache-openwhisk-runtimes-for-net-core">Apache OpenWhisk runtimes for .NET Core</a>.
           </p>
           <a class="indexable" id="dotnet-additional-resources"></a>
           <h5>Additional Resources</h5>
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-dotnet.md">Creating and invoking .NET Core actions</a>
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-dotnet.md">Creating and invoking .NET Core actions</a>
         </div>
 
         <!-- ************************************** -->
@@ -2226,7 +2223,7 @@ function addListenersToSections()
             OpenWhisk provides a base image for Docker actions called openwhisk/dockerskeleton. This image is based on Alpine Linux 3.4 and includes Python v2.7.12 but not much else. (For reference, the image is based on python:2.7.12-alpine).
             From this base image, you can create and run an OpenWhisk action:
             Let's look at how to write a sample hello world action in Docker. You can visit
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-docker.md#creating-and-invoking-docker-actions">Creating and Invoking Docker actions</a>
             page for further details.
         </p>
         <h5 id="docker-runtime">OpenWhisk Runtime for Docker</h5>
@@ -2255,7 +2252,7 @@ function addListenersToSections()
           <question>What is a package?</question> In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others.
           OpenWhisk comes with a list of packages
           You can get more details on OpenWhisk packages
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">here</a>.
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">here</a>.
         </p>
         <p>
           <question>Does OpenWhisk comes with any pre-installed packages?</question>
@@ -2375,7 +2372,7 @@ function addListenersToSections()
         <p>
           <question>Where do I get more information on packages?</question>
           Please read
-          <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
+          <a href="https://github.com/apache/openwhisk/blob/master/docs/packages.md#using-and-creating-openwhisk-packages">OpenWhisk Packages</a>
           for further details.
         </p>
       </div>
@@ -2563,28 +2560,28 @@ abcd.... locationUpdate
           </div>
           <p>
             Each of the packages under
-            <a href="https://github.com/apache/incubator-openwhisk-catalog#openwhisk-catalog">OpenWhisk Catalog</a>
+            <a href="https://github.com/apache/openwhisk-catalog#openwhisk-catalog">OpenWhisk Catalog</a>
             is hosted in a GitHub repo.
             Please refer to these package repositories for further details:
           </p>
           <ul>
             <li>
-              <a href="https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md">incubator-openwhisk-package-alarm</a>
+              <a href="https://github.com/apache/openwhisk-package-alarms/blob/master/README.md">openwhisk-package-alarm</a>
               is an Apache OpenWhisk alarm package that can be
               used to create periodic, time-based alarms.
             </li>
             <li>
-              <a href="https://github.com/apache/incubator-openwhisk-package-cloudant/blob/master/README.md">incubator-openwhisk-package-cloudant</a>
+              <a href="https://github.com/apache/openwhisk-package-cloudant/blob/master/README.md">openwhisk-package-cloudant</a>
               enables you to work with a Cloudant database.
             </li>
             <li>
-                <a href="https://github.com/apache/incubator-openwhisk-package-kafka/blob/master/README.md">incubator-openwhisk-package-kafka</a>
+                <a href="https://github.com/apache/openwhisk-package-kafka/blob/master/README.md">openwhisk-package-kafka</a>
               allows you to communicate with Kafka or Message Hub instances
               for publishing and consuming messages using native high
               performance Kafka API.
             </li>
             <li>
-              <a href="https://github.com/apache/incubator-openwhisk-package-rss/blob/master/README.md">incubator-openwhisk-package-rss</a>
+              <a href="https://github.com/apache/openwhisk-package-rss/blob/master/README.md">openwhisk-package-rss</a>
               allows users to subscribe to RSS/ATOM feeds and
               receive events when a new feed item is available.
             </li>
@@ -2595,13 +2592,13 @@ abcd.... locationUpdate
               Manifest file written in YAML.
             </li>
             <li>
-              <a href="https://github.com/apache/incubator-openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
+              <a href="https://github.com/apache/openwhisk-package-jira/blob/master/README.md">incubator-openwhisk-package-jira</a>
               includes actions that interact with JIRA software
               software development tool used for issue tracking,
               and project management functions.
             </li>
             <li>
-              <a href="https://github.com/apache/incubator-openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
+              <a href="https://github.com/apache/openwhisk-package-template/blob/master/README.md">incubator-openwhisk-package-template</a>
               is a template for Openwhisk Packages, it can be used
               to build, test and integrate new packages.
             </li>
@@ -2716,32 +2713,31 @@ abcd.... locationUpdate
         </ul>
         <p>For convenience, here is a listing of current Apache OpenWhisk
           project repositories (by category).</p>
-        <p><strong>Note:</strong> OpenWhisk repositories follow a naming convention where all repo starts with <i>incubator</i>, for example, <i>openwhisk-cli</i> GitHub repository is named <i>incubator-openwhisk-cli</i>.</p>
         <div class="flow-columns">
           <div class="project-structure-repo theme-deeper-sea-green">
             <h5>Platform</h5>
             <p>Primary source code repositories including platform code,
               run books, tests and more.</p>
             <p class="repo-title border-deeper-sea-green">
-              <a href="https://github.com/apache/incubator-openwhisk"
+              <a href="https://github.com/apache/openwhisk"
                 title="Core OpenWhisk repository including controller,
                 invoker, run books, and more.">
                     openwhisk</a>
             </p>
             <p class="repo-title border-deeper-sea-green">
-              <a href="https://github.com/apache/incubator-openwhisk-cli"
+              <a href="https://github.com/apache/openwhisk-cli"
                 title="Pluggable Command Line Interface (CLI) for wsk
                 command using the Cobra framework.">
                     openwhisk-cli</a>
             </p>
             <p class="repo-title border-deeper-sea-green">
-              <a href="https://github.com/apache/incubator-openwhisk-apigateway"
+              <a href="https://github.com/apache/openwhisk-apigateway"
                 title="A performant API Gateway based on Openresty
                 and NGINX.">
                     openwhisk-apigateway</a>
             </p>
             <p class="repo-title border-deeper-sea-green">
-              <a href="https://github.com/apache/incubator-openwhisk-catalog"
+              <a href="https://github.com/apache/openwhisk-catalog"
                 title="Catalog of built-in system, utility, test and sample
                 Actions, Feeds and provider integration services and catalog
                 packaging tooling.">
@@ -2753,42 +2749,42 @@ abcd.... locationUpdate
             <p>OpenWhisk supports several languages via Docker runtime
               containers.</p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs"
+              <a href="https://github.com/apache/openwhisk-runtime-nodejs"
                 title="Apache openwhisk nodejs runtime">
                     openwhisk-runtime-nodejs</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-docker"
+              <a href="https://github.com/apache/openwhisk-runtime-docker"
                 title="Apache openwhisk docker runtime.">
                     openwhisk-runtime-docker</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-python"
+              <a href="https://github.com/apache/openwhisk-runtime-python"
                 title="Apache openwhisk python runtime.">
                     openwhisk-runtime-python</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-go"
+              <a href="https://github.com/apache/openwhisk-runtime-go"
                 title="Apache openwhisk go runtime.">
                     openwhisk-runtime-go</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-swift"
+              <a href="https://github.com/apache/openwhisk-runtime-swift"
                 title="Apache openwhisk swift runtime.">
                     openwhisk-runtime-swift</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-php"
+              <a href="https://github.com/apache/openwhisk-runtime-php"
                 title="Apache openwhisk php runtime.">
                     openwhisk-runtime-php</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-java"
+              <a href="https://github.com/apache/openwhisk-runtime-java"
                 title="Apache openwhisk java runtime.">
                     openwhisk-runtime-java</a>
             </p>
             <p class="repo-title border-deeper-sky-blue">
-              <a href="https://github.com/apache/incubator-openwhisk-runtime-ruby"
+              <a href="https://github.com/apache/openwhisk-runtime-ruby"
                 title="Apache openwhisk ruby runtime.">
                     openwhisk-runtime-ruby</a>
             </p>
@@ -2797,14 +2793,14 @@ abcd.... locationUpdate
             <h5>Deployments</h5>
             <p>OpenWhisk can be deployed and configured on variety of platforms.</p>
             <p class="repo-title border-darkgoldenrod">
-              <a href="https://github.com/apache/incubator-openwhisk-deploy-kube"
+              <a href="https://github.com/apache/openwhisk-deploy-kube"
                 title="This project can be used to deploy Apache OpenWhisk
                 to a Kubernetes cluster.">
                     openwhisk-deploy-kube
               </a>
             </p>
             <p class="repo-title border-darkgoldenrod">
-              <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md"
+              <a href="https://github.com/apache/openwhisk-devtools/blob/master/docker-compose/README.md"
                 title="An easy way to try OpenWhisk locally is to use
                 Docker Compose.">
                     openwhisk-devtools/docker-compose
@@ -2818,20 +2814,13 @@ abcd.... locationUpdate
               </a>
             </p>
             <p class="repo-title border-darkgoldenrod">
-              <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift"
-                title="This project can be used to deploy Apache OpenWhisk
-                to the OpenShift platform.">
-                    openwhisk-deploy-openshift
-              </a>
-            </p>
-            <p class="repo-title border-darkgoldenrod">
-              <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md#deploying-openwhisk-using-ansible"
+              <a href="https://github.com/apache/openwhisk/blob/master/ansible/README.md#deploying-openwhisk-using-ansible"
                 title="Deploy OpenWhisk locally using Ansible.">
                     openwhisk/ansible
               </a>
             </p>
             <p class="repo-title border-darkgoldenrod">
-              <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup"
+              <a href="https://github.com/apache/openwhisk#vagrant-setup"
               title="Deploy OpenWhisk locally using Vagrant.">
                   openwhisk/vagrant-setup
               </a>
@@ -2841,14 +2830,14 @@ abcd.... locationUpdate
             <h5>Tooling</h5>
             <p>OpenWhisk provides variety of tools around deployment and development.</p>
             <p class="repo-title border-deeper-aquamarine">
-              <a href="https://github.com/apache/incubator-openwhisk-wskdeploy"
+              <a href="https://github.com/apache/openwhisk-wskdeploy"
                 title="Utility to deploy all your OpenWhisk Packages,
                 Actions, Triggers, Rules and more using a single command!">
                     openwhisk-wskdeploy
               </a>
             </p>
             <p class="repo-title border-deeper-aquamarine">
-              <a href="https://github.com/apache/incubator-openwhisk-devtools"
+              <a href="https://github.com/apache/openwhisk-devtools"
                 title="This repository provides developer tools that
                 help with local development, testing and operation
                 of OpenWhisk.">
@@ -2896,21 +2885,21 @@ abcd.... locationUpdate
               catalog, under the <em>/whisk.system/</em> namespace,
               and include:</p>
             <p class="repo-title border-darksalmon">
-              <a href="https://github.com/apache/incubator-openwhisk-package-alarms"
+              <a href="https://github.com/apache/openwhisk-package-alarms"
                 title="Apache OpenWhisk package that can be used to
                 create periodic, time-based alarms.">
                     openwhisk-package-alarms
             </a>
             </p>
             <p class="repo-title border-darksalmon">
-              <a href="https://github.com/apache/incubator-openwhisk-package-cloudant"
+              <a href="https://github.com/apache/openwhisk-package-cloudant"
                 title="The /whisk.system/cloudant package enables you
                 to work with a Cloudant database.">
                     openwhisk-package-cloudant
               </a>
             </p>
             <p class="repo-title border-darksalmon">
-              <a href="https://github.com/apache/incubator-openwhisk-package-kafka"
+              <a href="https://github.com/apache/openwhisk-package-kafka"
                 title="Apache OpenWhisk package for communicating with
                 Kafka or Message Hub">
                     openwhisk-package-kafka
@@ -2960,29 +2949,16 @@ abcd.... locationUpdate
             <h5>Clients and SDK</h5>
             <p>Here are the clients to access to OpenWhisk API:</p>
             <p class="repo-title  border-deeper-aquamarine">
-              <a href="https://github.com/apache/incubator-openwhisk-client-go"
+              <a href="https://github.com/apache/openwhisk-client-go"
                 title="This project openwhisk-client-go is a Go client
                 library to access Openwhisk API.">
                     openwhisk-client-go</a>
             </p>
             <p class="repo-title  border-deeper-aquamarine">
-              <a href="https://github.com/apache/incubator-openwhisk-client-js"
+              <a href="https://github.com/apache/openwhisk-client-js"
                 title="JavaScript client library for the OpenWhisk
                 platform.">
                     openwhisk-client-js</a>
-            </p>
-            <p class="repo-title  border-deeper-aquamarine">
-              <a href="https://github.com/apache/incubator-openwhisk-client-swift"
-                title="Swift client SDK for OpenWhisk with support for
-                iOS, WatchOS2, and Darwin CLI apps.">
-                    openwhisk-client-swift</a>
-            </p>
-            <p class="repo-title  border-deeper-aquamarine">
-              <a href="https://github.com/apache/incubator-openwhisk-client-python"
-                title="REST API of OpenWhisk can be used directly
-                from Python.">
-                    openwhisk-client-python
-              </a>
             </p>
           </div>
           <div class="project-structure-repo theme-darkorange">
@@ -3030,15 +3006,15 @@ abcd.... locationUpdate
             <h5>Others</h5>
             <p>Few other misc. but crucial repositories.</p>
             <p class="repo-title border-darkred">
-              <a href="https://github.com/apache/incubator-openwhisk-release"
+              <a href="https://github.com/apache/openwhisk-release"
                 title="This repository provides Release Management of all
                 designated Apache OpenWhisk project repositories.">
                       openwhisk-release</a>
             </p>
             <p class="repo-title border-darkred">
-              <a href="https://github.com/apache/incubator-openwhisk-website"
+              <a href="https://github.com/apache/openwhisk-website"
                 title="This repository contains source of this website
-                (openwhisk.incubator.apache.org) which is built using Jekyll.">
+                (openwhisk.apache.org) which is built using Jekyll.">
                       openwhisk-website</a>
             </p>
             <p class="repo-title border-darkred">
@@ -3061,8 +3037,8 @@ abcd.... locationUpdate
           <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Presentations%2C+Meeting+Notes+and+Transcripts">Meeting Notes and Transcripts</a></li>
           <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Processes">Processes</a></li>
           <li><a href="https://cwiki.apache.org/confluence/display/OPENWHISK/Project+Status">Project Status</a></li>
-          <li><a href="https://github.com/apache/incubator-openwhisk/issues">Report Bugs or Request Features</a></li>
-          <li><a href="https://github.com/apache/incubator-openwhisk-release#apache-openwhisk-project-release-management">Project Release Management</a></li>
+          <li><a href="https://github.com/apache/openwhisk/issues">Report Bugs or Request Features</a></li>
+          <li><a href="https://github.com/apache/openwhisk-release#apache-openwhisk-project-release-management">Project Release Management</a></li>
         </ul>
 
         <!-- ******************************************************* -->
@@ -3092,8 +3068,8 @@ abcd.... locationUpdate
           but there may be other languages you would like supported or even language variants with different frameworks for languages we support today. OpenWhisk is all about making it easy for ANY developer, using any functional language they are comfortable with, to develop Actions for our platform!</p>
         <p>You can create a new runtime in two ways:</p>
         <ul>
-          <li>Implementing the <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-new.md#Adding-Action-Language-Runtimes">Runtime specification</a> yourself, <i>or by</i></li>
-          <li>Using the <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-actionloop.md#Developing-a-new-Runtime-with-the-ActionLoop-proxy">ActionLoop engine</a> that provides a simplified path for building a new runtime.</li>
+          <li>Implementing the <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-new.md#Adding-Action-Language-Runtimes">Runtime specification</a> yourself, <i>or by</i></li>
+          <li>Using the <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-actionloop.md#Developing-a-new-Runtime-with-the-ActionLoop-proxy">ActionLoop engine</a> that provides a simplified path for building a new runtime.</li>
         </ul>
       </div>
     </main>
@@ -3123,7 +3099,7 @@ abcd.... locationUpdate
           shows its committment to be a true Open Source Serverless
           Cloud Platform.
         </p>
-        <img style="padding-top:20px; width: 400px;" src="https://raw.githubusercontent.com/apache/incubator-openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png"
+        <img style="padding-top:20px; width: 400px;" src="https://raw.githubusercontent.com/apache/openwhisk/master/docs/images/OpenWhisk_flow_of_processing.png"
         alt="OpenWhisk Architecture"/>
         <p>
           You can read more about the OpenWhisk platform
@@ -3131,7 +3107,7 @@ abcd.... locationUpdate
         </p>
         <ul>
           <li>
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/docs/about.md#how-openWhisk-works">How OpenWhisk works</a>.
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/about.md#how-openWhisk-works">How OpenWhisk works</a>.
           </li>
         </ul>
 
@@ -3156,9 +3132,9 @@ abcd.... locationUpdate
           public cloud provider.
         </p>
           <p>Please refer to:
-          <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#kubernetes">Deploy OpenWhisk to a Kubernetes Cluster</a>
+          <a href="https://github.com/apache/openwhisk-deploy-kube/blob/master/README.md#kubernetes">Deploy OpenWhisk to a Kubernetes Cluster</a>
           for detailed deployment instructions which includes specific
-          <a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/README.md#customize-the-deployment">customizations</a>
+          <a href="https://github.com/apache/openwhisk-deploy-kube/blob/master/README.md#customize-the-deployment">customizations</a>
           including Docker Desktop (Mac, Windows), Minikube,
           Google, IBM Cloud, IBM Cloud Private, etc.).
         </p>
@@ -3184,14 +3160,14 @@ abcd.... locationUpdate
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/apache/incubator-openwhisk-devtools.git
-<span class="gp">$ </span><span class="nb">cd </span>incubator-openwhisk-devtools/docker-compose
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/apache/openwhisk-devtools.git
+<span class="gp">$ </span><span class="nb">cd </span>openwhisk-devtools/docker-compose
 <span class="gp">$ </span>make quick-start</code></pre></figure>
 
           </div>
           <p>
             For more detailed instructions, see the
-            <a href="https://github.com/apache/incubator-openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
+            <a href="https://github.com/apache/openwhisk-devtools/blob/master/docker-compose/README.md">OpenWhisk with Docker Compose project</a>.
           </p>
 
           <!-- ******************************** -->
@@ -3200,7 +3176,7 @@ abcd.... locationUpdate
           <a class="indexable" id="deploy_ansible"></a>
           <h5>Ansible</h5>
           <p>
-            <a href="https://github.com/apache/incubator-openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/ansible/README.md">Deploying OpenWhisk using Ansible</a>
             is a more imperative, script-based deployment
             option such as in a CI/CD (Travis) pipeline.
             The OpenWhisk playbooks are structured such that it
@@ -3219,7 +3195,7 @@ abcd.... locationUpdate
             Downloading and install VirtualBox and Vagrant for your
             operating system and architecture.
             You can follow the steps under
-            <a href="https://github.com/apache/incubator-openwhisk#vagrant-setup">Vagrant Setup</a>
+            <a href="https://github.com/apache/openwhisk#vagrant-setup">Vagrant Setup</a>
             to run your first OpenWhisk action using Vagrant.
           </p>
 
@@ -3230,16 +3206,6 @@ abcd.... locationUpdate
           <h5>Mesos</h5>
           <p>
             <a href="https://github.com/apache/incubator-openwhisk-deploy-mesos/blob/master/README.md">Deploy OpenWhisk to a Mesos Cluster</a>
-            is under active development.
-          </p>
-
-          <!-- ******************************** -->
-          <!-- OpenShift                        -->
-          <!-- ******************************** -->
-          <a class="indexable" id="deploy_openshift"></a>
-          <h5>OpenShift</h5>
-          <p>
-            <a href="https://github.com/apache/incubator-openwhisk-deploy-openshift/blob/master/README.md">OpenWhisk Deployment on OpenShift</a>
             is under active development.
           </p>
         </div>
@@ -3254,7 +3220,7 @@ abcd.... locationUpdate
           to administer the running OpenWhisk instance.
         </p>
         <ul>
-          <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/tools/admin">wskadmin</a></li>
+          <li><a href="https://github.com/apache/openwhisk/tree/master/tools/admin">wskadmin</a></li>
         </ul>
 
         <!-- ******************************************************* -->
@@ -3308,9 +3274,9 @@ abcd.... locationUpdate
         <a href="#report-problem-with-this-site">How do I report a problem with this site or suggest an improvement?</a>
         <p>
             You can submit an issue to
-            <a href="https://github.com/apache/incubator-openwhisk-website/issues">the GitHub repository</a>
+            <a href="https://github.com/apache/openwhisk-website/issues">the GitHub repository</a>
             for this site. You can also submit a
-            <a href="https://github.com/apache/incubator-openwhisk-website/pulls">pull request</a>
+            <a href="https://github.com/apache/openwhisk-website/pulls">pull request</a>
             if you have signed the Apache ICLA.
         </p>
     </li>

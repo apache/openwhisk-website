@@ -19,7 +19,7 @@
 
 # Apache OpenWhisk Website
 
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0) [![Build Status](https://travis-ci.org/apache/incubator-openwhisk-website.svg?branch=master)](https://travis-ci.org/apache/incubator-openwhisk-website)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0) [![Build Status](https://travis-ci.org/apache/openwhisk-website.svg?branch=master)](https://travis-ci.org/apache/openwhisk-website)
 
 Apache OpenWhisk is a cloud-first distributed event-based programming service. It provides a programming model to upload event handlers to a cloud service, and register the handlers to respond to various events.
 
@@ -46,10 +46,10 @@ gem install jekyll bundler
 
 ```sh
 # Clone the repository (and correct branch).
-git clone https://github.com/apache/incubator-openwhisk-website.git
+git clone https://github.com/apache/openwhisk-website.git
 
 # Move into the cloned repo.
-cd incubator-openwhisk-website
+cd openwhisk-website
 
 # Install gem dependencies
 bundle install
