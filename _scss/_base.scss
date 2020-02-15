@@ -195,8 +195,7 @@ spacer {
   .content {
     background: $color-bg-base-content;
     // Provide for space around content's text
-    padding: $whisk-nodes-main-content-padding-base;
-
+    padding: 20px;
     // Provide a space between image and content when vertical
     margin-top: 20px;
   }
@@ -221,6 +220,9 @@ spacer {
       margin: auto; // allows centering in all layouts
     }
   }
+  #whiskSupporter{
+
+  }
 }
 
 /*
@@ -236,14 +238,14 @@ spacer {
 
 .flow-item-container {
   background: $color-white;
-  width: 260px;
-  margin: 10px;
+  width: 100px;
+  margin: 5px;
 }
 
 .flow-item-image {
   border-image-width: 0px;
-  max-width: 240px;
-  width: 240px;
+  max-width: 90px;
+  width: 90px;
 }
 
 /*
@@ -577,4 +579,16 @@ a.indexable {
       color: $color-index-fg-highlight;
     }
   }
+}
+#whiskSupporter {
+  background-color: $color-index-bg;
+  position: sticky !important; /* added to make toc scroll with page */
+  float: right !important; /* added to make toc scroll with page */
+  top: 0;
+  right: 0;
+  width: 300px;
+  padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 20px;
 }
