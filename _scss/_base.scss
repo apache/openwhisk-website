@@ -590,5 +590,31 @@ a.indexable {
   padding: 20px;
   margin-top: 80px;
   margin-bottom: 40px;
-  margin-left: 20px;
+  margin-right: 2%;
+
+  .flow-columns {
+    background-color: $color-index-bg;
+  }
+  .flow-item-container {
+    padding: 10px;
+    margin: 5px;
+  }
 }
+@media screen and (max-width: 999px) {
+  #whiskSupporter {
+    margin-top: $header-single-row-height + 90px;
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width: 919px) {
+  #whiskSupporter {
+    float: none;
+    position: relative;
+    margin-right: 5%;
+    margin-bottom: 0px;
+    margin-top: $header-single-row-height + 120px;
+    width: 90%;
+  }
+}
+
