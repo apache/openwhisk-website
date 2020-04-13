@@ -196,7 +196,7 @@ lede: This is the list of historic events
   <details><summary><strong>Open Labs</strong></summary>
   <ul>
   <li><strong>9002: Event-driven and Serverless Computing with IBM Bluemix OpenWhisk: Learn the basics now!</strong><br/>
-  Monday-Thursday drop-in; Mandalay Bay North, South Seas E&F; Andreas Nauerz (IBM)</li>
+  Monday-Thursday drop-in; Mandalay Bay North, South Seas E&amp;F; Andreas Nauerz (IBM)</li>
   </ul>
   </details>
 
