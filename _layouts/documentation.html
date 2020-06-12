@@ -2533,7 +2533,59 @@ abcd.... locationUpdate
         <p>Here are some alternate choices for deploying the OpenWhisk
           platform:
         </p>
-
+        <!-- TODO: add left margin for all these alt. options. -->
+        <div>
+          <!-- ******************************** -->
+          <!-- Quick Start                   -->
+          <!-- ******************************** -->
+          <a class="indexable" id="quick_start"></a>
+          <h5>Quick Start</h5>
+          <p>
+            The easiest way to start using OpenWhisk is to install the "Standalone" 
+            OpenWhisk stack. This is a full-featured OpenWhisk stack running as a Java process 
+            for convenience. Serverless functions run within Docker containers. 
+            You will need <a href="https://docs.docker.com/installDocker">Docker</a>,
+            <a href="https://java.com/en/download/help/download_options.xml">Java</a> and
+            <a href="https://nodejs.org/Node.js">Node.js</a> available on your machine.
+          </p>
+          <p>
+          To get started:
+          </p>
+          <div class="terminal">
+{% highlight bash %}
+$ git clone https://github.com/apache/openwhisk.git
+$ cd openwhisk
+$ ./gradlew core:standalone:bootRun
+{% endhighlight %}
+          </div>
+          <p>
+            <ul>
+              <li>When the OpenWhisk stack is up, it will open your browser to a functions Playground, 
+                  typically served from <a href="http://localhost:3232">http://localhost:3232</a>. 
+                  The Playground allows you create and run functions directly from your browser.
+              </li>
+              <li>To make use of all OpenWhisk features, you will need the OpenWhisk command line tool
+                  called wsk which you can download from <a href="https://s.apache.org/openwhisk-cli-download">https://s.apache.org/openwhisk-cli-download</a>. 
+                  Please refer to the <a href="https://github.com/apache/openwhisk/blob/master/docs/cli.md">CLI configuration</a> for additional details. Typically you configure the CLI for 
+                  Standalone OpenWhisk as follows:
+              </li>
+            </ul> 
+          </p>
+            <div class="terminal">
+{% highlight bash %}
+wsk property set \
+  --apihost 'http://localhost:3233' \
+  --auth '23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP'
+{% endhighlight %}
+            </div>
+            <p>
+              <ul>
+              <li> Standalone OpenWhisk can be configured to deploy additional capabilities when 
+                that is desirable. Additional resources are available <a href="https://github.com/apache/openwhisk/blob/master/core/standalone/README.md">here</a>.
+              </li>
+              </ul> 
+            </p>   
+        </div>
         <!-- TODO: add left margin for all these alt. options. -->
         <div>
           <!-- ******************************** -->
