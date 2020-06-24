@@ -481,7 +481,7 @@ function addListenersToSections()
           Multiple actions, even implemented in different languages, may be
           composed together to create a longer processing pipeline called a
           <a href="https://github.com/apache/openwhisk/blob/master/docs/actions.md#creating-action-sequences">sequence</a>.
-          Sequence can be treated as a single action in terms of it creation
+          A sequence can be treated as a single action in terms of it's creation
           and invocation.
         </p>
 
@@ -866,6 +866,13 @@ function addListenersToSections()
           is a utility, named <em>wskdeploy</em>, to help deploy and
           manage all your OpenWhisk Packages, Actions, Triggers, Rules
           and APIs using a single command using an application manifest.
+        </p>
+
+        <p>
+          The functionality of wskdeploy is also embedded as a subcommand 
+          of wsk in the CLI. You can use the <code>wsk deploy</code> 
+          subcommand or follow the instructions below on installing the 
+          wskdeploy utility.
         </p>
 
         <h5>Installing</h5>
