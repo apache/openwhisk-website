@@ -489,7 +489,7 @@ layout: default
         <!-- OpenWhisk CLI                                              -->
         <!-- ********************************************************** -->
         <a class="indexable" id="wsk-cli"></a>
-        <h4>OpenWhisk CLI (wsk)</h4>
+        <h4>OpenWhisk CLI <em>(wsk)</em></h4>
         <p>OpenWhisk offers the <code>wsk</code> Command Line Interface
           (CLI) to easily create, run, and manage OpenWhisk entities.
         </p>
@@ -661,19 +661,18 @@ $ wsk list -v
         <!-- Whisk Deploy                                               -->
         <!-- ********************************************************** -->
         <a class="indexable" id="wskdeploy"></a>
-        <h4>Whisk Deploy (wskdeploy)</h4>
+        <h4>Whisk Deploy <em>(wskdeploy)</em></h4>
         <p>
           <a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/README.md">Whisk Deploy</a>
           is a utility, named <em>wskdeploy</em>, to help deploy and
           manage all your OpenWhisk Packages, Actions, Triggers, Rules
-          and APIs using a single command using an application manifest.
+          and APIs from a single command using an application manifest.
         </p>
 
+        <h5>Whisk deploy in the <em>wsk</em> CLI</h5>
+
         <p>
-          The functionality of wskdeploy is also embedded as a subcommand
-          of wsk in the CLI. You can use the <code>wsk deploy</code>
-          subcommand or follow the instructions below on installing the
-          wskdeploy utility.
+          The functionality of <em>wskdeploy</em> is also embedded as the <code>deploy</code> subcommand within the <em>wsk</em> CLI. The functionality is identical and supports all the same parameters and flags. This means that you can use the <code>wsk deploy</code> subcommand if you already have the CLI installed or follow the instructions below on installing the wskdeploy utility for standalone use.
         </p>
 
         <h5>Installing</h5>
@@ -1180,7 +1179,9 @@ $ wsk list -v
               </div>
             </li>
             <li style="list-style-type: decimal">
-              Assure that you have downloaded the JAR file for the imported `com.google.gson.JsonObject` library (i.e., <a href="https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.5">google-gson-2.8.5.jar</a> from Maven) to your Java `CLASSPATH`.
+              <p>
+              Assure that you have downloaded the JAR file for the imported `com.google.gson.JsonObject` library (i.e., <a  target="_blank" href="https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.5">google-gson-2.8.5.jar</a> from Maven) to your Java `CLASSPATH`.
+              </p>
             </li>
             <li style="list-style-type: decimal">
               Compile <i>Hello.Java</i> into a JAR file
@@ -1192,6 +1193,8 @@ $ jar cvf hello.jar Hello.class
 {% endhighlight %}
               </div>
               <div>Please note that the current default JVM for OpenWhisk is Java 8. If you are using a newer version, you must specify that release version when you compile:
+              </div>
+              <div class="terminal">
 {% highlight bash %}
 $ javac --release 8 Hello.java
 {% endhighlight %}
