@@ -670,9 +670,9 @@ $ wsk list -v
         </p>
 
         <p>
-          The functionality of wskdeploy is also embedded as a subcommand 
-          of wsk in the CLI. You can use the <code>wsk deploy</code> 
-          subcommand or follow the instructions below on installing the 
+          The functionality of wskdeploy is also embedded as a subcommand
+          of wsk in the CLI. You can use the <code>wsk deploy</code>
+          subcommand or follow the instructions below on installing the
           wskdeploy utility.
         </p>
 
@@ -1180,6 +1180,9 @@ $ wsk list -v
               </div>
             </li>
             <li style="list-style-type: decimal">
+              Assure that you have downloaded the JAR file for the imported `com.google.gson.JsonObject` library (i.e., <a href"https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.5">google-gson-2.8.5.jar</a> from Maven) to your Java `CLASSPATH`.
+            </li>
+            <li style="list-style-type: decimal">
               Compile <i>Hello.Java</i> into a JAR file
               <i>hello.jar</i> as follows
               <div class="terminal">
@@ -1188,9 +1191,14 @@ $ javac Hello.java
 $ jar cvf hello.jar Hello.class
 {% endhighlight %}
               </div>
+              <div>Please note that the current default JVM for OpenWhisk is Java 8. If you are using a newer version, you must specify that release version when you compile:
+{% highlight bash %}
+$ javac --release 8 Hello.java
+{% endhighlight %}
+              </div>
             </li>
             <li style="list-style-type: decimal">
-              Create an action called <i>helloJava</i> using <i>hello.jar</i>:
+              Create an action called <i>helloJava</i> using <i>hello.jar</i> specifying the Java class where the `main` entry point you wish to invoke:
               <div class="terminal">
 {% highlight bash %}$ wsk action create helloJava hello.jar --main Hello{% endhighlight %}
               </div>
@@ -2548,9 +2556,9 @@ abcd.... locationUpdate
           <a class="indexable" id="quick_start"></a>
           <h5>Quick Start</h5>
           <p>
-            The easiest way to start using OpenWhisk is to install the "Standalone" 
-            OpenWhisk stack. This is a full-featured OpenWhisk stack running as a Java process 
-            for convenience. Serverless functions run within Docker containers. 
+            The easiest way to start using OpenWhisk is to install the "Standalone"
+            OpenWhisk stack. This is a full-featured OpenWhisk stack running as a Java process
+            for convenience. Serverless functions run within Docker containers.
             You will need <a href="https://docs.docker.com/installDocker">Docker</a>,
             <a href="https://java.com/en/download/help/download_options.xml">Java</a> and
             <a href="https://nodejs.org/Node.js">Node.js</a> available on your machine.
@@ -2567,16 +2575,16 @@ $ ./gradlew core:standalone:bootRun
           </div>
           <p>
             <ul>
-              <li>When the OpenWhisk stack is up, it will open your browser to a functions Playground, 
-                  typically served from <a href="http://localhost:3232">http://localhost:3232</a>. 
+              <li>When the OpenWhisk stack is up, it will open your browser to a functions Playground,
+                  typically served from <a href="http://localhost:3232">http://localhost:3232</a>.
                   The Playground allows you create and run functions directly from your browser.
               </li>
               <li>To make use of all OpenWhisk features, you will need the OpenWhisk command line tool
-                  called wsk which you can download from <a href="https://s.apache.org/openwhisk-cli-download">https://s.apache.org/openwhisk-cli-download</a>. 
-                  Please refer to the <a href="https://github.com/apache/openwhisk/blob/master/docs/cli.md">CLI configuration</a> for additional details. Typically you configure the CLI for 
+                  called wsk which you can download from <a href="https://s.apache.org/openwhisk-cli-download">https://s.apache.org/openwhisk-cli-download</a>.
+                  Please refer to the <a href="https://github.com/apache/openwhisk/blob/master/docs/cli.md">CLI configuration</a> for additional details. Typically you configure the CLI for
                   Standalone OpenWhisk as follows:
               </li>
-            </ul> 
+            </ul>
           </p>
             <div class="terminal">
 {% highlight bash %}
@@ -2587,11 +2595,11 @@ wsk property set \
             </div>
             <p>
               <ul>
-              <li> Standalone OpenWhisk can be configured to deploy additional capabilities when 
+              <li> Standalone OpenWhisk can be configured to deploy additional capabilities when
                 that is desirable. Additional resources are available <a href="https://github.com/apache/openwhisk/blob/master/core/standalone/README.md">here</a>.
               </li>
-              </ul> 
-            </p>   
+              </ul>
+            </p>
         </div>
         <!-- TODO: add left margin for all these alt. options. -->
         <div>
