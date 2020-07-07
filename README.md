@@ -27,7 +27,7 @@ Apache OpenWhisk is a cloud-first distributed event-based programming service. I
 
 ### Install Prerequisites
 
-- Download and install Node.js (recommend v10 LTS): see [https://nodejs.org/](https://nodejs.org/
+- Download and install Node.js (recommend v10 LTS): see [https://nodejs.org/](https://nodejs.org/)
 - Download and install NPM (recommend v6.14 latest): see [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
 - Download and install Ruby (recommend v2.7 stable): see [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
 
