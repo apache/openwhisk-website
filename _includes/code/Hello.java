@@ -1,5 +1,3 @@
-package hello;
-
 import com.google.gson.JsonObject;
 
 public class Hello {
