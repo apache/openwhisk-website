@@ -10,7 +10,7 @@ node("git-websites") {
     env
     export
     echo "Set ruby path to avoid writing to /usr directory"
-    export RUBY_PATH=~/shared/.rvm
+    export RUBY_PATH=${WORKSPACE}/shared/.rvm
     export GEM_HOME=${RUBY_PATH}/gems
     curl -sSL https://get.rvm.io | bash -s -- --path ${RUBY_PATH}
     mkdir -p ${GEM_HOME}/gems
