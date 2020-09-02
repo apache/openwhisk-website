@@ -207,7 +207,7 @@ layout: default
           <li><a href="https://github.com/apache/openwhisk-runtime-dotnet#readme">.Net</a> - OpenWhisk runtime for .Net Core 2.2</li>
           <li><a href="https://github.com/apache/openwhisk-runtime-go#readme">Go</a> - OpenWhisk runtime for Go</li>
           <li><a href="https://github.com/apache/openwhisk-runtime-java#readme">Java</a> - OpenWhisk runtime for Java 8 <i>(OpenJDK 8, JVM OpenJ9)</i></li>
-          <li><a href="https://github.com/apache/openwhisk-runtime-nodejs#readme">JavaScript</a> - OpenWhisk runtime for Node.js v6, v8 and v10</li>
+          <li><a href="https://github.com/apache/openwhisk-runtime-nodejs#readme">JavaScript</a> - OpenWhisk runtime for Node.js v10, v12 and v14</li>
           <li><a href="https://github.com/apache/openwhisk-runtime-php#readme">PHP</a> - OpenWhisk runtime for PHP 7.4, 7.3 and 7.2</li>
           <li><a href="https://github.com/apache/openwhisk-runtime-python#readme">Python</a> - OpenWhisk runtime for Python 2.7, 3 and a 3 runtime variant for AI/ML <i>(including packages for Tensorflow and PyTorch)</i></li>
           <li><a href="https://github.com/apache/openwhisk-runtime-ruby#readme">Ruby</a> - OpenWhisk runtime for Ruby 2.5</li>
@@ -844,7 +844,7 @@ $ wsk list -v
           <h5>Creating and Invoking NodeJS actions</h5>
           <p>
             Let's look at how to write a sample hello world action in NodeJS. You can visit
-            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-node.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
+            <a href="https://github.com/apache/openwhisk/blob/master/docs/actions-nodejs.md#creating-and-invoking-javascript-actions">Creating and Invoking NodeJS actions</a>
             page for further details.
           </p>
           <p>
@@ -924,7 +924,7 @@ $ wsk list -v
           <a class="indexable" id="nodejs-runtime"></a>
           <h5>OpenWhisk Runtime for NodeJS</h5>
           <p>
-              OpenWhisk supports <strong>Node.js 10</strong>, <strong>Node.js 8</strong>, and  <strong>Node.js 6</strong> runtimes where Node.js 6 being default pick by wsk CLI and Whisk Deploy.
+              OpenWhisk supports <strong>Node.js 14</strong>, <strong>Node.js 12</strong>, <strong>Node.js 10</strong>, <strong>Node.js 8</strong> and <strong>Node.js 6</strong> runtimes where Node.js 6 being default pick by wsk CLI and Whisk Deploy.
               If you wish to learn more about NodeJS runtime along with
               the libraries that are supported or "built-in" by default, please visit
               <a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/README.md">NodeJS Runtime GitHub Repository</a>.
@@ -2562,9 +2562,9 @@ abcd.... locationUpdate
             The easiest way to start using OpenWhisk is to install the "Standalone"
             OpenWhisk stack. This is a full-featured OpenWhisk stack running as a Java process
             for convenience. Serverless functions run within Docker containers.
-            You will need <a href="https://docs.docker.com/installDocker">Docker</a>,
+            You will need <a href="https://docs.docker.com/get-docker/">Docker</a>,
             <a href="https://java.com/en/download/help/download_options.xml">Java</a> and
-            <a href="https://nodejs.org/Node.js">Node.js</a> available on your machine.
+            <a href="https://nodejs.org/en/download/">Node.js</a> available on your machine.
           </p>
           <p>
           To get started:
