@@ -872,18 +872,14 @@ $ wsk list -v
               </div>
             </li>
             <li style="list-style-type: decimal">
-              Invoke the <i>helloJS</i> action as a blocking activation:
+              Invoke an action <i>helloJS</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloJS --blocking{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloJS -r -p name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
 {
-"result": {
-"payload": "Hello world"
-},
-"status": "success",
-"success": true
+  "greeting": "Hello World!"
 }{% endhighlight %}
               </div>
             </li>
@@ -1087,7 +1083,7 @@ $ wsk list -v
             </li>
             <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPy --blocking --param name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloPy -r -p name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1212,7 +1208,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
               Invoke an action <i>helloJava</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloJava --blocking --result{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloJava -r{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1290,7 +1286,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
               Invoke an action <i>helloPHP</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPHP --blocking --result --param name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloPHP -r -p name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1396,7 +1392,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
               Invoke an action <i>hello_ruby</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke hello_ruby --blocking --result --param name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke hello_ruby -r -p name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
