@@ -955,8 +955,9 @@ function addListenersToSections()
         <span class="s">actions</span><span class="pi">:</span>
             <span class="s">helloJS</span><span class="pi">:</span>
                 <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">function main() {</span>
-                        <span class="no">return {payload: 'Hello world'};</span>
+                    <span class="no">function main(args) {</span>
+                        <span class="no">const name = args &amp;&amp; args.name || "stranger";</span>
+                        <span class="no">return { greeting: `Hello ${name}!` };</span>
                     <span class="no">}</span>
                 <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:10</span></code></pre></figure>
 
@@ -1071,8 +1072,10 @@ function addListenersToSections()
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span><span class="na">payload</span><span class="p">:</span> <span class="s1">'Hello world'</span><span class="p">};</span>
+3
+4</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">args</span> <span class="o">&amp;&amp;</span> <span class="nx">args</span><span class="p">.</span><span class="nx">name</span> <span class="o">||</span> <span class="s2">"stranger"</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="na">greeting</span><span class="p">:</span> <span class="err">`</span><span class="nx">Hello</span> <span class="nx">$</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="o">!</span><span class="err">`</span> <span class="p">};</span>
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
@@ -1090,20 +1093,16 @@ function addListenersToSections()
               </div>
             </li>
             <li style="list-style-type: decimal">
-              Invoke the <i>helloJS</i> action as a blocking activation:
+              Invoke an action <i>helloJS</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJS --blocking</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJS --result --param name World</code></pre></figure>
 
               </div>
               <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
-<span class="s2">"</span><span class="s">result"</span><span class="pi">:</span> <span class="pi">{</span>
-<span class="s2">"</span><span class="s">payload"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">world"</span>
-<span class="pi">},</span>
-<span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">success"</span><span class="pi">,</span>
-<span class="s2">"</span><span class="s">success"</span><span class="pi">:</span> <span class="nv">true</span>
+  <span class="s2">"</span><span class="s">greeting"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">World!"</span>
 <span class="pi">}</span></code></pre></figure>
 
               </div>
@@ -1145,13 +1144,15 @@ function addListenersToSections()
 6
 7
 8
-9</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
+9
+10</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
     <span class="s">default</span><span class="pi">:</span>
         <span class="s">actions</span><span class="pi">:</span>
             <span class="s">helloJS</span><span class="pi">:</span>
                 <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">function main() {</span>
-                        <span class="no">return {payload: 'Hello world'};</span>
+                    <span class="no">function main(args) {</span>
+                        <span class="no">const name = args &amp;&amp; args.name || "stranger";</span>
+                        <span class="no">return { greeting: `Hello ${name}!` };</span>
                     <span class="no">}</span>
                 <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:10</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
@@ -1269,7 +1270,7 @@ function addListenersToSections()
                 Invoke an action <i>helloGo</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloGo -r -p name gopher</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloGo --result --param name gopher</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1398,7 +1399,7 @@ function addListenersToSections()
             <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPy --blocking --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPy --result --param name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1602,7 +1603,7 @@ function addListenersToSections()
               Invoke an action <i>helloJava</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJava --blocking --result</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJava --result</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1701,7 +1702,7 @@ function addListenersToSections()
               Invoke an action <i>helloPHP</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPHP --blocking --result --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPHP --result --param name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1860,7 +1861,7 @@ function addListenersToSections()
               Invoke an action <i>hello_ruby</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke hello_ruby --blocking --result --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke hello_ruby --result --param name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -2006,7 +2007,7 @@ function addListenersToSections()
                 Invoke an action <i>helloSwift</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloSwift -r -p name Carlos</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloSwift --result --param name Carlos</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -2200,7 +2201,7 @@ function addListenersToSections()
                 Invoke an action <i>helloDotNet</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloDotNet -r -p name Shawn</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloDotNet --result --param name Shawn</code></pre></figure>
 
               </div>
               <div class="terminal">
