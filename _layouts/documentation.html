@@ -874,7 +874,7 @@ $ wsk list -v
             <li style="list-style-type: decimal">
               Invoke an action <i>helloJS</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloJS -r -p name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloJS --result --param name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -984,7 +984,7 @@ $ wsk list -v
             <li style="list-style-type: decimal">
                 Invoke an action <i>helloGo</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloGo -r -p name gopher{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloGo --result --param name gopher{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1083,7 +1083,7 @@ $ wsk list -v
             </li>
             <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPy -r -p name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloPy --result --param name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1208,7 +1208,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
               Invoke an action <i>helloJava</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloJava -r{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloJava --result{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1286,7 +1286,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
               Invoke an action <i>helloPHP</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloPHP -r -p name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloPHP --result --param name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1392,7 +1392,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
               Invoke an action <i>hello_ruby</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke hello_ruby -r -p name World{% endhighlight %}
+{% highlight bash %}$ wsk action invoke hello_ruby --result --param name World{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1489,7 +1489,7 @@ $ javac --release 8 Hello.java
             <li style="list-style-type: decimal">
                 Invoke an action <i>helloSwift</i>:
               <div class="terminal">
-{% highlight bash %}$ wsk action invoke helloSwift -r -p name Carlos{% endhighlight %}
+{% highlight bash %}$ wsk action invoke helloSwift --result --param name Carlos{% endhighlight %}
               </div>
               <div class="terminal">
 {% highlight yaml %}
@@ -1634,7 +1634,7 @@ $ wsk action create helloDotNet helloDotNet.zip --main Apache.OpenWhisk.Example.
                 Invoke an action <i>helloDotNet</i>:
               <div class="terminal">
 {% highlight bash %}
-$ wsk action invoke helloDotNet -r -p name Shawn
+$ wsk action invoke helloDotNet --result --param name Shawn
 {% endhighlight %}
               </div>
               <div class="terminal">
