@@ -1,3 +1,4 @@
-function main() {
-    return {payload: 'Hello world'};
+function main(args) {
+    const name = args && args.name || "stranger";
+    return { greeting: `Hello ${name}!` };
 }
