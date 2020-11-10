@@ -1,0 +1,292 @@
+<!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+        <title>Apache OpenWhisk Security</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main-v1.css?v=1.13">
+        <!-- Load Index, Menu & collapsible support -->
+        <script type="text/javascript">
+            
+function applyCollapsible() {
+  addListenersToIndex();
+  addListenersToSections();
+}
+
+function toggleReferencedSection( parentId, expand )
+{
+  console.log( "toggleReferencedSection(): parentId=" + parentId + " expand=" + expand);
+  if (parentId !== ""){
+    sectionName = parentId.replace("index", "section");
+    //console.log( "toggleReferencedSection(): sectionName=" + sectionName);
+    sectionHeader = document.getElementById(sectionName);
+    section = sectionHeader.nextElementSibling;
+    if(expand){
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+          section.style.display = "block";
+    }
+    else{
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-plus.png')";
+          section.style.display = "none";
+    }
+  }
+}
+
+function addListenersToIndex()
+{
+  var coll = document.getElementsByClassName("index-menu-toggle");
+  var i;
+
+  // Apply exapandable (arrows) to all menuitems with a sibling
+  for (i = 0; i < coll.length; i++) {
+    var sibling = coll[i].nextElementSibling;
+
+    if(sibling!==null){
+        coll[i].style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+        // make room on left for image/icon (top right bottom left)
+        sibling.style.padding = "0px 0px 0px 20px";
+
+        if(sibling.classList.contains('index-menu-start-open')){
+          coll[i].style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+          sibling.style.display = "block";
+        }
+    }
+
+    // Set "click" event listener on all menuitems
+    coll[i].addEventListener("click", function() {
+      var sibling = this.nextElementSibling;
+      // toggle menu open/close states
+      if(sibling!==null){
+        if (sibling.style.display === "block") {
+          this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+          sibling.style.display = "none";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, false )
+          }
+        } else {
+          this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+          sibling.style.display = "block";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, true )
+          }
+        }
+      }
+
+    });
+  }
+}
+
+function addListenersToSections()
+{
+  var coll = document.getElementsByClassName("section-toggle");
+  var i;
+
+  // Apply exapandable (arrows) to all menuitems with a sibling
+  for (i = 0; i < coll.length; i++) {
+    var sibling = coll[i].nextElementSibling;
+
+    if(sibling!==null){
+      if(sibling.classList.contains("section-toggle-start-open")){
+        coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
+      } else if (sibling.classList.contains("section-toggle-start-closed")){
+        coll[i].style.backgroundImage = "url('../images/elements/circle-plus.png')";
+        sibling.style.display = "none";
+      } else {
+        //console.log( "addListenersToSections(): No Toggle style foun; default to open");
+        coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
+      }
+    }
+
+    // Set "click" event listener on all menuitems
+    coll[i].addEventListener("click", function() {
+      var sibling = this.nextElementSibling;
+      // toggle menu open/close states
+      if(sibling!==null){
+        //console.log("sibling.style.display: ["+sibling.style.display+"]");
+        if (sibling.style.display !== "none") {
+          //console.log("collapsing");
+          sibling.style.display = "none";
+          this.style.backgroundImage = "url('../images/elements/circle-plus.png')";
+        } else {
+          //console.log("expanding");
+          sibling.style.display = "block";
+          this.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        }
+      }
+
+    });
+  }
+}
+
+/*
+ *  Debug:
+ */
+// Use: console.log(dumpCSSText(this));
+// function dumpCSSText(element){
+//   var s = '';
+//   var o = getComputedStyle(element);
+//   for(var i = 0; i < o.length; i++){
+//     s+= ">> " + o[i] + ':' + o.getPropertyValue(o[i])+';\n';
+//   }
+//   return s;
+// }
+
+        </script>
+    </head>
+    <!-- Once all page elements are included, register event hooks -->
+    <body onload="applyCollapsible()">
+        <script src="js/main.min.js"></script>
+        <div class="header">
+
+    <a class="header-section-logo" href="/">
+    </a>
+    <div class="header-section-text-links">
+        <div class="header-row-text-links">
+            <a class="header-text-link" href="/documentation.html">Documentation</a>
+            <a class="header-text-link" href="/community.html">Community</a>
+            <a class="header-text-link" href="/downloads.html">Downloads</a>
+        </div>
+    </div>
+    <div class="header-section-social-icons">
+        <div class="header-row-social-icons">
+            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
+                <img class="header-icon-image" alt="Github" src="/images/icons/icon-github-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
+                <img class="header-icon-image" alt="Slack" src="/images/icons/icon-slack-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
+                <img class="header-icon-image" alt="Twitter" src="/images/icons/icon-twitter-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
+                <img class="header-icon-image" alt="Medium" src="/images/icons/icon-medium-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
+                <img class="header-icon-image" alt="YouTube" src="/images/icons/icon-youtube-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
+                <img class="header-icon-image" alt="Overflow" src="/images/icons/icon-stack-overflow-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
+                <img class="header-icon-image" alt="SlideShare" src="/images/icons/icon-slideshare-white.svg">
+            </a>
+        </div>
+    </div>
+</div>
+
+        <!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+<div id="whiskIndexedLayout">
+
+    <!-- Community Index -->
+    <div id="whiskIndex">
+        <ul>
+            <li><a href="#report">Security</a></li>
+            <li><a href="#report">Report a security vulnerability</a></li>
+
+        </ul>
+    </div>
+
+    <section id="whiskNodes">
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="downloads"></a>
+                <h2>Security</h2>
+                <div class="collapsible-content">
+                    <p>This page contains information on how to report a security vulnerability within the Apache OpenWhisk project.</p>
+                </div>
+            </div>
+        </main>
+
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="report"></a>
+                <h3>Report a security vulnerability</h3>
+                <div class="collapsible-content">
+                    <p>We encourage following the Apache <a href="http://www.apache.org/security/#reporting-a-vulnerability">Vulnerability Reporting</a> process for reporting suspected security vulnerabilities rather than disclosing them in a public forum.</p>
+                    <p>In short, the person discovering the issue, the reporter, should notify the Apache Security team with details of the suspected vulnerability by sending an email to <a href="mailto:security@apache.org">security@apache.org</a>.</p>
+                    <p>The Apache security team will notify the Apache OpenWhisk Project Management Committee (PMC) and work with them and the submitter to address the issue as described by the Apache <a href="https://www.apache.org/security/committers.html#vulnerability-handling">Vulnerability Handling</a> process.</p>
+                    <p>Please note that this mailing list should only be used for reporting undisclosed security vulnerabilities for Apache OpenWhisk code or dependent libraries, runtimes and tooling.  Bug reporting should be done by opening a GitHib Issue within the corresponding project repository where a bug is suspected.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+</div>
+
+        <!--
+/*
+ *   Required ASF website links (scanned)
+ *
+ *   Name: Regex: URL
+ *   ====  =====  ===
+ *   Foundation:  apache|asf|foundation:                        http://www.apache.org/
+ *   Events:      ^https?://.*apache.org/events/current-event:  See: https://www.apache.org/events/README.txt
+ *   License:     ^https?://.*apache.org/licenses/$:            http://www.apache.org/licenses/
+ *   Thanks:      ^https?://.*apache.org/foundation/thanks:     http://www.apache.org/foundation/thanks.html
+ *   Security:    ^https?://.*apache.org/.*[Ss]ecurity:         http://www.apache.org/security/
+ *   Sponsorship: ^https?://.*apache.org/foundation/sponsorship http://www.apache.org/foundation/sponsorship.html
+ *   Trademarks:  \btrademarks\b All project or product homepages must feature a prominent trademark attribution of all applicable Apache trademarks.
+ *   Copyright:   ((Copyright|©).*apache|apache.*(Copyright|©)): All website content SHOULD include a copyright notice for the ASF.
+ *   Image:       .   Projects SHOULD include a 212px wide copy of their logo in https://www.apache.org/img/ to be included in ASF homepage.
+ *                    See: https://www.apache.org/img/
+ */
+-->
+
+<footer class="footer light-text">
+  <main class="footer-row">
+    <div>
+        <div class="footer-row-text-links">
+            <a class="" href="https://www.apache.org/">Apache&nbsp;Software&nbsp;Foundation</a>
+            <a class="" href="https://apache.org/events/current-event">Events</a>
+            <a class="" href="https://www.apache.org/licenses/">License</a>
+            <a class="" href="security.html">Security</a>
+            <a class="" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+            <a class="" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+        </div>
+    </div>
+  </main>
+  <main class="footer-row">
+    <div>
+      Apache OpenWhisk, OpenWhisk, Apache, the Apache feather logo, and
+      the Apache OpenWhisk project logo are either
+      <a href="trademarks.html">registered trademarks</a> or
+      <a href="trademarks.html">trademarks</a>
+      of The Apache Software Foundation in the United States and other countries.
+      See <a href="trademarks.html">guidance</a> on use of Apache OpenWhisk trademarks.
+      All other marks mentioned may be trademarks or registered trademarks
+      of their respective owners.
+    </div>
+  </main>
+  <main class="footer-row">
+      Copyright © 2016-present The Apache Software Foundation,
+      Licensed under the Apache License, Version 2.0.
+  </main>
+</footer>
+
+    </body>
+</html>

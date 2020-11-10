@@ -1,0 +1,780 @@
+<!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+        <title>Apache OpenWhisk Downloads</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main-v1.css?v=1.13">
+        <!-- Load Index, Menu & collapsible support -->
+        <script type="text/javascript">
+            
+function applyCollapsible() {
+  addListenersToIndex();
+  addListenersToSections();
+}
+
+function toggleReferencedSection( parentId, expand )
+{
+  console.log( "toggleReferencedSection(): parentId=" + parentId + " expand=" + expand);
+  if (parentId !== ""){
+    sectionName = parentId.replace("index", "section");
+    //console.log( "toggleReferencedSection(): sectionName=" + sectionName);
+    sectionHeader = document.getElementById(sectionName);
+    section = sectionHeader.nextElementSibling;
+    if(expand){
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+          section.style.display = "block";
+    }
+    else{
+          sectionHeader.style.backgroundImage = "url('../images/elements/circle-plus.png')";
+          section.style.display = "none";
+    }
+  }
+}
+
+function addListenersToIndex()
+{
+  var coll = document.getElementsByClassName("index-menu-toggle");
+  var i;
+
+  // Apply exapandable (arrows) to all menuitems with a sibling
+  for (i = 0; i < coll.length; i++) {
+    var sibling = coll[i].nextElementSibling;
+
+    if(sibling!==null){
+        coll[i].style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+        // make room on left for image/icon (top right bottom left)
+        sibling.style.padding = "0px 0px 0px 20px";
+
+        if(sibling.classList.contains('index-menu-start-open')){
+          coll[i].style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+          sibling.style.display = "block";
+        }
+    }
+
+    // Set "click" event listener on all menuitems
+    coll[i].addEventListener("click", function() {
+      var sibling = this.nextElementSibling;
+      // toggle menu open/close states
+      if(sibling!==null){
+        if (sibling.style.display === "block") {
+          this.style.listStyleImage = "url('../images/elements/arrow-right-12px.png')";
+          sibling.style.display = "none";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, false )
+          }
+        } else {
+          this.style.listStyleImage = "url('../images/elements/arrow-down-12px.png')";
+          sibling.style.display = "block";
+
+          if (this.id !== ""){
+            toggleReferencedSection(this.id, true )
+          }
+        }
+      }
+
+    });
+  }
+}
+
+function addListenersToSections()
+{
+  var coll = document.getElementsByClassName("section-toggle");
+  var i;
+
+  // Apply exapandable (arrows) to all menuitems with a sibling
+  for (i = 0; i < coll.length; i++) {
+    var sibling = coll[i].nextElementSibling;
+
+    if(sibling!==null){
+      if(sibling.classList.contains("section-toggle-start-open")){
+        coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
+      } else if (sibling.classList.contains("section-toggle-start-closed")){
+        coll[i].style.backgroundImage = "url('../images/elements/circle-plus.png')";
+        sibling.style.display = "none";
+      } else {
+        //console.log( "addListenersToSections(): No Toggle style foun; default to open");
+        coll[i].style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        sibling.style.display = "block";
+      }
+    }
+
+    // Set "click" event listener on all menuitems
+    coll[i].addEventListener("click", function() {
+      var sibling = this.nextElementSibling;
+      // toggle menu open/close states
+      if(sibling!==null){
+        //console.log("sibling.style.display: ["+sibling.style.display+"]");
+        if (sibling.style.display !== "none") {
+          //console.log("collapsing");
+          sibling.style.display = "none";
+          this.style.backgroundImage = "url('../images/elements/circle-plus.png')";
+        } else {
+          //console.log("expanding");
+          sibling.style.display = "block";
+          this.style.backgroundImage = "url('../images/elements/circle-minus.png')";
+        }
+      }
+
+    });
+  }
+}
+
+/*
+ *  Debug:
+ */
+// Use: console.log(dumpCSSText(this));
+// function dumpCSSText(element){
+//   var s = '';
+//   var o = getComputedStyle(element);
+//   for(var i = 0; i < o.length; i++){
+//     s+= ">> " + o[i] + ':' + o.getPropertyValue(o[i])+';\n';
+//   }
+//   return s;
+// }
+
+        </script>
+    </head>
+    <!-- Once all page elements are included, register event hooks -->
+    <body onload="applyCollapsible()">
+        <script src="js/main.min.js"></script>
+        <div class="header">
+
+    <a class="header-section-logo" href="/">
+    </a>
+    <div class="header-section-text-links">
+        <div class="header-row-text-links">
+            <a class="header-text-link" href="/documentation.html">Documentation</a>
+            <a class="header-text-link" href="/community.html">Community</a>
+            <a class="header-text-link" href="/downloads.html">Downloads</a>
+        </div>
+    </div>
+    <div class="header-section-social-icons">
+        <div class="header-row-social-icons">
+            <a class="header-button-icon" style="order: 7;" href="https://github.com/apache?q=openwhisk" title="Apache OpenWhisk project repositories on GitHub">
+                <img class="header-icon-image" alt="Github" src="/images/icons/icon-github-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 6;" href="slack.html" title="Apache OpenWhisk on Slack">
+                <img class="header-icon-image" alt="Slack" src="/images/icons/icon-slack-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 5;" href="https://twitter.com/search?q=openwhisk" title="Apache OpenWhisk on Twitter">
+                <img class="header-icon-image" alt="Twitter" src="/images/icons/icon-twitter-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 4;" href="https://medium.com/openwhisk" title="Apache OpenWhisk on Medium">
+                <img class="header-icon-image" alt="Medium" src="/images/icons/icon-medium-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 3;" href="https://www.youtube.com/channel/UCbzgShnQk8F43NKsvEYA1SA" title="Apache OpenWhisk on YouTube">
+                <img class="header-icon-image" alt="YouTube" src="/images/icons/icon-youtube-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 2;" href="http://stackoverflow.com/questions/tagged/openwhisk" title="Apache OpenWhisk on Stack Overflow">
+                <img class="header-icon-image" alt="Overflow" src="/images/icons/icon-stack-overflow-white.svg">
+            </a>
+            <a class="header-button-icon" style="order: 1;" href="http://www.slideshare.net/OpenWhisk" title="Apache OpenWhisk on SlideShare">
+                <img class="header-icon-image" alt="SlideShare" src="/images/icons/icon-slideshare-white.svg">
+            </a>
+        </div>
+    </div>
+</div>
+
+        <!--
+# Licensed to the Apache Software Foundation (ASF) under one or more contributor
+# license agreements; and to You under the Apache License, Version 2.0.
+-->
+<div id="whiskIndexedLayout">
+
+    <!-- Community Index -->
+    <div id="whiskIndex">
+        <ul>
+            <li><a href="#downloads">Downloads</a></li>
+
+            <!-- Versioning -->
+            <li><a href="#versioning">Versioning</a></li>
+
+            <!-- Downloads -->
+            <li class="index-menu-toggle"><a href="#apache-releases">Apache Releases</a></li>
+            <ul class="index-menuitems">
+                <li><a href="#verifying">Verifying</a></li>
+                <li><a href="#keys">Keys</a></li>
+                <li><a href="#component-releases">Component Releases</a></li>
+            </ul>
+
+            <!-- Nightly and incremental builds -->
+            <li class="index-menu-toggle"><a href="#developer-builds">Developer Builds</a></li>
+
+        </ul>
+    </div>
+
+    <section id="whiskNodes">
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="downloads"></a>
+                <h2>Downloads</h2>
+                <div class="collapsible-content">
+                    <p>This page contains links to the official project source code downloads by release.</p>
+                </div>
+            </div>
+        </main>
+
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="versioning"></a>
+                <h3>Versioning</h3>
+                <p>Apache OpenWhisk uses semantic versioning. Version numbers
+                  use the form <code>major.minor.incremental-build</code> and
+                  are incremented as follows:</p>
+                    <ul>
+                        <li><em>major version</em>: for incompatible API changes.</li>
+                        <li><em>minor version</em>: for new functionality added in a backward-compatible manner.</li>
+                        <li><em>incremental version</em>: for forward-compatible bug fixes.</li>
+                        <li><em>build</em>: optional postfix to distinguish intermediate builds.</li>
+                    </ul>
+            </div>
+        </main>
+
+        <main class="doc">
+            <div class="content">
+                <a class="indexable" id="apache-releases"></a>
+                <h3>Apache Releases</h3>
+                <p>The Apache OpenWhisk project provides official releases of
+                  source code, by component groupings, as TAR compressed
+                  archives files denoted by the <em>.tar.gz</em> extension)
+                  in accordance with the Apache Software Foundation (ASF)
+                  <a style="font-weight:normal;" href="http://www.apache.org/legal/release-policy.html">
+                    release policy</a>.
+                </p>
+                <p>Developers who wish to use nightly builds or interim builds
+                  should read about them below under
+                  <a style="font-weight:normal;" href="#developer-builds">Developer Builds</a>.
+                </p>
+                <p>
+                    Older releases are archived at
+                    <a style="font-weight:normal;" href="http://archive.apache.org/dist/incubator/openwhisk/">archive.apache.org (incubator releases)</a>
+                    and 
+                    <a style="font-weight:normal;" href="http://archive.apache.org/dist/openwhisk/">archive.apache.org</a>.
+                </p>
+                <a class="indexable" id="verifying"></a>
+                <h4>Verifying</h4>
+                <p>As an Apache project, all downloaded files are signed by a
+                  project Release Manager and can be verified following these
+                  instructions:</p>
+                <ul>
+                    <li><a href="https://www.apache.org/info/verification">How to verify downloaded files</a></li>
+                </ul>
+
+                <a class="indexable" id="keys"></a>
+                <h4>Keys</h4>
+                <p>You can access the <a href="https://downloads.apache.org/openwhisk/KEYS">Release Keys</a> to verify the release artifacts.</p>
+
+                <a class="indexable" id="unified-releases"></a>
+                <h4>Unified Releases</h4>
+                <p>A working OpenWhisk system combines a number of
+                software components including action runtimes, CLI
+                tools, the core platform, the package catalog,
+                event providers, and deployment packaging.  The project
+                intends to start making time-based unified releases in
+                the near future. When available, these will be the
+                primary way for users to install a coherent OpenWhisk
+                system on their own machines.</p>
+
+                <a class="indexable" id="component-releases"></a>
+                <h4>Component Releases</h4>
+                <p>Individual downloads of the latest released version of each OpenWhisk component are available.  We group the components by their role in the platform.</p>
+                <p>Please click on a platform role to see the individual downloadable components:</p>
+                <h5 class="section-toggle section-toggle-start-open">Core System</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
+                      <div class="component-releases-structure theme-deeper-sea-green">
+                        <p><ctitle>OpenWhisk</ctitle>Core OpenWhisk Platform Components.</p>
+                        <div class="component-release-artifact-list border-deeper-sea-green">
+                          <version>1.0.0</version>
+                          <a href="https://www.apache.org/dyn/closer.cgi/openwhisk/OpenWhisk-1.0.0-sources.tar.gz">
+                            Source code</a>
+                          <a href="https://downloads.apache.org/openwhisk/OpenWhisk-1.0.0-sources.tar.gz.sha512">SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/OpenWhisk-1.0.0-sources.tar.gz.asc">PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sea-green">
+                        <p><ctitle>OpenWhisk API Gateway</ctitle>A performant, OpenWhisk-enabled API Gateway based on Openresty and NGINX.</p>
+                        <div class="component-release-artifact-list border-deeper-sea-green">
+                          <version>1.0.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-apigateway-1.0.0-sources.tar.gz">Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-apigateway-1.0.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-apigateway-1.0.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="section-toggle section-toggle-start-open ">Action Runtimes</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                   <div class="flow-columns">
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Docker</ctitle>The Apache OpenWhisk Runtime SDK for building Docker “blackbox" runtimes.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.14.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-docker-1.14.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-docker-1.14.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-docker-1.14.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Dotnet</ctitle>Supports functions written for .NET Core v2.2 and v3.1.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.15.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-dotnet-1.15.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-dotnet-1.15.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-dotnet-1.15.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Go</ctitle>Supports functions written for GoLang v1.13 and v1.15.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.16.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-go-1.16.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-go-1.16.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-go-1.16.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Java</ctitle>Supports functions written for Java 8 (OpenJDK 8, JVM OpenJ9).</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.15.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-java-1.15.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-java-1.15.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-java-1.15.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Node.js</ctitle>Supports functions written for NodeJS v10, v12 or v14.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.16.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-nodejs-1.16.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-nodejs-1.16.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-nodejs-1.16.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime PHP</ctitle>Supports functions written for PHP v7.2, v7.3 or v7.4</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.15.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-php-1.15.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-php-1.15.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-php-1.15.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Python</ctitle>Supports functions written for Python v3.6 and v3AI which includes AI library support.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.15.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-python-1.15.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-python-1.15.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-python-1.15.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Ruby</ctitle>Supports functions written for Ruby v2.5 and v2.6.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.15.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-ruby-1.15.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-ruby-1.15.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-ruby-1.15.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Rust</ctitle>Supports functions written for Rust v1.34.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.1.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-rust-1.1.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-rust-1.1.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-rust-1.1.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-sky-blue">
+                        <p><ctitle>OpenWhisk Runtime Swift</ctitle>Supports functions written for Swift v4.1, v4.2 and v5.1.</p>
+                        <div class="component-release-artifact-list border-deeper-sky-blue">
+                          <version>1.15.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-runtime-swift-1.15.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-swift-1.15.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-runtime-swift-1.15.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                   </div>
+                  </div>
+                </div>
+
+                <h5 class="section-toggle section-toggle-start-open ">Tools for Developers</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
+                      <div class="component-releases-structure theme-darkgoldenrod">
+                        <p><ctitle>OpenWhisk CLI</ctitle>OpenWhisk command-line interface.</p>
+                        <div class="component-release-artifact-list border-darkgoldenrod">
+                          <version>1.1.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-cli-1.1.0-sources.tar.gz">Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-cli-1.1.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-cli-1.1.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-darkgoldenrod">
+                        <p><ctitle>OpenWhisk Whisk Deploy</ctitle>Client utility to deploy, configure and manage OpenWhisk applications and packages with a single YAML Manifest file.</p>
+                        <div class="component-release-artifact-list border-darkgoldenrod">
+                          <version>1.1.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-wskdeploy-1.1.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-wskdeploy-1.1.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-wskdeploy-1.1.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-darkgoldenrod">
+                        <p><ctitle>OpenWhisk wskdebug</ctitle>Debugging and live development tool for OpenWhisk</p>
+                        <div class="component-release-artifact-list border-darkgoldenrod">
+                          <version>1.3.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-wskdebug-1.3.0-sources.tar.gz">Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-wskdebug-1.3.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-wskdebug-1.3.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="section-toggle section-toggle-start-open ">Package Catalog and Composer</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
+                      <div class="component-releases-structure theme-deeper-aquamarine">
+                        <p><ctitle>OpenWhisk Catalog</ctitle>Package catalogs of OpenWhisk, which provides an easy way to enhance your application with useful capabilities, and to access external services in the ecosystem.</p>
+                        <div class="component-release-artifact-list border-deeper-aquamarine">
+                          <version>0.11.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-catalog-0.11.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-catalog-0.11.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-catalog-0.11.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-aquamarine">
+                        <p><ctitle>OpenWhisk Composer</ctitle>Composer is a new programming model for composing cloud functions built on OpenWhisk</p>
+                        <div class="component-release-artifact-list border-deeper-aquamarine">
+                          <version>0.12.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-composer-0.12.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-composer-0.12.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-composer-0.12.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="section-toggle section-toggle-start-open ">Client Libraries</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
+
+                      <div class="component-releases-structure theme-deeper-aquamarine">
+                        <p><ctitle>OpenWhisk Client Go</ctitle>OpenWhisk client library in Go.</p>
+                        <div class="component-release-artifact-list border-deeper-aquamarine">
+                          <version>1.1.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-client-go-1.1.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-client-go-1.1.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-client-go-1.1.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-deeper-aquamarine">
+                        <p><ctitle>OpenWhisk Client JS</ctitle>JavaScript client library for the OpenWhisk platform</p>
+                        <div class="component-release-artifact-list border-deeper-aquamarine">
+                          <version>3.21.3</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-client-js-3.21.3-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-client-js-3.21.3-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-client-js-3.21.3-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="section-toggle section-toggle-start-open ">Provider Packages</h5>
+                <div class="section-start-open">
+                  <div class="content">
+                    <div class="flow-columns">
+                      <div class="component-releases-structure theme-darksalmon">
+                        <p><ctitle>OpenWhisk Package Alarms</ctitle>Apache OpenWhisk package that can be used to create periodic, time-based alarms </p>
+                        <div class="component-release-artifact-list border-darksalmon">
+                          <version>2.2.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-package-alarms-2.2.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-package-alarms-2.2.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-package-alarms-2.2.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-darksalmon">
+                        <p><ctitle>OpenWhisk Package Cloudant</ctitle>Apache OpenWhisk package that can be used to interact with a Cloudant database</p>
+                        <div class="component-release-artifact-list border-darksalmon">
+                          <version>2.0.0-incubating</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/incubating/openwhisk-package-cloudant-2.0.0-incubating-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/incubating/openwhisk-package-cloudant-2.0.0-incubating-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/incubating/openwhisk-package-cloudant-2.0.0-incubating-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+
+                      <div class="component-releases-structure theme-darksalmon">
+                        <p><ctitle>OpenWhisk Package Kafka</ctitle>Apache OpenWhisk package for communicating with Kafka</p>
+                        <div class="component-release-artifact-list border-darksalmon">
+                          <version>2.1.0</version>
+                          <a
+                            href="https://www.apache.org/dyn/closer.cgi/openwhisk/openwhisk-package-kafka-2.1.0-sources.tar.gz">
+                            Source code</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-package-kafka-2.1.0-sources.tar.gz.sha512">
+                            SHA-512 checksum</a>
+                          <a
+                            href="https://downloads.apache.org/openwhisk/openwhisk-package-kafka-2.1.0-sources.tar.gz.asc">
+                            PGP signature</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </main>
+
+      <main class="doc">
+        <div class="content">
+          <a class="indexable" id="developer-builds"></a>
+          <h3>Developer Builds</h3>
+          <p>Most of the Apache OpenWhisk project component repositories
+            are configured within GitHub to automatically generate interim
+            builds (not
+            <a href="#apache-releases">official release builds</a>)
+            for each merged Pull Request (PR) and/or on
+            a nightly basis.  These builds, by default, are tagged
+            <b><em>'nightly'</em></b> and appear under their respective GitHub
+            component's release tab and are intended for developer
+            evaluation and testing only.
+          </p>
+          <p>In some special cases,
+            Committers on the project may choose to use GitHub to tag
+            certain builds as they become closer to being Release Candidate
+            (RC) builds.  However, <em>any build tagged within GitHub with
+            either 'nightly' or any other tag <strong>do NOT have
+            official Apache project release status</strong>.</em>
+            All official Apache OpenWhisk release builds
+            undergo a rigorous process to be approved and are linked
+            <a style="font-weight:normal;" href="#apache-releases">above</a>.
+          </p>
+          <p>To be clear, <strong>GitHub "releases" are not official
+            Apache OpenWhisk project releases.</strong>
+          </p>
+        </div>
+      </main>
+
+    </section>
+</div>
+
+        <!--
+/*
+ *   Required ASF website links (scanned)
+ *
+ *   Name: Regex: URL
+ *   ====  =====  ===
+ *   Foundation:  apache|asf|foundation:                        http://www.apache.org/
+ *   Events:      ^https?://.*apache.org/events/current-event:  See: https://www.apache.org/events/README.txt
+ *   License:     ^https?://.*apache.org/licenses/$:            http://www.apache.org/licenses/
+ *   Thanks:      ^https?://.*apache.org/foundation/thanks:     http://www.apache.org/foundation/thanks.html
+ *   Security:    ^https?://.*apache.org/.*[Ss]ecurity:         http://www.apache.org/security/
+ *   Sponsorship: ^https?://.*apache.org/foundation/sponsorship http://www.apache.org/foundation/sponsorship.html
+ *   Trademarks:  \btrademarks\b All project or product homepages must feature a prominent trademark attribution of all applicable Apache trademarks.
+ *   Copyright:   ((Copyright|©).*apache|apache.*(Copyright|©)): All website content SHOULD include a copyright notice for the ASF.
+ *   Image:       .   Projects SHOULD include a 212px wide copy of their logo in https://www.apache.org/img/ to be included in ASF homepage.
+ *                    See: https://www.apache.org/img/
+ */
+-->
+
+<footer class="footer light-text">
+  <main class="footer-row">
+    <div>
+        <div class="footer-row-text-links">
+            <a class="" href="https://www.apache.org/">Apache&nbsp;Software&nbsp;Foundation</a>
+            <a class="" href="https://apache.org/events/current-event">Events</a>
+            <a class="" href="https://www.apache.org/licenses/">License</a>
+            <a class="" href="security.html">Security</a>
+            <a class="" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+            <a class="" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+        </div>
+    </div>
+  </main>
+  <main class="footer-row">
+    <div>
+      Apache OpenWhisk, OpenWhisk, Apache, the Apache feather logo, and
+      the Apache OpenWhisk project logo are either
+      <a href="trademarks.html">registered trademarks</a> or
+      <a href="trademarks.html">trademarks</a>
+      of The Apache Software Foundation in the United States and other countries.
+      See <a href="trademarks.html">guidance</a> on use of Apache OpenWhisk trademarks.
+      All other marks mentioned may be trademarks or registered trademarks
+      of their respective owners.
+    </div>
+  </main>
+  <main class="footer-row">
+      Copyright © 2016-present The Apache Software Foundation,
+      Licensed under the Apache License, Version 2.0.
+  </main>
+</footer>
+
+    </body>
+</html>
