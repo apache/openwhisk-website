@@ -19,7 +19,7 @@
 
 # Apache OpenWhisk Website
 
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0) [![Build Status](https://travis-ci.org/apache/openwhisk-website.svg?branch=master)](https://travis-ci.org/apache/openwhisk-website)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0) [![Build Status](https://travis-ci.com/apache/openwhisk-website.svg?branch=master)](https://travis-ci.com/apache/openwhisk-website)
 
 Apache OpenWhisk is a cloud-first distributed event-based programming service. It provides a programming model to upload event handlers to a cloud service, and register the handlers to respond to various events.
 

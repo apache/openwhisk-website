@@ -21,3 +21,7 @@ cache: bundler # caching bundler gem packages will speed up build
 # Optional: disable email notifications about the outcome of your builds
 notifications:
   email: false
+  webhooks:
+    urls:
+      # travis2slack webhook to enable DMs on openwhisk-team.slack.com to PR authors with TravisCI results
+      secure: "u2xi1toMPvuXGw+/R7X8eLA37N+CNDq2/DPpwo5Qs1H3hAJ9yQOfzCgSmTOxvXj3bkLXbIECkSAWNLGH8zAqHAidh7IYKBpnPeB/IfGbqv7N4ZWYYIhpt+ONMpbopnfDHXvk5sk3/XhNMZa4Ctx+7vq3XrWnDQzq9LFfy6ZInaecNNXX4YL5H3lppJbpjWMZkdKUmM3RvXQ+seWOcH6MC6Dc4Lrk4mdcFUIr+TJtSjUCtbrwUSsaHgiWOwZgW8OiM3daKQ5WjO+QID/vyjnnNzeTmCNW4+617rQVKaTSdBoGMFbna4hGqzMNo298FXBd8qziQHYJmpKSt1wHJRXugaBIFj5EiX/jLxRcPBctoVQK3ZXCUGWr42aDwm6DUqwmln+IKo/3OFgG23SrdOWpD1WVXBBTl/JQ8nueU27IRgIsqN6/FPmaWmck1eXAqAablxNkS4GSatHrDMeczcIzG1hnHOnQz/UBi66iI4he34TIfgKjB8nsU2KGKMe6xUDJ2qkv2Gln1gLlOCCCvsrGDl+kOYrplQGmElN7AdWZ1SD18x6bZbYvxtw6K0KGLz6rF/xw9qOzsX7kRcxhYaya+9lpuTK86qOtXscEVSpPPdBgGtaXIwunWmAG8wBmHKwUJ/2wX/IOSm6NTklqDyQg7/zv2I3p/R/vjB9tArRHtBk="
