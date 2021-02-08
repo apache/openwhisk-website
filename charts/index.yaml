@@ -17,6 +17,6 @@ entries:
     name: openwhisk
     type: application
     urls:
-    - https://openwhisk.apache.org/charts/openwhisk-1.0.0.tgz
+    - https://github.com/apache/openwhisk-deploy-kube/releases/download/1.0.0/openwhisk-1.0.0.tgz
     version: 1.0.0
 generated: "2021-02-05T18:55:49.20723-05:00"
