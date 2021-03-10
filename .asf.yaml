@@ -19,14 +19,14 @@ github:
   description: "Apache OpenWhisk website (openwhisk.apache.org) content; built using Jekyll"
   homepage: https://openwhisk.apache.org/
   labels:
-  - openwhisk
-  - apache
-  - serverless
-  - faas
-  - functions-as-a-service
-  - cloud
-  - serverless-architectures
-  - serverless-functions
-  - docker
-  - kubernetes
-  - functions
+    - openwhisk
+    - apache
+    - serverless
+    - faas
+    - functions-as-a-service
+    - cloud
+    - serverless-architectures
+    - serverless-functions
+    - docker
+    - kubernetes
+    - functions

@@ -11,8 +11,8 @@ script: ./bin/test
 
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-  - DISABLE_EXTERNAL_SITE_CHECK=true # speeds up installation of html-proofer
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+    - DISABLE_EXTERNAL_SITE_CHECK=true # speeds up installation of html-proofer
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
