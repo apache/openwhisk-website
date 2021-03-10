@@ -9,7 +9,7 @@ npm install
 echo "$ npm run build:js"
 npm run build:js
 
-# build site with jekyll
+# build site with Jekyll
 echo "$ bundle exec jekyll build"
 bundle exec jekyll build
 
