@@ -8,4 +8,3 @@ packages:
                         return { greeting: `Hello ${name}!` };
                     }
                 runtime: nodejs:10
-

@@ -39,8 +39,8 @@ defaults:
 # Build settings
 markdown: kramdown
 sass:
-    sass_dir: _scss
-    style: compressed
+  sass_dir: _scss
+  style: compressed
 gems:
   - jekyll-feed
 exclude:
