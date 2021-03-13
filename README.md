@@ -115,7 +115,7 @@ Current Jenkins build status can be checked here:
 
 ### Issues
 
-Report website bugs, ask questions and request features [here on GitHub](../../issues).
+Report website bugs, ask questions and request features [here on GitHub](https://github.com/apache/openwhisk-website/issues).
 
 You can also join our slack domain and chat with developers. Please visit here to sign up:
 [https://openwhisk.apache.org/slack.html](https://openwhisk.apache.org/slack.html)
