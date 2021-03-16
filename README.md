@@ -29,7 +29,10 @@ Apache OpenWhisk is a cloud-first distributed event-based programming service. I
 
 - Download and install Node.js (recommend v12 LTS): see [https://nodejs.org/](https://nodejs.org/)
 - Download and install NPM (recommend v6.14 latest): see [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
-- Download and install Ruby (recommend v2.7 stable): see [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
+- Download and install Ruby (recommend v2.7.2 stable): see [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
+    > **Note** Currently, the website's Jekyll version will not compile with Ruby version 3 or higher.
+    - If you need to manage multiple Ruby versions, you may use [https://github.com/rbenv/rbenv](https://github.com/rbenv/rbenv). See [Using rbenv](#using-rbenv) below.
+
 
 ```sh
 # Verify Node and Node Package Manager are installed
@@ -95,6 +98,32 @@ for example, update "?v1.12" to "?v1.13".
 
 ```html
 <link rel="stylesheet" href="{{ site.github.url }}/css/main-v1.css?v=1.13">
+```
+
+## Using `rbenv`
+
+If you need to maintain your existing system Ruby version, you can use the [https://github.com/rbenv/rbenv](https://github.com/rbenv/rbenv) utility.
+
+The project already has a `.ruby_version` file which indicates it requires Ruby 2.7.2.  All you need do is assure once `rbenv` is installed that you use the following commands from the bash shell you wish to compile the project:
+
+```sh
+$ rbenv init
+$ rbenv install 2.7.2
+$ rbenv global 2.7.2
+$ eval "$(rbenv init -)"
+```
+
+When opening subsequent bash terminals, you need only issue the following command (as `rbenv init` has updated your system `.bash_profile`):
+
+```sh
+eval "$(rbenv init -)"
+```
+
+You can verify the version changed by using:
+
+```sh
+$ rbenv global
+$ ruby -v
 ```
 
 ## Troubleshooting
