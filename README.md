@@ -102,9 +102,9 @@ for example, update "?v1.12" to "?v1.13".
 
 ## Using `rbenv`
 
-If you need to maintain your existing system Ruby version, you can use the [https://github.com/rbenv/rbenv](https://github.com/rbenv/rbenv) utility.
+If you need to maintain your existing system Ruby version, you can use the [https://github.com/rbenv/rbenv](https://github.com/rbenv/rbenv) utility to dynamically switch to the version this project requires.
 
-The project already has a `.ruby_version` file which indicates it requires Ruby 2.7.2.  All you need do is assure once `rbenv` is installed that you use the following commands from the bash shell you wish to compile the project:
+The project already has a `.ruby_version` file which indicates it requires Ruby 2.7.2.  All you need do is assure once `rbenv` is installed that you issue the following commands (one time) from the bash shell you wish to compile the project:
 
 ```sh
 $ rbenv init
