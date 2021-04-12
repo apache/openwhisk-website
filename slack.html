@@ -248,7 +248,7 @@ function addListenersToSections()
     var btn = $("button");
     var res = $("#result");
     var email = $('#inputEmail');
-    var actionUrl = "https://js-http.nimbella.io/github.com/apache/openwhisk-website/blob/slack/apis/slack-invite.js?__c=N0_25b48535e252995f2f0960d9002bf55f_0_45725642996e63884cf84425ac19b3db85d5cfe6037cbb39dba06a2dfbff22e551827e951cc36405f048fb2d41f36edfbab2fa9d852f629f7603017ed5a7ba70d5817eada2ba18535fb355e2b627fe5f89f2b1705491eb3418d153581644b4be_";
+    var actionUrl = "https://js-http.nimbella.io/github.com/apache/openwhisk-website/blob/master/apis/slack-invite.js?__c=N0_f11fa71538824fb94496633108113162_0_26bbc52c50f5018f978fc2e90357347a989c233a92b179ccab53724d1c56b25e2ae63957680e177ea54c172df5152ba4aaf55c7430d482779fd9e38cd9afd120bf9d8bb72bc45049f56ece78c42208369d56f34163f3909bdbce45fe1b6b5b65_";
     function handler() {
       var email = $("input")[0].value;
       $.get(actionUrl, { email: email, org: 'openwhisk-team' })
