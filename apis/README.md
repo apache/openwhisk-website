@@ -33,5 +33,5 @@ the encrypted value can be regenerated with the following Nimbella encryption AP
 replacing the placeholder `<token>` with the actual Slack App token.
 
 ```bash
-curl https://encrypt.nimbella.io/github.com/apache/openwhisk-website/blob/slack/apis/slack-invite.js?slacktoken=<token>
+curl https://encrypt.nimbella.io/github.com/apache/openwhisk-website/blob/master/apis/slack-invite.js?slacktoken=<token>
 ```
