@@ -699,8 +699,8 @@ function addListenersToSections()
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>brew update
-<span class="gp">$ </span>brew install wsk</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>brew update
+<span class="nv">$ </span>brew <span class="nb">install </span>wsk</code></pre></figure>
 
           </div>
           <p>Then you can invoke the OpenWhisk CLI by just
@@ -742,7 +742,7 @@ function addListenersToSections()
                   to your local <code>bin</code> directory:</p>
                     <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo mv <span class="o">[</span>full path to downloaded wsk executable] /usr/local/bin/wsk</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo mv</span> <span class="o">[</span>full path to downloaded wsk executable] /usr/local/bin/wsk</code></pre></figure>
 
                     </div>
                 </li>
@@ -770,7 +770,7 @@ function addListenersToSections()
         <div class="indented">
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk --help</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk <span class="nt">--help</span></code></pre></figure>
 
           </div>
         </div>
@@ -800,7 +800,7 @@ function addListenersToSections()
             authorization key to create the configuration file:</p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk property <span class="nb">set</span> --apihost API_HOST --auth AUTH_KEY --namespace guest</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk property <span class="nb">set</span> <span class="nt">--apihost</span> API_HOST <span class="nt">--auth</span> AUTH_KEY <span class="nt">--namespace</span> guest</code></pre></figure>
 
           </div>
           <p>The OpenWhisk CLI stores the properties set
@@ -811,7 +811,7 @@ function addListenersToSections()
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">export </span><span class="nv">WSK_CONFIG_FILE</span><span class="o">=</span>your-config-file</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">export </span><span class="nv">WSK_CONFIG_FILE</span><span class="o">=</span>your-config-file</code></pre></figure>
 
           </div>
 
@@ -820,7 +820,7 @@ function addListenersToSections()
             using the <code>wsk property get</code> command:</p>
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk property get</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk property get</code></pre></figure>
 
             </div>
         </div>
@@ -838,7 +838,7 @@ function addListenersToSections()
             <code>-v</code> (verbose) flag enabled.</p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk list -v</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk list <span class="nt">-v</span></code></pre></figure>
 
           </div>
           <p>You should see the full HTTP request and response headers
@@ -910,7 +910,7 @@ function addListenersToSections()
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy --help</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">--help</span></code></pre></figure>
 
           </div>
         </div>
@@ -940,16 +940,16 @@ function addListenersToSections()
             </p>
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloJS</span><span class="pi">:</span>
-                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">function main(args) {</span>
-                        <span class="no">const name = args &amp;&amp; args.name || "stranger";</span>
-                        <span class="no">return { greeting: `Hello ${name}!` };</span>
-                    <span class="no">}</span>
-                <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:10</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloJS</span><span class="pi">:</span>
+                <span class="na">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="s">function main(args) {</span>
+                        <span class="s">const name = args &amp;&amp; args.name || "stranger";</span>
+                        <span class="s">return { greeting: `Hello ${name}!` };</span>
+                    <span class="s">}</span>
+                <span class="na">runtime</span><span class="pi">:</span> <span class="s">nodejs:10</span></code></pre></figure>
 
             </div>
           </li>
@@ -961,7 +961,7 @@ function addListenersToSections()
 
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
             </div>
           </li>
@@ -1060,14 +1060,15 @@ function addListenersToSections()
               Create a file named <i>hello.js</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">args</span> <span class="o">&amp;&amp;</span> <span class="nx">args</span><span class="p">.</span><span class="nx">name</span> <span class="o">||</span> <span class="s2">"stranger"</span><span class="p">;</span>
-    <span class="k">return</span> <span class="p">{</span> <span class="na">greeting</span><span class="p">:</span> <span class="err">`</span><span class="nx">Hello</span> <span class="nx">$</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="o">!</span><span class="err">`</span> <span class="p">};</span>
-<span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+4
+</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">args</span> <span class="o">&amp;&amp;</span> <span class="nx">args</span><span class="p">.</span><span class="nx">name</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">stranger</span><span class="dl">"</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="na">greeting</span><span class="p">:</span> <span class="s2">`Hello </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">!`</span> <span class="p">};</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -1075,7 +1076,7 @@ function addListenersToSections()
               Create an action called <i>helloJS</i> using <i>hello.js</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloJS hello.js</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloJS hello.js</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1086,7 +1087,7 @@ function addListenersToSections()
               Invoke an action <i>helloJS</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJS --result --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloJS <span class="nt">--result</span> <span class="nt">--param</span> name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1110,23 +1111,24 @@ function addListenersToSections()
                   Create <i>manifest.yaml</i> with the following YAML content:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloJS</span><span class="pi">:</span>
-                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.js</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+5
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloJS</span><span class="pi">:</span>
+                <span class="na">function</span><span class="pi">:</span> <span class="s">hello.js</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                   Or
                   <p></p>
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1135,17 +1137,18 @@ function addListenersToSections()
 7
 8
 9
-10</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloJS</span><span class="pi">:</span>
-                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">function main(args) {</span>
-                        <span class="no">const name = args &amp;&amp; args.name || "stranger";</span>
-                        <span class="no">return { greeting: `Hello ${name}!` };</span>
-                    <span class="no">}</span>
-                <span class="s">runtime</span><span class="pi">:</span> <span class="s">nodejs:10</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+10
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloJS</span><span class="pi">:</span>
+                <span class="na">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="s">function main(args) {</span>
+                        <span class="s">const name = args &amp;&amp; args.name || "stranger";</span>
+                        <span class="s">return { greeting: `Hello ${name}!` };</span>
+                    <span class="s">}</span>
+                <span class="na">runtime</span><span class="pi">:</span> <span class="s">nodejs:10</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                 </li>
@@ -1153,7 +1156,7 @@ function addListenersToSections()
                   Run deployment with <i>wskdeploy</i>:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
                   </div>
                 </li>
@@ -1215,7 +1218,7 @@ function addListenersToSections()
               Create a file named <i>hello.go</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-go" data-lang="go"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-go" data-lang="go"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1229,22 +1232,23 @@ function addListenersToSections()
 12
 13
 14
-15</pre></td><td class="code"><pre><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+15
+</pre></td><td class="code"><pre><span class="k">package</span> <span class="n">main</span>
 
-</span><span class="k">import</span><span class="x"> </span><span class="s">"fmt"</span><span class="x">
+<span class="k">import</span> <span class="s">"fmt"</span>
 
-</span><span class="c">// Main function for the action</span><span class="x">
-</span><span class="k">func</span><span class="x"> </span><span class="n">Main</span><span class="p">(</span><span class="n">obj</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{})</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{}</span><span class="x"> </span><span class="p">{</span><span class="x">
-	</span><span class="n">name</span><span class="p">,</span><span class="x"> </span><span class="n">ok</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">obj</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="x">
-	</span><span class="k">if</span><span class="x"> </span><span class="o">!</span><span class="n">ok</span><span class="x"> </span><span class="p">{</span><span class="x">
-		</span><span class="n">name</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"stranger"</span><span class="x">
-	</span><span class="p">}</span><span class="x">
-	</span><span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"name=%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="x"> </span><span class="n">name</span><span class="p">)</span><span class="x">
-	</span><span class="n">msg</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{})</span><span class="x">
-	</span><span class="n">msg</span><span class="p">[</span><span class="s">"msg"</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"Hello, "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">name</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="s">"!"</span><span class="x">
-	</span><span class="k">return</span><span class="x"> </span><span class="n">msg</span><span class="x">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="c">// Main function for the action</span>
+<span class="k">func</span> <span class="n">Main</span><span class="p">(</span><span class="n">obj</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{})</span> <span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{}</span> <span class="p">{</span>
+	<span class="n">name</span><span class="p">,</span> <span class="n">ok</span> <span class="o">:=</span> <span class="n">obj</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+	<span class="k">if</span> <span class="o">!</span><span class="n">ok</span> <span class="p">{</span>
+		<span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span>
+	<span class="p">}</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s">"name=%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+	<span class="n">msg</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{})</span>
+	<span class="n">msg</span><span class="p">[</span><span class="s">"msg"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Hello, "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span>
+	<span class="k">return</span> <span class="n">msg</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -1252,7 +1256,7 @@ function addListenersToSections()
               Create an action <i>helloGo</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloGo hello.go</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloGo hello.go</code></pre></figure>
 
               </div>
             </li>
@@ -1260,7 +1264,7 @@ function addListenersToSections()
                 Invoke an action <i>helloGo</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloGo --result --param name gopher</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloGo <span class="nt">--result</span> <span class="nt">--param</span> name gopher</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1287,16 +1291,17 @@ function addListenersToSections()
                   Create <i>manifest.yaml</i> with the following YAML content:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloGo</span><span class="pi">:</span>
-                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.go</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+5
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloGo</span><span class="pi">:</span>
+                <span class="na">function</span><span class="pi">:</span> <span class="s">hello.go</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                 </li>
@@ -1304,7 +1309,7 @@ function addListenersToSections()
                   Run deployment with <i>wskdeploy</i>:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
                   </div>
                 </li>
@@ -1357,29 +1362,30 @@ function addListenersToSections()
             <li style="list-style-type: decimal">Create a file named <i>hello.py</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+8
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
     <span class="k">if</span> <span class="s">'name'</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="n">name</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span>
     <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span>
     <span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s">"greeting"</span><span class="p">:</span> <span class="n">greeting</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+    <span class="k">return</span> <span class="p">{</span><span class="s">"greeting"</span><span class="p">:</span> <span class="n">greeting</span><span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
             <li style="list-style-type: decimal">Create an action called <i>helloPy</i> using <i>hello.py</i>:
                 <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloPy hello.py</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloPy hello.py</code></pre></figure>
 
                 </div>
                 <div class="terminal">
@@ -1389,7 +1395,7 @@ function addListenersToSections()
             <li style="list-style-type: decimal">Invoke the <i>helloPy</i> action using command-line parameters:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPy --result --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloPy <span class="nt">--result</span> <span class="nt">--param</span> name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1409,23 +1415,24 @@ function addListenersToSections()
                 <li>Create <i>manifest.yaml</i> with the following YAML content:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloPy</span><span class="pi">:</span>
-                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.py</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+5
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloPy</span><span class="pi">:</span>
+                <span class="na">function</span><span class="pi">:</span> <span class="s">hello.py</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                   Or
                   <p></p>
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1439,22 +1446,23 @@ function addListenersToSections()
 12
 13
 14
-15</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloPy</span><span class="pi">:</span>
-                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">import sys</span>
-                    <span class="no">def main(dict):</span>
-                        <span class="no">if 'name' in dict:</span>
-                            <span class="no">name = dict['name']</span>
-                        <span class="no">else:</span>
-                            <span class="no">name = "stranger"</span>
-                        <span class="no">greeting = "Hello " + name + "!"</span>
-                        <span class="no">print(greeting)</span>
-                        <span class="no">return {"greeting": greeting}</span>
-                <span class="s">runtime</span><span class="pi">:</span> <span class="s">python:2</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+15
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloPy</span><span class="pi">:</span>
+                <span class="na">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="s">import sys</span>
+                    <span class="s">def main(dict):</span>
+                        <span class="s">if 'name' in dict:</span>
+                            <span class="s">name = dict['name']</span>
+                        <span class="s">else:</span>
+                            <span class="s">name = "stranger"</span>
+                        <span class="s">greeting = "Hello " + name + "!"</span>
+                        <span class="s">print(greeting)</span>
+                        <span class="s">return {"greeting": greeting}</span>
+                <span class="na">runtime</span><span class="pi">:</span> <span class="s">python:2</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                 </li>
@@ -1462,7 +1470,7 @@ function addListenersToSections()
                   Run deployment with <i>wskdeploy</i>:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
                   </div>
                 </li>
@@ -1517,7 +1525,7 @@ function addListenersToSections()
               Create a file named <i>Hello.java</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1533,24 +1541,25 @@ function addListenersToSections()
 14
 15
 16
-17</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
+17
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">JsonObject</span> <span class="nf">main</span><span class="o">(</span><span class="n">JsonObject</span> <span class="n">args</span><span class="o">){</span>
-        <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">JsonObject</span> <span class="nf">main</span><span class="o">(</span><span class="nc">JsonObject</span> <span class="n">args</span><span class="o">){</span>
+        <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
 
         <span class="k">try</span> <span class="o">{</span>
             <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">getAsJsonPrimitive</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">getAsString</span><span class="o">();</span>
-        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span><span class="o">;</span>
         <span class="o">}</span>
 
-        <span class="n">JsonObject</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JsonObject</span><span class="o">();</span>
+        <span class="nc">JsonObject</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JsonObject</span><span class="o">();</span>
         <span class="n">response</span><span class="o">.</span><span class="na">addProperty</span><span class="o">(</span><span class="s">"greeting"</span><span class="o">,</span> <span class="s">"Hello "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span><span class="o">);</span>
         <span class="k">return</span> <span class="n">response</span><span class="o">;</span>
     <span class="o">}</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -1564,15 +1573,15 @@ function addListenersToSections()
               <i>hello.jar</i> as follows
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>javac Hello.java
-<span class="gp">$ </span>jar cvf hello.jar Hello.class</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>javac Hello.java
+<span class="nv">$ </span>jar cvf hello.jar Hello.class</code></pre></figure>
 
               </div>
               <div>Please note that the current default JVM for OpenWhisk is Java 8. If you are using a newer version, you must specify that release version when you compile:
               </div>
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>javac --release 8 Hello.java</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>javac <span class="nt">--release</span> 8 Hello.java</code></pre></figure>
 
               </div>
             </li>
@@ -1580,12 +1589,12 @@ function addListenersToSections()
               Create an action called <i>helloJava</i> using <i>hello.jar</i> specifying the Java class where the `main` entry point you wish to invoke:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloJava hello.jar --main Hello</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloJava hello.jar <span class="nt">--main</span> Hello</code></pre></figure>
 
               </div>
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ok</span><span class="pi">:</span> <span class="s">created action helloJava</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">ok</span><span class="pi">:</span> <span class="s">created action helloJava</span></code></pre></figure>
 
               </div>
             </li>
@@ -1593,7 +1602,7 @@ function addListenersToSections()
               Invoke an action <i>helloJava</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloJava --result</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloJava <span class="nt">--result</span></code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1656,22 +1665,23 @@ function addListenersToSections()
               Create a file named <i>hello.php</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="cp">&lt;?php</span>
-<span class="k">function</span> <span class="nf">main</span><span class="p">(</span><span class="k">array</span> <span class="nv">$args</span><span class="p">)</span> <span class="o">:</span> <span class="k">array</span>
+8
+</pre></td><td class="code"><pre><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="n">main</span><span class="p">(</span><span class="kt">array</span> <span class="nv">$args</span><span class="p">)</span> <span class="p">:</span> <span class="kt">array</span>
 <span class="p">{</span>
     <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$args</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">??</span> <span class="s2">"stranger"</span><span class="p">;</span>
     <span class="nv">$greeting</span> <span class="o">=</span> <span class="s2">"Hello </span><span class="nv">$name</span><span class="s2">!"</span><span class="p">;</span>
     <span class="k">echo</span> <span class="nv">$greeting</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">[</span><span class="s2">"greeting"</span> <span class="o">=&gt;</span> <span class="nv">$greeting</span><span class="p">];</span>
-<span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -1679,7 +1689,7 @@ function addListenersToSections()
               Create an action called <i>helloPHP</i> using <i>hello.php</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloPHP hello.php</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloPHP hello.php</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1692,7 +1702,7 @@ function addListenersToSections()
               Invoke an action <i>helloPHP</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloPHP --result --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloPHP <span class="nt">--result</span> <span class="nt">--param</span> name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1717,23 +1727,24 @@ function addListenersToSections()
                   YAML content:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloPHP</span><span class="pi">:</span>
-                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.php</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+5
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloPHP</span><span class="pi">:</span>
+                <span class="na">function</span><span class="pi">:</span> <span class="s">hello.php</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                   Or
                   <p></p>
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1746,21 +1757,22 @@ function addListenersToSections()
 11
 12
 13
-14</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloPHP</span><span class="pi">:</span>
-                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">&lt;?php</span>
-                    <span class="no">function main(array $args) : array</span>
-                    <span class="no">{</span>
-                        <span class="no">$name = $args["name"] ?? "stranger";</span>
-                        <span class="no">$greeting = "Hello $name!";</span>
-                        <span class="no">echo $greeting;</span>
-                        <span class="no">return ["greeting" =&gt; $greeting];</span>
-                    <span class="no">}</span>
-                <span class="s">runtime</span><span class="pi">:</span> <span class="s">php:7.3</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+14
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloPHP</span><span class="pi">:</span>
+                <span class="na">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="s">&lt;?php</span>
+                    <span class="s">function main(array $args) : array</span>
+                    <span class="s">{</span>
+                        <span class="s">$name = $args["name"] ?? "stranger";</span>
+                        <span class="s">$greeting = "Hello $name!";</span>
+                        <span class="s">echo $greeting;</span>
+                        <span class="s">return ["greeting" =&gt; $greeting];</span>
+                    <span class="s">}</span>
+                <span class="na">runtime</span><span class="pi">:</span> <span class="s">php:7.3</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                 </li>
@@ -1768,7 +1780,7 @@ function addListenersToSections()
                   Run deployment with <i>wskdeploy</i>:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
                   </div>
                 </li>
@@ -1821,16 +1833,17 @@ function addListenersToSections()
               Create a file named <i>hello.rb</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">params</span> <span class="o">=</span> <span class="p">{})</span>
+5
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">params</span> <span class="o">=</span> <span class="p">{})</span>
   <span class="nb">name</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'stranger'</span>
   <span class="n">greeting</span> <span class="o">=</span> <span class="s2">"Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">!"</span>
   <span class="p">{</span> <span class="s2">"greeting"</span><span class="p">:</span> <span class="n">greeting</span> <span class="p">}</span>
-<span class="k">end</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -1838,7 +1851,7 @@ function addListenersToSections()
               Create an action called <i>hello_ruby</i> using <i>hello.rb</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create hello_ruby hello.rb</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create hello_ruby hello.rb</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1851,7 +1864,7 @@ function addListenersToSections()
               Invoke an action <i>hello_ruby</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke hello_ruby --result --param name World</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke hello_ruby <span class="nt">--result</span> <span class="nt">--param</span> name World</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -1873,23 +1886,24 @@ function addListenersToSections()
                   Create <i>manifest.yaml</i> with the following YAML content:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">hello_ruby</span><span class="pi">:</span>
-                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.rb</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+5
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">hello_ruby</span><span class="pi">:</span>
+                <span class="na">function</span><span class="pi">:</span> <span class="s">hello.rb</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                   Or
                   <p></p>
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1899,18 +1913,19 @@ function addListenersToSections()
 8
 9
 10
-11</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">hello_ruby</span><span class="pi">:</span>
-                <span class="s">code</span><span class="pi">:</span> <span class="pi">|</span>
-                    <span class="no">def main(params = {})</span>
-                      <span class="no">name = params["name"] || "stranger"</span>
-                      <span class="no">greeting = "Hello #{name}!"</span>
-                      <span class="no">{ "greeting": greeting }</span>
-                    <span class="no">end</span>
-                <span class="s">runtime</span><span class="pi">:</span> <span class="s">ruby:2.5</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+11
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">hello_ruby</span><span class="pi">:</span>
+                <span class="na">code</span><span class="pi">:</span> <span class="pi">|</span>
+                    <span class="s">def main(params = {})</span>
+                      <span class="s">name = params["name"] || "stranger"</span>
+                      <span class="s">greeting = "Hello #{name}!"</span>
+                      <span class="s">{ "greeting": greeting }</span>
+                    <span class="s">end</span>
+                <span class="na">runtime</span><span class="pi">:</span> <span class="s">ruby:2.5</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                 </li>
@@ -1918,7 +1933,7 @@ function addListenersToSections()
                   Run deployment with <i>wskdeploy</i>:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
                   </div>
                 </li>
@@ -1968,20 +1983,21 @@ function addListenersToSections()
               Create a file named <i>hello.swift</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7</pre></td><td class="code"><pre><span class="n">func</span> <span class="nf">main</span><span class="o">(</span><span class="nl">args:</span> <span class="o">[</span><span class="nl">String:</span><span class="n">Any</span><span class="o">])</span> <span class="o">-&gt;</span> <span class="o">[</span><span class="nl">String:</span><span class="n">Any</span><span class="o">]</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="n">let</span> <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="s">"name"</span><span class="o">]</span> <span class="n">as</span><span class="o">?</span> <span class="n">String</span> <span class="o">{</span>
+7
+</pre></td><td class="code"><pre><span class="n">func</span> <span class="nf">main</span><span class="o">(</span><span class="nl">args:</span> <span class="o">[</span><span class="nl">String:</span><span class="nc">Any</span><span class="o">])</span> <span class="o">-&gt;</span> <span class="o">[</span><span class="nl">String:</span><span class="nc">Any</span><span class="o">]</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="n">let</span> <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="s">"name"</span><span class="o">]</span> <span class="n">as</span><span class="o">?</span> <span class="nc">String</span> <span class="o">{</span>
         <span class="k">return</span> <span class="o">[</span> <span class="s">"greeting"</span> <span class="o">:</span> <span class="s">"Hello \(name)!"</span> <span class="o">]</span>
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
         <span class="k">return</span> <span class="o">[</span> <span class="s">"greeting"</span> <span class="o">:</span> <span class="s">"Hello swif4!"</span> <span class="o">]</span>
     <span class="o">}</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -1989,7 +2005,7 @@ function addListenersToSections()
               Create an action <i>helloSwift</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloSwift hello.swift</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloSwift hello.swift</code></pre></figure>
 
               </div>
             </li>
@@ -1997,7 +2013,7 @@ function addListenersToSections()
                 Invoke an action <i>helloSwift</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloSwift --result --param name Carlos</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloSwift <span class="nt">--result</span> <span class="nt">--param</span> name Carlos</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -2024,16 +2040,17 @@ function addListenersToSections()
                   Create <i>manifest.yaml</i> with the following YAML content:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="s">packages</span><span class="pi">:</span>
-    <span class="s">default</span><span class="pi">:</span>
-        <span class="s">actions</span><span class="pi">:</span>
-            <span class="s">helloSwift</span><span class="pi">:</span>
-                <span class="s">function</span><span class="pi">:</span> <span class="s">hello.swift</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+5
+</pre></td><td class="code"><pre><span class="na">packages</span><span class="pi">:</span>
+    <span class="na">default</span><span class="pi">:</span>
+        <span class="na">actions</span><span class="pi">:</span>
+            <span class="na">helloSwift</span><span class="pi">:</span>
+                <span class="na">function</span><span class="pi">:</span> <span class="s">hello.swift</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
                   </div>
                 </li>
@@ -2041,7 +2058,7 @@ function addListenersToSections()
                   Run deployment with <i>wskdeploy</i>:
                   <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wskdeploy -m manifest.yaml</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wskdeploy <span class="nt">-m</span> manifest.yaml</code></pre></figure>
 
                   </div>
                 </li>
@@ -2097,7 +2114,7 @@ function addListenersToSections()
               Create a C# project called <i>Apache.OpenWhisk.Example.Dotnet</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>dotnet new classlib -n Apache.OpenWhisk.Example.Dotnet -lang C#</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>dotnet new classlib <span class="nt">-n</span> Apache.OpenWhisk.Example.Dotnet <span class="nt">-lang</span> C#</code></pre></figure>
 
               </div>
             </li>
@@ -2105,7 +2122,7 @@ function addListenersToSections()
               Navigate to the <i>Apache.OpenWhisk.Example.Dotnet</i> directory:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd </span>Apache.OpenWhisk.Example.Dotnet</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>Apache.OpenWhisk.Example.Dotnet</code></pre></figure>
 
               </div>
             </li>
@@ -2113,7 +2130,7 @@ function addListenersToSections()
               Install the <i>Newtonsoft.Json</i> NuGet package as follows:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>dotnet add package Newtonsoft.Json -v 12.0.1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>dotnet add package Newtonsoft.Json <span class="nt">-v</span> 12.0.1</code></pre></figure>
 
               </div>
             </li>
@@ -2121,7 +2138,7 @@ function addListenersToSections()
               Create a file called <i>Hello.cs</i> with the following content:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -2139,26 +2156,27 @@ function addListenersToSections()
 16
 17
 18
-19</pre></td><td class="code"><pre><span class="n">using</span> <span class="n">System</span><span class="o">;</span>
-<span class="n">using</span> <span class="n">Newtonsoft</span><span class="o">.</span><span class="na">Json</span><span class="o">.</span><span class="na">Linq</span><span class="o">;</span>
+19
+</pre></td><td class="code"><pre><span class="n">using</span> <span class="nc">System</span><span class="o">;</span>
+<span class="n">using</span> <span class="nc">Newtonsoft</span><span class="o">.</span><span class="na">Json</span><span class="o">.</span><span class="na">Linq</span><span class="o">;</span>
 
-<span class="n">namespace</span> <span class="n">Apache</span><span class="o">.</span><span class="na">OpenWhisk</span><span class="o">.</span><span class="na">Example</span><span class="o">.</span><span class="na">Dotnet</span>
+<span class="n">namespace</span> <span class="nc">Apache</span><span class="o">.</span><span class="na">OpenWhisk</span><span class="o">.</span><span class="na">Example</span><span class="o">.</span><span class="na">Dotnet</span>
 <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span>
     <span class="o">{</span>
-        <span class="kd">public</span> <span class="n">JObject</span> <span class="nf">Main</span><span class="o">(</span><span class="n">JObject</span> <span class="n">args</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="nc">JObject</span> <span class="nf">Main</span><span class="o">(</span><span class="nc">JObject</span> <span class="n">args</span><span class="o">)</span>
         <span class="o">{</span>
             <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span><span class="o">;</span>
             <span class="k">if</span> <span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">ContainsKey</span><span class="o">(</span><span class="s">"name"</span><span class="o">))</span> <span class="o">{</span>
                 <span class="n">name</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="s">"name"</span><span class="o">].</span><span class="na">ToString</span><span class="o">();</span>
             <span class="o">}</span>
-            <span class="n">JObject</span> <span class="n">message</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JObject</span><span class="o">();</span>
-            <span class="n">message</span><span class="o">.</span><span class="na">Add</span><span class="o">(</span><span class="s">"greeting"</span><span class="o">,</span> <span class="k">new</span> <span class="n">JValue</span><span class="o">(</span><span class="err">$</span><span class="s">"Hello, {name}!"</span><span class="o">));</span>
+            <span class="nc">JObject</span> <span class="n">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JObject</span><span class="o">();</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">Add</span><span class="o">(</span><span class="s">"greeting"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">JValue</span><span class="o">(</span><span class="err">$</span><span class="s">"Hello, {name}!"</span><span class="o">));</span>
             <span class="k">return</span> <span class="o">(</span><span class="n">message</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
               </div>
             </li>
@@ -2166,7 +2184,7 @@ function addListenersToSections()
               Publish the project as follows:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>dotnet publish -c Release -o out</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>dotnet publish <span class="nt">-c</span> Release <span class="nt">-o</span> out</code></pre></figure>
 
               </div>
             </li>
@@ -2174,8 +2192,8 @@ function addListenersToSections()
               Publish the project as follows:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd </span>out
-<span class="gp">$ </span>zip -r -0 helloDotNet.zip <span class="k">*</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>out
+<span class="nv">$ </span>zip <span class="nt">-r</span> <span class="nt">-0</span> helloDotNet.zip <span class="k">*</span></code></pre></figure>
 
               </div>
             </li>
@@ -2183,7 +2201,7 @@ function addListenersToSections()
               Create an action <i>helloDotNet</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create helloDotNet helloDotNet.zip --main Apache.OpenWhisk.Example.Dotnet::Apache.OpenWhisk.Example.Dotnet.Hello::Main --kind dotnet:2.2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create helloDotNet helloDotNet.zip <span class="nt">--main</span> Apache.OpenWhisk.Example.Dotnet::Apache.OpenWhisk.Example.Dotnet.Hello::Main <span class="nt">--kind</span> dotnet:2.2</code></pre></figure>
 
               </div>
             </li>
@@ -2191,7 +2209,7 @@ function addListenersToSections()
                 Invoke an action <i>helloDotNet</i>:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke helloDotNet --result --param name Shawn</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke helloDotNet <span class="nt">--result</span> <span class="nt">--param</span> name Shawn</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -2271,7 +2289,7 @@ function addListenersToSections()
             Get a list of packages:
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package list /whisk.system</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk package list /whisk.system</code></pre></figure>
 
             </div>
           </li>
@@ -2279,7 +2297,7 @@ function addListenersToSections()
             Get a list of entities in a package:
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package get --summary /whisk.system/&lt;package-name&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk package get <span class="nt">--summary</span> /whisk.system/&lt;package-name&gt;</code></pre></figure>
 
             </div>
           </li>
@@ -2298,7 +2316,7 @@ function addListenersToSections()
                 Get a description of the /whisk.system/samples/greeting action:
                 <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action get --summary /whisk.system/samples/greeting</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action get <span class="nt">--summary</span> /whisk.system/samples/greeting</code></pre></figure>
 
                 </div>
                 <div class="terminal">
@@ -2311,7 +2329,7 @@ function addListenersToSections()
                 Invoking action in a package:
                 <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result /whisk.system/samples/greeting</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke <span class="nt">--result</span> /whisk.system/samples/greeting</code></pre></figure>
 
                 </div>
                 <div class="terminal">
@@ -2326,7 +2344,7 @@ function addListenersToSections()
                 Invoke the action with parameters:
                 <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke <span class="nt">--result</span> /whisk.system/samples/greeting <span class="nt">--param</span> name Bernie <span class="nt">--param</span> place Vermont</code></pre></figure>
 
                 </div>
                 <div class="terminal">
@@ -2345,7 +2363,7 @@ function addListenersToSections()
                 Creating and using package bindings:
                 <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package <span class="nb">bind</span> /whisk.system/samples valhallaSamples --param place Valhalla</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk package <span class="nb">bind</span> /whisk.system/samples valhallaSamples <span class="nt">--param</span> place Valhalla</code></pre></figure>
 
                 </div>
                 <div class="terminal">
@@ -2358,7 +2376,7 @@ function addListenersToSections()
                 Invoke an action in the package binding:
                 <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result valhallaSamples/greeting --param name Odin</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke <span class="nt">--result</span> valhallaSamples/greeting <span class="nt">--param</span> name Odin</code></pre></figure>
 
                 </div>
                 <div class="terminal">
@@ -2397,7 +2415,7 @@ function addListenersToSections()
               Create a trigger to send user location updates:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger create locationUpdate</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk trigger create locationUpdate</code></pre></figure>
 
               </div>
           </li>
@@ -2406,7 +2424,7 @@ function addListenersToSections()
               of triggers:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger list</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk trigger list</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -2418,7 +2436,7 @@ function addListenersToSections()
               Fire the trigger by specifying its name and parameters:
               <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger fire locationUpdate --param name Bob --param place NYC</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk trigger fire locationUpdate <span class="nt">--param</span> name Bob <span class="nt">--param</span> place NYC</code></pre></figure>
 
               </div>
               <div class="terminal">
@@ -2440,22 +2458,23 @@ function addListenersToSections()
             following <i>hello.js</i>.
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span><span class="na">payload</span><span class="p">:</span> <span class="s1">'Hello, '</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">' from '</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">place</span><span class="p">};</span>
-<span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+3
+</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="na">payload</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> from </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">place</span><span class="p">};</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
             </div>
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action create hello hello.js</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action create hello hello.js</code></pre></figure>
 
             </div>
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk action invoke --result hello --param name Bernie --param place Vermont</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk action invoke <span class="nt">--result</span> hello <span class="nt">--param</span> name Bernie <span class="nt">--param</span> place Vermont</code></pre></figure>
 
             </div>
             <div class="terminal">
@@ -2473,7 +2492,7 @@ function addListenersToSections()
             Create the rule (i.e., an association):
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk rule create myRule locationUpdate hello</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk rule create myRule locationUpdate hello</code></pre></figure>
 
             </div>
             <div class="terminal">
@@ -2487,7 +2506,7 @@ function addListenersToSections()
             Fire the <i>locationUpdate</i> trigger:
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk trigger fire locationUpdate --param name Bob --param place NYC</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk trigger fire locationUpdate <span class="nt">--param</span> name Bob <span class="nt">--param</span> place NYC</code></pre></figure>
 
             </div>
             <div class="terminal">
@@ -2498,7 +2517,7 @@ function addListenersToSections()
             Verify that the action was invoked by checking the activations list:
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk activation list --limit 2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk activation list <span class="nt">--limit</span> 2</code></pre></figure>
 
             </div>
             <div class="terminal">
@@ -2512,7 +2531,7 @@ abcd.... locationUpdate
             Retrieving the trigger activation record:
             <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk activation result 1234....</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk activation result 1234....</code></pre></figure>
 
             </div>
             <div class="terminal">
@@ -2547,7 +2566,7 @@ abcd.... locationUpdate
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>wsk package list /whisk.system</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wsk package list /whisk.system</code></pre></figure>
 
           </div>
           <div class="terminal">
@@ -3159,9 +3178,9 @@ abcd.... locationUpdate
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/apache/openwhisk.git
-<span class="gp">$ </span><span class="nb">cd </span>openwhisk
-<span class="gp">$ </span>./gradlew core:standalone:bootRun</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/apache/openwhisk.git
+<span class="nv">$ </span><span class="nb">cd </span>openwhisk
+<span class="nv">$ </span>./gradlew core:standalone:bootRun</code></pre></figure>
 
           </div>
           <p>
@@ -3180,8 +3199,8 @@ abcd.... locationUpdate
             <div class="terminal">
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">wsk property <span class="nb">set</span> <span class="se">\</span>
-  --apihost <span class="s1">'http://localhost:3233'</span> <span class="se">\</span>
-  --auth <span class="s1">'23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP'</span></code></pre></figure>
+  <span class="nt">--apihost</span> <span class="s1">'http://localhost:3233'</span> <span class="se">\</span>
+  <span class="nt">--auth</span> <span class="s1">'23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP'</span></code></pre></figure>
 
             </div>
             <p>
@@ -3208,9 +3227,9 @@ abcd.... locationUpdate
           </p>
           <div class="terminal">
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/apache/openwhisk-devtools.git
-<span class="gp">$ </span><span class="nb">cd </span>openwhisk-devtools/docker-compose
-<span class="gp">$ </span>make quick-start</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/apache/openwhisk-devtools.git
+<span class="nv">$ </span><span class="nb">cd </span>openwhisk-devtools/docker-compose
+<span class="nv">$ </span>make quick-start</code></pre></figure>
 
           </div>
           <p>
