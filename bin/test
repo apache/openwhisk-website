@@ -15,10 +15,10 @@ bundle exec jekyll build
 
 if [[ $DISABLE_EXTERNAL_SITE_CHECK = "true" ]]; then
   # run htmlproofer to test the site
-  echo "$ bundle exec htmlproofer ./_site --check-html --disable-external"
-  bundle exec htmlproofer ./_site --check-html --disable-external true
+  echo "$ bundle exec htmlproofer ./_site --disable-external"
+  bundle exec htmlproofer ./_site --disable-external true
 else
   # run htmlproofer to test the site
-  echo "$ bundle exec htmlproofer ./_site --check-html"
-  bundle exec htmlproofer ./_site --check-html
+  echo "$ bundle exec htmlproofer ./_site"
+  bundle exec htmlproofer ./_site
 fi
