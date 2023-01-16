@@ -2,23 +2,19 @@
 node("git-websites") {
   sh 'env'
   stage('Build') {
-    // Run jekyll
+    // Install tools and run jekyll to build site
     checkout scm
     sh '''
-    ls
-    pwd
-    env
     export
-    echo "Set ruby path to avoid writing to /usr directory"
-    export RUBY_PATH=${WORKSPACE}/shared/.rvm
-    export GEM_HOME=${RUBY_PATH}/gems
-    curl -sSL https://get.rvm.io | bash -s -- --path ${RUBY_PATH}
-    mkdir -p ${GEM_HOME}/gems
-    gem install  --install-dir ${GEM_HOME} jekyll bundler
-    export PATH=${GEM_HOME}/bin:$PATH
+    echo "Install rbenv into the workspace"
+    export RBENV_ROOT=${WORKSPACE}/shared/.rbenv
+    git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT}
+    eval "$(${RBENV_ROOT}/bin/rbenv init - sh)"
+    git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+    rbenv install
+    gem install bundler
     which bundle
-    bundle install --path ${GEM_HOME}
-    bundle
+    bundle install
     npm install
     npm run build:js
     bundle exec jekyll build --verbose
