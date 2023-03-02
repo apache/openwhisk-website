@@ -1064,7 +1064,7 @@ function addListenersToSections()
 2
 3
 4
-</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nf">main</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">args</span> <span class="o">&amp;&amp;</span> <span class="nx">args</span><span class="p">.</span><span class="nx">name</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">stranger</span><span class="dl">"</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">{</span> <span class="na">greeting</span><span class="p">:</span> <span class="s2">`Hello </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">!`</span> <span class="p">};</span>
 <span class="p">}</span>
@@ -1376,7 +1376,7 @@ function addListenersToSections()
     <span class="k">else</span><span class="p">:</span>
         <span class="n">name</span> <span class="o">=</span> <span class="s">"stranger"</span>
     <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">{</span><span class="s">"greeting"</span><span class="p">:</span> <span class="n">greeting</span><span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre></figure>
 
@@ -2461,7 +2461,7 @@ function addListenersToSections()
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">main</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nf">main</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span><span class="na">payload</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> from </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">place</span><span class="p">};</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre></figure>
