@@ -27,11 +27,11 @@ The action requires a [Slack token](https://api.slack.com/authentication/token-t
 to work correctly.
 
 The API call is made in [`_layouts/slack.html`](../_layouts/slack.html) using
-[Nimbella's anonymous action invocation](https://nimbella.com). The token for
+anonymous action invocation hosted on [DigitalOcean Functions](https://www.digitalocean.com/try/functions). The token for
 the API call is uniquely encrypted for this action. Should this token change,
-the encrypted value can be regenerated with the following Nimbella encryption API,
+the encrypted value can be regenerated with the following encryption API,
 replacing the placeholder `<token>` with the actual Slack App token.
 
 ```bash
-curl https://encrypt.nimbella.io/github.com/apache/openwhisk-website/blob/master/apis/slack-invite.js?slacktoken=<token>
+curl https://encrypt.nimbella.io/run/encrypt/github.com/apache/openwhisk-website/blob/master/apis/slack-invite.js?slacktoken=<token>
 ```
