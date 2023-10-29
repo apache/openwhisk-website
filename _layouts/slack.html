@@ -30,55 +30,11 @@ layout: default
                 <li><strong>Learn</strong> from others and ask questions.</li>
                 <li><strong>Share</strong> your work and demos.</li>
             </ul>
-            <form>
-                <div>
-                    <label for="exampleInputEmail2">Email:</label>
-                    <input class="form-control" id="inputEmail" placeholder="jane.doe@example.com" required="" type="email">
-                </div>
-                <button type="button" class="btn btn-primary" style="margin:5px;">Send invitation</button>
-            </form>
             <p></p>
             <p>We are a friendly, respectful and inclusive community!</p>
-            <a href="https://openwhisk-team.slack.com/"></a>
-            <p>
-                <i>Code for Slack invite (this page) is on github:</i><br><i> </i><i>
-                <a href="https://github.com/openwhisk/openwhisk-slackinvite" target="blank">https://github.com/openwhisk/openwhisk-slackinvite</a></i>
+            <p>Join us by sending an email to <a href="mailto:dev@openwhisk.apache.org?subject=Requesting Invitation to OpenWhisk Slack">dev@openwhisk.apache.org</a>
+              requesting an invitation to the Slack team.  Please note, there is a human in the loop...it may take a day or two for the invitation to be sent.
             </p>
         </div>
     </main>
 </section>
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    var btn = $("button");
-    var res = $("#result");
-    var email = $('#inputEmail');
-    var actionUrl = "https://js-http.nimbella.io/github.com/apache/openwhisk-website/blob/master/apis/slack-invite.js?__c=N0_f11fa71538824fb94496633108113162_0_26bbc52c50f5018f978fc2e90357347a989c233a92b179ccab53724d1c56b25e2ae63957680e177ea54c172df5152ba4aaf55c7430d482779fd9e38cd9afd120bf9d8bb72bc45049f56ece78c42208369d56f34163f3909bdbce45fe1b6b5b65_";
-    function handler() {
-      var email = $("input")[0].value;
-      $.get(actionUrl, { email: email, org: 'openwhisk-team' })
-        .done(function (data) {
-          btn.addClass("btn-success");
-          btn.html("WOOT. CHECK YOUR EMAIL!");
-          res.html(data.message);
-        })
-        .fail(function (err) {
-          res.html(err.statusText + ":Your invitation didn't work :-( ");
-          btn.addClass("btn-error");
-        });
-    }
-    btn.click(handler);
-    btn.prop("disabled", true);
-
-    function validate() {
-      console.log("validate")
-      if (email[0].validity.typeMismatch) {
-        btn.prop("disabled", true);
-      } else {
-        btn.prop("disabled", false);
-      }
-    }
-    email.keyup(validate);
-  })
-
-</script>
