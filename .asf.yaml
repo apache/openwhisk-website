@@ -30,6 +30,7 @@ github:
     - docker
     - kubernetes
     - functions
+    - jekyll
   protected_branches:
     master:
       required_status_checks:
