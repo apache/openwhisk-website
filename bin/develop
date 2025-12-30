@@ -7,4 +7,4 @@ npm install
 npm run build:js
 
 # Start the Jekyll server and JavaScript watcher.
-npm run dev:jekyll
+npm run dev:jekyll -- $@
